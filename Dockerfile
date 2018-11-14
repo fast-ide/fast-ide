@@ -1,7 +1,8 @@
 FROM rusdevops/bootstrap:cpp
 
 RUN apt update
-RUN apt -y install git zsh vim python-dev tmux
+RUN apt -y install git zsh vim python-dev tmux exuberant-ctags && \
+    rm -rf /var/lib/apt/lists/*
 
 ENV TERM xterm-256color
 
