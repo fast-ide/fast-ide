@@ -84,6 +84,11 @@ set splitbelow
 set splitright
 set encoding=utf-8
 
+let g:gcov_marker_covered    = '✓'
+let g:gcov_marker_uncovered  = 'X'
+let g:gcov_marker_path = '_coverage'
+let g:gcov_marker_auto_lopen = 0
+
 let g:previm_open_cmd = 'xdg-open'
 
 let g:DirDiffAddArgs = "-w"
@@ -112,8 +117,6 @@ let g:UltiSnipsExpandTrigger="<c-k>"
 let g:UltiSnipsJumpForwardTrigger="<c-n>"
 let g:UltiSnipsJumpBackwardTrigger="<c-p>"
 let g:UltiSnipsEditSplit="vertical"
-
-call plug#end()
 
 runtime! ftplugin/man.vim
 
