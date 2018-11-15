@@ -7,10 +7,8 @@ $ sudo docker run --rm -i -t -w /home/developer rusdevops/devenv-cpp
 $ git clone --recursive https://github.com/bmstu-iu8-34-cpp-2018/lab-04-stack-orangejohny 
 $ cd $(basename $_ .git)
 # run tests with coverage
-$ scripts/tests.sh && gcovr -r .
-# aggregate coverage file
-$ mkdir _coverage && find . -name "*.gcov" -exec mv -t _coverage {} \+
-# start collaborative code review
+$ scripts/coverage.sh
+# start collaborative codereview
 $ vim -c "GcovFind" include/stack.hpp
 $ exit
 ```
