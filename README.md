@@ -1,12 +1,18 @@
 ### Usage example:
 
 ```Shell
-$ cd lab # student lab directory
-$ git submodule update --init
-$ docker run  -v `pwd`:`pwd` -w `pwd` -i -t rusdevops/devenv-cpp
-$ scripts/tests.sh
+# run developer environment
+$ sudo docker run -i -t -w /home/developer rusdevops/devenv-cpp
+# clone student lab repository
+$ git clone --recursive https://github.com/bmstu-iu8-34-cpp-2018/lab-04-stack-orangejohny 
+$ cd $(basename $_ .git)
+# run tests with coverage
+$ scripts/tests.sh && gcovr -r .
+# aggregate coverage file
 $ mkdir _coverage && find . -name "*.gcov" -exec mv -t _coverage {} \+
-$ vim -c "GcovFind" sources/source.cpp
+# start collaborative code review
+$ vim -c "GcovFind" include/stack.hpp
+$ exit
 ```
 
-<a href="https://asciinema.org/a/jqcFuptMnWqSkBEMBhNpsx3Db" target="_blank"><img src="https://asciinema.org/a/jqcFuptMnWqSkBEMBhNpsx3Db.svg" /></a>
+[![asciicast](https://asciinema.org/a/211861.svg)](https://asciinema.org/a/211861)>
