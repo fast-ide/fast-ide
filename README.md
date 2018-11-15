@@ -15,4 +15,4 @@ $ vim -c "GcovFind" include/stack.hpp
 $ exit
 ```
 
-[![asciicast](https://asciinema.org/a/211861.svg)](https://asciinema.org/a/211861)>
+[![asciicast](https://asciinema.org/a/211861.svg)](https://asciinema.org/a/211861)
