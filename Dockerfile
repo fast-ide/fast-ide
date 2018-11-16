@@ -1,6 +1,6 @@
 FROM rusdevops/bootstrap:cpp
 
-RUN apt update
+RUN add-apt-repository -y ppa:neovim-ppa/stable && apt update
 RUN apt -y install git zsh python-dev \
     neovim python-neovim python3-neovim \
     tmux exuberant-ctags valgrind gdb && \
