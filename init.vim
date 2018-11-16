@@ -68,7 +68,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'vim-airline/vim-airline'
   Plug 'vim-airline/vim-airline-themes'
   Plug 'vim-ctrlspace/vim-ctrlspace'
-  Plug 'vim-scripts/Conque-GDB'
+  Plug 'huawenyu/neogdb.vim'
   Plug 'vim-scripts/DoxygenToolkit.vim'
   Plug 'vim-scripts/DrawIt'
   Plug 'vim-scripts/ZoomWin'
@@ -83,6 +83,10 @@ call plug#end()
 set splitbelow
 set splitright
 set encoding=utf-8
+
+let g:neobugger_leader = ';'
+let g:gdb_require_enter_after_toggling_breakpoint = 0
+nmap ;p :call neobugger#gdb#Send("print " . expand('<cword>'))<CR>
 
 let g:gcov_marker_covered    = '✓'
 let g:gcov_marker_uncovered  = 'X'
@@ -402,8 +406,8 @@ imap <silent> <S-Right> <C-o><Plug>CamelCaseMotion_w
 set noendofline
 set nofixendofline
 
-set backupdir=$HOME/.vim/backup/
-set directory=$HOME/.vim/swap/
+set backupdir=$HOME/.nvim/backup/
+set directory=$HOME/.nvim/swap/
 
 map <leader>m <Plug>ToggleMarkbar
 
