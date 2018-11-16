@@ -1,10 +1,13 @@
 FROM rusdevops/bootstrap:cpp
 
 RUN add-apt-repository -y ppa:neovim-ppa/stable && apt update
-RUN apt -y install git zsh python-dev \
+RUN apt -y install git zsh astyle python-dev \
     neovim python-neovim python3-neovim \
     tmux exuberant-ctags valgrind gdb && \
     rm -rf /var/lib/apt/lists/*
+
+RUN git clone git://github.com/rkitover/vimpager && \
+    cd vimpager && make install && cd .. rm -rf vimpager
 
 ENV TERM xterm-256color
 
