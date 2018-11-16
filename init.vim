@@ -8,7 +8,6 @@ call plug#begin('~/.vim/plugged')
   Plug 'altercation/vim-colors-solarized'
   Plug 'vim-scripts/Wombat'
   Plug 'm42e/vim-gcov-marker'
-  Plug 'ryanoasis/vim-devicons'
   Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
   Plug 'gregsexton/gitv'
   Plug 'tpope/vim-surround'
