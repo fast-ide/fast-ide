@@ -85,7 +85,7 @@ set encoding=utf-8
 
 let g:neobugger_leader = ';'
 let g:gdb_require_enter_after_toggling_breakpoint = 0
-nmap ;p :call neobugger#gdb#Send("print " . expand('<cword>'))<CR>
+noremap <leader>;p :GdbEvalRange<CR>
 
 let g:gcov_marker_covered    = '✓'
 let g:gcov_marker_uncovered  = 'X'
