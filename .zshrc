@@ -1,5 +1,6 @@
 source ~/.zsh/antigen.zsh
 
+ZSH_THEME=""
 antigen use oh-my-zsh
 antigen bundle git
 antigen bundle heroku
@@ -25,8 +26,7 @@ antigen bundle robertzk/send.zsh
 antigen bundle gko/ssh-connect
 antigen bundle nviennot/zsh-vim-plugin
 antigen bundle yonchu/vimman
-
-antigen theme miloshadzic
+antigen theme https://github.com/denysdovhan/spaceship-prompt spaceship
 
 antigen apply
 
