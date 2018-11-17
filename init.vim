@@ -16,7 +16,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'kshenoy/vim-signature'
   Plug 'will133/vim-dirdiff'
   Plug 'wellle/tmux-complete.vim'
-  Plug 'python-mode/python-mode', { 'branch': 'develop' }
+  "Plug 'python-mode/python-mode', { 'branch': 'develop' }
   Plug 'junegunn/goyo.vim'
   Plug 'Chiel92/vim-autoformat'
   Plug 'Raimondi/delimitMate'
@@ -75,7 +75,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'mileszs/ack.vim'
   Plug 'machakann/vim-highlightedyank'
   Plug 'SirVer/ultisnips'
-  Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+  "Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 call plug#end()
 
