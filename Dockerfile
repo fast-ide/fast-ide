@@ -24,6 +24,9 @@ RUN chown developer /tmp/.tmux.conf
 RUN chown developer /tmp/.zshrc
 RUN chown developer /tmp/init.vim
 
+RUN git clone https://github.com/facebook/PathPicker.git /usr/local/PathPicker && \
+    ln -s /usr/local/PathPicker/fpp /usr/local/bin/fpp
+
 USER developer
 
 RUN mkdir $HOME/.zsh
@@ -42,5 +45,7 @@ RUN mkdir -p $HOME/.nvim/swap
 
 RUN git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 RUN zsh --rcs $HOME/.zshrc || true
+
+ENV SHELL /usr/bin/zsh
 
 ENTRYPOINT zsh
