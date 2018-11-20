@@ -17,6 +17,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'will133/vim-dirdiff'
   Plug 'wellle/tmux-complete.vim'
   "Plug 'python-mode/python-mode', { 'branch': 'develop' }
+  "Plug 'vim-vdebug/vdebug'
   Plug 'junegunn/goyo.vim'
   Plug 'Chiel92/vim-autoformat'
   Plug 'Raimondi/delimitMate'

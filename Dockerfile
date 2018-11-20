@@ -9,6 +9,8 @@ RUN apt -y install git zsh astyle python-dev \
 RUN git clone git://github.com/rkitover/vimpager && \
     cd vimpager && make install && cd .. rm -rf vimpager
 
+RUN pip3 install komodo-python3-dbgp
+
 ENV TERM xterm-256color
 
 RUN curl -L http://install.ohmyz.sh | sh || true
