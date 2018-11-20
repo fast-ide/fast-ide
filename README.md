@@ -1,9 +1,10 @@
 ### Usage example:
 
 ```Shell
-# _ apt install gconf2
+# set terminal theme
+$ _ apt install gconf2
 # https://askubuntu.com/questions/270469/how-can-i-create-a-new-profile-for-gnome-terminal-via-command-line
-# ./one-dark.sh
+$ ./one-dark.sh
 # run developer environment
 $ _ docker run --rm --cap-add=SYS_PTRACE --security-opt seccomp=unconfined -w /home/developer -it rusdevops/devenv-cpp
 # clone student lab repository
