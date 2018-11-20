@@ -1,15 +1,15 @@
-FROM rusdevops/bootstrap:cpp
+FROM rusdevops/bootstrap-cpp
 
 RUN add-apt-repository -y ppa:neovim-ppa/stable && apt update
 RUN apt -y install curl git git-extras zsh astyle python-dev \
-    neovim python-neovim python3-neovim silversearcher-ag \
+    neovim silversearcher-ag \
     tmux exuberant-ctags valgrind gdb && \
     rm -rf /var/lib/apt/lists/*
 
 RUN git clone git://github.com/rkitover/vimpager && \
     cd vimpager && make install && cd .. rm -rf vimpager
 
-RUN pip3 install komodo-python3-dbgp
+RUN pip3 install komodo-python3-dbgp pynvim
 
 ENV TERM xterm-256color
 
