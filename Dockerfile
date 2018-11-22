@@ -39,9 +39,9 @@ RUN mkdir -p $HOME/.config/nvim
 RUN mv /tmp/init.vim $HOME/.config/nvim/
 RUN mv /tmp/.tmux.conf $HOME/
 
-RUN nvim +PlugInstall +qall
 RUN mkdir -p $HOME/.nvim/backup
 RUN mkdir -p $HOME/.nvim/swap
+RUN nvim +PlugInstall +qall
 
 RUN git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 RUN zsh --rcs $HOME/.zshrc || true

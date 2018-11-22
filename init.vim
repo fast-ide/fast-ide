@@ -1,4 +1,4 @@
-call plug#begin('~/.vim/plugged')
+call plug#begin('~/.nvim/plugged')
 
   Plug 'previm/previm'
   Plug 'tpope/vim-dadbod'
@@ -68,7 +68,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'tpope/vim-sensible'
   Plug 'vim-airline/vim-airline'
   Plug 'vim-airline/vim-airline-themes'
-  Plug 'vim-ctrlspace/vim-ctrlspace'
+  "Plug 'vim-ctrlspace/vim-ctrlspace'
   Plug 'huawenyu/neogdb.vim'
   Plug 'vim-scripts/DoxygenToolkit.vim'
   Plug 'vim-scripts/DrawIt'
