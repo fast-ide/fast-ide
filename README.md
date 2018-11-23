@@ -4,7 +4,7 @@
 $ sudo apt install docker.io gconf2 
 # https://askubuntu.com/questions/270469/how-can-i-create-a-new-profile-for-gnome-terminal-via-command-line
 $ ./one-dark.sh
-# sudo usermod -aG docker $USER
+$ sudo usermod -aG docker $USER
 # run developer environment
 # optional argumetns: --cap-add=SYS_PTRACE --security-opt seccomp=unconfined
 $ docker run --rm  -w /home/developer -it rusdevops/devenv-cpp
