@@ -6,7 +6,8 @@ $ sudo apt install docker.io gconf2
 $ ./one-dark.sh
 # sudo usermod -aG docker $USER
 # run developer environment
-$ docker run --rm --cap-add=SYS_PTRACE --security-opt seccomp=unconfined -w /home/developer -it rusdevops/devenv-cpp
+# optional argumetns: --cap-add=SYS_PTRACE --security-opt seccomp=unconfined
+$ docker run --rm  -w /home/developer -it rusdevops/devenv-cpp
 # clone student lab repository
 $ git clone --recursive https://github.com/bmstu-iu8-34-cpp-2018/lab-04-stack-orangejohny 
 $ cd $(basename $_ .git) && ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .
