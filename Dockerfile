@@ -1,7 +1,7 @@
 FROM rusdevops/bootstrap-cpp
 
 RUN add-apt-repository -y ppa:neovim-ppa/stable && apt update
-RUN apt -y install curl git git-extras zsh astyle python-dev \
+RUN apt -y install curl git git-extras zsh astyle python3-dev \
     neovim silversearcher-ag python3-pip python-pip \
     tmux exuberant-ctags valgrind gdb && \
     rm -rf /var/lib/apt/lists/*
