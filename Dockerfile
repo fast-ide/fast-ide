@@ -7,7 +7,7 @@ RUN apt -y install curl git git-extras zsh astyle python3-dev \
     rm -rf /var/lib/apt/lists/*
 
 RUN git clone git://github.com/rkitover/vimpager && \
-    cd vimpager && make install && cd .. rm -rf vimpager
+    cd vimpager && make install && cd .. && rm -rf vimpager
 
 RUN pip3 install komodo-python3-dbgp pynvim && pip2 install pynvim
 
