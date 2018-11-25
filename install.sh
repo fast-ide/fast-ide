@@ -6,7 +6,8 @@ set -e
 apt install -y wget
 wget -O - https://apt.llvm.org/llvm-snapshot.gpg.key | apt-key add -
 
-apt-add-repository "deb http://apt.llvm.org/$(lsb_release -sc)/ llvm-toolchain-$(lsb_release -sc)-7 main"
+codename=$(lsb_release -sc)
+apt-add-repository "deb http://apt.llvm.org/$codename/ llvm-toolchain-$codename-7 main"
 apt install -y libcurl4-openssl-dev curl \
      g++-7 lcov gcovr cmake cmake-data clang-7
 
