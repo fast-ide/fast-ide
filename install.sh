@@ -31,7 +31,7 @@ export PATH="$HOME/.pyenv/bin:$PATH"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
-PYTHON_CONFIGURE_OPTS='--enable-shared' pyenv install 3.5.3
+PYTHON_CONFIGURE_OPTS='--enable-shared' pyenv install -f 3.5.3
 pyenv shell 3.5.3
 
 pip3 install cpplint && npm install -g jscpd
