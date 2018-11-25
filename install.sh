@@ -1,10 +1,10 @@
 set -e
 
-#sudo apt-add-repository -y "ppa:ubuntu-toolchain-r/test" && sudo apt update
-#sudo add-apt-repository -y ppa:neovim-ppa/stable && apt update
+# apt-add-repository -y "ppa:ubuntu-toolchain-r/test" && apt update
+# add-apt-repository -y ppa:neovim-ppa/stable && apt update
 
 apt install -y wget
-wget -O - https://apt.llvm.org/llvm-snapshot.gpg.key | sudo apt-key add -
+wget -O - https://apt.llvm.org/llvm-snapshot.gpg.key | apt-key add -
 
 apt-add-repository "deb http://apt.llvm.org/$(lsb_release -sc)/ llvm-toolchain-$(lsb_release -sc)-7 main"
 apt install -y libcurl4-openssl-dev curl \
