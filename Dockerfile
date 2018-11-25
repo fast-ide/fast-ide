@@ -43,7 +43,8 @@ RUN mkdir -p $HOME/.nvim/backup
 RUN mkdir -p $HOME/.nvim/swap
 RUN nvim +PlugInstall +qall
 
-RUN git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+RUN git clone https://github.com/tmux-plugins/tpm $HOME/.tmux/plugins/tpm
+RUN git clone https://github.com/yonchu/vimman.git $HOME/.zsh/vimman
 RUN zsh --rcs $HOME/.zshrc || true
 
 ENV SHELL /usr/bin/zsh
