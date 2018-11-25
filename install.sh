@@ -3,7 +3,7 @@ set -e
 #sudo apt-add-repository -y "ppa:ubuntu-toolchain-r/test" && sudo apt update
 #sudo add-apt-repository -y ppa:neovim-ppa/stable && apt update
 
-sudo apt install -y wget
+sudo apt install -y wget gconf2
 
 wget -O - https://apt.llvm.org/llvm-snapshot.gpg.key | sudo apt-key add -
 
@@ -44,7 +44,7 @@ pip2 install pynvim
 
 curl -L http://install.ohmyz.sh | sh || true
 
-git clone https://github.com/facebook/PathPicker.git /usr/local/PathPicker
+sudo git clone https://github.com/facebook/PathPicker.git /usr/local/PathPicker
 sudo ln -s /usr/local/PathPicker/fpp /usr/local/bin/fpp
 
 mkdir $HOME/.zsh
