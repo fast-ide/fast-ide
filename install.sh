@@ -1,13 +1,27 @@
 set -e
 
-sudo apt-add-repository -y "ppa:ubuntu-toolchain-r/test" && sudo apt update
+#sudo apt-add-repository -y "ppa:ubuntu-toolchain-r/test" && sudo apt update
+#sudo add-apt-repository -y ppa:neovim-ppa/stable && apt update
+
 sudo apt install -y wget
+
 wget -O - https://apt.llvm.org/llvm-snapshot.gpg.key | sudo apt-key add -
-sudo apt-add-repository "deb http://apt.llvm.org/bionic/ llvm-toolchain-bionic-7 main"
-sudo apt install -y libcurl4-gnutls-dev curl \ # nodejs npm
-     g++-7 lcov gcovr cmake cmake-data clang-7 # python3-pip 
+
+sudo apt-add-repository "deb http://apt.llvm.org/$(lsb_release -sc)/ llvm-toolchain-$(lsb_release -sc)-7 main"
+sudo apt install -y libcurl4-openssl-dev curl \
+     g++-7 lcov gcovr cmake cmake-data clang-7
+
+sudo apt -y install curl git git-extras zsh astyle python3-dev \
+     neovim silversearcher-ag python-pip \
+     tmux exuberant-ctags valgrind gdb
+
+sudo apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev \
+     libreadline-dev libsqlite3-dev wget curl libncurses5-dev libncursesw5-dev \
+     xz-utils tk-dev libffi-dev liblzma-dev
 
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | zsh
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 nvm install v8.12.0
 nvm use v8.12.0
 nvm install-latest-npm
@@ -16,18 +30,14 @@ curl -L https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer 
 export PATH="$HOME/.pyenv/bin:$PATH"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
+
 PYTHON_CONFIGURE_OPTS='--enable-shared' pyenv install 3.5.3
 pyenv shell 3.5.3
 
 pip3 install cpplint && npm install -g jscpd
 
-sudo add-apt-repository -y ppa:neovim-ppa/stable && apt update
-sudo apt -y install curl git git-extras zsh astyle python3-dev \
-     neovim silversearcher-ag python3-pip python-pip \
-     tmux exuberant-ctags valgrind gdb
-
-git clone git://github.com/rkitover/vimpager 
-cd vimpager && make install && cd .. && rm -rf vimpager
+git clone git://github.com/rkitover/vimpager
+cd vimpager && sudo make install && cd .. && rm -rf vimpager
 
 pip3 install komodo-python3-dbgp pynvim
 pip2 install pynvim
@@ -35,7 +45,7 @@ pip2 install pynvim
 curl -L http://install.ohmyz.sh | sh || true
 
 git clone https://github.com/facebook/PathPicker.git /usr/local/PathPicker
-ln -s /usr/local/PathPicker/fpp /usr/local/bin/fpp
+sudo ln -s /usr/local/PathPicker/fpp /usr/local/bin/fpp
 
 mkdir $HOME/.zsh
 curl -L git.io/antigen > $HOME/.zsh/antigen.zsh
