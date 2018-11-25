@@ -31,7 +31,7 @@ export PATH="$HOME/.pyenv/bin:$PATH"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
-PYTHON_CONFIGURE_OPTS='--enable-shared' pyenv install -f 3.5.3
+PYTHON_CONFIGURE_OPTS='--enable-shared' pyenv install --skip-existing 3.5.3
 pyenv shell 3.5.3
 
 pip3 install cpplint && npm install -g jscpd
@@ -42,12 +42,15 @@ cd vimpager && sudo make install && cd .. && rm -rf vimpager
 pip3 install komodo-python3-dbgp pynvim
 pip2 install pynvim
 
+rm -rf $HOME/.oh-my-zsh
 curl -L http://install.ohmyz.sh | sh || true
 
-sudo git clone https://github.com/facebook/PathPicker.git /usr/local/PathPicker
-sudo ln -s /usr/local/PathPicker/fpp /usr/local/bin/fpp
+if [ ! -d "/usr/local/PathPicker" ]; then
+  sudo git clone https://github.com/facebook/PathPicker.git /usr/local/PathPicker
+  sudo ln -s /usr/local/PathPicker/fpp /usr/local/bin/fpp
+fi
 
-mkdir $HOME/.zsh
+mkdir -p $HOME/.zsh
 curl -L git.io/antigen > $HOME/.zsh/antigen.zsh
 curl -fLo $HOME/.local/share/nvim/site/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
@@ -55,23 +58,36 @@ curl -fLo $HOME/.local/share/nvim/site/autoload/plug.vim --create-dirs \
 mkdir -p $HOME/.config/nvim
 mkdir -p $HOME/.nvim/backup
 mkdir -p $HOME/.nvim/swap
-cp .zshrc $HOME/
 cp init.vim $HOME/.config/nvim/
 cp .tmux.conf $HOME/
+cp .zshrc $HOME/
+cat >> $HOME/.zshrc <<EOF
+
+export PATH="\$HOME/.pyenv/bin:\$PATH"
+eval "\$(pyenv init -)"
+eval "\$(pyenv virtualenv-init -)"
+EOF
 
 nvim +PlugInstall +qall
 
-git clone https://github.com/tmux-plugins/tpm $HOME/.tmux/plugins/tpm
-git clone https://github.com/yonchu/vimman.git $HOME/.zsh/vimman
+if [ ! -d "$HOME/.tmux/plugins/tpm" ]; then
+  git clone https://github.com/tmux-plugins/tpm $HOME/.tmux/plugins/tpm
+fi
+if [ ! -d "$HOME/.zsh/vimman" ]; then
+  git clone https://github.com/yonchu/vimman.git $HOME/.zsh/vimman
+fi
 zsh --rcs $HOME/.zshrc || true
 
-uuids=$(gsettings get org.gnome.Terminal.ProfilesList list | tr -d \' | tr -d \[ | tr -d \] | tr -d ,)
+uuids=$(gsettings get org.gnome.Terminal.ProfilesList list | \
+  tr -d \' | tr -d \[ | tr -d \] | tr -d , | sed "s/\ /\n/g")
+echo $uuids | read -r uuid
+echo $uuid
 git clone https://github.com/Anthony25/gnome-terminal-colors-solarized.git
 cd gnome-terminal-colors-solarized
-./install.sh --scheme dark --profile ${uuids[0]} --skip-dircolors && cd ..
-rm -rf gnome-terminal-colors-solarized
+./install.sh --scheme dark --skip-dircolors --profile $uuid
+cd .. && rm -rf gnome-terminal-colors-solarized
 ./one-dark.sh
 
-sudo apt install docker.io
+sudo apt install -y docker.io
 sudo chsh -s /bin/zsh $USER
 sudo usermod -aG docker $USER
