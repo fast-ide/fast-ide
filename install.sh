@@ -64,3 +64,10 @@ nvim +PlugInstall +qall
 git clone https://github.com/tmux-plugins/tpm $HOME/.tmux/plugins/tpm
 git clone https://github.com/yonchu/vimman.git $HOME/.zsh/vimman
 zsh --rcs $HOME/.zshrc || true
+
+uuids=$(gsettings get org.gnome.Terminal.ProfilesList list | tr -d \' | tr -d \[ | tr -d \] | tr -d ,)
+git clone https://github.com/Anthony25/gnome-terminal-colors-solarized.git
+cd gnome-terminal-colors-solarized
+./install.sh --scheme dark --profile ${uuids[0]} --skip-dircolors && cd ..
+rm -rf gnome-terminal-colors-solarized
+./one-dark.sh
