@@ -71,3 +71,7 @@ cd gnome-terminal-colors-solarized
 ./install.sh --scheme dark --profile ${uuids[0]} --skip-dircolors && cd ..
 rm -rf gnome-terminal-colors-solarized
 ./one-dark.sh
+
+sudo apt install docker.io
+sudo chsh -s /bin/zsh $USER
+sudo usermod -aG docker $USER
