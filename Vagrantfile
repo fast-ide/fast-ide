@@ -11,10 +11,15 @@ Vagrant.configure("2") do |config|
 
     vb.gui = true
     vb.memory = "2048"
+    vb.customize ["storageattach", :id, 
+                  "--storagectl", "IDE", 
+                  "--port", "0", "--device", "1", 
+                  "--type", "dvddrive", 
+                  "--medium", "emptydrive"]
   end
 
   config.vm.provision "file", source: "configs", destination: "configs"
-  config.vm.provision "file", source: "theme.sh", destination: "theme.sh"
   config.vm.provision "shell", path: "install.sh"
   config.vm.provision "shell", path: "bootstrap.sh", privileged: false
+  config.vm.provision "shell", path: "theme.sh", privileged: false
 end
