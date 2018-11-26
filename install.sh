@@ -16,7 +16,7 @@ apt install -y curl git git-extras zsh astyle python3-dev \
     neovim silversearcher-ag python-pip \
     tmux exuberant-ctags valgrind gdb gconf2 docker.io
 
-apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev \
+apt install -y make build-essential libssl-dev zlib1g-dev libbz2-dev \
     libreadline-dev libsqlite3-dev wget curl libncurses5-dev libncursesw5-dev \
     xz-utils tk-dev libffi-dev liblzma-dev
 
