@@ -14,7 +14,7 @@ Vagrant.configure("2") do |config|
   end
 
   config.vm.provision "file", source: "configs", destination: "configs"
+  config.vm.provision "file", source: "theme.sh", destination: "theme.sh"
   config.vm.provision "shell", path: "install.sh"
   config.vm.provision "shell", path: "bootstrap.sh", privileged: false
-  config.vm.provision "shell", path: "theme.sh", privileged: false
 end
