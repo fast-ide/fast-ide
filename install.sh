@@ -31,3 +31,5 @@ fi
 ln -s /usr/bin/clang-7 /usr/bin/clang
 ln -s /usr/bin/clang++-7 /usr/bin/clang++
 ln -s /usr/bin/clang-cpp-7 /usr/bin/clang-cpp
+
+chsh -s /bin/zsh $USER
