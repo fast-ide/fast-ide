@@ -51,15 +51,6 @@ fi
 
 zsh --rcs $HOME/.zshrc || true
 
-uuids=$(gsettings get org.gnome.Terminal.ProfilesList list | \
-  tr -d \' | tr -d \[ | tr -d \] | tr -d , | sed "s/\ /\n/g")
-profile=$(echo $uuids | head -n 1)
-git clone https://github.com/Anthony25/gnome-terminal-colors-solarized.git
-cd gnome-terminal-colors-solarized
-./install.sh --scheme dark --skip-dircolors --profile $profile
-cd .. && rm -rf gnome-terminal-colors-solarized
-./one-dark.sh
-
 # sudo apt install -y docker.io
 # sudo chsh -s /bin/zsh $USER
 # sudo usermod -aG docker $USER
