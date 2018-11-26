@@ -33,9 +33,9 @@ fi
 mkdir -p $HOME/.config/nvim
 mkdir -p $HOME/.nvim/backup
 mkdir -p $HOME/.nvim/swap
-cp init.vim $HOME/.config/nvim/
-cp .tmux.conf $HOME/
-cp .zshrc $HOME/
+cp configs/init.vim $HOME/.config/nvim/
+cp configs/.tmux.conf $HOME/
+cp configs/.zshrc $HOME/
 cat >> $HOME/.zshrc <<EOF
 
 export PATH="\$HOME/.pyenv/bin:\$PATH"
