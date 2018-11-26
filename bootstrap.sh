@@ -34,6 +34,7 @@ mkdir -p $HOME/.config/nvim
 mkdir -p $HOME/.nvim/backup
 mkdir -p $HOME/.nvim/swap
 cp configs/init.vim $HOME/.config/nvim/
+cp configs/theme.sh $HOME/
 cp configs/.tmux.conf $HOME/
 cp configs/.zshrc $HOME/
 cat >> $HOME/.zshrc <<EOF
