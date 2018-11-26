@@ -13,6 +13,7 @@ Vagrant.configure("2") do |config|
     vb.memory = "2048"
   end
 
+  config.vm.provision "file", source: "configs", destination: "configs"
   config.vm.provision "shell", path: "install.sh"
   config.vm.provision "shell", path: "bootstrap.sh", privileged: false
 end
