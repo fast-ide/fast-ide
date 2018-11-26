@@ -14,7 +14,7 @@ apt install -y libcurl4-openssl-dev curl \
 
 apt install -y curl git git-extras zsh astyle python3-dev \
     neovim silversearcher-ag python-pip \
-    tmux exuberant-ctags valgrind gdb gconf2
+    tmux exuberant-ctags valgrind gdb gconf2 docker.io
 
 apt-get install -y make build-essential libssl-dev zlib1g-dev libbz2-dev \
     libreadline-dev libsqlite3-dev wget curl libncurses5-dev libncursesw5-dev \
@@ -33,3 +33,4 @@ ln -s /usr/bin/clang++-7 /usr/bin/clang++
 ln -s /usr/bin/clang-cpp-7 /usr/bin/clang-cpp
 
 chsh -s /bin/zsh $USER
+usermod -aG docker $USER
