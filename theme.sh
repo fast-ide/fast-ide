@@ -6,6 +6,14 @@
 # Based on:
 #   https://github.com/chriskempson/base16-gnome-terminal/
 
+uuids=$(gsettings get org.gnome.Terminal.ProfilesList list | \
+  tr -d \' | tr -d \[ | tr -d \] | tr -d , | sed "s/\ /\n/g")
+profile=$(echo $uuids | head -n 1)
+git clone https://github.com/Anthony25/gnome-terminal-colors-solarized.git
+cd gnome-terminal-colors-solarized
+./install.sh --scheme dark --skip-dircolors --profile $profile
+cd .. && rm -rf gnome-terminal-colors-solarized
+
 [[ -z "$PROFILE_NAME" ]] && PROFILE_NAME="One Dark"
 [[ -z "$PROFILE_SLUG" ]] && PROFILE_SLUG="one-dark"
 [[ -z "$DCONF" ]] && DCONF=dconf
