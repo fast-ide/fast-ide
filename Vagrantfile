@@ -11,11 +11,6 @@ Vagrant.configure("2") do |config|
 
     vb.gui = true
     vb.memory = "2048"
-    # vb.customize ["storageattach", :id, 
-    #               "--storagectl", "IDE", 
-    #               "--port", "0", "--device", "1", 
-    #               "--type", "dvddrive", 
-    #               "--medium", "emptydrive"]
   end
 
   config.vm.provision "file", source: "configs", destination: "configs"
