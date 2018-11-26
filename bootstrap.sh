@@ -50,7 +50,3 @@ if [ ! -d "$HOME/.tmux/plugins/tpm" ]; then
 fi
 
 zsh --rcs $HOME/.zshrc || true
-
-# sudo apt install -y docker.io
-# sudo chsh -s /bin/zsh $USER
-# sudo usermod -aG docker $USER
