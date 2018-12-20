@@ -345,6 +345,10 @@ nnoremap <leader>wJ <C-W>J
 nnoremap <leader>wK <C-W>K
 nnoremap <leader>wL <C-W>L
 nnoremap <leader>wH <C-W>H
+nmap <C-Right> <C-W>><C-W>>
+nmap <C-Left> <C-W><<C-W><
+nmap <C-Down> <C-W>-<C-W>-
+nmap <C-Up> <C-W>+<C-W>+
 
 nnoremap <silent> <C-l> :nohlsearch<CR><C-l>
 
