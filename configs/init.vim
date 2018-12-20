@@ -423,3 +423,4 @@ highlight Comment cterm=italic
 match ErrorMsg '\%>80v.\+'
 
 let g:pymode_options_colorcolumn = 0
+packadd cfilter
