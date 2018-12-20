@@ -105,6 +105,7 @@ let g:tmuxcomplete#trigger = 'omnifunc'
 
 let g:ack_default_options = " -s -H --nocolor --nogroup --column --smart-case --follow"
 let g:ackprg = "ag --vimgrep"
+noremap <Leader>a :Ack <cword><cr>
 
 let g:ctrlp_working_path_mode = 'c'
 let g:AutoClosePumvisible = {"ENTER": "", "ESC": ""}
