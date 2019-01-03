@@ -44,6 +44,32 @@ eval "\$(pyenv init -)"
 eval "\$(pyenv virtualenv-init -)"
 EOF
 
+mkdir -p $HOME/.config/systemd/user
+cat > $HOME/.config/systemd/user/rdm.socket <<EOF
+[Unit]
+Description=RTags daemon socket
+
+[Socket]
+ListenStream=%t/rdm.socket
+
+[Install]
+WantedBy=default.target
+EOF
+
+cat > $HOME/.config/systemd/user/rdm.service <<EOF
+[Unit]
+Description=RTags daemon
+
+Requires=rdm.socket
+
+[Service]
+Type=simple
+ExecStart=`which rdm` -v --inactivity-timeout 300 --log-flush
+ExecStartPost=/bin/sh -c "echo +19 > /proc/$MAINPID/autogroup"
+Nice=19
+CPUSchedulingPolicy=idle
+EOF
+
 nvim +PlugInstall +qall
 
 if [ ! -d "$HOME/.tmux/plugins/tpm" ]; then
@@ -51,5 +77,3 @@ if [ ! -d "$HOME/.tmux/plugins/tpm" ]; then
 fi
 
 zsh --rcs $HOME/.zshrc || true
-
-# TODO: https://github.com/Andersbakken/rtags#integration-with-systemd-gnu-linux
