@@ -67,6 +67,8 @@ ExecStartPost=/bin/sh -c "echo +19 > /proc/$MAINPID/autogroup"
 Nice=19
 CPUSchedulingPolicy=idle
 EOF
+systemctl --user enable rdm.socket
+systemctl --user start rdm.socket
 
 nvim +PlugInstall +UpdateRemotePlugins +qall
 
