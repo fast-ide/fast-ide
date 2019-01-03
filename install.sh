@@ -32,5 +32,7 @@ ln -s /usr/bin/clang-7 /usr/bin/clang
 ln -s /usr/bin/clang++-7 /usr/bin/clang++
 ln -s /usr/bin/clang-cpp-7 /usr/bin/clang-cpp
 
+ln -s /usr/lib/llvm-7/lib/libclang.so /usr/lib/libclang.so
+
 chsh -s /bin/zsh vagrant
 usermod -aG docker vagrant
