@@ -36,3 +36,5 @@ ln -s /usr/lib/llvm-7/lib/libclang.so /usr/lib/libclang.so
 
 chsh -s /bin/zsh vagrant
 usermod -aG docker vagrant
+
+# TODO: install https://github.com/Andersbakken/rtags
