@@ -48,10 +48,8 @@ mkdir -p $HOME/.config/systemd/user
 cat > $HOME/.config/systemd/user/rdm.socket <<EOF
 [Unit]
 Description=RTags daemon socket
-
 [Socket]
 ListenStream=%t/rdm.socket
-
 [Install]
 WantedBy=default.target
 EOF
@@ -59,9 +57,7 @@ EOF
 cat > $HOME/.config/systemd/user/rdm.service <<EOF
 [Unit]
 Description=RTags daemon
-
 Requires=rdm.socket
-
 [Service]
 Type=simple
 ExecStart=`which rdm` -v --inactivity-timeout 300 --log-flush
