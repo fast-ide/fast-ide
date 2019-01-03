@@ -116,14 +116,14 @@ map ? <Plug>(incsearch-backward)
 map g/ <Plug>(incsearch-stay)
 
 inoremap <expr> <CR> pumvisible() ? "\<C-Y>" : "\<CR>"
-let g:move_key_modifier = 'C'
+let g:move_key_modifier = 'A'
 let g:vim_search_pulse_mode = 'cursor_line'
 nmap <leader>sc <Plug>Pulse
 
-let g:UltiSnipsExpandTrigger="<c-k>"
-let g:UltiSnipsJumpForwardTrigger="<c-n>"
-let g:UltiSnipsJumpBackwardTrigger="<c-p>"
-let g:UltiSnipsEditSplit="vertical"
+let g:UltiSnipsExpandTrigger = "<C-k>"
+let g:UltiSnipsJumpForwardTrigger = "<C-n>"
+let g:UltiSnipsJumpBackwardTrigger = "<C-p>"
+let g:UltiSnipsEditSplit = "vertical"
 
 runtime! ftplugin/man.vim
 
