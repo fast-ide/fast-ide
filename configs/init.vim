@@ -1,6 +1,7 @@
 call plug#begin('~/.nvim/plugged')
 
   Plug 'previm/previm'
+  Plug 'arakashic/chromatica.nvim'
   Plug 'tpope/vim-dadbod'
   Plug 'amix/vim-zenroom2'
   Plug 'terryma/vim-expand-region'
