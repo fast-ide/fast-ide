@@ -3,6 +3,8 @@
 
 Vagrant.configure("2") do |config|
 
+  config.vagrant.plugins = ["vagrant-vbguest", "vagrant-disksize"]
+
   config.vm.box = "peru/ubuntu-18.10-desktop-amd64"
   config.vm.network "public_network"
   config.disksize.size = "20GB"
