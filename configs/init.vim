@@ -351,7 +351,7 @@ nmap <C-Left> <C-W><<C-W><
 nmap <C-Down> <C-W>-<C-W>-
 nmap <C-Up> <C-W>+<C-W>+
 
-nnoremap <silent> <C-l> :nohlsearch<CR><C-l>
+nnoremap <silent> <Leader>hl :nohlsearch<CR>
 
 nmap <silent> <Leader>of :FSHere<cr>
 nmap <silent> <Leader>ol :FSRight<cr>
@@ -397,8 +397,6 @@ let g:ycm_semantic_triggers = {
 nmap <silent> <leader>ss :set spell!<CR>
 set spelllang=en_gb
 
-let g:ConqueGdb_SaveHistory = 1
-
 map <silent> w <Plug>CamelCaseMotion_w
 map <silent> b <Plug>CamelCaseMotion_b
 map <silent> e <Plug>CamelCaseMotion_e
@@ -430,6 +428,6 @@ match ErrorMsg '\%>80v.\+'
 let g:pymode_options_colorcolumn = 0
 "packadd cfilter
 
-let g:chromatica#enable_at_startup=1
+"let g:chromatica#enable_at_startup=1
 let g:chromatica#highlight_feature_level=0
 let g:rtagsUseLocationList = 0
