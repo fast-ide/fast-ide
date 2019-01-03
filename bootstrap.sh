@@ -70,7 +70,7 @@ EOF
 systemctl --user enable rdm.socket
 systemctl --user start rdm.socket
 
-nvim +PlugInstall +UpdateRemotePlugins +qall
+nvim +PlugInstall +UpdateRemotePlugins +qall!
 
 if [ ! -d "$HOME/.tmux/plugins/tpm" ]; then
   git clone https://github.com/tmux-plugins/tpm $HOME/.tmux/plugins/tpm
