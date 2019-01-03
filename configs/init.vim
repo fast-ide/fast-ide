@@ -430,5 +430,4 @@ match ErrorMsg '\%>80v.\+'
 let g:pymode_options_colorcolumn = 0
 packadd cfilter
 
-let g:chromatica#libclang_path='/usr/lib/llvm-7/lib/'
 let g:chromatica#enable_at_startup=1
