@@ -51,3 +51,5 @@ if [ ! -d "$HOME/.tmux/plugins/tpm" ]; then
 fi
 
 zsh --rcs $HOME/.zshrc || true
+
+# TODO: https://github.com/Andersbakken/rtags#integration-with-systemd-gnu-linux
