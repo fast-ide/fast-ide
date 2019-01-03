@@ -17,3 +17,6 @@ Vagrant.configure("2") do |config|
   config.vm.provision "shell", path: "install.sh"
   config.vm.provision "shell", path: "bootstrap.sh", privileged: false
 end
+
+
+# TODO: update https://app.vagrantup.com/peru/boxes/ubuntu-18.10-desktop-amd64
