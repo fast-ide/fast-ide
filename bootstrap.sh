@@ -37,6 +37,8 @@ cp configs/init.vim $HOME/.config/nvim/
 cp configs/theme.sh $HOME/
 cp configs/.tmux.conf $HOME/
 cp configs/.zshrc $HOME/
+chmod +x $HOME/theme.sh
+
 cat >> $HOME/.zshrc <<EOF
 
 export PATH="\$HOME/.pyenv/bin:\$PATH"
