@@ -54,7 +54,7 @@ call plug#begin('~/.nvim/plugged')
   Plug 'matze/vim-move'
   Plug 'mh21/errormarker.vim'
   Plug 'nathanaelkane/vim-indent-guides'
-  Plug 'octol/vim-cpp-enhanced-highlight'
+  "Plug 'octol/vim-cpp-enhanced-highlight'
   Plug 'plasticboy/vim-markdown'
   Plug 'rdnetto/YCM-Generator', { 'branch': 'develop'}
   Plug 'roman/golden-ratio'
