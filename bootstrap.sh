@@ -63,7 +63,7 @@ Requires=rdm.socket
 [Service]
 Type=simple
 ExecStart=`which rdm` -v --inactivity-timeout 300 --log-flush
-ExecStartPost=/bin/sh -c "echo +19 > /proc/$MAINPID/autogroup"
+ExecStartPost=/bin/sh -c "echo +19 > /proc/\$MAINPID/autogroup"
 Nice=19
 CPUSchedulingPolicy=idle
 EOF
