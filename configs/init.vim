@@ -428,7 +428,7 @@ highlight Comment cterm=italic
 match ErrorMsg '\%>80v.\+'
 
 let g:pymode_options_colorcolumn = 0
-packadd cfilter
+"packadd cfilter
 
 let g:chromatica#enable_at_startup=1
 let g:chromatica#highlight_feature_level=0
