@@ -431,3 +431,4 @@ let g:pymode_options_colorcolumn = 0
 packadd cfilter
 
 let g:chromatica#enable_at_startup=1
+let g:rtagsUseLocationList = 0
