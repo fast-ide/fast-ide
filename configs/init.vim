@@ -260,6 +260,13 @@ let g:move_key_modifier = 'A'
 let g:tmuxcomplete#trigger = 'omnifunc'
 let g:ycm_add_preview_to_completeopt = 1
 
+let g:exchange_no_mappings=1
+nmap cx <Plug>(Exchange)
+vmap X <Plug>(Exchange)
+nmap cxc <Plug>(ExchangeClear)
+nmap cxx <Plug>(ExchangeLine)
+
+
 if exists(":Tabularize")
   nmap <Leader>a= :Tabularize /=<CR>
   vmap <Leader>a= :Tabularize /=<CR>
@@ -285,9 +292,9 @@ let g:UltiSnipsJumpBackwardTrigger = "<C-p>"
 let g:UltiSnipsJumpForwardTrigger = "<C-n>"
 
 let g:ycm_semantic_triggers = {
-  \   'cpp': [ 're!.' ],
-  \   'c++': [ 're!.' ]
-  \ }
+\   'cpp': [ 're!.' ],
+\   'c++': [ 're!.' ]
+\ }
 
 " checks
 
