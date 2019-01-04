@@ -110,15 +110,15 @@ let g:ack_default_options = " -s -H --nocolor --nogroup --column --smart-case --
 let g:ackprg = "ag --vimgrep"
 noremap <Leader>a :Ack <cword><cr>
 
-nnoremap <silent> <Leader>hl :nohlsearch<CR>
-
-inoremap <expr> <CR> pumvisible() ? "\<C-Y>" : "\<CR>"
 let g:AutoClosePumvisible = {"ENTER": "", "ESC": ""}
 let g:vim_search_pulse_mode = 'cursor_line'
+inoremap <expr> <CR> pumvisible() ? "\<C-Y>" : "\<CR>"
 map / <Plug>(incsearch-forward)
 map ? <Plug>(incsearch-backward)
 map g/ <Plug>(incsearch-stay)
 nmap <Leader>sc <Plug>Pulse
+
+nnoremap <silent> <Leader>hl :nohlsearch<CR>
 
 " navigation
 
@@ -145,35 +145,35 @@ noremap <Leader>ov :e $MYVIMRC<CR>
 noremap <silent> <Leader><Tab> :NERDTreeToggle<CR>
 
 nmap <Leader>w <Plug>(easymotion-overwin-w)
-xmap <Leader>w <Plug>(easymotion-bd-w)
 omap <Leader>w <Plug>(easymotion-bd-w)
+xmap <Leader>w <Plug>(easymotion-bd-w)
 
-map <silent>w <Plug>CamelCaseMotion_w
 map <silent>b <Plug>CamelCaseMotion_b
 map <silent>e <Plug>CamelCaseMotion_e
 map <silent>ge <Plug>CamelCaseMotion_ge
-sunmap w
+map <silent>w <Plug>CamelCaseMotion_w
 sunmap b
 sunmap e
 sunmap ge
+sunmap w
 imap <silent> <S-Left> <C-o><Plug>CamelCaseMotion_b
 imap <silent> <S-Right> <C-o><Plug>CamelCaseMotion_w
 
 map <Leader>m <Plug>ToggleMarkbar
 
-nmap <silent> <Leader>of :FSHere<cr>
-nmap <silent> <Leader>ol :FSRight<cr>
-nmap <silent> <Leader>oL :FSSplitRight<cr>
-nmap <silent> <Leader>oh :FSLeft<cr>
 nmap <silent> <Leader>oH :FSSplitLeft<cr>
-nmap <silent> <Leader>ok :FSAbove<cr>
-nmap <silent> <Leader>oK :FSSplitAbove<cr>
-nmap <silent> <Leader>oj :FSBelow<cr>
 nmap <silent> <Leader>oJ :FSSplitBelow<cr>
+nmap <silent> <Leader>oK :FSSplitAbove<cr>
+nmap <silent> <Leader>oL :FSSplitRight<cr>
+nmap <silent> <Leader>of :FSHere<cr>
+nmap <silent> <Leader>oh :FSLeft<cr>
+nmap <silent> <Leader>oj :FSBelow<cr>
+nmap <silent> <Leader>ok :FSAbove<cr>
+nmap <silent> <Leader>ol :FSRight<cr>
 
 nnoremap <silent> <Leader>k :Man<CR>
-vnoremap <silent> <Leader>k y:Man <C-r>"<CR>
 nnoremap <silent> <Leader>v :vertical Man<CR>
+vnoremap <silent> <Leader>k y:Man <C-r>"<CR>
 vnoremap <silent> <Leader>v y:vertical Man <C-r>"<CR>
 
 " style
@@ -182,8 +182,8 @@ highlight Comment cterm=italic
 highlight Normal guibg=NONE ctermbg=NONE
 
 let g:chromatica#highlight_feature_level=0
-let g:pymode_options_colorcolumn = 0
 let g:limelight_conceal_ctermfg = 'gray'
+let g:pymode_options_colorcolumn = 0
 
 " view
 
@@ -193,19 +193,20 @@ let g:golden_ratio_filetypes_blacklist = ["nerdtree", "unite"]
 noremap <silent> <Leader>b :TagbarToggle<CR>
 
 nmap <Leader>wo <C-W>o
-nnoremap <Leader>wj <C-W><C-J>
-nnoremap <Leader>wk <C-W><C-K>
-nnoremap <Leader>wl <C-W><C-L>
-nnoremap <Leader>wh <C-W><C-H>
-nnoremap <Leader>wr <C-W>R
-nnoremap <Leader>wd <C-W>q
+nnoremap <Leader>wH <C-W>H
 nnoremap <Leader>wJ <C-W>J
 nnoremap <Leader>wK <C-W>K
 nnoremap <Leader>wL <C-W>L
-nnoremap <Leader>wH <C-W>H
-nmap <C-Right> <C-W>><C-W>>
-nmap <C-Left> <C-W><<C-W><
+nnoremap <Leader>wd <C-W>q
+nnoremap <Leader>wh <C-W><C-H>
+nnoremap <Leader>wj <C-W><C-J>
+nnoremap <Leader>wk <C-W><C-K>
+nnoremap <Leader>wl <C-W><C-L>
+nnoremap <Leader>wr <C-W>R
+
 nmap <C-Down> <C-W>-<C-W>-
+nmap <C-Left> <C-W><<C-W><
+nmap <C-Right> <C-W>><C-W>>
 nmap <C-Up> <C-W>+<C-W>+
 
 let g:onedark_terminal_italics = 1
@@ -247,6 +248,12 @@ let g:lightline = {
 \   ],
 \ },
 \ }
+
+let g:asyncrun_status = "stopped"
+augroup QuickfixStatus
+	au! BufWinEnter quickfix setlocal
+		\ statusline=%t\ [%{g:asyncrun_status}]\ %{exists('w:quickfix_title')?\ '\ '.w:quickfix_title\ :\ ''}\ %=%-15(%l,%c%V%)\ %P
+augroup END
 
 " editing
 
@@ -322,19 +329,19 @@ let g:formatters_cpp = ['cpp_formatter']
 
   " VCS
   nnoremap <Leader>ga :Git add %:p<CR><CR>
-  nnoremap <Leader>gs :Gstatus<CR>
+  nnoremap <Leader>gb :Git branch<Space>
   nnoremap <Leader>gc :Gcommit -v -q<CR>
-  nnoremap <Leader>gt :Gcommit -v -q %:p<CR>
   nnoremap <Leader>gd :Gdiff<CR>
   nnoremap <Leader>ge :Gedit<CR>
-  nnoremap <Leader>gr :Gread<CR>
-  nnoremap <Leader>gw :Gwrite<CR><CR>
-  nnoremap <Leader>gp :Ggrep<Space>
+  nnoremap <Leader>gl :Dispatch! git pull<CR>
   nnoremap <Leader>gm :Gmove<Space>
-  nnoremap <Leader>gb :Git branch<Space>
   nnoremap <Leader>go :Git checkout<Space>
   nnoremap <Leader>gp :Dispatch! git push<CR>
-  nnoremap <Leader>gl :Dispatch! git pull<CR>
+  nnoremap <Leader>gp :Ggrep<Space>
+  nnoremap <Leader>gr :Gread<CR>
+  nnoremap <Leader>gs :Gstatus<CR>
+  nnoremap <Leader>gt :Gcommit -v -q %:p<CR>
+  nnoremap <Leader>gw :Gwrite<CR><CR>
 
   " debugger
   let g:neobugger_leader = ';'
@@ -342,10 +349,10 @@ let g:formatters_cpp = ['cpp_formatter']
   noremap <Leader>;p :GdbEvalRange<CR>
 
   " gcov
-  let g:gcov_marker_covered    = '✓'
-  let g:gcov_marker_uncovered  = 'X'
-  let g:gcov_marker_path = '_coverage'
   let g:gcov_marker_auto_lopen = 0
+  let g:gcov_marker_covered    = '✓'
+  let g:gcov_marker_path = '_coverage'
+  let g:gcov_marker_uncovered  = 'X'
 
   " dirdiff
   let g:DirDiffAddArgs = "-w"
@@ -359,9 +366,3 @@ let g:formatters_cpp = ['cpp_formatter']
 
   " copy location
   nnoremap <Leader>cl :let @+=expand("%:h") . '/' . expand("%:t") . ':' . line(".")<CR>
-
-let g:asyncrun_status = "stopped"
-augroup QuickfixStatus
-	au! BufWinEnter quickfix setlocal
-		\ statusline=%t\ [%{g:asyncrun_status}]\ %{exists('w:quickfix_title')?\ '\ '.w:quickfix_title\ :\ ''}\ %=%-15(%l,%c%V%)\ %P
-augroup END
