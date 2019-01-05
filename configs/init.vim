@@ -358,7 +358,8 @@ let g:formatters_cpp = ['cpp_formatter']
   " debugger
   let g:neobugger_leader = ';'
   let g:gdb_require_enter_after_toggling_breakpoint = 0
-  noremap <Leader>;p :GdbEvalRange<CR>
+  vnoremap <Leader>;p :GdbEvalRange<CR>
+  nnoremap <Leader>;p :GdbEvalWord<CR>
 
   " gcov
   let g:gcov_marker_auto_lopen = 0
