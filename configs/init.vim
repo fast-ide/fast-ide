@@ -324,6 +324,9 @@ set errorformat=
 
 match ErrorMsg '\%>80v.\+'
 
+highlight TabsAndTrailingSpaces ctermbg=red guibg=red
+match TabsAndTrailingSpaces /\t\| \+$/
+
 nmap <silent> <Leader>ss :set spell!<CR>
 
 let g:formatdef_cmake_formatter = '"cmake-format - -o -"'
