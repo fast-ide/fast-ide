@@ -83,23 +83,27 @@ call plug#end()
 
 filetype plugin on
 runtime! ftplugin/man.vim
+
 set background=dark
 set backupdir=$HOME/.nvim/backup/
 set directory=$HOME/.nvim/swap/
 set encoding=utf-8
 set expandtab
+set foldmethod=syntax
 set hidden
 set iskeyword-=/
 set iskeyword-=_
 set nocompatible
 set noendofline
 set nofixendofline
+set nofoldenable
 set number
 set spelllang=en_gb
 set splitbelow
 set splitright
 set sw=2
 set ts=2
+
 silent! colorscheme onedark
 
 let mapleader = "\<Space>"
