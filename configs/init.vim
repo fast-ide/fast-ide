@@ -4,7 +4,6 @@ call plug#begin('~/.nvim/plugged')
   "Plug 'jalcine/cmake.vim'
   "Plug 'octol/vim-cpp-enhanced-highlight'
   "Plug 'python-mode/python-mode', { 'branch': 'develop' }
-  "Plug 'vim-ctrlspace/vim-ctrlspace'
   "Plug 'vim-vdebug/vdebug'
   Plug 'Chiel92/vim-autoformat'
   Plug 'Raimondi/delimitMate'
@@ -64,7 +63,7 @@ call plug#begin('~/.nvim/plugged')
   Plug 'tmux-plugins/vim-tmux-focus-events'
   Plug 'tommcdo/vim-exchange'
   Plug 'tpope/vim-dadbod'
-  Plug 'tpope/vim-dispatch' 
+  Plug 'tpope/vim-dispatch'
   Plug 'tpope/vim-fugitive'
   Plug 'tpope/vim-sensible'
   Plug 'tpope/vim-speeddating'
@@ -254,8 +253,8 @@ let g:lightline = {
 
 let g:asyncrun_status = "stopped"
 augroup QuickfixStatus
-	au! BufWinEnter quickfix setlocal
-		\ statusline=%t\ [%{g:asyncrun_status}]\ %{exists('w:quickfix_title')?\ '\ '.w:quickfix_title\ :\ ''}\ %=%-15(%l,%c%V%)\ %P
+  au! BufWinEnter quickfix setlocal
+    \ statusline=%t\ [%{g:asyncrun_status}]\ %{exists('w:quickfix_title')?\ '\ '.w:quickfix_title\ :\ ''}\ %=%-15(%l,%c%V%)\ %P
 augroup END
 
 " editing
@@ -323,7 +322,7 @@ set errorformat=
     set errorformat+=\ CMake\ Error\ at\ %f:%l\ %m
 " }
 " msvc {
-    set errorformat+=%f(%l):%c:\ error:\ %m 
+    set errorformat+=%f(%l):%c:\ error:\ %m
 " }
 
 match ErrorMsg '\%>80v.\+'
