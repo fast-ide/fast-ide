@@ -282,6 +282,7 @@ nmap cxc <Plug>(ExchangeClear)
 nmap cxx <Plug>(ExchangeLine)
 
 nnoremap Q @q
+nnoremap g. :normal! `[v`]<cr><left>
 
 if exists(":Tabularize")
   nmap <Leader>a= :Tabularize /=<CR>
