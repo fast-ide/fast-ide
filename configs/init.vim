@@ -281,6 +281,7 @@ vmap X <Plug>(Exchange)
 nmap cxc <Plug>(ExchangeClear)
 nmap cxx <Plug>(ExchangeLine)
 
+nnoremap Q @q
 
 if exists(":Tabularize")
   nmap <Leader>a= :Tabularize /=<CR>
