@@ -5,6 +5,7 @@ call plug#begin('~/.nvim/plugged')
   "Plug 'octol/vim-cpp-enhanced-highlight'
   "Plug 'python-mode/python-mode', { 'branch': 'develop' }
   "Plug 'vim-vdebug/vdebug'
+  "Plug 'tmux-plugins/vim-tmux'
   Plug 'Chiel92/vim-autoformat'
   Plug 'Raimondi/delimitMate'
   Plug 'SirVer/ultisnips'
@@ -15,6 +16,7 @@ call plug#begin('~/.nvim/plugged')
   Plug 'altercation/vim-colors-solarized'
   Plug 'amix/vim-zenroom2'
   Plug 'arakashic/chromatica.nvim'
+  Plug 'benmills/vimux'
   Plug 'bkad/CamelCaseMotion'
   Plug 'derekwyatt/vim-fswitch'
   Plug 'dhruvasagar/vim-zoom'
@@ -38,7 +40,6 @@ call plug#begin('~/.nvim/plugged')
   Plug 'junegunn/goyo.vim'
   Plug 'junegunn/limelight.vim'
   Plug 'junegunn/vader.vim'
-  Plug 'kien/ctrlp.vim'
   Plug 'kshenoy/vim-signature'
   Plug 'lyuts/vim-rtags'
   Plug 'm42e/vim-gcov-marker'
@@ -68,6 +69,7 @@ call plug#begin('~/.nvim/plugged')
   Plug 'tpope/vim-sensible'
   Plug 'tpope/vim-speeddating'
   Plug 'tpope/vim-surround'
+  Plug 'vifm/vifm.vim'
   Plug 'vim-airline/vim-airline'
   Plug 'vim-airline/vim-airline-themes'
   Plug 'vim-scripts/DoxygenToolkit.vim'
@@ -125,8 +127,18 @@ nnoremap <silent> <Leader>hl :nohlsearch<CR>
 
 " navigation
 
-let g:ctrlp_working_path_mode = 'C'
 let g:rtagsUseLocationList = 0
+
+noremap <Leader>fb :Buffers<CR>
+noremap <Leader>fc :Commits<CR>
+noremap <Leader>ff :Files<CR>
+noremap <Leader>fh :History<CR>
+noremap <Leader>fl :Lines<CR>
+noremap <Leader>ft :Tags<CR>
+
+noremap <Leader>sc :BCommits<CR>
+noremap <Leader>sl :BLines<CR>
+noremap <Leader>st :BTags<CR>
 
 noremap <Leader>ld :lclose<CR>
 noremap <Leader>ln :lnext<CR>
@@ -302,7 +314,7 @@ let g:ycm_semantic_triggers = {
 " checks
 
 silent! set listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<,space:␣
-noremap <Leader>sl :set list!<CR>
+noremap <Leader>ss :set list!<CR>
 
 set errorformat=
 " clang {
@@ -330,7 +342,7 @@ match ErrorMsg '\%>80v.\+'
 highlight TabsAndTrailingSpaces ctermbg=red guibg=red
 match TabsAndTrailingSpaces /\t\| \+$/
 
-nmap <silent> <Leader>ss :set spell!<CR>
+"nmap <silent> <Leader>ss :set spell!<CR>
 
 let g:formatdef_cmake_formatter = '"cmake-format - -o -"'
 let g:formatters_cmake = ['cmake_formatter']
@@ -379,3 +391,11 @@ let g:formatters_cpp = ['cpp_formatter']
 
   " copy location
   nnoremap <Leader>cl :let @+=expand("%:h") . '/' . expand("%:t") . ':' . line(".")<CR>
+
+  " tmux
+  map <Leader>vi :VimuxInspectRunner<CR>
+  map <Leader>vl :VimuxRunLastCommand<CR>
+  map <Leader>vp :VimuxPromptCommand<CR>
+  map <Leader>vq :VimuxCloseRunner<CR>
+  map <Leader>vx :VimuxInterruptRunner<CR>
+  map <Leader>vz :call VimuxZoomRunner()<CR>

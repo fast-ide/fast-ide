@@ -13,7 +13,7 @@ apt install -y libcurl4-openssl-dev curl \
      g++-7 lcov gcovr cmake cmake-data clang-7 libclang-7-dev
 
 apt install -y curl git git-extras zsh astyle python3-dev \
-    neovim silversearcher-ag python-pip \
+    neovim silversearcher-ag python-pip vifm \
     tmux exuberant-ctags valgrind gdb gconf2 docker.io \
     graphviz doxygen pandoc
 
