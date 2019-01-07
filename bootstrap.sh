@@ -34,6 +34,7 @@ mkdir -p $HOME/.config/nvim
 mkdir -p $HOME/.nvim/backup
 mkdir -p $HOME/.nvim/swap
 cp configs/init.vim $HOME/.config/nvim/
+cp configs/snapshot.vim $HOME/.config/nvim/
 cp configs/theme.sh $HOME/
 cp configs/.tmux.conf $HOME/
 cp configs/.zshrc $HOME/
@@ -71,6 +72,7 @@ systemctl --user enable rdm.socket
 systemctl --user start rdm.socket
 
 nvim +PlugInstall +UpdateRemotePlugins +qall!
+#nvim -S $HOME/.config/nvim/snapshot.vim
 
 if [ ! -d "$HOME/.tmux/plugins/tpm" ]; then
   git clone https://github.com/tmux-plugins/tpm $HOME/.tmux/plugins/tpm
