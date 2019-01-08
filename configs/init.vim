@@ -360,11 +360,11 @@ let g:formatters_cpp = ['cpp_formatter']
   nnoremap <Leader>gc :Gcommit -v -q<CR>
   nnoremap <Leader>gd :Gdiff<CR>
   nnoremap <Leader>ge :Gedit<CR>
+  nnoremap <Leader>gg :Ggrep<Space>
   nnoremap <Leader>gl :Dispatch! git pull<CR>
   nnoremap <Leader>gm :Gmove<Space>
   nnoremap <Leader>go :Git checkout<Space>
   nnoremap <Leader>gp :Dispatch! git push<CR>
-  nnoremap <Leader>gp :Ggrep<Space>
   nnoremap <Leader>gr :Gread<CR>
   nnoremap <Leader>gs :Gstatus<CR>
   nnoremap <Leader>gt :Gcommit -v -q %:p<CR>
