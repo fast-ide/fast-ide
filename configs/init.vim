@@ -50,6 +50,7 @@ call plug#begin('~/.nvim/plugged')
   Plug 'majutsushi/tagbar'
   Plug 'matze/vim-move'
   Plug 'mh21/errormarker.vim'
+  Plug 'mhinz/vim-startify'
   Plug 'mileszs/ack.vim'
   Plug 'nathanaelkane/vim-indent-guides'
   Plug 'plasticboy/vim-markdown'
