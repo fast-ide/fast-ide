@@ -115,30 +115,34 @@ let g:ack_default_options = " -s -H --nocolor --nogroup --column --smart-case --
 let g:ackprg = "ag --vimgrep"
 noremap <Leader>a :Ack <cword><cr>
 
+noremap <Leader>fb :Buffers<CR>
+noremap <Leader>fc :Commits<CR>
+noremap <Leader>ff :Files<CR>
+noremap <Leader>fg :GFiles<CR>
+noremap <Leader>fh :History<CR>
+noremap <Leader>fl :Lines<CR>
+noremap <Leader>ft :Tags<CR>
+
+noremap q: :History:<CR>
+noremap q/ :History/<CR>
+
+noremap <Leader>sc :BCommits<CR>
+noremap <Leader>sl :BLines<CR>
+noremap <Leader>st :BTags<CR>
+
 let g:AutoClosePumvisible = {"ENTER": "", "ESC": ""}
 let g:vim_search_pulse_mode = 'cursor_line'
+
 inoremap <expr> <CR> pumvisible() ? "\<C-Y>" : "\<CR>"
 map / <Plug>(incsearch-forward)
 map ? <Plug>(incsearch-backward)
 map g/ <Plug>(incsearch-stay)
-nmap <Leader>sc <Plug>Pulse
 
 nnoremap <silent> <Leader>hl :nohlsearch<CR>
 
 " navigation
 
 let g:rtagsUseLocationList = 0
-
-noremap <Leader>fb :Buffers<CR>
-noremap <Leader>fc :Commits<CR>
-noremap <Leader>ff :Files<CR>
-noremap <Leader>fh :History<CR>
-noremap <Leader>fl :Lines<CR>
-noremap <Leader>ft :Tags<CR>
-
-noremap <Leader>sc :BCommits<CR>
-noremap <Leader>sl :BLines<CR>
-noremap <Leader>st :BTags<CR>
 
 noremap <Leader>ld :lclose<CR>
 noremap <Leader>ln :lnext<CR>
@@ -152,9 +156,6 @@ noremap <Leader>qn :cnext<CR>
 noremap <Leader>qo :copen<CR>
 noremap <Leader>qp :cprev<CR>
 
-noremap <Leader>oc :Commits<CR>
-noremap <Leader>of :Files<CR>
-noremap <Leader>og :GFiles<CR>
 noremap <Leader>ov :e $MYVIMRC<CR>
 
 noremap <silent> <Leader><Tab> :NERDTreeToggle<CR>
