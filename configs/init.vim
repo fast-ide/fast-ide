@@ -2,6 +2,7 @@ call plug#begin('~/.nvim/plugged')
 
   "Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
   "Plug 'octol/vim-cpp-enhanced-highlight'
+  "Plug 'previm/previm'
   "Plug 'python-mode/python-mode', { 'branch': 'develop' }
   Plug 'AndrewRadev/splitjoin.vim'
   Plug 'Chiel92/vim-autoformat'
@@ -52,7 +53,6 @@ call plug#begin('~/.nvim/plugged')
   Plug 'mileszs/ack.vim'
   Plug 'nathanaelkane/vim-indent-guides'
   Plug 'plasticboy/vim-markdown'
-  Plug 'previm/previm'
   Plug 'rafi/vim-sidemenu'
   Plug 'roman/golden-ratio'
   Plug 'rykka/riv.vim'
