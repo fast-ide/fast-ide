@@ -1,15 +1,15 @@
 call plug#begin('~/.nvim/plugged')
 
   "Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-  "Plug 'jalcine/cmake.vim'
   "Plug 'octol/vim-cpp-enhanced-highlight'
+  "Plug 'previm/previm'
   "Plug 'python-mode/python-mode', { 'branch': 'develop' }
-  "Plug 'vim-vdebug/vdebug'
-  "Plug 'tmux-plugins/vim-tmux'
+  Plug 'AndrewRadev/splitjoin.vim'
   Plug 'Chiel92/vim-autoformat'
   Plug 'Raimondi/delimitMate'
-  Plug 'SirVer/ultisnips'
-  Plug 'Valloric/YouCompleteMe', { 'do': './install.py --clang-completer --system-libclang' }
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+  Plug 'Shougo/neosnippet-snippets'
+  Plug 'Shougo/neosnippet.vim'
   Plug 'Xuyuanp/nerdtree-git-plugin'
   Plug 'airblade/vim-gitgutter'
   Plug 'albertomontesg/lightline-asyncrun'
@@ -25,7 +25,6 @@ call plug#begin('~/.nvim/plugged')
   Plug 'edkolev/tmuxline.vim'
   Plug 'fidian/hexmode'
   Plug 'freitass/todo.txt-vim'
-  Plug 'godlygeek/tabular'
   Plug 'gregsexton/gitv'
   Plug 'haya14busa/incsearch.vim'
   Plug 'hecal3/vim-leader-guide'
@@ -35,32 +34,36 @@ call plug#begin('~/.nvim/plugged')
   Plug 'inside/vim-search-pulse'
   Plug 'itchyny/calendar.vim'
   Plug 'itchyny/lightline.vim'
+  Plug 'itchyny/vim-cursorword'
   Plug 'joshdick/onedark.vim'
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' } | Plug 'junegunn/fzf.vim'
   Plug 'junegunn/goyo.vim'
   Plug 'junegunn/limelight.vim'
   Plug 'junegunn/vader.vim'
+  Plug 'junegunn/vim-peekaboo'
   Plug 'kshenoy/vim-signature'
+  Plug 'lambdalisue/vim-unified-diff'
+  Plug 'ludovicchabant/vim-gutentags'
   Plug 'lyuts/vim-rtags'
   Plug 'm42e/vim-gcov-marker'
   Plug 'machakann/vim-highlightedyank'
   Plug 'majutsushi/tagbar'
   Plug 'matze/vim-move'
   Plug 'mh21/errormarker.vim'
+  Plug 'mhinz/vim-startify'
   Plug 'mileszs/ack.vim'
   Plug 'nathanaelkane/vim-indent-guides'
-  Plug 'pboettch/vim-cmake-syntax'
   Plug 'plasticboy/vim-markdown'
-  Plug 'previm/previm'
-  Plug 'rdnetto/YCM-Generator', { 'branch': 'develop'}
+  Plug 'rafi/vim-sidemenu'
   Plug 'roman/golden-ratio'
   Plug 'rykka/riv.vim'
+  Plug 'rzaluska/deoplete-rtags'
   Plug 'scrooloose/nerdcommenter'
   Plug 'scrooloose/nerdtree'
   Plug 'sjl/gundo.vim'
   Plug 'skywind3000/asyncrun.vim'
   Plug 'terryma/vim-expand-region'
-  Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+  Plug 'tmux-plugins/vim-tmux'
   Plug 'tmux-plugins/vim-tmux-focus-events'
   Plug 'tommcdo/vim-exchange'
   Plug 'tpope/vim-dadbod'
@@ -76,6 +79,8 @@ call plug#begin('~/.nvim/plugged')
   Plug 'vim-scripts/DrawIt'
   Plug 'vim-scripts/Wombat'
   Plug 'vim-scripts/ZoomWin'
+  Plug 'vim-vdebug/vdebug'
+  Plug 'vimwiki/vimwiki', { 'branch': 'dev' }
   Plug 'w0rp/ale'
   Plug 'wellle/tmux-complete.vim'
   Plug 'will133/vim-dirdiff'
@@ -94,6 +99,7 @@ set foldmethod=syntax
 set hidden
 set iskeyword-=/
 set iskeyword-=_
+set lazyredraw
 set nocompatible
 set noendofline
 set nofixendofline
@@ -142,6 +148,7 @@ nnoremap <silent> <Leader>hl :nohlsearch<CR>
 
 " navigation
 
+let g:deoplete#enable_at_startup = 1
 let g:rtagsUseLocationList = 0
 
 noremap <Leader>ld :lclose<CR>
@@ -206,6 +213,8 @@ let g:golden_ratio_exclude_nonmodifiable = 1
 let g:golden_ratio_filetypes_blacklist = ["nerdtree", "unite"]
 
 noremap <silent> <Leader>b :TagbarToggle<CR>
+nmap <Leader>l <Plug>(sidemenu)
+xmap <Leader>l <Plug>(sidemenu-visual)
 
 nmap <Leader>wo <C-W>o
 nnoremap <Leader>wH <C-W>H
@@ -284,6 +293,9 @@ nmap cxx <Plug>(ExchangeLine)
 
 nnoremap Q @q
 nnoremap g. :normal! `[v`]<cr><left>
+
+xnoremap <  <gv
+xnoremap >  >gv
 
 if exists(":Tabularize")
   nmap <Leader>a= :Tabularize /=<CR>
@@ -369,6 +381,10 @@ let g:formatters_cpp = ['cpp_formatter']
   nnoremap <Leader>gs :Gstatus<CR>
   nnoremap <Leader>gt :Gcommit -v -q %:p<CR>
   nnoremap <Leader>gw :Gwrite<CR><CR>
+  
+  nmap <leader>gv :Gitv --all<cr>
+  nmap <leader>gV :Gitv! --all<cr>
+  vmap <leader>gV :Gitv! --all<cr>
 
   " debugger
   let g:neobugger_leader = ';'
