@@ -99,6 +99,7 @@ set foldmethod=syntax
 set hidden
 set iskeyword-=/
 set iskeyword-=_
+set lazyredraw
 set nocompatible
 set noendofline
 set nofixendofline
@@ -380,6 +381,10 @@ let g:formatters_cpp = ['cpp_formatter']
   nnoremap <Leader>gs :Gstatus<CR>
   nnoremap <Leader>gt :Gcommit -v -q %:p<CR>
   nnoremap <Leader>gw :Gwrite<CR><CR>
+  
+  nmap <leader>gv :Gitv --all<cr>
+  nmap <leader>gV :Gitv! --all<cr>
+  vmap <leader>gV :Gitv! --all<cr>
 
   " debugger
   let g:neobugger_leader = ';'
