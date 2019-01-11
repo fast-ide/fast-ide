@@ -3,6 +3,7 @@ source ~/.zsh/antigen.zsh
 ZSH_THEME=""
 antigen use oh-my-zsh
 antigen bundle git
+antigen bundle gitfast
 antigen bundle heroku
 antigen bundle pip
 antigen bundle debian
