@@ -409,7 +409,7 @@ let g:formatters_cpp = ['cpp_formatter']
   nnoremap <Leader>cd :Dox<CR>
 
   " copy location
-  nnoremap <Leader>cl :let @+=expand("%:h") . '/' . expand("%:t") . ':' . line(".")<CR>
+  nnoremap <Leader>yl :let @+=expand("%:h") . '/' . expand("%:t") . ':' . line(".")<CR>
 
   " tmux
   map <Leader>vi :VimuxInspectRunner<CR>
