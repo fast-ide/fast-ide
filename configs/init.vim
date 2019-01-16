@@ -98,7 +98,6 @@ set expandtab
 set foldmethod=syntax
 set hidden
 set iskeyword-=/
-set iskeyword-=_
 set lazyredraw
 set nocompatible
 set noendofline
