@@ -117,6 +117,8 @@ let mapleader = "\<Space>"
 
 " search
 
+let g:qf_mapping_ack_style = 1
+let g:qf_nowrap = 0
 let g:ack_default_options = " -s -H --nocolor --nogroup --column --smart-case --follow"
 let g:ackprg = "ag --vimgrep"
 noremap <Leader>a :Ack <cword><cr>
