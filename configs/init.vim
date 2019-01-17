@@ -55,6 +55,7 @@ call plug#begin('~/.nvim/plugged')
   Plug 'nathanaelkane/vim-indent-guides'
   Plug 'plasticboy/vim-markdown'
   Plug 'rafi/vim-sidemenu'
+  Plug 'romainl/vim-qf'
   Plug 'roman/golden-ratio'
   Plug 'rykka/riv.vim'
   Plug 'rzaluska/deoplete-rtags'
