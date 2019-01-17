@@ -81,9 +81,9 @@ call plug#begin('~/.nvim/plugged')
   Plug 'vim-scripts/Wombat'
   Plug 'vim-scripts/ZoomWin'
   Plug 'vim-vdebug/vdebug'
-  Plug 'vimwiki/vimwiki', { 'branch': 'dev' }
   Plug 'w0rp/ale'
   Plug 'wellle/tmux-complete.vim'
+  Plug 'wesQ3/vim-windowswap'
   Plug 'will133/vim-dirdiff'
 
 call plug#end()
