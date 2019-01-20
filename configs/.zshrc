@@ -34,7 +34,9 @@ bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 HISTORY_SUBSTRING_SEARCH_ENSURE_UNIQUE=1
 
-export EDITOR=vim
+export EDITOR=nvim
+alias o=nvim
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 alias pbcopy='xclip -selection clipboard'
