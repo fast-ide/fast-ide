@@ -6,6 +6,7 @@ export NVM_DIR="$HOME/.nvm"
 nvm install v8.12.0
 nvm use v8.12.0
 nvm install-latest-npm
+npm install -g diff-so-fancy
 npm install -g jscpd
 
 curl -L https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer | zsh
