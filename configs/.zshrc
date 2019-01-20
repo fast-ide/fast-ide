@@ -36,11 +36,11 @@ HISTORY_SUBSTRING_SEARCH_ENSURE_UNIQUE=1
 
 export EDITOR=nvim
 alias o=nvim
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
+alias p=vimcat
 alias pbcopy='xclip -selection clipboard'
 alias pbpaste='xclip -selection clipboard -o'
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 if [ ! -f "$HOME/.tmux/line" ]; then
   tmux new-session "vim -c ':Tmuxline lightline' -c ':TmuxlineSnapshot $HOME/.tmux/line' -c ':qall'"
