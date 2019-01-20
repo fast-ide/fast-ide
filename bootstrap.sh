@@ -6,8 +6,10 @@ export NVM_DIR="$HOME/.nvm"
 nvm install v8.12.0
 nvm use v8.12.0
 nvm install-latest-npm
-npm install -g diff-so-fancy
 npm install -g jscpd
+
+npm install -g diff-so-fancy
+git config --global core.pager "diff-so-fancy | less --tabs=4 -RFX"
 
 curl -L https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer | zsh
 export PATH="$HOME/.pyenv/bin:$PATH"
