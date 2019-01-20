@@ -42,6 +42,7 @@ call plug#begin('~/.nvim/plugged')
   Plug 'junegunn/vader.vim'
   Plug 'junegunn/vim-peekaboo'
   Plug 'kshenoy/vim-signature'
+  Plug 'lambdalisue/vim-gista'
   Plug 'lambdalisue/vim-unified-diff'
   Plug 'ludovicchabant/vim-gutentags'
   Plug 'lyuts/vim-rtags'
