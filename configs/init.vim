@@ -284,6 +284,7 @@ augroup END
 
 " editing
 
+let g:NERDSpaceDelims = 1
 let g:move_key_modifier = 'A'
 let g:tmuxcomplete#trigger = 'omnifunc'
 let g:ycm_add_preview_to_completeopt = 1
