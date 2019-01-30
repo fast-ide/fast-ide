@@ -98,6 +98,7 @@ set directory=$HOME/.nvim/swap/
 set encoding=utf-8
 set expandtab
 set foldmethod=syntax
+set gdefault
 set hidden
 set iskeyword-=/
 set lazyredraw
