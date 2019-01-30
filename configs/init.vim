@@ -125,6 +125,11 @@ let g:ack_default_options = " -s -H --nocolor --nogroup --column --smart-case --
 let g:ackprg = "ag --vimgrep"
 noremap <Leader>a :Ack <cword><cr>
 
+nmap n nzz
+nmap N Nzz
+nmap * *Nzz
+nmap # #nzz
+
 noremap <Leader>fb :Buffers<CR>
 noremap <Leader>fc :Commits<CR>
 noremap <Leader>ff :Files<CR>
@@ -298,6 +303,7 @@ nmap cxx <Plug>(ExchangeLine)
 
 nnoremap Q @q
 nnoremap g. :normal! `[v`]<cr><left>
+nnoremap Y y$
 
 xnoremap <  <gv
 xnoremap >  >gv
