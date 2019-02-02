@@ -20,7 +20,7 @@ eval "$(pyenv virtualenv-init -)"
 PYTHON_CONFIGURE_OPTS='--enable-shared' pyenv install --skip-existing 3.5.3
 pyenv shell 3.5.3
 
-pip3 install cpplint
+pip3 install cpplint git-plus
 pip3 install komodo-python3-dbgp pynvim
 pip2 install pynvim
 
