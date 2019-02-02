@@ -10,7 +10,6 @@ npm install -g jscpd
 npm install -g gitmoji-cli
 npm install -g git-recent
 npm install -g git-stats
-npm install -g recursive-blame
 
 npm install -g diff-so-fancy
 git config --global core.pager "diff-so-fancy | less --tabs=4 -RFX"
