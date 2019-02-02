@@ -23,6 +23,7 @@ call plug#begin('~/.nvim/plugged')
   Plug 'dpelle/vim-LanguageTool'
   Plug 'easymotion/vim-easymotion'
   Plug 'edkolev/tmuxline.vim'
+  Plug 'farmergreg/vim-lastplace'
   Plug 'fidian/hexmode'
   Plug 'freitass/todo.txt-vim'
   Plug 'gregsexton/gitv'
