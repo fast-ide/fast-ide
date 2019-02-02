@@ -8,6 +8,7 @@ nvm use v8.12.0
 nvm install-latest-npm
 npm install -g jscpd
 npm install -g gitmoji-cli
+npm install -g git-recent
 npm install -g git-stats
 npm install -g recursive-blame
 
