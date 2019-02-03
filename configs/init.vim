@@ -302,6 +302,8 @@ vmap X <Plug>(Exchange)
 nmap cxc <Plug>(ExchangeClear)
 nmap cxx <Plug>(ExchangeLine)
 
+map <leader>pp :setlocal paste!<cr>
+
 nnoremap Q @q
 nnoremap g. :normal! `[v`]<cr><left>
 nnoremap Y y$
