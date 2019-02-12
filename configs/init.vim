@@ -66,6 +66,7 @@ call plug#begin('~/.nvim/plugged')
   Plug 'sjl/gundo.vim'
   Plug 'skywind3000/asyncrun.vim'
   Plug 'terryma/vim-expand-region'
+  Plug 'terryma/vim-multiple-cursors'
   Plug 'tmux-plugins/vim-tmux'
   Plug 'tmux-plugins/vim-tmux-focus-events'
   Plug 'tommcdo/vim-exchange'
@@ -157,6 +158,8 @@ map g/ <Plug>(incsearch-stay)
 nnoremap <silent> <Leader>hl :nohlsearch<CR>
 
 " navigation
+
+noremap L $
 
 let g:deoplete#enable_at_startup = 1
 let g:rtagsUseLocationList = 0
