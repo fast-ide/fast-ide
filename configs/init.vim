@@ -227,6 +227,7 @@ let g:pymode_options_colorcolumn = 0
 let g:golden_ratio_exclude_nonmodifiable = 1
 let g:golden_ratio_filetypes_blacklist = ["nerdtree", "unite"]
 
+noremap <silent> <leader>gt :GoldenRatioToggle<CR>
 noremap <silent> <Leader>b :TagbarToggle<CR>
 nmap <Leader>l <Plug>(sidemenu)
 xmap <Leader>l <Plug>(sidemenu-visual)
