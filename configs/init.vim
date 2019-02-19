@@ -79,6 +79,7 @@ call plug#begin('~/.nvim/plugged')
   Plug 'vifm/vifm.vim'
   Plug 'vim-airline/vim-airline'
   Plug 'vim-airline/vim-airline-themes'
+  Plug 'vim-ctrlspace/vim-ctrlspace'
   Plug 'vim-scripts/DoxygenToolkit.vim'
   Plug 'vim-scripts/DrawIt'
   Plug 'vim-scripts/Wombat'
@@ -161,6 +162,7 @@ nnoremap <silent> <Leader>hl :nohlsearch<CR>
 
 noremap L $
 
+let g:CtrlSpaceDefaultMappingKey = "<C-space> "
 let g:deoplete#enable_at_startup = 1
 let g:rtagsUseLocationList = 0
 
