@@ -21,7 +21,7 @@ apt install -y make build-essential libssl-dev zlib1g-dev libbz2-dev \
     libreadline-dev libsqlite3-dev wget curl libncurses5-dev libncursesw5-dev \
     xz-utils tk-dev libffi-dev liblzma-dev
 
-apt install -y nfs-common cifs-utils
+apt install -y nfs-common cifs-utils htop
 
 git clone git://github.com/rkitover/vimpager
 cd vimpager && make install && cd .. && rm -rf vimpager
