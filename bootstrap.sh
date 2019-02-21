@@ -14,6 +14,9 @@ npm install -g git-stats
 npm install -g diff-so-fancy
 git config --global core.pager "diff-so-fancy | less --tabs=4 -RFX"
 
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install --all
+
 curl -L https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer | zsh
 export PATH="$HOME/.pyenv/bin:$PATH"
 eval "$(pyenv init -)"
