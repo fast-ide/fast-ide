@@ -48,6 +48,7 @@ cp configs/theme.sh $HOME/
 cp configs/.tmux.conf $HOME/
 cp configs/.zshrc $HOME/
 chmod +x $HOME/theme.sh
+# TODO: https://github.com/sonph/onehalf
 
 cat >> $HOME/.zshrc <<EOF
 
