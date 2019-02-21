@@ -2,7 +2,7 @@ set -e
 
 # apt-add-repository -y "ppa:ubuntu-toolchain-r/test" && apt update
 # add-apt-repository -y ppa:neovim-ppa/stable && apt update
-
+# TODO: https://github.com/icy/pacapt
 apt update && apt install -y gnome-shell ubuntu-gnome-desktop
 apt install -y wget
 wget -O - https://apt.llvm.org/llvm-snapshot.gpg.key | apt-key add -
