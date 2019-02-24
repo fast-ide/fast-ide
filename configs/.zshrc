@@ -35,8 +35,12 @@ bindkey '^[[B' history-substring-search-down
 HISTORY_SUBSTRING_SEARCH_ENSURE_UNIQUE=1
 
 export EDITOR=nvim
+export PAGER=vimpager
+
 alias o=nvim
-alias p=vimcat
+alias c=vimcat
+alias p=echo
+alias r=clear
 alias pbcopy='xclip -selection clipboard'
 alias pbpaste='xclip -selection clipboard -o'
 
