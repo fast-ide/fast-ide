@@ -27,6 +27,7 @@ pyenv shell 3.5.3
 
 pip3 install cpplint git-plus
 pip3 install komodo-python3-dbgp pynvim
+# pip3 install cheat cheat-ext
 pip2 install pynvim
 
 rm -rf $HOME/.oh-my-zsh
