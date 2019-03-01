@@ -1,4 +1,5 @@
 set -e
+set -x
 
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | zsh
 export NVM_DIR="$HOME/.nvm"
