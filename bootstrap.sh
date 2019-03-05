@@ -24,11 +24,11 @@ eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
 PYTHON_CONFIGURE_OPTS='--enable-shared' pyenv install --skip-existing 3.5.3
-pyenv shell 3.5.3
+pyenv global 3.5.3
 
 pip3 install cpplint git-plus
 pip3 install komodo-python3-dbgp pynvim
-# pip3 install cheat cheat-ext
+pip3 install cheat cheat-ext
 pip2 install pynvim pygments
 
 rm -rf $HOME/.oh-my-zsh
