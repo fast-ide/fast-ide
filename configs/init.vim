@@ -167,6 +167,11 @@ let g:CtrlSpaceDefaultMappingKey = "<C-space> "
 let g:deoplete#enable_at_startup = 1
 let g:rtagsUseLocationList = 0
 
+nmap <Leader>m <Plug>(quickhl-manual-this)
+xmap <Leader>m <Plug>(quickhl-manual-this)
+nmap <Leader>M <Plug>(quickhl-manual-reset)
+xmap <Leader>M <Plug>(quickhl-manual-reset)
+
 noremap <Leader>ld :lclose<CR>
 noremap <Leader>ln :lnext<CR>
 noremap <Leader>lo :lopen<CR>
@@ -197,8 +202,6 @@ sunmap ge
 sunmap w
 imap <silent> <S-Left> <C-o><Plug>CamelCaseMotion_b
 imap <silent> <S-Right> <C-o><Plug>CamelCaseMotion_w
-
-map <Leader>m <Plug>ToggleMarkbar
 
 nmap <silent> <Leader>oH :FSSplitLeft<cr>
 nmap <silent> <Leader>oJ :FSSplitBelow<cr>
@@ -269,7 +272,6 @@ let g:tmuxline_preset = {
 \'x'    : '%a',
 \'y'    : '#W %R',
 \'z'    : '#H'}
-
 
 let g:lightline = {
 \ 'colorscheme': 'onedark',
