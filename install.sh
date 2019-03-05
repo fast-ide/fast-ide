@@ -14,7 +14,7 @@ apt install -y libcurl4-openssl-dev curl \
 
 apt install -y curl git git-extras zsh astyle python3-dev \
     neovim silversearcher-ag python-pip vifm \
-    tmux exuberant-ctags valgrind gdb gconf2 docker.io \
+    tmux valgrind gdb gconf2 docker.io \
     graphviz doxygen pandoc xclip
 
 apt install -y make build-essential libssl-dev zlib1g-dev libbz2-dev \
@@ -30,6 +30,13 @@ if [ ! -d "/usr/local/PathPicker" ]; then
   git clone https://github.com/facebook/PathPicker.git /usr/local/PathPicker
   ln -s /usr/local/PathPicker/fpp /usr/local/bin/fpp
 fi
+
+git clone https://github.com/universal-ctags/ctags.git
+cd ctags
+./autogen.sh 
+./configure
+make
+make install
 
 ln -s /usr/bin/clang-7 /usr/bin/clang
 ln -s /usr/bin/clang++-7 /usr/bin/clang++
