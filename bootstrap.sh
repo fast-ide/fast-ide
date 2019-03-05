@@ -27,9 +27,10 @@ PYTHON_CONFIGURE_OPTS='--enable-shared' pyenv install --skip-existing 3.5.3
 pyenv shell 3.5.3
 
 pip3 install cpplint git-plus
-pip3 install komodo-python3-dbgp pynvim
-#pip3 install cheat cheat-ext
-pip2 install pynvim pygments
+pip3 install komodo-python3-dbgp pynvim pygments
+pip2 install pynvim 
+export CHEAT_PATH=$HOME/.config/cheat
+pip3 install cheat cheat-ext
 
 rm -rf $HOME/.oh-my-zsh
 curl -L http://install.ohmyz.sh | sh || true
