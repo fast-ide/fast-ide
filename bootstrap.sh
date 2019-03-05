@@ -44,6 +44,8 @@ fi
 mkdir -p $HOME/.config/nvim
 mkdir -p $HOME/.nvim/backup
 mkdir -p $HOME/.nvim/swap
+mkdir -p $HOME/.tmux
+
 cp configs/init.vim $HOME/.config/nvim/
 cp configs/snapshot.vim $HOME/.config/nvim/
 cp configs/theme.sh $HOME/
