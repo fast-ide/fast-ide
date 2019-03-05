@@ -24,11 +24,11 @@ eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
 PYTHON_CONFIGURE_OPTS='--enable-shared' pyenv install --skip-existing 3.5.3
-pyenv global 3.5.3
+pyenv shell 3.5.3
 
 pip3 install cpplint git-plus
 pip3 install komodo-python3-dbgp pynvim
-pip3 install cheat cheat-ext
+#pip3 install cheat cheat-ext
 pip2 install pynvim pygments
 
 rm -rf $HOME/.oh-my-zsh
@@ -51,8 +51,11 @@ cp configs/snapshot.vim $HOME/.config/nvim/
 cp configs/theme.sh $HOME/
 cp configs/.tmux.conf $HOME/
 cp configs/.zshrc $HOME/
-chmod +x $HOME/theme.sh
-# TODO: https://github.com/sonph/onehalf
+
+git clone https://github.com/sonph/onehalf
+chmod +x onehalf/gnome-terminal/onehalfdark.sh
+./onehalf/gnome-terminal/onehalfdark.sh
+rm -rf onehalf
 
 cat >> $HOME/.zshrc <<EOF
 
