@@ -29,8 +29,8 @@ pyenv shell 3.5.3
 pip3 install cpplint git-plus
 pip3 install komodo-python3-dbgp pynvim pygments
 pip2 install pynvim 
-export CHEAT_PATH=$HOME/.config/cheat
-pip3 install cheat cheat-ext
+# export CHEAT_PATH=$HOME/.config/cheat
+# pip3 install cheat cheat-ext
 
 rm -rf $HOME/.oh-my-zsh
 curl -L http://install.ohmyz.sh | sh || true
