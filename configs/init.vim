@@ -4,6 +4,8 @@ call plug#begin('~/.nvim/plugged')
   "Plug 'octol/vim-cpp-enhanced-highlight'
   "Plug 'previm/previm'
   "Plug 'python-mode/python-mode', { 'branch': 'develop' }
+  Plug 't9md/vim-quickhl'
+
   Plug 'AndrewRadev/splitjoin.vim'
   Plug 'Chiel92/vim-autoformat'
   Plug 'Raimondi/delimitMate'
