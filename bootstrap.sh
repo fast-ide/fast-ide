@@ -52,6 +52,7 @@ cp configs/snapshot.vim $HOME/.config/nvim/
 cp configs/theme.sh $HOME/
 cp configs/.tmux.conf $HOME/
 cp configs/.zshrc $HOME/
+cp configs/.ackignore $HOME/.config/
 
 git clone https://github.com/sonph/onehalf
 chmod +x onehalf/gnome-terminal/onehalfdark.sh
