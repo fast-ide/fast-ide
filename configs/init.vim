@@ -194,6 +194,8 @@ noremap <silent> <Leader><Tab> :NERDTreeToggle<CR>
 nmap <Leader>w <Plug>(easymotion-overwin-w)
 omap <Leader>w <Plug>(easymotion-bd-w)
 xmap <Leader>w <Plug>(easymotion-bd-w)
+map  <Leader>f <Plug>(easymotion-bd-f)
+nmap <Leader>f <Plug>(easymotion-overwin-f)
 
 map <silent>b <Plug>CamelCaseMotion_b
 map <silent>e <Plug>CamelCaseMotion_e
