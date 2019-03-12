@@ -5,6 +5,7 @@ call plug#begin('~/.nvim/plugged')
   "Plug 'previm/previm'
   "Plug 'python-mode/python-mode', { 'branch': 'develop' }
   Plug 't9md/vim-quickhl'
+  Plug 'bronson/vim-trailing-whitespace'
 
   Plug 'AndrewRadev/splitjoin.vim'
   Plug 'Chiel92/vim-autoformat'
@@ -378,9 +379,6 @@ set errorformat=
 " }
 
 match ErrorMsg '\%>80v.\+'
-
-highlight TabsAndTrailingSpaces ctermbg=red guibg=red
-match TabsAndTrailingSpaces /\t\| \+$/
 
 "nmap <silent> <Leader>ss :set spell!<CR>
 
