@@ -6,6 +6,7 @@ call plug#begin('~/.nvim/plugged')
   "Plug 'python-mode/python-mode', { 'branch': 'develop' }
   Plug 't9md/vim-quickhl'
   Plug 'bronson/vim-trailing-whitespace'
+  Plug 'airblade/vim-rooter'
 
   Plug 'AndrewRadev/splitjoin.vim'
   Plug 'Chiel92/vim-autoformat'
