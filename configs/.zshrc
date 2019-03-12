@@ -1,6 +1,8 @@
 source ~/.zsh/antigen.zsh
 
+CASE_SENSITIVE="true"
 ZSH_THEME=""
+
 antigen use oh-my-zsh
 antigen bundle git
 antigen bundle gitfast
