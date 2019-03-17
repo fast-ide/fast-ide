@@ -4,6 +4,7 @@ call plug#begin('~/.nvim/plugged')
   "Plug 'octol/vim-cpp-enhanced-highlight'
   "Plug 'previm/previm'
   "Plug 'python-mode/python-mode', { 'branch': 'develop' }
+  Plug 'pedrohdz/vim-yaml-folds'
   Plug 't9md/vim-quickhl'
   Plug 'bronson/vim-trailing-whitespace'
   Plug 'airblade/vim-rooter'
