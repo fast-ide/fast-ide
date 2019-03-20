@@ -79,7 +79,7 @@ call plug#begin('~/.nvim/plugged')
   Plug 'tommcdo/vim-exchange'
   Plug 'tpope/vim-dadbod'
   Plug 'tpope/vim-dispatch'
-  Plug 'tpope/vim-fugitive'
+  Plug 'tpope/vim-fugitive' | Plug 'christoomey/vim-conflicted'
   Plug 'tpope/vim-sensible'
   Plug 'tpope/vim-speeddating'
   Plug 'tpope/vim-surround'
@@ -237,6 +237,7 @@ let g:pymode_options_colorcolumn = 0
 " view
 
 let g:golden_ratio_exclude_nonmodifiable = 1
+let g:golden_ratio_autocommand = 0
 let g:golden_ratio_filetypes_blacklist = ["nerdtree", "unite"]
 
 noremap <silent> <leader>gt :GoldenRatioToggle<CR>
@@ -446,3 +447,10 @@ let g:formatters_cpp = ['cpp_formatter']
   map <Leader>vq :VimuxCloseRunner<CR>
   map <Leader>vx :VimuxInterruptRunner<CR>
   map <Leader>vz :call VimuxZoomRunner()<CR>
+
+  " git
+  set stl+=%{ConflictedVersion()}
+  let g:diffget_local_map = 'gl'
+  let g:diffget_upstream_map = 'gu'
+  nnoremap gn :GitNextConflict<CR>
+  set diffopt+=vertical
