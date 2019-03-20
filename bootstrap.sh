@@ -16,6 +16,9 @@ npm install -g diff-so-fancy
 git config --global core.pager "diff-so-fancy | less --tabs=4 -RFX"
 git config --global push.default current
 
+git alias conflicted "!nvim +Conflicted"
+git alias staged "diff --cached --name-only"
+
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install --all
 
