@@ -465,3 +465,16 @@ let g:quickhl_manual_colors = [
       \ "gui=bold ctermfg=16  ctermbg=6   guibg=#40a070 guifg=#ffffff",
       \ "gui=bold ctermfg=16  ctermbg=7   guibg=#40a070 guifg=#ffffff",
       \ ]
+
+map <leader>tn :tabnew<cr>
+map <leader>to :tabonly<cr>
+map <leader>tc :tabclose<cr>
+map <leader>tm :tabmove
+map <leader>te :tabedit <c-r>=expand("%:p:h")<cr>/
+
+cnoremap <C-A>		<Home>
+cnoremap <C-E>		<End>
+cnoremap <C-K>		<C-U>
+
+cnoremap <C-P> <Up>
+cnoremap <C-N> <Down>
