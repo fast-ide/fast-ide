@@ -9,6 +9,7 @@ call plug#begin('~/.nvim/plugged')
   Plug 'bronson/vim-trailing-whitespace'
   Plug 'airblade/vim-rooter'
   Plug 'MattesGroeger/vim-bookmarks'
+  Plug 'maxbrunsfeld/vim-yankstack'
 
   Plug 'AndrewRadev/splitjoin.vim'
   Plug 'Chiel92/vim-autoformat'
