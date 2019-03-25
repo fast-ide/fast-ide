@@ -172,9 +172,10 @@ nnoremap <silent> <Leader>hl :nohlsearch<CR>
 
 noremap L $
 
-let g:CtrlSpaceDefaultMappingKey = "<C-space> "
 let g:deoplete#enable_at_startup = 1
 let g:rtagsUseLocationList = 0
+let g:CtrlSpaceDefaultMappingKey = "<C-space> "
+let g:NERDTreeWinPos = "right"
 
 nmap <Leader>m <Plug>(quickhl-manual-this)
 xmap <Leader>m <Plug>(quickhl-manual-this)
