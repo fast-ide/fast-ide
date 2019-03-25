@@ -1,9 +1,11 @@
 call plug#begin('~/.nvim/plugged')
 
-  "Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-  "Plug 'octol/vim-cpp-enhanced-highlight'
-  "Plug 'previm/previm'
-  "Plug 'python-mode/python-mode', { 'branch': 'develop' }
+  " Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+  " Plug 'octol/vim-cpp-enhanced-highlight'
+  " Plug 'previm/previm'
+  " Plug 'python-mode/python-mode', { 'branch': 'develop' }
+  " Plug 'prettier/vim-prettier'
+
   Plug 'pedrohdz/vim-yaml-folds'
   Plug 't9md/vim-quickhl'
   Plug 'bronson/vim-trailing-whitespace'
