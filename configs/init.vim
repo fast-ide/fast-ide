@@ -126,6 +126,8 @@ set spelllang=en_gb
 set splitbelow
 set splitright
 set sw=2
+set timeoutlen=1000
+set ttimeoutlen=0
 set ts=2
 set t_vb=
 
