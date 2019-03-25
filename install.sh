@@ -15,7 +15,7 @@ apt install -y libcurl4-openssl-dev curl \
 apt install -y curl git git-extras zsh astyle python3-dev \
     neovim silversearcher-ag python-pip vifm \
     tmux valgrind gdb gconf2 docker.io \
-    graphviz doxygen pandoc xclip
+    graphviz doxygen pandoc xclip tig
 
 apt install -y make build-essential libssl-dev zlib1g-dev libbz2-dev \
     libreadline-dev libsqlite3-dev wget curl libncurses5-dev libncursesw5-dev \
