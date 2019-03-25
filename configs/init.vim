@@ -117,14 +117,17 @@ set iskeyword-=/
 set lazyredraw
 set nocompatible
 set noendofline
+set noerrorbells
 set nofixendofline
 set nofoldenable
+set novisualbell
 set number
 set spelllang=en_gb
 set splitbelow
 set splitright
 set sw=2
 set ts=2
+set t_vb=
 
 silent! colorscheme onedark
 
