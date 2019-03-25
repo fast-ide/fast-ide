@@ -9,7 +9,7 @@ call plug#begin('~/.nvim/plugged')
   Plug 'bronson/vim-trailing-whitespace'
   Plug 'airblade/vim-rooter'
   Plug 'MattesGroeger/vim-bookmarks'
-  Plug 'maxbrunsfeld/vim-yankstack'
+  Plug 'bfredl/nvim-miniyank'
 
   Plug 'AndrewRadev/splitjoin.vim'
   Plug 'Chiel92/vim-autoformat'
@@ -478,3 +478,10 @@ cnoremap <C-K>		<C-U>
 
 cnoremap <C-P> <Up>
 cnoremap <C-N> <Down>
+
+map p <Plug>(miniyank-autoput)
+map P <Plug>(miniyank-autoPut)
+map <leader>p <Plug>(miniyank-startput)
+map <leader>P <Plug>(miniyank-startPut)
+map <leader>n <Plug>(miniyank-cycle)
+map <leader>N <Plug>(miniyank-cycleback)
