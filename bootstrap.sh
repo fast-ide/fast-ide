@@ -47,16 +47,17 @@ if [ ! -d "$HOME/.zsh/vimman" ]; then
 fi
 
 mkdir -p $HOME/.config/nvim
+mkdir -p $HOME/.config/vifm
 mkdir -p $HOME/.nvim/backup
 mkdir -p $HOME/.nvim/swap
 mkdir -p $HOME/.tmux
 
 cp configs/init.vim $HOME/.config/nvim/
 cp configs/snapshot.vim $HOME/.config/nvim/
-cp configs/theme.sh $HOME/
+cp configs/vifmrc $HOME/.config/vifm/
+cp configs/.ackignore $HOME/.config/
 cp configs/.tmux.conf $HOME/
 cp configs/.zshrc $HOME/
-cp configs/.ackignore $HOME/.config/
 
 git clone https://github.com/sonph/onehalf
 chmod +x onehalf/gnome-terminal/onehalfdark.sh
@@ -100,5 +101,8 @@ nvim +PlugInstall +UpdateRemotePlugins +qall!
 if [ ! -d "$HOME/.tmux/plugins/tpm" ]; then
   git clone https://github.com/tmux-plugins/tpm $HOME/.tmux/plugins/tpm
 fi
+
+rm -rf ~/.config/vifm/colors
+git clone https://github.com/vifm/vifm-colors ~/.config/vifm/colors
 
 zsh --rcs $HOME/.zshrc || true
