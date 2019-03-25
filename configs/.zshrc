@@ -54,6 +54,8 @@ fi
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-nvm use v8.12.0
 
+nvm use v8.12.0
 pyenv shell 3.5.3
+
+KEYTIMEOUT=1
