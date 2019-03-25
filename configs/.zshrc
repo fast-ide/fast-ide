@@ -49,7 +49,7 @@ alias pbpaste='xclip -selection clipboard -o'
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 if [ ! -f "$HOME/.tmux/line" ]; then
-  tmux new-session "vim -c ':Tmuxline iceberg' -c ':TmuxlineSnapshot $HOME/.tmux/line' -c ':qall'"
+  tmux new-session "nvim -c ':Tmuxline lightline' -c ':TmuxlineSnapshot $HOME/.tmux/line' -c ':qall'"
 fi
 
 export NVM_DIR="$HOME/.nvm"
