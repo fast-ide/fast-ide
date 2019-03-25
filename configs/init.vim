@@ -240,6 +240,8 @@ let g:pymode_options_colorcolumn = 0
 
 " view
 
+set formatoptions-=t
+
 let g:golden_ratio_exclude_nonmodifiable = 1
 let g:golden_ratio_autocommand = 0
 let g:golden_ratio_filetypes_blacklist = ["nerdtree", "unite"]
