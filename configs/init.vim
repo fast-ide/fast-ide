@@ -493,3 +493,7 @@ map <leader>p <Plug>(miniyank-startput)
 map <leader>P <Plug>(miniyank-startPut)
 map <leader>n <Plug>(miniyank-cycle)
 map <leader>N <Plug>(miniyank-cycleback)
+
+" TODO:
+" set complete-=i   " disable scanning included files
+" set complete-=t   " disable searching tags
