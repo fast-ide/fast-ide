@@ -53,9 +53,5 @@ if [ ! -f "$HOME/.tmux/line" ]; then
 fi
 
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
-
-# if [ -f "$HOME/theme.sh" ]; then
-#   $HOME/theme.sh
-#   rm -rf $HOME/theme.sh
-# fi
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+nvm use v8.12.0
