@@ -51,7 +51,7 @@ alias pbpaste='xclip -selection clipboard -o'
 if [ ! -f "$HOME/.tmux/line" ]; then
   tmux new-session "vim -c ':Tmuxline iceberg' -c ':TmuxlineSnapshot $HOME/.tmux/line' -c ':qall'"
 fi
-if [ -f "$HOME/theme.sh" ]; then
-  $HOME/theme.sh
-  rm -rf $HOME/theme.sh
-fi
+# if [ -f "$HOME/theme.sh" ]; then
+#   $HOME/theme.sh
+#   rm -rf $HOME/theme.sh
+# fi
