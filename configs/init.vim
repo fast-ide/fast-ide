@@ -55,7 +55,6 @@ call plug#begin('~/.nvim/plugged')
   Plug 'lambdalisue/vim-gista'
   Plug 'lambdalisue/vim-unified-diff'
   Plug 'lambdalisue/suda.vim'
-  Plug 'ludovicchabant/vim-gutentags'
   Plug 'lyuts/vim-rtags'
   Plug 'm42e/vim-gcov-marker'
   Plug 'machakann/vim-highlightedyank'
