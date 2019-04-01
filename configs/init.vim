@@ -12,7 +12,6 @@ call plug#begin('~/.nvim/plugged')
   Plug 'airblade/vim-rooter'
   Plug 'MattesGroeger/vim-bookmarks'
   Plug 'bfredl/nvim-miniyank'
-
   Plug 'AndrewRadev/splitjoin.vim'
   Plug 'Chiel92/vim-autoformat'
   Plug 'Raimondi/delimitMate'
@@ -92,7 +91,6 @@ call plug#begin('~/.nvim/plugged')
   Plug 'vim-scripts/DoxygenToolkit.vim'
   Plug 'vim-scripts/DrawIt'
   Plug 'vim-scripts/Wombat'
-  Plug 'vim-scripts/ZoomWin'
   Plug 'vim-vdebug/vdebug'
   Plug 'w0rp/ale'
   Plug 'wellle/tmux-complete.vim'
@@ -255,7 +253,6 @@ noremap <silent> <Leader>b :TagbarToggle<CR>
 nmap <Leader>l <Plug>(sidemenu)
 xmap <Leader>l <Plug>(sidemenu-visual)
 
-nmap <Leader>wo <C-W>o
 nnoremap <Leader>wH <C-W>H
 nnoremap <Leader>wJ <C-W>J
 nnoremap <Leader>wK <C-W>K
@@ -475,11 +472,14 @@ let g:quickhl_manual_colors = [
       \ "gui=bold ctermfg=16  ctermbg=7   guibg=#40a070 guifg=#ffffff",
       \ ]
 
-map <leader>tn :tabnew<cr>
-map <leader>to :tabonly<cr>
-map <leader>tc :tabclose<cr>
-map <leader>tm :tabmove
+map <leader>tc :tabnew<cr>
+map <leader>td :tabclose<cr>
 map <leader>te :tabedit <c-r>=expand("%:p:h")<cr>/
+map <leader>tm :tabmove<space>
+map <leader>tn gt
+map <leader>to :tabonly<cr>
+map <leader>tp gT
+map <leader>ts :tab split<cr>
 
 cnoremap <C-A>		<Home>
 cnoremap <C-E>		<End>
