@@ -3,6 +3,10 @@ source ~/.zsh/antigen.zsh
 CASE_SENSITIVE="true"
 ZSH_THEME=""
 
+setopt hist_ignore_all_dups
+setopt hist_save_nodups
+setopt hist_ignore_space
+
 antigen use oh-my-zsh
 antigen bundle git
 antigen bundle gitfast
