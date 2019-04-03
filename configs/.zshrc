@@ -11,6 +11,7 @@ antigen bundle pip
 antigen bundle debian
 antigen bundle command-not-found
 antigen bundle tmuxinator
+antigen bundle vi-mode
 
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zsh-users/zsh-history-substring-search
