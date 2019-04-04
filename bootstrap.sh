@@ -64,6 +64,8 @@ chmod +x onehalf/gnome-terminal/onehalfdark.sh
 ./onehalf/gnome-terminal/onehalfdark.sh
 rm -rf onehalf
 
+# bash -c "$(curl -fsSL https://raw.githubusercontent.com/denysdovhan/gnome-terminal-one/master/one-dark.sh)"
+
 cat >> $HOME/.zshrc <<EOF
 
 export PATH="\$HOME/.pyenv/bin:\$PATH"
