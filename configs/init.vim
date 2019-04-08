@@ -9,7 +9,7 @@ call plug#begin('~/.nvim/plugged')
   Plug 'christoomey/vim-tmux-navigator'
   Plug 'pedrohdz/vim-yaml-folds'
   Plug 't9md/vim-quickhl'
-  Plug 'bronson/vim-trailing-whitespace'
+  Plug 'ntpeters/vim-better-whitespace'
   Plug 'airblade/vim-rooter'
   Plug 'MattesGroeger/vim-bookmarks'
   Plug 'bfredl/nvim-miniyank'
