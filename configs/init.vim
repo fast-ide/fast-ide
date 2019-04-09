@@ -128,6 +128,8 @@ set timeoutlen=1000
 set ttimeoutlen=0
 set ts=2
 set t_vb=
+set undofile
+set undodir=~/.nvim/undodir
 
 silent! colorscheme onedark
 
