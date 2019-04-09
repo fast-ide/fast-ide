@@ -6,6 +6,7 @@ call plug#begin('~/.nvim/plugged')
   " Plug 'python-mode/python-mode', { 'branch': 'develop' }
   " Plug 'prettier/vim-prettier'
 
+  Plug 'chrisbra/NrrwRgn'
   Plug 'christoomey/vim-tmux-navigator'
   Plug 'pedrohdz/vim-yaml-folds'
   Plug 't9md/vim-quickhl'
