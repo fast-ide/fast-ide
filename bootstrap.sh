@@ -98,8 +98,7 @@ EOF
 systemctl --user enable rdm.socket
 systemctl --user start rdm.socket
 
-nvim +PlugInstall +UpdateRemotePlugins +qall!
-#nvim -S $HOME/.config/nvim/snapshot.vim
+nvim +PlugInstall +UpdateRemotePlugins +qall! # nvim -S $HOME/.config/nvim/snapshot.vim
 
 if [ ! -d "$HOME/.tmux/plugins/tpm" ]; then
   git clone https://github.com/tmux-plugins/tpm $HOME/.tmux/plugins/tpm
@@ -109,3 +108,4 @@ rm -rf ~/.config/vifm/colors
 git clone https://github.com/vifm/vifm-colors ~/.config/vifm/colors
 
 zsh --rcs $HOME/.zshrc || true
+tmux source-file ~/.tmux.conf
