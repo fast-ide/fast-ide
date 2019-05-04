@@ -178,6 +178,9 @@ nnoremap <silent> <Leader>hl :nohlsearch<CR>
 
 noremap L $
 
+inoremap <C-E> <C-X><C-E>
+inoremap <C-Y> <C-X><C-Y>
+
 let g:deoplete#enable_at_startup = 1
 let g:rtagsUseLocationList = 0
 let g:CtrlSpaceDefaultMappingKey = "<C-space> "
