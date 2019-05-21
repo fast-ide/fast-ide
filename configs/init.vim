@@ -502,6 +502,15 @@ map <leader>P <Plug>(miniyank-startPut)
 map <leader>n <Plug>(miniyank-cycle)
 map <leader>N <Plug>(miniyank-cycleback)
 
+let g:bookmark_no_default_key_mappings = 1
+nmap <Leader>b <Plug>BookmarkToggle
+nmap <Leader>bi <Plug>BookmarkAnnotate
+nmap <Leader>ba <Plug>BookmarkShowAll
+nmap <Leader>bn <Plug>BookmarkNext
+nmap <Leader>bp <Plug>BookmarkPrev
+nmap <Leader>bc <Plug>BookmarkClear
+nmap <Leader>bx <Plug>BookmarkClearAll
+
 " TODO:
 " set complete-=i   " disable scanning included files
 " set complete-=t   " disable searching tags
