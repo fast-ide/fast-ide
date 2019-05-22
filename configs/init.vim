@@ -1,6 +1,6 @@
 call plug#begin('~/.nvim/plugged')
 
-  " Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+  Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
   " Plug 'octol/vim-cpp-enhanced-highlight'
   " Plug 'previm/previm'
   " Plug 'python-mode/python-mode', { 'branch': 'develop' }
@@ -514,3 +514,29 @@ nmap <Leader>bx <Plug>BookmarkClearAll
 " TODO:
 " set complete-=i   " disable scanning included files
 " set complete-=t   " disable searching tags
+
+let g:go_debug_windows = {
+      \ 'vars':  'rightbelow 80vnew',
+      \ 'out':   'botright 20new',
+\ }
+
+autocmd FileType go nmap <leader>b  <Plug>(go-build)
+autocmd FileType go nmap <leader>r  <Plug>(go-run)
+autocmd FileType go nmap <leader>t  <Plug>(go-test)
+autocmd FileType go nmap <Leader>v <Plug>(go-coverage-toggle)
+autocmd FileType go nmap <Leader>i <Plug>(go-info)
+
+autocmd FileType go nmap <Leader>dn <Plug>(go-debug-next)
+autocmd FileType go nmap <Leader>ds <Plug>(go-debug-step)
+autocmd FileType go nmap <Leader>dc <Plug>(go-debug-continue)
+autocmd FileType go nmap <Leader>do <Plug>(go-debug-stepout)
+autocmd FileType go nmap <Leader>dd <Plug>(go-debug-stop)
+
+autocmd FileType go nmap <Leader>db <Plug>GoDebugBreackpoint<CR>
+autocmd FileType go nmap <Leader>dr <Plug>GoDebugStart<CR>
+
+autocmd BufNewFile,BufRead *.go setlocal noexpandtab tabstop=4 shiftwidth=4
+autocmd FileType go hi! GoDebugCurrent ctermfg=16 ctermbg=12 guifg=Black guibg=DarkBlue
+
+let g:go_list_type = "quickfix"
+let g:go_fmt_command = "goimports"
