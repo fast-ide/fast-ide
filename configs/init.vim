@@ -107,6 +107,7 @@ runtime! ftplugin/man.vim
 set background=dark
 set backupdir=$HOME/.nvim/backup/
 set directory=$HOME/.nvim/swap/
+set viewdir=$HOME/.nvim/view/
 set encoding=utf-8
 set expandtab
 set foldmethod=syntax
