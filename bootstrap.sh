@@ -51,6 +51,7 @@ mkdir -p $HOME/.config/vifm
 mkdir -p $HOME/.nvim/backup
 mkdir -p $HOME/.nvim/swap
 mkdir -p $HOME/.nvim/undodir
+mkdir -p $HOME/.nvim/view/
 mkdir -p $HOME/.tmux
 
 cp configs/init.vim $HOME/.config/nvim/
