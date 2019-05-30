@@ -107,7 +107,9 @@ runtime! ftplugin/man.vim
 set background=dark
 set backupdir=$HOME/.nvim/backup/
 set directory=$HOME/.nvim/swap/
+set undodir=$HOME/.nvim/undodir
 set viewdir=$HOME/.nvim/view/
+
 set encoding=utf-8
 set expandtab
 set foldmethod=syntax
@@ -131,7 +133,6 @@ set ttimeoutlen=0
 set ts=2
 set t_vb=
 set undofile
-set undodir=~/.nvim/undodir
 
 silent! colorscheme onedark
 
