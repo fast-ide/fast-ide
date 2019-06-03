@@ -90,7 +90,6 @@ call plug#begin('~/.nvim/plugged')
   Plug 'vim-airline/vim-airline'
   Plug 'vim-airline/vim-airline-themes'
   Plug 'vim-scripts/DoxygenToolkit.vim'
-  Plug 'vim-scripts/Wombat'
   Plug 'vim-vdebug/vdebug'
   Plug 'w0rp/ale'
   Plug 'wellle/tmux-complete.vim'
