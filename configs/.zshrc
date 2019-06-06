@@ -39,6 +39,9 @@ antigen apply
 
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
+bindkey '^ ' autosuggest-accept
+bindkey "^I" menu-expand-or-complete
+
 HISTORY_SUBSTRING_SEARCH_ENSURE_UNIQUE=1
 
 export EDITOR=nvim
