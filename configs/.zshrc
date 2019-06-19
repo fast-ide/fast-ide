@@ -18,6 +18,7 @@ antigen bundle tmuxinator
 antigen bundle vi-mode
 
 antigen bundle zdharma/fast-syntax-highlighting
+antigen bundle hschne/fzf-git
 antigen bundle zsh-users/zsh-history-substring-search
 antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle zsh-users/zsh-completions
