@@ -17,7 +17,7 @@ antigen bundle command-not-found
 antigen bundle tmuxinator
 antigen bundle vi-mode
 
-antigen bundle zsh-users/zsh-syntax-highlighting
+antigen bundle zdharma/fast-syntax-highlighting
 antigen bundle zsh-users/zsh-history-substring-search
 antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle zsh-users/zsh-completions
