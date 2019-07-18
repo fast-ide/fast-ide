@@ -74,3 +74,16 @@ nvm use v8.12.0
 pyenv shell 3.5.3
 
 KEYTIMEOUT=1
+
+magic-enter () {
+    if [[ -z $BUFFER ]]
+    then
+        zle clear-screen
+    else
+        zle accept-line
+    fi
+}
+zle -N magic-enter
+
+bindkey "^M" magic-enter
+
