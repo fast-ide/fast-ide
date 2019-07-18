@@ -86,4 +86,3 @@ magic-enter () {
 zle -N magic-enter
 
 bindkey "^M" magic-enter
-
