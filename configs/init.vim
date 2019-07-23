@@ -305,11 +305,11 @@ let g:lightline = {
 \   'asyncrun_status': 'lightline#asyncrun#status'
 \ },
 \ 'active': {
-\   'left': [ [ 'mode', 'paste' ],
-\             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ],
+\   'left': [ ['mode', 'paste'],
+\             ['readonly', 'filename', 'modified'] ],
 \   'right': [
 \     ['percent', 'lineinfo'],
-\     ['fileformat', 'fileencoding', 'filetype'],
+\     ['fileencoding'],
 \     ['asyncrun_status']
 \   ],
 \ },
