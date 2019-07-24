@@ -209,9 +209,9 @@ noremap <Leader>ov :e $MYVIMRC<CR>
 
 noremap <silent> <Leader><Tab> :NERDTreeToggle<CR>
 
-nmap <Leader>w <Plug>(easymotion-overwin-w)
-omap <Leader>w <Plug>(easymotion-bd-w)
-xmap <Leader>w <Plug>(easymotion-bd-w)
+nmap <Leader>g <Plug>(easymotion-overwin-w)
+omap <Leader>g <Plug>(easymotion-bd-w)
+xmap <Leader>g <Plug>(easymotion-bd-w)
 map  <Leader>f <Plug>(easymotion-bd-f)
 nmap <Leader>f <Plug>(easymotion-overwin-f)
 
@@ -261,6 +261,10 @@ noremap <silent> <leader>gt :GoldenRatioToggle<CR>
 noremap <silent> <Leader>b :TagbarToggle<CR>
 nmap <Leader>l <Plug>(sidemenu)
 xmap <Leader>l <Plug>(sidemenu-visual)
+
+nnoremap <Leader>wo :only<cr>
+nnoremap <Leader>wv :vsp %<cr>
+nnoremap <Leader>ws :sp %<cr>
 
 nnoremap <Leader>wH <C-W>H
 nnoremap <Leader>wJ <C-W>J
