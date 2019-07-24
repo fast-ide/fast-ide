@@ -71,7 +71,7 @@ eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
 nvm use v8.12.0
-pyenv shell 3.5.3
+pyenv shell 3.6.5
 
 KEYTIMEOUT=1
 
