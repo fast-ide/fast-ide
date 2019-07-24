@@ -27,8 +27,8 @@ export PATH="$HOME/.pyenv/bin:$PATH"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
-PYTHON_CONFIGURE_OPTS='--enable-shared' pyenv install --skip-existing 3.5.3
-pyenv shell 3.5.3
+PYTHON_CONFIGURE_OPTS='--enable-shared' pyenv install --skip-existing 3.6.5
+pyenv shell 3.6.5
 
 pip3 install cpplint git-plus
 pip3 install komodo-python3-dbgp pynvim pygments
