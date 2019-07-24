@@ -494,6 +494,8 @@ let g:quickhl_manual_colors = [
       \ "gui=bold ctermfg=16  ctermbg=7   guibg=#40a070 guifg=#ffffff",
       \ ]
 
+autocmd FileType go hi! GoDebugCurrent ctermfg=16 ctermbg=12 guifg=Black guibg=DarkBlue
+
 map <leader>tc :tabnew<cr>
 map <leader>td :tabclose<cr>
 map <leader>te :tabedit <c-r>=expand("%:p:h")<cr>/
