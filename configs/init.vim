@@ -5,8 +5,8 @@ call plug#begin('~/.nvim/plugged')
   " Plug 'previm/previm'
   " Plug 'python-mode/python-mode', { 'branch': 'develop' }
   " Plug 'prettier/vim-prettier'
-  
-  Plug 'takac/vim-hardtime'  
+
+  Plug 'takac/vim-hardtime'
 
   Plug 'kana/vim-textobj-user' |
   Plug 'kana/vim-textobj-entire' |
