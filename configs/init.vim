@@ -285,6 +285,7 @@ nnoremap <Leader>wj <C-W><C-J>
 nnoremap <Leader>wk <C-W><C-K>
 nnoremap <Leader>wl <C-W><C-L>
 nnoremap <Leader>wr <C-W>R
+nnoremap <leader>we :vert new <c-r>=expand("%:p:h")<cr>/
 
 nmap <C-Down> <C-W>-<C-W>-
 nmap <C-Left> <C-W><<C-W><
