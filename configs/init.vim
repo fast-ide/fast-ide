@@ -5,6 +5,7 @@ call plug#begin('~/.nvim/plugged')
   " Plug 'previm/previm'
   " Plug 'python-mode/python-mode', { 'branch': 'develop' }
   " Plug 'prettier/vim-prettier'
+  " Plug 'vim-vdebug/vdebug' " slow pluggin
 
   Plug 'takac/vim-hardtime'
 
@@ -102,7 +103,6 @@ call plug#begin('~/.nvim/plugged')
   Plug 'vim-airline/vim-airline'
   Plug 'vim-airline/vim-airline-themes'
   Plug 'vim-scripts/DoxygenToolkit.vim'
-  Plug 'vim-vdebug/vdebug'
   Plug 'w0rp/ale'
   Plug 'wellle/tmux-complete.vim'
   Plug 'wesQ3/vim-windowswap'
