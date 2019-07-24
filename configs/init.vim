@@ -553,3 +553,7 @@ let g:startify_lists = [
       \ { 'header': ['   Sessions'],       'type': 'sessions' },
       \ { 'header': ['   Commits'],        'type': function('s:list_commits') },
       \ ]
+
+" nmap <leader>tt <Plug>Titlecase
+" vmap <leader>tt <Plug>Titlecase
+" nmap <leader>tT <Plug>TitlecaseLine
