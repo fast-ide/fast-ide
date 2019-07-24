@@ -94,7 +94,7 @@ call plug#begin('~/.nvim/plugged')
   Plug 'tmux-plugins/vim-tmux-focus-events'
   Plug 'tommcdo/vim-exchange'
   Plug 'tpope/vim-dadbod'
-  Plug 'tpope/vim-dispatch'
+  Plug 'tpope/vim-dispatch' | Plug 'radenling/vim-dispatch-neovim'
   Plug 'tpope/vim-fugitive' | Plug 'christoomey/vim-conflicted'
   Plug 'tpope/vim-sensible'
   Plug 'tpope/vim-speeddating'
