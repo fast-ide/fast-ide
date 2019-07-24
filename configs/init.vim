@@ -5,6 +5,15 @@ call plug#begin('~/.nvim/plugged')
   " Plug 'previm/previm'
   " Plug 'python-mode/python-mode', { 'branch': 'develop' }
   " Plug 'prettier/vim-prettier'
+  
+  Plug 'takac/vim-hardtime'  
+
+  Plug 'kana/vim-textobj-user' |
+  Plug 'kana/vim-textobj-entire' |
+  Plug 'kana/vim-textobj-line' |
+  Plug 'rhysd/vim-textobj-anyblock' |
+  Plug 'sgur/vim-textobj-parameter' |
+  Plug 'coderifous/textobj-word-column.vim'
 
   Plug 'christoomey/vim-titlecase'
   Plug 'jeffkreeftmeijer/vim-numbertoggle'
@@ -520,3 +529,7 @@ nmap <Leader>bx <Plug>BookmarkClearAll
 " TODO:
 " set complete-=i   " disable scanning included files
 " set complete-=t   " disable searching tags
+
+let g:hardtime_default_on = 1
+let g:hardtime_ignore_quickfix = 1
+let g:hardtime_maxcount = 2
