@@ -142,6 +142,7 @@ set ttimeoutlen=0
 set ts=2
 set t_vb=
 set undofile
+set viewoptions=folds
 
 silent! colorscheme onedark
 
@@ -536,3 +537,19 @@ nmap <Leader>bx <Plug>BookmarkClearAll
 let g:hardtime_default_on = 1
 let g:hardtime_ignore_quickfix = 1
 let g:hardtime_maxcount = 2
+
+let g:rooter_manual_only = 1
+
+let g:go_list_type = "quickfix"
+let g:go_fmt_command = "goimports"
+
+let g:go_highlight_functions = 1
+let g:go_highlight_function_calls = 1
+let g:go_highlight_function_parameters = 1
+
+let g:startify_lists = [
+      \ { 'header': ['   MRU'],            'type': 'files' },
+      \ { 'header': ['   MRU '. getcwd()], 'type': 'dir' },
+      \ { 'header': ['   Sessions'],       'type': 'sessions' },
+      \ { 'header': ['   Commits'],        'type': function('s:list_commits') },
+      \ ]
