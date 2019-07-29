@@ -30,7 +30,6 @@ antigen bundle djui/alias-tips
 antigen bundle adolfoabegg/browse-commit
 antigen bundle joel-porquet/zsh-dircolors-solarized
 antigen bundle unixorn/git-extra-commands
-antigen bundle supercrabtree/k
 antigen bundle cal2195/q
 antigen bundle robertzk/send.zsh
 antigen bundle gko/ssh-connect
