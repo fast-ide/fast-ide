@@ -51,6 +51,7 @@ export PAGER=vimpager
 alias o=nvim
 alias c=vimcat
 alias gs='git status'
+alias cdr='cd `git root`'
 alias p=echo
 alias r=clear
 alias pbcopy='xclip -selection clipboard'
