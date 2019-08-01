@@ -132,6 +132,7 @@ set noerrorbells
 set nofixendofline
 set nofoldenable
 set novisualbell
+set nowrap
 set number
 set spelllang=en_gb
 set splitbelow
