@@ -29,7 +29,7 @@ call plug#begin('~/.nvim/plugged')
   Plug 'bfredl/nvim-miniyank'
   Plug 'AndrewRadev/splitjoin.vim'
   Plug 'Chiel92/vim-autoformat'
-  Plug 'Raimondi/delimitMate'
+  Plug 'jiangmiao/auto-pairs'
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
   Plug 'Shougo/neosnippet-snippets'
   Plug 'Shougo/neosnippet.vim'
