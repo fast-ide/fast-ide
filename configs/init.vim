@@ -146,6 +146,7 @@ set ts=2
 set t_vb=
 set undofile
 set viewoptions=folds
+set wildmode=longest:full
 
 silent! colorscheme onedark
 
