@@ -557,6 +557,7 @@ let g:startify_lists = [
       \ { 'header': ['   Commits'],        'type': function('s:list_commits') },
       \ ]
 
-" nmap <leader>tt <Plug>Titlecase
-" vmap <leader>tt <Plug>Titlecase
-" nmap <leader>tT <Plug>TitlecaseLine
+let g:better_whitespace_guicolor='gray'
+let g:better_whitespace_ctermcolor='gray'
+let g:better_whitespace_enabled=1
+let g:strip_whitespace_on_save=0
