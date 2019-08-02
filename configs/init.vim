@@ -191,6 +191,7 @@ nnoremap <silent> <Leader><space> :nohlsearch<CR>
 " navigation
 
 noremap L $
+noremap H ^
 
 inoremap <C-E> <C-X><C-E>
 inoremap <C-Y> <C-X><C-Y>
