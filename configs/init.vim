@@ -125,6 +125,7 @@ set foldmethod=syntax
 set gdefault
 set hidden
 set iskeyword-=/
+set ignorecase
 set lazyredraw
 set nocompatible
 set noendofline
