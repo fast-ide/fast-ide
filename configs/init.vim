@@ -570,3 +570,9 @@ nnoremap k gk
 
 nnoremap / /\v
 vnoremap / /\v
+
+let test#strategy = {
+  \ 'nearest': 'neovim',
+  \ 'file':    'dispatch',
+  \ 'suite':   'basic',
+\}
