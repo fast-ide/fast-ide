@@ -565,3 +565,6 @@ let g:strip_whitespace_on_save=0
 inoremap jk <esc>
 nnoremap j gj
 nnoremap k gk
+
+nnoremap / /\v
+vnoremap / /\v
