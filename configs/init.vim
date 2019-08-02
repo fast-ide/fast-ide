@@ -186,7 +186,7 @@ map / <Plug>(incsearch-forward)
 map ? <Plug>(incsearch-backward)
 map g/ <Plug>(incsearch-stay)
 
-nnoremap <silent> <Leader>hl :nohlsearch<CR>
+nnoremap <silent> <Leader><space> :nohlsearch<CR>
 
 " navigation
 
