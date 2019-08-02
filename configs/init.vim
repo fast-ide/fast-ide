@@ -8,6 +8,7 @@ call plug#begin('~/.nvim/plugged')
   " Plug 'vim-vdebug/vdebug' " slow pluggin
 
   Plug 'takac/vim-hardtime'
+  Plug 'janko/vim-test'
 
   Plug 'kana/vim-textobj-user' |
   Plug 'kana/vim-textobj-entire' |
