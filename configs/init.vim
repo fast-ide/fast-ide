@@ -7,6 +7,7 @@ call plug#begin('~/.nvim/plugged')
   " Plug 'prettier/vim-prettier'
   " Plug 'vim-vdebug/vdebug' " slow pluggin
 
+  Plug 'neoclide/coc.nvim', {'branch': 'release'}
   Plug 'takac/vim-hardtime'
   Plug 'janko/vim-test'
 
@@ -577,3 +578,5 @@ let test#strategy = {
   \ 'file':    'dispatch',
   \ 'suite':   'basic',
 \}
+
+source $HOME/.config/nvim/config/lsp.vimrc
