@@ -48,7 +48,7 @@ if [ ! -d "$HOME/.zsh/vimman" ]; then
   git clone https://github.com/yonchu/vimman.git $HOME/.zsh/vimman
 fi
 
-mkdir -p $HOME/.config/nvim
+mkdir -p $HOME/.config/nvim/config
 mkdir -p $HOME/.config/vifm
 mkdir -p $HOME/.nvim/backup
 mkdir -p $HOME/.nvim/swap
@@ -57,6 +57,7 @@ mkdir -p $HOME/.nvim/view/
 mkdir -p $HOME/.tmux
 
 cp configs/init.vim $HOME/.config/nvim/
+cp configs/lsp.vimrc $HOME/.config/nvim/config
 cp configs/snapshot.vim $HOME/.config/nvim/
 cp configs/vifmrc $HOME/.config/vifm/
 cp configs/.ackignore $HOME/.config/
