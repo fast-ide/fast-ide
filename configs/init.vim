@@ -80,7 +80,7 @@ call plug#begin('~/.nvim/plugged')
   Plug 'mhinz/vim-startify'
   Plug 'mileszs/ack.vim'
   Plug 'nathanaelkane/vim-indent-guides'
-  Plug 'plasticboy/vim-markdown'
+  Plug 'godlygeek/tabular' | Plug 'plasticboy/vim-markdown'
   Plug 'rafi/vim-sidemenu'
   Plug 'romainl/vim-qf'
   Plug 'roman/golden-ratio'
