@@ -580,3 +580,6 @@ let test#strategy = {
 \}
 
 source $HOME/.config/nvim/config/lsp.vimrc
+
+" nnoremap <key>       *``cgn
+" nnoremap <other-key> #``cgN
