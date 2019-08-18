@@ -86,3 +86,7 @@ magic-enter () {
 zle -N magic-enter
 
 bindkey "^M" magic-enter
+
+export GOPATH=$HOME/go
+export GOPROXY="https://gocenter.io"
+export GO111MODULE=on
