@@ -165,6 +165,8 @@ nmap n nzz
 nmap N Nzz
 nmap * *Nzz
 nmap # #nzz
+nmap zj <C-D>zz
+nmap zk <C-U>zz
 
 noremap <Leader>fb :Buffers<CR>
 noremap <Leader>fc :Commits<CR>
