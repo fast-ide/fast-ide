@@ -122,7 +122,8 @@ set viewdir=$HOME/.nvim/view/
 
 set encoding=utf-8
 set expandtab
-set foldmethod=syntax
+set foldenable
+set foldmethod=indent
 set gdefault
 set hidden
 set iskeyword-=/
@@ -223,7 +224,8 @@ noremap <Leader>qn :cnext<CR>
 noremap <Leader>qo :copen<CR>
 noremap <Leader>qp :cprev<CR>
 
-noremap <Leader>ov :e $MYVIMRC<CR>
+noremap <Leader>ve :edit $MYVIMRC<CR>
+noremap <Leader>vs :source $MYVIMRC<CR>
 
 noremap <silent> <Leader><Tab> :NERDTreeToggle<CR>
 
