@@ -286,6 +286,7 @@ nnoremap <Leader>wo :only<cr>
 nnoremap <Leader>wv :vsp %<cr>
 nnoremap <Leader>ws :sp %<cr>
 
+nnoremap <Leader>wt <C-W>T
 nnoremap <Leader>wH <C-W>H
 nnoremap <Leader>wJ <C-W>J
 nnoremap <Leader>wK <C-W>K
