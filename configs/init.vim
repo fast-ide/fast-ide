@@ -122,7 +122,6 @@ set viewdir=$HOME/.nvim/view/
 
 set encoding=utf-8
 set expandtab
-set foldenable
 set foldmethod=indent
 set gdefault
 set hidden
