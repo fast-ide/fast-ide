@@ -89,6 +89,7 @@ call plug#begin('~/.nvim/plugged')
   Plug 'scrooloose/nerdtree'
   Plug 'sjl/gundo.vim'
   Plug 'skywind3000/asyncrun.vim'
+  Plug 'skywind3000/vim-preview'
   Plug 'terryma/vim-expand-region'
   Plug 'terryma/vim-multiple-cursors'
   Plug 'tmux-plugins/vim-tmux'
@@ -158,7 +159,7 @@ let g:qf_mapping_ack_style = 1
 let g:qf_nowrap = 0
 let g:ack_default_options = " -s -H --nocolor --nogroup --column --smart-case --follow -p $HOME/.ackignore"
 let g:ackprg = "ag --vimgrep"
-noremap <Leader>a :Ag <C-R><C-W><CR>
+nnoremap " :Ag <C-R><C-W><CR>
 nnoremap \ :Ag<SPACE>
 
 nmap n nzz
@@ -302,6 +303,16 @@ nmap <C-Down> <C-W>-<C-W>-
 nmap <C-Left> <C-W><<C-W><
 nmap <C-Right> <C-W>><C-W>>
 nmap <C-Up> <C-W>+<C-W>+
+
+nnoremap ; :PreviewTag<CR>
+nnoremap <Leader>pd :PreviewClose<CR>
+nnoremap <Leader>pt :PreviewGoto tabe<CR>
+nnoremap <Leader>ps :PreviewGoto split<CR>
+nnoremap <Leader>pv :PreviewGoto vsplit<CR>
+noremap <m-u> :PreviewScroll -1<cr>
+noremap <m-d> :PreviewScroll +1<cr>
+autocmd FileType qf nnoremap <silent><buffer> p :PreviewQuickfix<cr>
+autocmd FileType qf nnoremap <silent><buffer> P :PreviewClose<cr>
 
 let g:onedark_terminal_italics = 1
 
