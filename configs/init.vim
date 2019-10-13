@@ -156,9 +156,8 @@ let mapleader = "\<Space>"
 " search
 
 let g:qf_mapping_ack_style = 1
-let g:qf_nowrap = 0
-let g:ack_default_options = " -s -H --nocolor --nogroup --column --smart-case --follow -p $HOME/.ackignore"
-let g:ackprg = "ag --vimgrep"
+let g:qf_nowrap = 1
+let g:ackprg = "ag --vimgrep -s -H --nocolor --nogroup --column --smart-case --follow -p $HOME/.ackignore"
 nnoremap " :Ag <C-R><C-W><CR>
 nnoremap \ :Ag<SPACE>
 
