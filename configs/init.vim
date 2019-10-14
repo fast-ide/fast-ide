@@ -203,7 +203,7 @@ set lazyredraw
 set listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<,space:␣
 set nocompatible
 set noendofline
-set noerrorbellr
+set noerrorbells
 set nofixendofline
 set nofoldenable
 set novisualbell
