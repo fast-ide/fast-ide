@@ -1,100 +1,186 @@
 call plug#begin('~/.nvim/plugged')
 
-  " Plug 'takac/vim-hardtime'
-  " Plug 'vim-vdebug/vdebug' " slow pluggin
+" ----------------------------------------------------------------------------
+" Text edit plugins
+" ----------------------------------------------------------------------------
 
+  Plug 'AndrewRadev/splitjoin.vim'
+  Plug 'tpope/vim-surround'
+  Plug 'bkad/CamelCaseMotion'
+  Plug 'jeffkreeftmeijer/vim-numbertoggle'
+  Plug 'terryma/vim-expand-region'
+  Plug 'terryma/vim-multiple-cursors'
+  Plug 'tommcdo/vim-exchange'
+  Plug 'matze/vim-move'
+  Plug 'tpope/vim-speeddating'
+  Plug 'godlygeek/tabular'
+  Plug 'svermeulen/vim-cutlass'
+
+" ----------------------------------------------------------------------------
+" Marks plugins
+" ----------------------------------------------------------------------------
+
+  Plug 'MattesGroeger/vim-bookmarks'
+  Plug 'kshenoy/vim-signature'
+
+" ----------------------------------------------------------------------------
+" Autocomplete plugins
+" ----------------------------------------------------------------------------
+
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' } |
+  Plug 'rzaluska/deoplete-rtags'
+  Plug 'jiangmiao/auto-pairs'
+
+" ----------------------------------------------------------------------------
+" Snippets plugins
+" ----------------------------------------------------------------------------
+
+  Plug 'Shougo/neosnippet.vim'
+  Plug 'Shougo/neosnippet-snippets'
+  Plug 'honza/vim-snippets'
+
+" ----------------------------------------------------------------------------
+" Version plugins
+" ----------------------------------------------------------------------------
+
+  Plug 'scrooloose/nerdtree' |
+  Plug 'scrooloose/nerdcommenter' |
+  Plug 'Xuyuanp/nerdtree-git-plugin'
+
+  Plug 'airblade/vim-gitgutter' |
+  Plug 'tpope/vim-fugitive' |
+  Plug 'gregsexton/gitv' |
+  Plug 'lambdalisue/vim-unified-diff' |
+  Plug 'christoomey/vim-conflicted'
+  Plug 'will133/vim-dirdiff'
+
+  Plug 'sjl/gundo.vim'
+
+" ----------------------------------------------------------------------------
+" Tmux plugins
+" ----------------------------------------------------------------------------
+
+  Plug 'christoomey/vim-tmux-navigator'
+  Plug 'edkolev/tmuxline.vim'
+  Plug 'tmux-plugins/vim-tmux' | Plug 'tmux-plugins/vim-tmux-focus-events'
+  Plug 'wellle/tmux-complete.vim'
+  Plug 'benmills/vimux'
+
+" ----------------------------------------------------------------------------
+" Search plugins
+" ----------------------------------------------------------------------------
+
+  Plug 'easymotion/vim-easymotion'
+  Plug 'mileszs/ack.vim'
+
+  Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' } |
+  Plug 'junegunn/fzf.vim'
+
+  Plug 'haya14busa/incsearch.vim'
+
+" ----------------------------------------------------------------------------
+" Autostart plugins
+" ----------------------------------------------------------------------------
+
+  Plug 'airblade/vim-rooter'
+  Plug 'mhinz/vim-startify'
+  Plug 'farmergreg/vim-lastplace'
+
+" ----------------------------------------------------------------------------
+" Highlight plugins
+" ----------------------------------------------------------------------------
+
+  Plug 'itchyny/vim-cursorword'
+  Plug 'machakann/vim-highlightedyank'
+  Plug 't9md/vim-quickhl'
+  Plug 'inside/vim-search-pulse'
+
+" ----------------------------------------------------------------------------
+" Terminal plugins
+" ----------------------------------------------------------------------------
+
+  Plug 'skywind3000/asyncrun.vim'
+  Plug 'tpope/vim-dispatch' | Plug 'radenling/vim-dispatch-neovim'
+  Plug 'lambdalisue/suda.vim'
+  Plug 'tpope/vim-eunuch'
+
+" ----------------------------------------------------------------------------
+" Workspace plugins
+" ----------------------------------------------------------------------------
+
+  Plug 'dhruvasagar/vim-zoom'
+  Plug 'wesQ3/vim-windowswap'
+  Plug 'roman/golden-ratio'
+  Plug 'chrisbra/NrrwRgn'
+
+" ----------------------------------------------------------------------------
+" View plugins
+" ----------------------------------------------------------------------------
+
+  Plug 'fidian/hexmode'
+  Plug 'hecal3/vim-leader-guide'
+  Plug 'junegunn/goyo.vim' | Plug 'amix/vim-zenroom2'
+  Plug 'junegunn/limelight.vim'
+  Plug 'nathanaelkane/vim-indent-guides'
+
+" ----------------------------------------------------------------------------
+" Tags plugins
+" ----------------------------------------------------------------------------
+
+  Plug 'lyuts/vim-rtags'
+  Plug 'majutsushi/tagbar'
+  Plug 'skywind3000/vim-preview'
+
+" ----------------------------------------------------------------------------
+"  plugins
+" ----------------------------------------------------------------------------
+
+  Plug 'romainl/vim-qf'
+
+" ----------------------------------------------------------------------------
+" External tools plugins
+" ----------------------------------------------------------------------------
+
+  Plug 'lambdalisue/vim-gista'
+  Plug 'tpope/vim-dadbod'
+
+" ----------------------------------------------------------------------------
+" Languse server protocol plugins
+" ----------------------------------------------------------------------------
+
+  Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+" ----------------------------------------------------------------------------
+" Theme plugins
+" ----------------------------------------------------------------------------
+
+  Plug 'altercation/vim-colors-solarized'
+  Plug 'joshdick/onedark.vim'
+  Plug 'itchyny/lightline.vim' |
+  Plug 'albertomontesg/lightline-asyncrun'
+
+" ----------------------------------------------------------------------------
+" Syntax plugins
+" ----------------------------------------------------------------------------
+
+  Plug 'Chiel92/vim-autoformat'
+  Plug 'w0rp/ale'
+  Plug 'plasticboy/vim-markdown'
+  Plug 'ntpeters/vim-better-whitespace'
+
+" ----------------------------------------------------------------------------
+" Language specific plugins
+" ----------------------------------------------------------------------------
+
+  Plug 'arakashic/chromatica.nvim'
+  Plug 'm42e/vim-gcov-marker'
+  Plug 'dpelle/vim-LanguageTool'
   Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+  Plug 'huawenyu/neogdb.vim'
   Plug 'octol/vim-cpp-enhanced-highlight'
   Plug 'python-mode/python-mode', { 'branch': 'develop' }
 
-  Plug 'AndrewRadev/splitjoin.vim'
-  Plug 'Chiel92/vim-autoformat'
-  Plug 'MattesGroeger/vim-bookmarks'
-  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' } |
-  Plug 'rzaluska/deoplete-rtags'
-  Plug 'Shougo/neosnippet-snippets'
-  Plug 'Shougo/neosnippet.vim'
-  Plug 'Xuyuanp/nerdtree-git-plugin'
-  Plug 'airblade/vim-gitgutter'
-  Plug 'airblade/vim-rooter'
-  Plug 'albertomontesg/lightline-asyncrun'
-  Plug 'altercation/vim-colors-solarized'
-  Plug 'amix/vim-zenroom2'
-  Plug 'arakashic/chromatica.nvim'
-  Plug 'benmills/vimux'
-  Plug 'bkad/CamelCaseMotion'
-  Plug 'chrisbra/NrrwRgn'
-  Plug 'christoomey/vim-tmux-navigator'
-  Plug 'dhruvasagar/vim-zoom'
-  Plug 'dpelle/vim-LanguageTool'
-  Plug 'easymotion/vim-easymotion'
-  Plug 'edkolev/tmuxline.vim'
-  Plug 'farmergreg/vim-lastplace'
-  Plug 'fidian/hexmode'
-  Plug 'freitass/todo.txt-vim'
-  Plug 'godlygeek/tabular' | Plug 'plasticboy/vim-markdown'
-  Plug 'gregsexton/gitv'
-  Plug 'haya14busa/incsearch.vim'
-  Plug 'hecal3/vim-leader-guide'
-  Plug 'honza/vim-snippets'
-  Plug 'huawenyu/neogdb.vim'
-  Plug 'inside/vim-search-pulse'
-  Plug 'itchyny/calendar.vim'
-  Plug 'itchyny/lightline.vim'
-  Plug 'itchyny/vim-cursorword'
-  Plug 'jeffkreeftmeijer/vim-numbertoggle'
-  Plug 'jiangmiao/auto-pairs'
-  Plug 'joshdick/onedark.vim'
-  Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' } |
-  Plug 'junegunn/fzf.vim'
-  Plug 'junegunn/goyo.vim'
-  Plug 'junegunn/limelight.vim'
-  Plug 'junegunn/vader.vim'
-  Plug 'kshenoy/vim-signature'
-  Plug 'lambdalisue/suda.vim'
-  Plug 'lambdalisue/vim-gista'
-  Plug 'lambdalisue/vim-unified-diff'
-  Plug 'lyuts/vim-rtags'
-  Plug 'm42e/vim-gcov-marker'
-  Plug 'machakann/vim-highlightedyank'
-  Plug 'majutsushi/tagbar'
-  Plug 'matze/vim-move'
-  Plug 'mh21/errormarker.vim'
-  Plug 'mhinz/vim-startify'
-  Plug 'mileszs/ack.vim'
-  Plug 'nathanaelkane/vim-indent-guides'
-  Plug 'neoclide/coc.nvim', {'branch': 'release'}
-  Plug 'ntpeters/vim-better-whitespace'
-  Plug 'pedrohdz/vim-yaml-folds'
-  Plug 'rafi/vim-sidemenu'
-  Plug 'romainl/vim-qf'
-  Plug 'roman/golden-ratio'
-  Plug 'rykka/riv.vim'
-  Plug 'scrooloose/nerdcommenter'
-  Plug 'scrooloose/nerdtree'
-  Plug 'sjl/gundo.vim'
-  Plug 'skywind3000/asyncrun.vim'
-  Plug 'skywind3000/vim-preview'
-  Plug 't9md/vim-quickhl'
-  Plug 'terryma/vim-expand-region'
-  Plug 'terryma/vim-multiple-cursors'
-  Plug 'tmux-plugins/vim-tmux'
-  Plug 'tmux-plugins/vim-tmux-focus-events'
-  Plug 'tommcdo/vim-exchange'
-  Plug 'tpope/vim-dadbod'
-  Plug 'tpope/vim-dispatch' | Plug 'radenling/vim-dispatch-neovim'
-  Plug 'tpope/vim-eunuch'
-  Plug 'tpope/vim-fugitive' | Plug 'christoomey/vim-conflicted'
-  Plug 'tpope/vim-sensible'
-  Plug 'tpope/vim-speeddating'
-  Plug 'tpope/vim-surround'
-  Plug 'vifm/vifm.vim'
-  Plug 'vim-airline/vim-airline'
-  Plug 'vim-airline/vim-airline-themes'
-  Plug 'w0rp/ale'
-  Plug 'wellle/tmux-complete.vim'
-  Plug 'wesQ3/vim-windowswap'
-  Plug 'will133/vim-dirdiff'
+  " Plug 'vim-vdebug/vdebug' " slow pluggin
 
 call plug#end()
 
@@ -117,7 +203,7 @@ set lazyredraw
 set listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<,space:␣
 set nocompatible
 set noendofline
-set noerrorbells
+set noerrorbellr
 set nofixendofline
 set nofoldenable
 set novisualbell
@@ -194,7 +280,7 @@ nnoremap <Leader>P "+P
 vnoremap <Leader>p "+p
 vnoremap <Leader>P "+P
 
-nnoremap <Leader><space> :nohlsearch<CR>
+nnoremap <Leader>hl :nohlsearch<CR>
 nnoremap <Leader>ss :set list!<CR>
 nnoremap <Leader>pp :setlocal paste!<cr>
 
