@@ -661,7 +661,7 @@ vmap <leader>gV :Gitv! --all<cr>
 " Plug 'airblade/vim-rooter'
 " ----------------------------------------------------------------------------
 
-let g:rooter_manual_only = 1
+let g:rooter_manual_only = 0
 
 " ----------------------------------------------------------------------------
 " Plug 'will133/vim-dirdiff'
