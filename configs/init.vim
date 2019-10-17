@@ -310,8 +310,8 @@ noremap <Leader>qn :cnext<CR>
 noremap <Leader>qo :copen<CR>
 noremap <Leader>qp :cprev<CR>
 
-noremap <Leader>ve :edit $MYVIMRC<CR>
-noremap <Leader>vs :source $MYVIMRC<CR>
+noremap <Leader>ov :edit $MYVIMRC<CR>
+noremap <Leader>sv :source $MYVIMRC<CR>
 
 map <Leader>tc :tabnew<cr>
 map <Leader>td :tabclose<cr>
