@@ -333,6 +333,7 @@ let g:ackprg = "ag --vimgrep -s -H
             \ -p $HOME/.ackignore"
 
 nnoremap \ :Ag <C-R><C-W><CR>
+nnoremap s :Ag 
 
 " ----------------------------------------------------------------------------
 " Plug 'junegunn/fzf.vim'
