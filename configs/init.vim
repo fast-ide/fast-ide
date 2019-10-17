@@ -333,7 +333,7 @@ let g:ackprg = "ag --vimgrep -s -H
             \ -p $HOME/.ackignore"
 
 nnoremap \ :Ag <C-R><C-W><CR>
-nnoremap s :Ag<Space>
+nnoremap <Leader>a :Ag<Space>
 
 " ----------------------------------------------------------------------------
 " Plug 'junegunn/fzf.vim'
@@ -411,11 +411,11 @@ let g:quickhl_manual_colors = [
 " Plug 'easymotion/vim-easymotion'
 " ----------------------------------------------------------------------------
 
-nmap <Leader>g <Plug>(easymotion-overwin-w)
-omap <Leader>g <Plug>(easymotion-bd-w)
-xmap <Leader>g <Plug>(easymotion-bd-w)
-map  <Leader>f <Plug>(easymotion-bd-f)
-nmap <Leader>f <Plug>(easymotion-overwin-f)
+nmap s <Plug>(easymotion-overwin-f2)
+map <Leader>j <Plug>(easymotion-j)
+map <Leader>k <Plug>(easymotion-k)
+
+let g:EasyMotion_smartcase = 1
 
 " ----------------------------------------------------------------------------
 " Plug 'bkad/CamelCaseMotion'
