@@ -27,9 +27,13 @@ call plug#begin('~/.nvim/plugged')
 " Autocomplete plugins
 " ----------------------------------------------------------------------------
 
-  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' } |
-  Plug 'rzaluska/deoplete-rtags'
   Plug 'jiangmiao/auto-pairs'
+
+" ----------------------------------------------------------------------------
+" Languse server protocol plugins
+" ----------------------------------------------------------------------------
+
+  Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " ----------------------------------------------------------------------------
 " Snippets plugins
@@ -143,12 +147,6 @@ call plug#begin('~/.nvim/plugged')
 
   Plug 'lambdalisue/vim-gista'
   Plug 'tpope/vim-dadbod'
-
-" ----------------------------------------------------------------------------
-" Languse server protocol plugins
-" ----------------------------------------------------------------------------
-
-  Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " ----------------------------------------------------------------------------
 " Theme plugins
@@ -366,12 +364,6 @@ inoremap <expr> <CR> pumvisible() ? "\<C-Y>" : "\<CR>"
 map / <Plug>(incsearch-forward)
 map ? <Plug>(incsearch-backward)
 map g/ <Plug>(incsearch-stay)
-
-" ----------------------------------------------------------------------------
-" Plug 'Shougo/deoplete.nvim'
-" ----------------------------------------------------------------------------
-
-let g:deoplete#enable_at_startup = 1
 
 " ----------------------------------------------------------------------------
 " Plug 'lyuts/vim-rtags'
