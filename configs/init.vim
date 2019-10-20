@@ -719,5 +719,5 @@ silent! colorscheme onedark
 highlight Comment cterm=italic
 highlight Normal guibg=NONE ctermbg=NONE
 
-set termguicolors
+set notermguicolors
 set background=dark
