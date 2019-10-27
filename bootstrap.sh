@@ -67,23 +67,6 @@ git alias conflicted "nvim +Conflicted"
 git alias staged "diff --cached --name-only"
 
 
-# Install python
-
-ZLIB_ROOT_PATH=$(brew --cellar zlib)/$(brew list --versions zlib | tr ' ' '\n' | tail -1)
-ZLIB_INCLUDE_PATH=$ZLIB_ROOT_PATH/include
-ZLIB_LIBRARY_PATH=$ZLIB_ROOT_PATH/lib
-OPENSSL_INCLUDE_PATH=$(brew --prefix openssl)/include
-OPENSSL_LIBRARY_PATH=$(brew --prefix openssl)/lib
-SQLITE3_INCLUDE_PATH=$(brew --prefix sqlite3)/include
-SQLITE3_LIBRARY_PATH=$(brew --prefix sqlite3)/lib
-
-export CPPFLAGS="-I$ZLIB_INCLUDE_PATH -I$OPENSSL_INCLUDE_PATH -I$SQLITE3_INCLUDE_PATH"
-export LDFLAGS="-L$ZLIB_LIBRARY_PATH -L$OPENSSL_LIBRARY_PATH -L$SQLITE3_LIBRARY_PATH"
-pyenv install 3.6.5
-eval "$(pyenv init -)"
-pyenv shell 3.6.5
-
-
 # Install python packages
 
 pip3 install pynvim
