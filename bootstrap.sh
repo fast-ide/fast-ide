@@ -95,15 +95,6 @@ pip3 install git-plus termdown pygments
 curl -L git.io/antigen -o $HOME/.zsh/antigen.zsh --create-dirs
 git clone https://github.com/tmux-plugins/tpm $HOME/.tmux/plugins/tpm
 
-
-# Install vim packages
-
-curl -fLo $HOME/.local/share/nvim/site/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-
-nvim +PlugInstall +UpdateRemotePlugins +qall!
-
-
 # Copy configuration files
 
 mkdir -p $HOME/.zsh
@@ -120,3 +111,10 @@ install -m 644 -D configs/lsp.vimrc -t $HOME/.config/nvim/config/
 install -m 644 -D configs/.ackignore -t $HOME/
 install -m 644 -D configs/.tmux.conf -t $HOME/
 install -m 644 -D configs/.zshrc -t $HOME/
+
+
+# Install vim packages
+
+curl -fLo $HOME/.local/share/nvim/site/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+nvim +PlugInstall +UpdateRemotePlugins +qall!
