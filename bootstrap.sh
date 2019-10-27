@@ -92,8 +92,9 @@ pip3 install git-plus termdown pygments
 
 # Install zsh packages
 
-curl -L git.io/antigen > $HOME/.zsh/antigen.zsh
+curl -L git.io/antigen -o $HOME/.zsh/antigen.zsh --create-dirs
 git clone https://github.com/tmux-plugins/tpm $HOME/.tmux/plugins/tpm
+
 
 # Install vim packages
 
