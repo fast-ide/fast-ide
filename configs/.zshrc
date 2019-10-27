@@ -63,16 +63,6 @@ if [ ! -f "$HOME/.tmux/line" ]; then
   tmux new-session "nvim -c ':Tmuxline lightline' -c ':TmuxlineSnapshot $HOME/.tmux/line' -c ':qall'"
 fi
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-[ -s "$HOME/.linuxbrew/opt/nvm/nvm.sh" ] && . "$HOME/.linuxbrew/opt/nvm/nvm.sh"
-
-export PATH="$HOME/.pyenv/bin:$PATH"
-eval "$(pyenv init -)"
-
-nvm use v8.12.0
-pyenv shell 3.6.5
-
 KEYTIMEOUT=1
 
 magic-enter () {

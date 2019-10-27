@@ -2,23 +2,13 @@ set -e
 set -x
 
 # ----------------------------------------------------------------------------
-# Install brew
-# ----------------------------------------------------------------------------
-
-git clone https://github.com/Homebrew/brew ~/.linuxbrew/Homebrew
-mkdir ~/.linuxbrew/bin
-ln -s ../Homebrew/bin/brew ~/.linuxbrew/bin
-eval $(~/.linuxbrew/bin/brew shellenv)
-
-test -r ~/.bash_profile && echo "eval \$($(brew --prefix)/bin/brew shellenv)" >>~/.bash_profile
-echo "eval \$($(brew --prefix)/bin/brew shellenv)" >>~/.profile
-
-# ----------------------------------------------------------------------------
 # Install brew packages
 # ----------------------------------------------------------------------------
 
 brew install zsh \
+             python \
              pyenv \
+             node \
              nvm \
              neovim \
              tmux \
@@ -36,16 +26,7 @@ brew install zsh \
              httpie \
              ncdu
 
-# ----------------------------------------------------------------------------
-# Install nodejs
-# ----------------------------------------------------------------------------
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$HOME/.linuxbrew/opt/nvm/nvm.sh" ] && . "/$HOME/.linuxbrew/opt/nvm/nvm.sh"
-
-nvm install v8.12.0
-nvm use v8.12.0
-nvm install-latest-npm
+brew cleanup
 
 # ----------------------------------------------------------------------------
 # Install npm packages
@@ -113,4 +94,4 @@ mkdir -p $HOME/.nvim/view/
 # Install neovim packages
 # ----------------------------------------------------------------------------
 
-nvim +PlugInstall +UpdateRemotePlugins +qall!
+# nvim +'PlugInstall --sync' +UpdateRemotePlugins +qall!

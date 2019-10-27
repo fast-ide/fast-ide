@@ -1,0 +1,15 @@
+FROM ubuntu:19.04
+
+RUN apt update -y && \
+    apt upgrade -y && \
+    apt install -y build-essential curl file git
+
+
+RUN useradd -m developer
+USER developer
+
+COPY preinstall.sh /tmp/
+COPY bootstrap.sh /tmp/
+COPY configs /tmp/
+RUN /tmp/preinstall.sh
+RUN /tmp/bootstrap.sh
