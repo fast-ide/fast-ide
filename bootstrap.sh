@@ -54,6 +54,7 @@ npm install -g gitmoji-cli
 npm install -g git-recent
 npm install -g git-stats
 npm install -g diff-so-fancy
+npm install -g vtop
 
 
 # Set git configuration
