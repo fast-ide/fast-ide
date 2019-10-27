@@ -36,6 +36,8 @@ brew install jid
 brew install httpie
 brew install sqlite3
 
+brew install ncdu
+
 
 # Install nodejs
 
