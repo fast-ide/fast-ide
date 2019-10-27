@@ -1,7 +1,9 @@
 set -e
 set -x
 
+# ----------------------------------------------------------------------------
 # Install brew
+# ----------------------------------------------------------------------------
 
 git clone https://github.com/Homebrew/brew ~/.linuxbrew/Homebrew
 mkdir ~/.linuxbrew/bin
@@ -9,7 +11,9 @@ ln -s ../Homebrew/bin/brew ~/.linuxbrew/bin
 eval $(~/.linuxbrew/bin/brew shellenv)
 ~/.linuxbrew/bin/brew shellenv
 
+# ----------------------------------------------------------------------------
 # Install brew packages
+# ----------------------------------------------------------------------------
 
 brew install zsh
 brew install pyenv
@@ -21,25 +25,25 @@ brew install tmux
 brew install fpp
 brew install ag
 brew install fzf
-brew install --HEAD universal-ctags/universal-ctags/universal-ctags
+brew install ctags
 
 brew install git-extras
 brew install tig
+brew install highlight
 
 brew install htop
 brew install catimg
-brew install highlight
+
 
 brew install grc
 brew install jid
 
 brew install httpie
-brew install sqlite3
-
 brew install ncdu
 
-
+# ----------------------------------------------------------------------------
 # Install nodejs
+# ----------------------------------------------------------------------------
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$HOME/.linuxbrew/opt/nvm/nvm.sh" ] && . "/$HOME/.linuxbrew/opt/nvm/nvm.sh" 
@@ -48,8 +52,9 @@ nvm install v8.12.0
 nvm use v8.12.0
 nvm install-latest-npm
 
-
+# ----------------------------------------------------------------------------
 # Install npm packages
+# ----------------------------------------------------------------------------
 
 npm install -g jscpd
 npm install -g gitmoji-cli
@@ -58,29 +63,36 @@ npm install -g git-stats
 npm install -g diff-so-fancy
 npm install -g vtop
 
-
+# ----------------------------------------------------------------------------
 # Set git configuration
+# ----------------------------------------------------------------------------
 
 git config --global core.pager "diff-so-fancy | less --tabs=4 -RFX"
 git config --global push.default current
 git alias conflicted "nvim +Conflicted"
 git alias staged "diff --cached --name-only"
 
-
+# ----------------------------------------------------------------------------
 # Install python packages
+# ----------------------------------------------------------------------------
 
 pip3 install pynvim
 pip2 install pynvim
 
 pip3 install git-plus termdown pygments
 
-
-# Install zsh packages
+# ----------------------------------------------------------------------------
+# Install package managers
+# ----------------------------------------------------------------------------
 
 curl -L git.io/antigen -o $HOME/.zsh/antigen.zsh --create-dirs
 git clone https://github.com/tmux-plugins/tpm $HOME/.tmux/plugins/tpm
+curl -fLo $HOME/.local/share/nvim/site/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
+# ----------------------------------------------------------------------------
 # Copy configuration files
+# ----------------------------------------------------------------------------
 
 mkdir -p $HOME/.zsh
 
@@ -97,9 +109,8 @@ install -m 644 -D configs/.ackignore -t $HOME/
 install -m 644 -D configs/.tmux.conf -t $HOME/
 install -m 644 -D configs/.zshrc -t $HOME/
 
-
+# ----------------------------------------------------------------------------
 # Install vim packages
+# ----------------------------------------------------------------------------
 
-curl -fLo $HOME/.local/share/nvim/site/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 nvim +PlugInstall +UpdateRemotePlugins +qall!
