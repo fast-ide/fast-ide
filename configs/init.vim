@@ -346,6 +346,7 @@ noremap <Leader>fg :GFiles<CR>
 noremap <Leader>fh :History<CR>
 noremap <Leader>fl :Lines<CR>
 noremap <Leader>ft :Tags<CR>
+noremap <Leader>fs :Filetypes<CR>
 
 noremap <Leader>sc :BCommits<CR>
 noremap <Leader>sl :BLines<CR>
