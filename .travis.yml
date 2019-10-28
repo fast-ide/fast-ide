@@ -1,0 +1,15 @@
+os: linux
+sudo: required
+language:
+- minimal
+services:
+- docker
+
+jobs:
+  include:
+  - name: "build"
+    script:
+    - docker build -t fde/ubuntu:19.04 .
+
+notifications:
+    email: true
