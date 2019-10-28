@@ -13,10 +13,15 @@ docker run -it fastide/ubuntu:19.04 zsh -c "nvim +PlugInstall +qa && zsh"
 ### Deploy
 
 ```Shell
+# on Ubuntu 🍎
 docker pull fastide/ubuntu:19.04
 docker create -ti --name fastide fastide/ubuntu:19.04 bash
-docker cp fastide:/home/developer $HOME/
-docker rm -f fastide
+docker cp fastide:/home/developer /home/developer
+# docker rm -f fastide
+
+sudo useradd developer && sudo passwd developer
+sudo chown -R developer /home/developer
+su - developer
 ```
 
 ### Install
