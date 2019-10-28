@@ -56,6 +56,7 @@ npm install -g jscpd \
                git-recent \
                git-stats \
                diff-so-fancy \
+               taskbook \
                vtop
 
 # ----------------------------------------------------------------------------
