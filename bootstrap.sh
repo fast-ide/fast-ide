@@ -41,15 +41,6 @@ npm install -g jscpd \
                vtop
 
 # ----------------------------------------------------------------------------
-# Set git configuration
-# ----------------------------------------------------------------------------
-
-git config --global core.pager "diff-so-fancy | less --tabs=4 -RFX"
-git config --global push.default current
-
-git alias resolve "nvim +Conflicted"
-
-# ----------------------------------------------------------------------------
 # Install python packages
 # ----------------------------------------------------------------------------
 
@@ -61,6 +52,7 @@ pip3 install pynvim \
 # Copy configuration files
 # ----------------------------------------------------------------------------
 
+install -m 644 -D configs/.gitconfig -t $HOME/
 install -m 644 -D configs/.tmux.conf -t $HOME/
 install -m 644 -D configs/.zshrc -t $HOME/
 
