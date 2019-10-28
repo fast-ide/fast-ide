@@ -82,16 +82,7 @@ install -m 644 -D configs/lsp.vimrc -t $HOME/.config/nvim/config/
 install -m 644 -D configs/.ackignore -t $HOME/
 
 # ----------------------------------------------------------------------------
-# Create neovim directories
-# ----------------------------------------------------------------------------
-
-mkdir -p $HOME/.nvim/backup/
-mkdir -p $HOME/.nvim/swap/
-mkdir -p $HOME/.nvim/undodir/
-mkdir -p $HOME/.nvim/view/
-
-# ----------------------------------------------------------------------------
 # Install neovim packages
 # ----------------------------------------------------------------------------
 
-# nvim +'PlugInstall --sync' +UpdateRemotePlugins +qall!
+nvim +'PlugInstall --sync' +UpdateRemotePlugins +qall!
