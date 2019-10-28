@@ -1,16 +1,18 @@
-### Example of restore to new machine:
+[![Build Status](https://travis-ci.org/rusdevops/fast-ide.svg?branch=master)](https://travis-ci.org/rusdevops/fast-ide)
+
+### Run
 
 ```Shell
-$ cd ode
-$ vagrant up
-$ vagrant snapshot save default installed_fast_ide
+docker pull fastide/ubuntu:19.04
+docker run -it fastide/ubuntu:19.04 zsh -c "nvim +PlugInstall +qa && zsh"
+
 ```
 
-### Example of restore to existed machine
+### Deploy
 
 ```Shell
-$ cd ode
-$ sudo ./install.sh
-# ./requirements.sh
-$ ./bootstrap.sh
+docker pull fastide/ubuntu:19.04
+docker create -ti --name fastide fastide/ubuntu:19.04 bash
+docker cp fastide:/home/developer $HOME/
+docker rm -f fastide
 ```
