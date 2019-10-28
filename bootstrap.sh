@@ -47,8 +47,7 @@ npm install -g jscpd \
 git config --global core.pager "diff-so-fancy | less --tabs=4 -RFX"
 git config --global push.default current
 
-git alias conflicted "nvim +Conflicted"
-git alias staged "diff --cached --name-only"
+git alias resolve "nvim +Conflicted"
 
 # ----------------------------------------------------------------------------
 # Install python packages
