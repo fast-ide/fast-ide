@@ -1,4 +1,7 @@
-source ~/.zsh/antigen.zsh
+if [ ! -f "$HOME/.zsh/antigen.zsh" ]; then
+  curl -L git.io/antigen -o $HOME/.zsh/antigen.zsh --create-dirs
+fi
+source $HOME/.zsh/antigen.zsh
 
 CASE_SENSITIVE="true"
 ZSH_THEME=""
@@ -38,6 +41,7 @@ antigen theme https://github.com/denysdovhan/spaceship-prompt spaceship
 
 antigen apply
 
+# need to make this for multiple os
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 bindkey '^ ' autosuggest-accept
@@ -46,7 +50,6 @@ bindkey "^I" menu-expand-or-complete
 HISTORY_SUBSTRING_SEARCH_ENSURE_UNIQUE=1
 
 export EDITOR=nvim
-export PAGER=vimpager
 
 alias o=nvim
 alias c=vimcat
@@ -57,25 +60,15 @@ alias r=clear
 alias pbcopy='xclip -selection clipboard'
 alias pbpaste='xclip -selection clipboard -o'
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+[ -f $HOME/.fzf.zsh ] && source $HOME/.fzf.zsh
 
+# TODO: need to fix this crutch
 if [ ! -f "$HOME/.tmux/line" ]; then
   tmux new-session "nvim -c ':Tmuxline lightline' -c ':TmuxlineSnapshot $HOME/.tmux/line' -c ':qall'"
 fi
 
 KEYTIMEOUT=1
 
-magic-enter () {
-    if [[ -z $BUFFER ]]
-    then
-        zle clear-screen
-    else
-        zle accept-line
-    fi
-}
-zle -N magic-enter
-
-bindkey "^M" magic-enter
-
+# TODO: need to move in specific language directory
 export GOPATH=$HOME/go
 export PATH="$GOPATH/bin:$PATH"
