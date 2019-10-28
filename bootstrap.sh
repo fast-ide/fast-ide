@@ -62,8 +62,6 @@ pip3 install pynvim \
 # Install package managers
 # ----------------------------------------------------------------------------
 
-curl -L git.io/antigen -o $HOME/.zsh/antigen.zsh --create-dirs
-
 git clone https://github.com/tmux-plugins/tpm $HOME/.tmux/plugins/tpm
 
 # ----------------------------------------------------------------------------
