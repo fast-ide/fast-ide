@@ -644,7 +644,7 @@ nnoremap <Leader>gw :Gwrite<CR><CR>
 " ----------------------------------------------------------------------------
 
 set diffopt+=vertical
-set stl+=%{ConflictedVersion()}
+" set stl+=%{ConflictedVersion()}
 
 let g:diffget_local_map = 'gl'
 let g:diffget_upstream_map = 'gu'
@@ -715,7 +715,7 @@ autocmd FileType go hi! GoDebugCurrent
 " Plug 'neoclide/coc.nvim'
 " ----------------------------------------------------------------------------
 
-source $HOME/.config/nvim/config/lsp.vimrc
+" source $HOME/.config/nvim/config/lsp.vimrc
 
 " ----------------------------------------------------------------------------
 " Plug 'joshdick/onedark.vim'
