@@ -11,5 +11,6 @@ $ vagrant snapshot save default installed_devenv
 ```Shell
 $ cd ode
 $ sudo ./install.sh
+$ ./requirements.sh
 $ ./bootstrap.sh
 ```
