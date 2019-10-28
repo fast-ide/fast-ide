@@ -1,15 +1,8 @@
-FROM ubuntu:19.04
+FROM rusdevops/linuxbrew:19.04
 
-RUN apt update -y && \
-    apt upgrade -y && \
-    apt install -y build-essential curl file git
-
-
-RUN useradd -m developer
 USER developer
 
-COPY preinstall.sh /tmp/
 COPY bootstrap.sh /tmp/
-COPY configs /tmp/
-RUN /tmp/preinstall.sh
+COPY configs /tmp/configs
+WORKDIR /tmp/
 RUN /tmp/bootstrap.sh
