@@ -715,6 +715,7 @@ autocmd FileType go hi! GoDebugCurrent
 " Plug 'neoclide/coc.nvim'
 " ----------------------------------------------------------------------------
 
+" TODO: need to fix the example of lsp configuration
 " source $HOME/.config/nvim/config/lsp.vimrc
 
 " ----------------------------------------------------------------------------
