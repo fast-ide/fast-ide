@@ -3,7 +3,7 @@
 ```Shell
 $ cd ode
 $ vagrant up
-$ vagrant snapshot save default installed_devenv
+$ vagrant snapshot save default installed_fast_ide
 ```
 
 ### Example of restore to existed machine
@@ -11,6 +11,6 @@ $ vagrant snapshot save default installed_devenv
 ```Shell
 $ cd ode
 $ sudo ./install.sh
-$ ./requirements.sh
+# ./requirements.sh
 $ ./bootstrap.sh
 ```
