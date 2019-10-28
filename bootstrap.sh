@@ -18,7 +18,6 @@ brew install zsh \
              ctags \
              git-extras \
              tig \
-             highlight \
              htop \
              catimg \
              grc \
