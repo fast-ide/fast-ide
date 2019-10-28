@@ -16,3 +16,19 @@ docker create -ti --name fastide fastide/ubuntu:19.04 bash
 docker cp fastide:/home/developer $HOME/
 docker rm -f fastide
 ```
+
+### Install
+
+```Shell
+# on the newly installed macOS 🍎
+./bootstrap.sh
+zsh
+```
+
+```Shell
+# on the newly installed Linux 🐧
+./install.sh
+./requirements.sh
+./bootstrap.sh
+zsh
+```
