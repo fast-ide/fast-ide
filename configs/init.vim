@@ -184,10 +184,12 @@ call plug#end()
 
 filetype plugin on
 
-set backupdir=$HOME/.nvim/backup//
-set directory=$HOME/.nvim/swap//
-set undodir=$HOME/.nvim/undodir//
-set viewdir=$HOME/.nvim/view//
+set noswapfile
+set nobackup
+" set backupdir=$HOME/.nvim/backup//
+" set directory=$HOME/.nvim/swap//
+" set undodir=$HOME/.nvim/undodir//
+" set viewdir=$HOME/.nvim/view//
 
 set encoding=utf-8
 set expandtab
