@@ -1,4 +1,4 @@
-FROM rusdevops/linuxbrew:19.04
+FROM fastide/linuxbrew:19.04
 
 USER developer
 
