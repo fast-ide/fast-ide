@@ -644,6 +644,7 @@ nnoremap <Leader>gw :Gwrite<CR><CR>
 " ----------------------------------------------------------------------------
 
 set diffopt+=vertical
+" TODO: need to add silent mode
 " set stl+=%{ConflictedVersion()}
 
 let g:diffget_local_map = 'gl'
