@@ -16,7 +16,9 @@ Vagrant.configure("2") do |config|
   end
 
   config.vm.provision "file", source: "configs", destination: "configs"
+
   config.vm.provision "shell", path: "install.sh"
+  config.vm.provision "shell", path: "requirements.sh", privileged: false
   config.vm.provision "shell", path: "bootstrap.sh", privileged: false
 
   config.ssh.extra_args = "-tt"
