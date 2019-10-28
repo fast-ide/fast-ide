@@ -66,9 +66,6 @@ curl -L git.io/antigen -o $HOME/.zsh/antigen.zsh --create-dirs
 
 git clone https://github.com/tmux-plugins/tpm $HOME/.tmux/plugins/tpm
 
-curl -fLo $HOME/.local/share/nvim/site/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-
 # ----------------------------------------------------------------------------
 # Copy configuration files
 # ----------------------------------------------------------------------------
@@ -80,9 +77,3 @@ install -m 644 -D configs/init.vim -t $HOME/.config/nvim/
 install -m 644 -D configs/lsp.vimrc -t $HOME/.config/nvim/config/
 
 install -m 644 -D configs/.ackignore -t $HOME/
-
-# ----------------------------------------------------------------------------
-# Install neovim packages
-# ----------------------------------------------------------------------------
-
-nvim +'PlugInstall --sync' +UpdateRemotePlugins +qall!
