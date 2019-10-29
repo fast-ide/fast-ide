@@ -524,11 +524,29 @@ xnoremap >  >gv
 xnoremap m d
 
 inoremap <expr> <CR> pumvisible() ? "\<C-Y>" : "\<CR>"
+
 inoremap <silent> <S-Left> <C-o><Plug>CamelCaseMotion_b
 inoremap <silent> <S-Right> <C-o><Plug>CamelCaseMotion_w
 
 nnoremap <silent> / <Plug>(incsearch-forward)
 nnoremap <silent> ; :PreviewTag<CR>
+nnoremap <silent> <m-d> :PreviewScroll +1<cr>
+nnoremap <silent> <m-u> :PreviewScroll -1<cr>
+nnoremap <silent> ? <Plug>(incsearch-backward)
+nnoremap <silent> \ :Ag <C-R><C-W><CR>
+nnoremap <silent> b <Plug>CamelCaseMotion_b
+nnoremap <silent> cx <Plug>(Exchange)
+nnoremap <silent> cxc <Plug>(ExchangeClear)
+nnoremap <silent> cxx <Plug>(ExchangeLine)
+nnoremap <silent> e <Plug>CamelCaseMotion_e
+nnoremap <silent> g/ <Plug>(incsearch-stay)
+nnoremap <silent> ge <Plug>CamelCaseMotion_ge
+nnoremap <silent> q/ :History/<CR>
+nnoremap <silent> q: :History:<CR>
+nnoremap <silent> s <Plug>(easymotion-overwin-f2)
+nnoremap <silent> w <Plug>CamelCaseMotion_w
+vnoremap <silent> X <Plug>(Exchange)
+
 nnoremap <silent> <Leader><Tab> :NERDTreeToggle<CR>
 nnoremap <silent> <Leader>M <Plug>(quickhl-manual-reset)
 nnoremap <silent> <Leader>P "+P
@@ -629,21 +647,6 @@ nnoremap <silent> <Leader>wt <C-W>T
 nnoremap <silent> <Leader>wv :vsp %<cr>
 nnoremap <silent> <Leader>y "+y
 nnoremap <silent> <Leader>yy "+yy
-nnoremap <silent> <m-d> :PreviewScroll +1<cr>
-nnoremap <silent> <m-u> :PreviewScroll -1<cr>
-nnoremap <silent> ? <Plug>(incsearch-backward)
-nnoremap <silent> \ :Ag <C-R><C-W><CR>
-nnoremap <silent> b <Plug>CamelCaseMotion_b
-nnoremap <silent> cx <Plug>(Exchange)
-nnoremap <silent> cxc <Plug>(ExchangeClear)
-nnoremap <silent> cxx <Plug>(ExchangeLine)
-nnoremap <silent> e <Plug>CamelCaseMotion_e
-nnoremap <silent> g/ <Plug>(incsearch-stay)
-nnoremap <silent> ge <Plug>CamelCaseMotion_ge
-nnoremap <silent> q/ :History/<CR>
-nnoremap <silent> q: :History:<CR>
-nnoremap <silent> s <Plug>(easymotion-overwin-f2)
-nnoremap <silent> w <Plug>CamelCaseMotion_w
 vnoremap <silent> <Leader>P "+P
 vnoremap <silent> <Leader>a: :Tabularize /:\zs<CR>
 vnoremap <silent> <Leader>a= :Tabularize /=<CR>
@@ -653,9 +656,8 @@ vnoremap <silent> <Leader>k y:Man <C-r>"<CR>
 vnoremap <silent> <Leader>p "+p
 vnoremap <silent> <Leader>v y:vertical Man <C-r>"<CR>
 vnoremap <silent> <Leader>y "+y
-vnoremap <silent> X <Plug>(Exchange)
-xmap <silent> <Leader>M <Plug>(quickhl-manual-reset)
-xmap <silent> <Leader>m <Plug>(quickhl-manual-this)
+xnoremap <silent> <Leader>M <Plug>(quickhl-manual-reset)
+xnoremap <silent> <Leader>m <Plug>(quickhl-manual-this)
 
 sunmap b
 sunmap e
