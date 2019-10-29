@@ -192,10 +192,6 @@ filetype plugin on
 
 set noswapfile
 set nobackup
-" set backupdir=$HOME/.nvim/backup//
-" set directory=$HOME/.nvim/swap//
-" set undodir=$HOME/.nvim/undodir//
-" set viewdir=$HOME/.nvim/view//
 
 set encoding=utf-8
 set expandtab
@@ -227,109 +223,6 @@ set undofile
 set viewoptions=folds
 set wildmode=longest:full
 
-let mapleader = "\<Space>"
-
-cnoremap <C-A> <Home>
-cnoremap <C-E> <End>
-cnoremap <C-K> <C-U>
-cnoremap <C-N> <Down>
-cnoremap <C-P> <Up>
-inoremap <C-E> <C-X><C-E>
-inoremap <C-Y> <C-X><C-Y>
-
-nmap # #nzz
-nmap * *nzz
-nmap n nzz
-nmap n nzz
-
-nnoremap # #``
-nnoremap * *``
-
-nmap <C-Down> <C-W>-<C-W>-
-nmap <C-Left> <C-W><<C-W><
-nmap <C-Right> <C-W>><C-W>>
-nmap <C-Up> <C-W>+<C-W>+
-
-inoremap jk <esc>
-nmap zj <C-d>zz
-nmap zk <C-u>zz
-
-nnoremap j gj
-nnoremap k gk
-
-nnoremap Q @q
-nnoremap Y y$
-
-noremap H ^
-noremap L $
-
-noremap q/ :History/<CR>
-noremap q: :History:<CR>
-
-nnoremap / /\v
-vnoremap / /\v
-
-xnoremap <  <gv
-xnoremap >  >gv
-
-nnoremap M D
-nnoremap m d
-nnoremap mm dd
-xnoremap m d
-
-vnoremap <Leader>y "+y
-nnoremap <Leader>Y "+yg_
-nnoremap <Leader>y "+y
-nnoremap <Leader>yy "+yy
-nnoremap <Leader>p "+p
-nnoremap <Leader>P "+P
-vnoremap <Leader>p "+p
-vnoremap <Leader>P "+P
-
-nnoremap <Leader>hl :nohlsearch<CR>
-nnoremap <Leader>ss :set list!<CR>
-nnoremap <Leader>pp :setlocal paste!<cr>
-
-nnoremap <Leader>wH <C-W>H
-nnoremap <Leader>wJ <C-W>J
-nnoremap <Leader>wK <C-W>K
-nnoremap <Leader>wL <C-W>L
-nnoremap <Leader>wd <C-W>q
-nnoremap <Leader>wh <C-W><C-H>
-nnoremap <Leader>wj <C-W><C-J>
-nnoremap <Leader>wk <C-W><C-K>
-nnoremap <Leader>wl <C-W><C-L>
-nnoremap <Leader>wo :only<cr>
-nnoremap <Leader>wr <C-W>R
-nnoremap <Leader>ws :sp %<cr>
-nnoremap <Leader>wt <C-W>T
-nnoremap <Leader>wv :vsp %<cr>
-nnoremap <leader>we :vert new <c-r>=expand("%:p:h")<cr>/
-
-noremap <Leader>ld :lclose<CR>
-noremap <Leader>ln :lnext<CR>
-noremap <Leader>lo :lopen<CR>
-noremap <Leader>lp :lprev<CR>
-
-noremap <Leader>qd :cclose<CR>
-noremap <Leader>qf :cfirst<CR>
-noremap <Leader>ql :clast<CR>
-noremap <Leader>qn :cnext<CR>
-noremap <Leader>qo :copen<CR>
-noremap <Leader>qp :cprev<CR>
-
-noremap <Leader>ov :edit $MYVIMRC<CR>
-noremap <Leader>sv :source $MYVIMRC<CR>
-
-map <Leader>tc :tabnew<cr>
-map <Leader>td :tabclose<cr>
-map <Leader>te :tabedit <c-r>=expand("%:p:h")<cr>/
-map <Leader>tm :tabmove<space>
-map <Leader>tn gt
-map <Leader>to :tabonly<cr>
-map <Leader>tp gT
-map <Leader>ts :tab split<cr>
-
 " ----------------------------------------------------------------------------
 " Plug 'mileszs/ack.vim'
 " ----------------------------------------------------------------------------
@@ -340,43 +233,14 @@ let g:ackprg = "ag --vimgrep -s -H
             \ --nocolor --nogroup --column --smart-case --follow
             \ -p $HOME/.ackignore"
 
-nnoremap \ :Ag <C-R><C-W><CR>
-nnoremap <Leader>a :Ag<Space>
-
 " ----------------------------------------------------------------------------
 " Plug 'junegunn/fzf.vim'
-" ----------------------------------------------------------------------------
-
-noremap <Leader>fb :Buffers<CR>
-noremap <Leader>fc :Commits<CR>
-noremap <Leader>ff :Files<CR>
-noremap <Leader>fg :GFiles<CR>
-noremap <Leader>fh :History<CR>
-noremap <Leader>fl :Lines<CR>
-noremap <Leader>ft :Tags<CR>
-noremap <Leader>fs :Filetypes<CR>
-
-noremap <Leader>sc :BCommits<CR>
-noremap <Leader>sl :BLines<CR>
-noremap <Leader>st :BTags<CR>
-
-" ----------------------------------------------------------------------------
-" Plug 'inside/vim-search-pulse'
 " ----------------------------------------------------------------------------
 
 let g:vim_search_pulse_mode = 'cursor_line'
 
 " ----------------------------------------------------------------------------
 " Plug 'haya14busa/incsearch.vim'
-" ----------------------------------------------------------------------------
-
-inoremap <expr> <CR> pumvisible() ? "\<C-Y>" : "\<CR>"
-map / <Plug>(incsearch-forward)
-map ? <Plug>(incsearch-backward)
-map g/ <Plug>(incsearch-stay)
-
-" ----------------------------------------------------------------------------
-" Plug 'lyuts/vim-rtags'
 " ----------------------------------------------------------------------------
 
 let g:rtagsUseLocationList = 0
@@ -388,22 +252,9 @@ let g:rtagsUseLocationList = 0
 let g:NERDTreeWinPos = "right"
 let g:NERDSpaceDelims = 1
 
-noremap <silent> <Leader><Tab> :NERDTreeToggle<CR>
-
-" ----------------------------------------------------------------------------
-" Plug 'majutsushi/tagbar'
-" ----------------------------------------------------------------------------
-
-noremap <silent> <Leader>tb :TagbarToggle<CR>
-
 " ----------------------------------------------------------------------------
 " Plug 't9md/vim-quickhl'
 " ----------------------------------------------------------------------------
-
-nmap <Leader>m <Plug>(quickhl-manual-this)
-xmap <Leader>m <Plug>(quickhl-manual-this)
-nmap <Leader>M <Plug>(quickhl-manual-reset)
-xmap <Leader>M <Plug>(quickhl-manual-reset)
 
 let g:quickhl_manual_colors = [
     \ "gui=bold ctermfg=16  ctermbg=153 guifg=#ffffff guibg=#0a7383",
@@ -420,39 +271,13 @@ let g:quickhl_manual_colors = [
 " Plug 'easymotion/vim-easymotion'
 " ----------------------------------------------------------------------------
 
-nmap s <Plug>(easymotion-overwin-f2)
-map <Leader>j <Plug>(easymotion-j)
-map <Leader>k <Plug>(easymotion-k)
-
 let g:EasyMotion_smartcase = 1
-
-" ----------------------------------------------------------------------------
-" Plug 'bkad/CamelCaseMotion'
-" ----------------------------------------------------------------------------
-
-map <silent>b <Plug>CamelCaseMotion_b
-map <silent>e <Plug>CamelCaseMotion_e
-map <silent>ge <Plug>CamelCaseMotion_ge
-map <silent>w <Plug>CamelCaseMotion_w
-
-sunmap b
-sunmap e
-sunmap ge
-sunmap w
-
-imap <silent> <S-Left> <C-o><Plug>CamelCaseMotion_b
-imap <silent> <S-Right> <C-o><Plug>CamelCaseMotion_w
 
 " ----------------------------------------------------------------------------
 " ftplugin/man.vim
 " ----------------------------------------------------------------------------
 
 runtime! ftplugin/man.vim
-
-nnoremap <silent> <Leader>k :Man<CR>
-nnoremap <silent> <Leader>v :vertical Man<CR>
-vnoremap <silent> <Leader>k y:Man <C-r>"<CR>
-vnoremap <silent> <Leader>v y:vertical Man <C-r>"<CR>
 
 " ----------------------------------------------------------------------------
 " Plug 'arakashic/chromatica.nvim'
@@ -473,25 +298,6 @@ let g:limelight_conceal_ctermfg = 'gray'
 let g:golden_ratio_exclude_nonmodifiable = 1
 let g:golden_ratio_autocommand = 0
 let g:golden_ratio_filetypes_blacklist = ["nerdtree", "unite"]
-
-noremap <silent> <leader>gt :GoldenRatioToggle<CR>
-
-" ----------------------------------------------------------------------------
-" Plug 'skywind3000/vim-preview'
-" ----------------------------------------------------------------------------
-
-nnoremap ; :PreviewTag<CR>
-
-nnoremap <Leader>pd :PreviewClose<CR>
-nnoremap <Leader>pt :PreviewGoto tabe<CR>
-nnoremap <Leader>ps :PreviewGoto split<CR>
-nnoremap <Leader>pv :PreviewGoto vsplit<CR>
-
-noremap <m-u> :PreviewScroll -1<cr>
-noremap <m-d> :PreviewScroll +1<cr>
-
-autocmd FileType qf nnoremap <silent><buffer> p :PreviewQuickfix<cr>
-autocmd FileType qf nnoremap <silent><buffer> P :PreviewClose<cr>
 
 " ----------------------------------------------------------------------------
 " Plug 'edkolev/tmuxline.vim'
@@ -562,24 +368,11 @@ let g:lightline = {
 
 let g:exchange_no_mappings=1
 
-nmap cx <Plug>(Exchange)
-nmap cxc <Plug>(ExchangeClear)
-nmap cxx <Plug>(ExchangeLine)
-vmap X <Plug>(Exchange)
-
 " ----------------------------------------------------------------------------
 " Plug 'MattesGroeger/vim-bookmarks'
 " ----------------------------------------------------------------------------
 
 let g:bookmark_no_default_key_mappings = 1
-
-nmap <Leader>b <Plug>BookmarkToggle
-nmap <Leader>bi <Plug>BookmarkAnnotate
-nmap <Leader>ba <Plug>BookmarkShowAll
-nmap <Leader>bn <Plug>BookmarkNext
-nmap <Leader>bp <Plug>BookmarkPrev
-nmap <Leader>bc <Plug>BookmarkClear
-nmap <Leader>bx <Plug>BookmarkClearAll
 
 " ----------------------------------------------------------------------------
 " Plug 'mhinz/vim-startify'
@@ -590,17 +383,6 @@ let g:startify_lists = [
     \ { 'header': ['   MRU '. getcwd()], 'type': 'dir' },
     \ { 'header': ['   Sessions'],       'type': 'sessions' },
     \ ]
-
-" ----------------------------------------------------------------------------
-" Plug 'godlygeek/tabular'
-" ----------------------------------------------------------------------------
-
-nmap <silent> <Leader>a= :Tabularize /=<CR>
-vmap <silent> <Leader>a= :Tabularize /=<CR>
-nmap <silent> <Leader>a\| :Tabularize /\|<CR>
-vmap <silent> <Leader>a\| :Tabularize /\|<CR>
-nmap <silent> <Leader>a: :Tabularize /:\zs<CR>
-vmap <silent> <Leader>a: :Tabularize /:\zs<CR>
 
 " ----------------------------------------------------------------------------
 " Plug 'ntpeters/vim-better-whitespace'
@@ -621,25 +403,6 @@ let g:formatdef_cpp_formatter = '"astyle"'
 let g:formatters_cpp = ['cpp_formatter']
 
 " ----------------------------------------------------------------------------
-" Plug 'tpope/vim-fugitive'
-" ----------------------------------------------------------------------------
-
-nnoremap <Leader>ga :Git add %:p<CR><CR>
-nnoremap <Leader>gb :Git branch<Space>
-nnoremap <Leader>gc :Gcommit -v -q<CR>
-nnoremap <Leader>gd :Gdiff<CR>
-nnoremap <Leader>ge :Gedit<CR>
-nnoremap <Leader>gg :Ggrep<Space>
-nnoremap <Leader>gl :Dispatch! git pull<CR>
-nnoremap <Leader>gm :Gmove<Space>
-nnoremap <Leader>go :Git checkout<Space>
-nnoremap <Leader>gp :Dispatch! git push<CR>
-nnoremap <Leader>gr :Gread<CR>
-nnoremap <Leader>gs :Gstatus<CR>
-nnoremap <Leader>gt :Gcommit -v -q %:p<CR>
-nnoremap <Leader>gw :Gwrite<CR><CR>
-
-" ----------------------------------------------------------------------------
 " Plug 'christoomey/vim-conflicted'
 " ----------------------------------------------------------------------------
 
@@ -654,16 +417,6 @@ set stl+=%{ConflictedVersionWrapper()}
 let g:diffget_local_map = 'gl'
 let g:diffget_upstream_map = 'gu'
 
-nnoremap gn :GitNextConflict<CR>
-
-" ----------------------------------------------------------------------------
-" Plug 'gregsexton/gitv'
-" ----------------------------------------------------------------------------
-
-nmap <leader>gv :Gitv --all<cr>
-nmap <leader>gV :Gitv! --all<cr>
-vmap <leader>gV :Gitv! --all<cr>
-
 " ----------------------------------------------------------------------------
 " Plug 'airblade/vim-rooter'
 " ----------------------------------------------------------------------------
@@ -675,17 +428,6 @@ let g:rooter_manual_only = 0
 " ----------------------------------------------------------------------------
 
 let g:DirDiffAddArgs = "-w"
-
-" ----------------------------------------------------------------------------
-" Plug 'benmills/vimux'
-" ----------------------------------------------------------------------------
-
-map <Leader>vi :VimuxInspectRunner<CR>
-map <Leader>vl :VimuxRunLastCommand<CR>
-map <Leader>vp :VimuxPromptCommand<CR>
-map <Leader>vq :VimuxCloseRunner<CR>
-map <Leader>vx :VimuxInterruptRunner<CR>
-map <Leader>vz :call VimuxZoomRunner()<CR>
 
 " ----------------------------------------------------------------------------
 " Plug 'm42e/vim-gcov-marker'
@@ -736,3 +478,189 @@ highlight Normal guibg=NONE ctermbg=NONE
 
 set notermguicolors
 set background=dark
+
+" ----------------------------------------------------------------------------
+" Mapping
+" ----------------------------------------------------------------------------
+
+let mapleader = "\<Space>"
+
+cnoremap <C-A> <Home>
+cnoremap <C-E> <End>
+cnoremap <C-K> <C-U>
+cnoremap <C-N> <Down>
+cnoremap <C-P> <Up>
+
+inoremap <C-E> <C-X><C-E>
+inoremap <C-Y> <C-X><C-Y>
+inoremap jk <esc>
+
+nnoremap # #``
+nnoremap # #nzz
+nnoremap * *``
+nnoremap * *nzz
+nnoremap / /\v
+nnoremap <C-Down> <C-W>-<C-W>-
+nnoremap <C-Left> <C-W><<C-W><
+nnoremap <C-Right> <C-W>><C-W>>
+nnoremap <C-Up> <C-W>+<C-W>+
+nnoremap M D
+nnoremap Q @q
+nnoremap Y y$
+nnoremap j gj
+nnoremap k gk
+nnoremap m d
+nnoremap mm dd
+nnoremap n nzz
+nnoremap n nzz
+nnoremap zj <C-d>zz
+nnoremap zk <C-u>zz
+noremap H ^
+noremap L $
+
+vnoremap / /\v
+xnoremap <  <gv
+xnoremap >  >gv
+xnoremap m d
+
+inoremap <expr> <CR> pumvisible() ? "\<C-Y>" : "\<CR>"
+inoremap <silent> <S-Left> <C-o><Plug>CamelCaseMotion_b
+inoremap <silent> <S-Right> <C-o><Plug>CamelCaseMotion_w
+
+nnoremap <silent> / <Plug>(incsearch-forward)
+nnoremap <silent> ; :PreviewTag<CR>
+nnoremap <silent> <Leader><Tab> :NERDTreeToggle<CR>
+nnoremap <silent> <Leader>M <Plug>(quickhl-manual-reset)
+nnoremap <silent> <Leader>P "+P
+nnoremap <silent> <Leader>Y "+yg_
+nnoremap <silent> <Leader>a :Ag<Space>
+nnoremap <silent> <Leader>a: :Tabularize /:\zs<CR>
+nnoremap <silent> <Leader>a= :Tabularize /=<CR>
+nnoremap <silent> <Leader>a\| :Tabularize /\|<CR>
+nnoremap <silent> <Leader>b <Plug>BookmarkToggle
+nnoremap <silent> <Leader>ba <Plug>BookmarkShowAll
+nnoremap <silent> <Leader>bc <Plug>BookmarkClear
+nnoremap <silent> <Leader>bi <Plug>BookmarkAnnotate
+nnoremap <silent> <Leader>bn <Plug>BookmarkNext
+nnoremap <silent> <Leader>bp <Plug>BookmarkPrev
+nnoremap <silent> <Leader>bx <Plug>BookmarkClearAll
+nnoremap <silent> <Leader>fb :Buffers<CR>
+nnoremap <silent> <Leader>fc :Commits<CR>
+nnoremap <silent> <Leader>ff :Files<CR>
+nnoremap <silent> <Leader>fg :GFiles<CR>
+nnoremap <silent> <Leader>fh :History<CR>
+nnoremap <silent> <Leader>fl :Lines<CR>
+nnoremap <silent> <Leader>fs :Filetypes<CR>
+nnoremap <silent> <Leader>ft :Tags<CR>
+nnoremap <silent> <Leader>gV :Gitv! --all<cr>
+nnoremap <silent> <Leader>ga :Git add %:p<CR><CR>
+nnoremap <silent> <Leader>gb :Git branch<Space>
+nnoremap <silent> <Leader>gc :Gcommit -v -q<CR>
+nnoremap <silent> <Leader>gd :Gdiff<CR>
+nnoremap <silent> <Leader>ge :Gedit<CR>
+nnoremap <silent> <Leader>gg :Ggrep<Space>
+nnoremap <silent> <Leader>gl :Dispatch! git pull<CR>
+nnoremap <silent> <Leader>gm :Gmove<Space>
+nnoremap <silent> <Leader>gn :GitNextConflict<CR>
+nnoremap <silent> <Leader>go :Git checkout<Space>
+nnoremap <silent> <Leader>gp :Dispatch! git push<CR>
+nnoremap <silent> <Leader>gr :Gread<CR>
+nnoremap <silent> <Leader>gs :Gstatus<CR>
+nnoremap <silent> <Leader>gv :Gitv --all<cr>
+nnoremap <silent> <Leader>gw :Gwrite<CR><CR>
+nnoremap <silent> <Leader>hl :nohlsearch<CR>
+nnoremap <silent> <Leader>j <Plug>(easymotion-j)
+nnoremap <silent> <Leader>k :Man<CR>
+nnoremap <silent> <Leader>k <Plug>(easymotion-k)
+nnoremap <silent> <Leader>ld :lclose<CR>
+nnoremap <silent> <Leader>ln :lnext<CR>
+nnoremap <silent> <Leader>lo :lopen<CR>
+nnoremap <silent> <Leader>lp :lprev<CR>
+nnoremap <silent> <Leader>m <Plug>(quickhl-manual-this)
+nnoremap <silent> <Leader>ov :edit $MYVIMRC<CR>
+nnoremap <silent> <Leader>p "+p
+nnoremap <silent> <Leader>pd :PreviewClose<CR>
+nnoremap <silent> <Leader>pp :setlocal paste!<cr>
+nnoremap <silent> <Leader>ps :PreviewGoto split<CR>
+nnoremap <silent> <Leader>pt :PreviewGoto tabe<CR>
+nnoremap <silent> <Leader>pv :PreviewGoto vsplit<CR>
+nnoremap <silent> <Leader>qd :cclose<CR>
+nnoremap <silent> <Leader>qf :cfirst<CR>
+nnoremap <silent> <Leader>ql :clast<CR>
+nnoremap <silent> <Leader>qn :cnext<CR>
+nnoremap <silent> <Leader>qo :copen<CR>
+nnoremap <silent> <Leader>qp :cprev<CR>
+nnoremap <silent> <Leader>rt :GoldenRatioToggle<CR>
+nnoremap <silent> <Leader>sc :BCommits<CR>
+nnoremap <silent> <Leader>sl :BLines<CR>
+nnoremap <silent> <Leader>ss :set list!<CR>
+nnoremap <silent> <Leader>st :BTags<CR>
+nnoremap <silent> <Leader>sv :source $MYVIMRC<CR>
+nnoremap <silent> <Leader>tb :TagbarToggle<CR>
+nnoremap <silent> <Leader>tc :tabnew<cr>
+nnoremap <silent> <Leader>td :tabclose<cr>
+nnoremap <silent> <Leader>te :tabedit <c-r>=expand("%:p:h")<cr>/
+nnoremap <silent> <Leader>tm :tabmove<space>
+nnoremap <silent> <Leader>tn gt
+nnoremap <silent> <Leader>to :tabonly<cr>
+nnoremap <silent> <Leader>tp gT
+nnoremap <silent> <Leader>ts :tab split<cr>
+nnoremap <silent> <Leader>v :vertical Man<CR>
+nnoremap <silent> <Leader>vi :VimuxInspectRunner<CR>
+nnoremap <silent> <Leader>vl :VimuxRunLastCommand<CR>
+nnoremap <silent> <Leader>vp :VimuxPromptCommand<CR>
+nnoremap <silent> <Leader>vq :VimuxCloseRunner<CR>
+nnoremap <silent> <Leader>vx :VimuxInterruptRunner<CR>
+nnoremap <silent> <Leader>vz :call VimuxZoomRunner()<CR>
+nnoremap <silent> <Leader>wH <C-W>H
+nnoremap <silent> <Leader>wJ <C-W>J
+nnoremap <silent> <Leader>wK <C-W>K
+nnoremap <silent> <Leader>wL <C-W>L
+nnoremap <silent> <Leader>wd <C-W>q
+nnoremap <silent> <Leader>we :vert new <c-r>=expand("%:p:h")<cr>/
+nnoremap <silent> <Leader>wh <C-W><C-H>
+nnoremap <silent> <Leader>wj <C-W><C-J>
+nnoremap <silent> <Leader>wk <C-W><C-K>
+nnoremap <silent> <Leader>wl <C-W><C-L>
+nnoremap <silent> <Leader>wo :only<cr>
+nnoremap <silent> <Leader>wr <C-W>R
+nnoremap <silent> <Leader>ws :sp %<cr>
+nnoremap <silent> <Leader>wt <C-W>T
+nnoremap <silent> <Leader>wv :vsp %<cr>
+nnoremap <silent> <Leader>y "+y
+nnoremap <silent> <Leader>yy "+yy
+nnoremap <silent> <m-d> :PreviewScroll +1<cr>
+nnoremap <silent> <m-u> :PreviewScroll -1<cr>
+nnoremap <silent> ? <Plug>(incsearch-backward)
+nnoremap <silent> \ :Ag <C-R><C-W><CR>
+nnoremap <silent> b <Plug>CamelCaseMotion_b
+nnoremap <silent> cx <Plug>(Exchange)
+nnoremap <silent> cxc <Plug>(ExchangeClear)
+nnoremap <silent> cxx <Plug>(ExchangeLine)
+nnoremap <silent> e <Plug>CamelCaseMotion_e
+nnoremap <silent> g/ <Plug>(incsearch-stay)
+nnoremap <silent> ge <Plug>CamelCaseMotion_ge
+nnoremap <silent> q/ :History/<CR>
+nnoremap <silent> q: :History:<CR>
+nnoremap <silent> s <Plug>(easymotion-overwin-f2)
+nnoremap <silent> w <Plug>CamelCaseMotion_w
+vnoremap <silent> <Leader>P "+P
+vnoremap <silent> <Leader>a: :Tabularize /:\zs<CR>
+vnoremap <silent> <Leader>a= :Tabularize /=<CR>
+vnoremap <silent> <Leader>a\| :Tabularize /\|<CR>
+vnoremap <silent> <Leader>gV :Gitv! --all<cr>
+vnoremap <silent> <Leader>k y:Man <C-r>"<CR>
+vnoremap <silent> <Leader>p "+p
+vnoremap <silent> <Leader>v y:vertical Man <C-r>"<CR>
+vnoremap <silent> <Leader>y "+y
+vnoremap <silent> X <Plug>(Exchange)
+xmap <silent> <Leader>M <Plug>(quickhl-manual-reset)
+xmap <silent> <Leader>m <Plug>(quickhl-manual-this)
+
+sunmap b
+sunmap e
+sunmap ge
+sunmap w
+
+autocmd FileType qf nnoremap <silent><buffer> P :PreviewClose<cr>
+autocmd FileType qf nnoremap <silent><buffer> p :PreviewQuickfix<cr>
