@@ -547,7 +547,7 @@ let g:lightline = {
     \ },
     \ 'active': {
     \   'left': [ ['mode', 'paste'],
-    \             ['readonly', 'filename', 'modified'] ],
+    \             ['gitbranch', 'readonly', 'filename', 'modified'] ],
     \   'right': [
     \     ['percent', 'lineinfo'],
     \     ['fileencoding'],
