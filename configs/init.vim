@@ -508,8 +508,6 @@ nnoremap j gj
 nnoremap k gk
 nnoremap m d
 nnoremap mm dd
-nnoremap n nzz
-nnoremap n nzz
 nnoremap zj <C-d>zz
 nnoremap zk <C-u>zz
 noremap H ^
@@ -546,14 +544,14 @@ vnoremap <silent> X <Plug>(Exchange)
 nnoremap <silent> <Leader><Tab> :NERDTreeToggle<CR>
 nnoremap <silent> <Leader>y "+y
 nnoremap <silent> <Leader>yy "+yy
-nnoremap <silent> <Leader>P "+P
-nnoremap <silent> <Leader>p "+p
+nnoremap <silent> <Leader>X "+P
+nnoremap <silent> <Leader>x "+p
 nnoremap <silent> <Leader>Y "+yg_
-vnoremap <silent> <Leader>p "+p
+vnoremap <silent> <Leader>x "+p
 vnoremap <silent> <Leader>y "+y
-vnoremap <silent> <Leader>P "+P
+vnoremap <silent> <Leader>X "+P
 vnoremap <silent> <Leader>Y "+Y
-xnoremap <silent> <Leader>p "+p
+xnoremap <silent> <Leader>x "+p
 xnoremap <silent> <Leader>y "+y
 
 nnoremap <silent> <Leader>m <Plug>(quickhl-manual-this)
@@ -594,8 +592,6 @@ nnoremap <silent> <Leader>t :Tags<CR>
 nnoremap <silent> <Leader>j <Plug>(easymotion-j)
 nnoremap <silent> <Leader>k <Plug>(easymotion-k)
 
-nnoremap <silent> <Leader><Space> :nohlsearch<CR>
-
 nnoremap <silent> <Leader>gV :Gitv! --all<cr>
 nnoremap <silent> <Leader>ga :Git add %:p<CR><CR>
 nnoremap <silent> <Leader>gb :Git branch<Space>
@@ -617,11 +613,11 @@ vnoremap <silent> <Leader>gV :Gitv! --all<cr>
 nnoremap <silent> <Leader>ql :lclose<CR>
 nnoremap <silent> <Leader>qq :cclose<CR>
 nnoremap <silent> <Leader>qp :PreviewClose<CR>
-nnoremap <silent> <Leader>qt :tabclose<cr>
+nnoremap <silent> <Leader>qt :tabclose<CR>
 nnoremap <silent> <Leader>qw <C-W>q
 
-nnoremap <silent> <Leader>et :tabedit <c-r>=expand("%:p:h")<cr>/
-nnoremap <silent> <Leader>ew :vert new <c-r>=expand("%:p:h")<cr>/
+nnoremap <silent> <Leader>et :tabedit <c-r>=expand("%:p:h")<CR>/
+nnoremap <silent> <Leader>ew :vert new <c-r>=expand("%:p:h")<CR>/
 
 nnoremap <silent> <Leader>ct :tabnew<cr>
 nnoremap <silent> <Leader>cw :new<cr>
@@ -640,6 +636,9 @@ nnoremap <silent> <Leader>ov :edit $MYVIMRC<CR>
 nnoremap <silent> <Leader>oq :copen<CR>
 nnoremap <silent> <Leader>op :PreviewGoto tabe<CR>
 
+nnoremap <silent> <Leader>st :tab split<CR>
+nnoremap <silent> <Leader>sw <C-W>s
+
 nnoremap <silent> <Leader>zw :only<cr>
 nnoremap <silent> <Leader>zt :tabonly<cr>
 
@@ -650,12 +649,11 @@ nnoremap <silent> <Leader>;g :GoldenRatioToggle<CR>
 nnoremap <silent> <Leader>;t :TagbarToggle<CR>
 nnoremap <silent> <Leader>;p :setlocal paste!<cr>
 nnoremap <silent> <Leader>;l :set list!<CR>
+nnoremap <silent> <Leader>; :nohlsearch<CR>
 
 nnoremap <silent> <LocalLeader>c :BCommits<CR>
 nnoremap <silent> <LocalLeader>l :BLines<CR>
 nnoremap <silent> <LocalLeader>t :BTags<CR>
-
-nnoremap <silent> <Leader>ts :tab split<cr>
 
 nnoremap <silent> <Leader>ri :VimuxInspectRunner<CR>
 nnoremap <silent> <Leader>rl :VimuxRunLastCommand<CR>
