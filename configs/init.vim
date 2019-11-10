@@ -21,6 +21,7 @@ call plug#begin('~/.nvim/plugged')
   Plug 'tpope/vim-speeddating'
   Plug 'godlygeek/tabular'
   Plug 'svermeulen/vim-cutlass'
+  Plug 'junegunn/vim-peekaboo'
 
 " ----------------------------------------------------------------------------
 " Marks plugins
@@ -484,6 +485,7 @@ set background=dark
 " ----------------------------------------------------------------------------
 
 let mapleader = "\<Space>"
+let maplocalleader = ","
 
 cnoremap <C-A> <Home>
 cnoremap <C-E> <End>
@@ -548,28 +550,58 @@ nnoremap <silent> w <Plug>CamelCaseMotion_w
 vnoremap <silent> X <Plug>(Exchange)
 
 nnoremap <silent> <Leader><Tab> :NERDTreeToggle<CR>
-nnoremap <silent> <Leader>M <Plug>(quickhl-manual-reset)
+nnoremap <silent> <Leader>y "+y
+nnoremap <silent> <Leader>yy "+yy
 nnoremap <silent> <Leader>P "+P
+nnoremap <silent> <Leader>p "+p
 nnoremap <silent> <Leader>Y "+yg_
+vnoremap <silent> <Leader>p "+p
+vnoremap <silent> <Leader>y "+y
+vnoremap <silent> <Leader>P "+P
+vnoremap <silent> <Leader>Y "+Y
+xnoremap <silent> <Leader>p "+p
+xnoremap <silent> <Leader>y "+y
+
+nnoremap <silent> <Leader>m <Plug>(quickhl-manual-this)
+nnoremap <silent> <Leader>M <Plug>(quickhl-manual-reset)
+vnoremap <silent> <Leader>M <Plug>(quickhl-manual-reset)
+vnoremap <silent> <Leader>m <Plug>(quickhl-manual-this)
+xnoremap <silent> <Leader>M <Plug>(quickhl-manual-reset)
+xnoremap <silent> <Leader>m <Plug>(quickhl-manual-this)
+
 nnoremap <silent> <Leader>a :Ag<Space>
-nnoremap <silent> <Leader>a: :Tabularize /:\zs<CR>
-nnoremap <silent> <Leader>a= :Tabularize /=<CR>
-nnoremap <silent> <Leader>a\| :Tabularize /\|<CR>
-nnoremap <silent> <Leader>b <Plug>BookmarkToggle
+
+nnoremap <silent> <Leader>t: :Tabularize /:\zs<CR>
+nnoremap <silent> <Leader>t= :Tabularize /=<CR>
+nnoremap <silent> <Leader>t\| :Tabularize /\|<CR>
+vnoremap <silent> <Leader>t: :Tabularize /:\zs<CR>
+vnoremap <silent> <Leader>t= :Tabularize /=<CR>
+vnoremap <silent> <Leader>t\| :Tabularize /\|<CR>
+
+nnoremap <silent> <Leader>bb <Plug>BookmarkToggle
 nnoremap <silent> <Leader>ba <Plug>BookmarkShowAll
 nnoremap <silent> <Leader>bc <Plug>BookmarkClear
 nnoremap <silent> <Leader>bi <Plug>BookmarkAnnotate
 nnoremap <silent> <Leader>bn <Plug>BookmarkNext
 nnoremap <silent> <Leader>bp <Plug>BookmarkPrev
 nnoremap <silent> <Leader>bx <Plug>BookmarkClearAll
-nnoremap <silent> <Leader>fb :Buffers<CR>
-nnoremap <silent> <Leader>fc :Commits<CR>
-nnoremap <silent> <Leader>ff :Files<CR>
-nnoremap <silent> <Leader>fg :GFiles<CR>
-nnoremap <silent> <Leader>fh :History<CR>
-nnoremap <silent> <Leader>fl :Lines<CR>
-nnoremap <silent> <Leader>fs :Filetypes<CR>
-nnoremap <silent> <Leader>ft :Tags<CR>
+
+nnoremap <silent> <Leader>w :wall<CR>
+nnoremap <silent> <Leader>q :qall!<CR>
+
+nnoremap <silent> <Leader>b :Buffers<CR>
+nnoremap <silent> <Leader>c :Commits<CR>
+nnoremap <silent> <Leader>f :Files<CR>
+nnoremap <silent> <Leader>h :History<CR>
+nnoremap <silent> <Leader>l :Lines<CR>
+nnoremap <silent> <Leader>z :Filetypes<CR>
+nnoremap <silent> <Leader>t :Tags<CR>
+
+nnoremap <silent> <Leader>j <Plug>(easymotion-j)
+nnoremap <silent> <Leader>k <Plug>(easymotion-k)
+
+nnoremap <silent> <Leader><Space> :nohlsearch<CR>
+
 nnoremap <silent> <Leader>gV :Gitv! --all<cr>
 nnoremap <silent> <Leader>ga :Git add %:p<CR><CR>
 nnoremap <silent> <Leader>gb :Git branch<Space>
@@ -586,78 +618,57 @@ nnoremap <silent> <Leader>gr :Gread<CR>
 nnoremap <silent> <Leader>gs :Gstatus<CR>
 nnoremap <silent> <Leader>gv :Gitv --all<cr>
 nnoremap <silent> <Leader>gw :Gwrite<CR><CR>
-nnoremap <silent> <Leader>hl :nohlsearch<CR>
-nnoremap <silent> <Leader>j <Plug>(easymotion-j)
-nnoremap <silent> <Leader>k :Man<CR>
-nnoremap <silent> <Leader>k <Plug>(easymotion-k)
-nnoremap <silent> <Leader>ld :lclose<CR>
-nnoremap <silent> <Leader>ln :lnext<CR>
-nnoremap <silent> <Leader>lo :lopen<CR>
-nnoremap <silent> <Leader>lp :lprev<CR>
-nnoremap <silent> <Leader>m <Plug>(quickhl-manual-this)
-nnoremap <silent> <Leader>ov :edit $MYVIMRC<CR>
-nnoremap <silent> <Leader>p "+p
-nnoremap <silent> <Leader>pd :PreviewClose<CR>
-nnoremap <silent> <Leader>pp :setlocal paste!<cr>
-nnoremap <silent> <Leader>ps :PreviewGoto split<CR>
-nnoremap <silent> <Leader>pt :PreviewGoto tabe<CR>
-nnoremap <silent> <Leader>pv :PreviewGoto vsplit<CR>
-nnoremap <silent> <Leader>qd :cclose<CR>
-nnoremap <silent> <Leader>qf :cfirst<CR>
-nnoremap <silent> <Leader>ql :clast<CR>
-nnoremap <silent> <Leader>qn :cnext<CR>
-nnoremap <silent> <Leader>qo :copen<CR>
-nnoremap <silent> <Leader>qp :cprev<CR>
-nnoremap <silent> <Leader>rt :GoldenRatioToggle<CR>
-nnoremap <silent> <Leader>sc :BCommits<CR>
-nnoremap <silent> <Leader>sl :BLines<CR>
-nnoremap <silent> <Leader>ss :set list!<CR>
-nnoremap <silent> <Leader>st :BTags<CR>
-nnoremap <silent> <Leader>sv :source $MYVIMRC<CR>
-nnoremap <silent> <Leader>tb :TagbarToggle<CR>
-nnoremap <silent> <Leader>tc :tabnew<cr>
-nnoremap <silent> <Leader>td :tabclose<cr>
-nnoremap <silent> <Leader>te :tabedit <c-r>=expand("%:p:h")<cr>/
-nnoremap <silent> <Leader>tm :tabmove<space>
-nnoremap <silent> <Leader>tn gt
-nnoremap <silent> <Leader>to :tabonly<cr>
-nnoremap <silent> <Leader>tp gT
-nnoremap <silent> <Leader>ts :tab split<cr>
-nnoremap <silent> <Leader>v :vertical Man<CR>
-nnoremap <silent> <Leader>vi :VimuxInspectRunner<CR>
-nnoremap <silent> <Leader>vl :VimuxRunLastCommand<CR>
-nnoremap <silent> <Leader>vp :VimuxPromptCommand<CR>
-nnoremap <silent> <Leader>vq :VimuxCloseRunner<CR>
-nnoremap <silent> <Leader>vx :VimuxInterruptRunner<CR>
-nnoremap <silent> <Leader>vz :call VimuxZoomRunner()<CR>
-nnoremap <silent> <Leader>wH <C-W>H
-nnoremap <silent> <Leader>wJ <C-W>J
-nnoremap <silent> <Leader>wK <C-W>K
-nnoremap <silent> <Leader>wL <C-W>L
-nnoremap <silent> <Leader>wd <C-W>q
-nnoremap <silent> <Leader>we :vert new <c-r>=expand("%:p:h")<cr>/
-nnoremap <silent> <Leader>wh <C-W><C-H>
-nnoremap <silent> <Leader>wj <C-W><C-J>
-nnoremap <silent> <Leader>wk <C-W><C-K>
-nnoremap <silent> <Leader>wl <C-W><C-L>
-nnoremap <silent> <Leader>wo :only<cr>
-nnoremap <silent> <Leader>wr <C-W>R
-nnoremap <silent> <Leader>ws :sp %<cr>
-nnoremap <silent> <Leader>wt <C-W>T
-nnoremap <silent> <Leader>wv :vsp %<cr>
-nnoremap <silent> <Leader>y "+y
-nnoremap <silent> <Leader>yy "+yy
-vnoremap <silent> <Leader>P "+P
-vnoremap <silent> <Leader>a: :Tabularize /:\zs<CR>
-vnoremap <silent> <Leader>a= :Tabularize /=<CR>
-vnoremap <silent> <Leader>a\| :Tabularize /\|<CR>
 vnoremap <silent> <Leader>gV :Gitv! --all<cr>
-vnoremap <silent> <Leader>k y:Man <C-r>"<CR>
-vnoremap <silent> <Leader>p "+p
-vnoremap <silent> <Leader>v y:vertical Man <C-r>"<CR>
-vnoremap <silent> <Leader>y "+y
-xnoremap <silent> <Leader>M <Plug>(quickhl-manual-reset)
-xnoremap <silent> <Leader>m <Plug>(quickhl-manual-this)
+
+nnoremap <silent> <Leader>ql :lclose<CR>
+nnoremap <silent> <Leader>qq :cclose<CR>
+nnoremap <silent> <Leader>qp :PreviewClose<CR>
+nnoremap <silent> <Leader>qt :tabclose<cr>
+nnoremap <silent> <Leader>qw <C-W>q
+
+nnoremap <silent> <Leader>et :tabedit <c-r>=expand("%:p:h")<cr>/
+nnoremap <silent> <Leader>ew :vert new <c-r>=expand("%:p:h")<cr>/
+
+nnoremap <silent> <Leader>ct :tabnew<cr>
+nnoremap <silent> <Leader>cw :new<cr>
+
+nnoremap <silent> <Leader>nl :lnext<CR>
+nnoremap <silent> <Leader>nq :cnext<CR>
+nnoremap <silent> <Leader>nt gt
+
+nnoremap <silent> <Leader>pl :lprev<CR>
+nnoremap <silent> <Leader>pq :cprev<CR>
+nnoremap <silent> <Leader>pt gT
+
+nnoremap <silent> <Leader>ol :lopen<CR>
+nnoremap <silent> <Leader>ol :lopen<CR>
+nnoremap <silent> <Leader>ov :edit $MYVIMRC<CR>
+nnoremap <silent> <Leader>oq :copen<CR>
+nnoremap <silent> <Leader>op :PreviewGoto tabe<CR>
+
+nnoremap <silent> <Leader>zw :only<cr>
+nnoremap <silent> <Leader>zt :tabonly<cr>
+
+nnoremap <silent> <Leader>vp :PreviewGoto vsplit<CR>
+nnoremap <silent> <Leader>vw :vsp %<cr>
+
+nnoremap <silent> <Leader>;g :GoldenRatioToggle<CR>
+nnoremap <silent> <Leader>;t :TagbarToggle<CR>
+nnoremap <silent> <Leader>;p :setlocal paste!<cr>
+nnoremap <silent> <Leader>;l :set list!<CR>
+
+nnoremap <silent> <LocalLeader>c :BCommits<CR>
+nnoremap <silent> <LocalLeader>l :BLines<CR>
+nnoremap <silent> <LocalLeader>t :BTags<CR>
+
+nnoremap <silent> <Leader>ts :tab split<cr>
+
+nnoremap <silent> <Leader>ri :VimuxInspectRunner<CR>
+nnoremap <silent> <Leader>rl :VimuxRunLastCommand<CR>
+nnoremap <silent> <Leader>rp :VimuxPromptCommand<CR>
+nnoremap <silent> <Leader>rq :VimuxCloseRunner<CR>
+nnoremap <silent> <Leader>rx :VimuxInterruptRunner<CR>
+nnoremap <silent> <Leader>rz :call VimuxZoomRunner()<CR>
 
 sunmap b
 sunmap e
