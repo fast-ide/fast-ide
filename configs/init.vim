@@ -497,11 +497,6 @@ inoremap <C-E> <C-X><C-E>
 inoremap <C-Y> <C-X><C-Y>
 inoremap jk <esc>
 
-nnoremap # #``
-nnoremap # #nzz
-nnoremap * *``
-nnoremap * *nzz
-nnoremap / /\v
 nnoremap <C-Down> <C-W>-<C-W>-
 nnoremap <C-Left> <C-W><<C-W><
 nnoremap <C-Right> <C-W>><C-W>>
@@ -520,7 +515,6 @@ nnoremap zk <C-u>zz
 noremap H ^
 noremap L $
 
-vnoremap / /\v
 xnoremap <  <gv
 xnoremap >  >gv
 xnoremap m d
@@ -530,23 +524,23 @@ inoremap <expr> <CR> pumvisible() ? "\<C-Y>" : "\<CR>"
 inoremap <silent> <S-Left> <C-o><Plug>CamelCaseMotion_b
 inoremap <silent> <S-Right> <C-o><Plug>CamelCaseMotion_w
 
-nnoremap <silent> / <Plug>(incsearch-forward)
+nmap <silent> / <Plug>(incsearch-forward)
+nmap <silent> g/ <Plug>(incsearch-stay)
+nmap <silent> ? <Plug>(incsearch-backward)
+
+nnoremap <silent> s <Plug>(easymotion-overwin-f2)
+
+nnoremap <silent> q/ :History/<CR>
+nnoremap <silent> q: :History:<CR>
+
 nnoremap <silent> ; :PreviewTag<CR>
 nnoremap <silent> <m-d> :PreviewScroll +1<cr>
 nnoremap <silent> <m-u> :PreviewScroll -1<cr>
-nnoremap <silent> ? <Plug>(incsearch-backward)
+
 nnoremap <silent> \ :Ag <C-R><C-W><CR>
-nnoremap <silent> b <Plug>CamelCaseMotion_b
 nnoremap <silent> cx <Plug>(Exchange)
 nnoremap <silent> cxc <Plug>(ExchangeClear)
 nnoremap <silent> cxx <Plug>(ExchangeLine)
-nnoremap <silent> e <Plug>CamelCaseMotion_e
-nnoremap <silent> g/ <Plug>(incsearch-stay)
-nnoremap <silent> ge <Plug>CamelCaseMotion_ge
-nnoremap <silent> q/ :History/<CR>
-nnoremap <silent> q: :History:<CR>
-nnoremap <silent> s <Plug>(easymotion-overwin-f2)
-nnoremap <silent> w <Plug>CamelCaseMotion_w
 vnoremap <silent> X <Plug>(Exchange)
 
 nnoremap <silent> <Leader><Tab> :NERDTreeToggle<CR>
@@ -670,10 +664,20 @@ nnoremap <silent> <Leader>rq :VimuxCloseRunner<CR>
 nnoremap <silent> <Leader>rx :VimuxInterruptRunner<CR>
 nnoremap <silent> <Leader>rz :call VimuxZoomRunner()<CR>
 
+map <silent> b <Plug>CamelCaseMotion_b
+map <silent> w <Plug>CamelCaseMotion_w
+map <silent> e <Plug>CamelCaseMotion_e
+map <silent> ge <Plug>CamelCaseMotion_ge
+
 sunmap b
 sunmap e
 sunmap ge
 sunmap w
+
+nnoremap n nzz
+nnoremap N Nzz
+nnoremap * *nzz
+nnoremap # #nzz
 
 autocmd FileType qf nnoremap <silent><buffer> P :PreviewClose<cr>
 autocmd FileType qf nnoremap <silent><buffer> p :PreviewQuickfix<cr>
