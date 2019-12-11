@@ -34,6 +34,7 @@ zsh
 # on the newly installed Linux 🐧
 ./install.sh
 ./requirements.sh
+# restart OS
 ./bootstrap.sh
 zsh
 ```
