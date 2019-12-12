@@ -20,6 +20,7 @@ antigen bundle command-not-found
 antigen bundle tmuxinator
 antigen bundle vi-mode
 
+antigen bundle agkozak/zsh-z
 antigen bundle zdharma/fast-syntax-highlighting
 antigen bundle hschne/fzf-git
 antigen bundle leophys/zsh-plugin-fzf-finder
