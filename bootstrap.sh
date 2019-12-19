@@ -52,11 +52,12 @@ pip3 install pynvim \
 # Copy configuration files
 # ----------------------------------------------------------------------------
 
-install -m 644 -D configs/.gitconfig -t $HOME/
-install -m 644 -D configs/.tmux.conf -t $HOME/
-install -m 644 -D configs/.zshrc -t $HOME/
+cp configs/.ackignore -t $HOME/
+cp configs/.gitconfig -t $HOME/
+cp configs/.tmux.conf -t $HOME/
+cp configs/.zshrc -t $HOME/
 
-install -m 644 -D configs/init.vim -t $HOME/.config/nvim/
-install -m 644 -D configs/lsp.vimrc -t $HOME/.config/nvim/config/
+mkdir -p $HOME/.config/nvim/
 
-install -m 644 -D configs/.ackignore -t $HOME/
+cp configs/init.vim -t $HOME/.config/nvim/
+cp configs/lsp.vimrc -t $HOME/.config/nvim/
