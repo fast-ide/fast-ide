@@ -7,7 +7,7 @@ set -x
 
 brew install zsh \
              python@2 \
-             python \
+             python@3 \
              pyenv \
              node \
              nvm \
