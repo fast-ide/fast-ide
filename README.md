@@ -28,7 +28,7 @@ zsh -c "nvim +PlugInstall +qa && zsh"
 # on the newly installed macOS 🍎
 # /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ./bootstrap.sh
-zsh
+zsh -c "nvim +PlugInstall +qa && zsh"
 ```
 
 ```Shell
@@ -37,5 +37,5 @@ zsh
 ./requirements.sh
 # restart OS
 ./bootstrap.sh
-zsh
+zsh -c "nvim +PlugInstall +qa && zsh"
 ```
