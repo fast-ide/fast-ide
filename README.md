@@ -41,7 +41,8 @@ zsh -c "nvim +PlugInstall +qa && zsh"
 ```
 
 ### Font settings
-```
+
+```Shell
 # this is required for OS that don't support non-ascii characters
 git clone https://github.com/powerline/fonts
 cd fonts
