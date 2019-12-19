@@ -39,3 +39,13 @@ zsh -c "nvim +PlugInstall +qa && zsh"
 ./bootstrap.sh
 zsh -c "nvim +PlugInstall +qa && zsh"
 ```
+
+### Font settings
+```
+# this is required for OS that don't support non-ascii characters
+git clone https://github.com/powerline/fonts
+cd fonts
+./install.sh
+# select 'Ubuntu Mono' font in terminal preferences
+```
+
