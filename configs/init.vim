@@ -736,7 +736,7 @@ smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
 " ----------------------------------------------------------------------------
 
 " TODO: need to fix the example of lsp configuration
-" source $HOME/.config/nvim/config/lsp.vimrc
+" source $HOME/.config/nvim/lsp.vim
 
 " ----------------------------------------------------------------------------
 " Plug 'joshdick/onedark.vim'
