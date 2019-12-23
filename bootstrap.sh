@@ -25,7 +25,8 @@ brew install zsh \
              jq \
              jid \
              httpie \
-             ncdu
+             ncdu \
+             vimpager
 
 brew cleanup
 
