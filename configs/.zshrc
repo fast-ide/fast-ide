@@ -42,7 +42,7 @@ antigen theme https://github.com/denysdovhan/spaceship-prompt spaceship
 
 antigen apply
 
-# need to make this for multiple os
+# TODO: need to make this for multiple os
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 bindkey '^ ' autosuggest-accept
