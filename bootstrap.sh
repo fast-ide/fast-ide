@@ -11,6 +11,7 @@ brew install zsh \
              pyenv \
              node \
              nvm \
+             vim \
              neovim \
              tmux \
              fpp \
