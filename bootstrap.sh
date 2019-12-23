@@ -22,6 +22,7 @@ brew install zsh \
              htop \
              catimg \
              grc \
+             jq \
              jid \
              httpie \
              ncdu
