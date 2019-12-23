@@ -6,4 +6,3 @@ requirements:
 install:
 	./install.sh
 	./bootstrap.sh
-	zsh -c "nvim +PlugInstall +qa && zsh"

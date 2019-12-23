@@ -1,14 +1,13 @@
-os: linux
+os:
+  - linux
+  - osx
 language:
 - minimal
-services:
-- docker
-
-jobs:
-  include:
-  - name: "build"
-    script:
-    - docker build -t fde/ubuntu:19.04 .
+install:
+- ./requirements.sh
+- ./install.sh
+script:
+- ./bootstrap.sh
 
 notifications:
     email: true
