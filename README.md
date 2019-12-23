@@ -26,18 +26,8 @@ zsh -c "nvim +PlugInstall +qa && zsh"
 
 ```Shell
 # on the newly installed macOS 🍎
-# /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-./bootstrap.sh
-zsh -c "nvim +PlugInstall +qa && zsh"
-```
-
-```Shell
 # on the newly installed Linux 🐧
-./debian/requirements.sh
-./requirements.sh
-# restart OS
-./bootstrap.sh
-zsh -c "nvim +PlugInstall +qa && zsh"
+make install
 ```
 
 ### Font settings

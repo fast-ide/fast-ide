@@ -2,13 +2,23 @@ set -e
 set -x
 
 # ----------------------------------------------------------------------------
-# Install brew
+# Install brew with requirements
 # ----------------------------------------------------------------------------
 
-git clone https://github.com/Homebrew/brew ~/.linuxbrew/Homebrew
-mkdir ~/.linuxbrew/bin
-ln -s ../Homebrew/bin/brew ~/.linuxbrew/bin
-eval $(~/.linuxbrew/bin/brew shellenv)
+case $(uname | tr '[:upper:]' '[:lower:]') in
+  linux*)
+    which apt && sudo ./scripts/linuxbrew/debian/requirements.sh
+    which yum && sudo ./scripts/linuxbrew/redhat/requirements.sh
+    ./scripts/linuxbrew/install.sh
+    ;;
+  darwin*)
+    which brew || /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    ;;
+  msys*)
+    echo "unsupported OS"
+    ;;
+  *)
+    echo "unsupported OS"
+    ;;
+  esac
 
-test -r ~/.bash_profile && echo "eval \$($(brew --prefix)/bin/brew shellenv)" >>~/.bash_profile
-echo "eval \$($(brew --prefix)/bin/brew shellenv)" >>~/.profile
