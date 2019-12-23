@@ -42,7 +42,7 @@ antigen theme https://github.com/denysdovhan/spaceship-prompt spaceship
 
 antigen apply
 
-# TODO: need to make this for multiple os
+# TODO: need to check this for multiple os
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 bindkey '^ ' autosuggest-accept
@@ -58,8 +58,10 @@ alias gs='git status'
 alias cdr='cd `git root`'
 alias p=echo
 alias r=clear
-alias pbcopy='xclip -selection clipboard'
-alias pbpaste='xclip -selection clipboard -o'
+
+# TODO: need to make this for multiple os
+# alias pbcopy='xclip -selection clipboard'
+# alias pbpaste='xclip -selection clipboard -o'
 
 [ -f $HOME/.fzf.zsh ] && source $HOME/.fzf.zsh
 
