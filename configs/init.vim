@@ -746,8 +746,8 @@ let g:onedark_terminal_italics = 1
 
 silent! colorscheme onedark
 
-highlight Comment cterm=italic
-highlight Normal guibg=NONE ctermbg=NONE
-
 set notermguicolors
 set background=dark
+
+highlight Comment cterm=italic
+highlight Normal guibg=NONE ctermbg=NONE
