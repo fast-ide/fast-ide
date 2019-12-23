@@ -4,7 +4,7 @@ os:
 language:
 - minimal
 install:
-- ./requirements.sh
+- sudo ./requirements.sh
 - ./install.sh
 script:
 - ./bootstrap.sh
