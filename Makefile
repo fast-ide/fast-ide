@@ -1,6 +1,9 @@
-all: install
+all: requirements install
+
+requirements:
+	./requirements.sh
 
 install:
-	./requirements.sh
+	./install.sh
 	./bootstrap.sh
 	zsh -c "nvim +PlugInstall +qa && zsh"

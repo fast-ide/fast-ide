@@ -26,7 +26,12 @@ zsh -c "nvim +PlugInstall +qa && zsh"
 
 ```Shell
 # on the newly installed macOS 🍎
+make install
+```
+
+```Shell
 # on the newly installed Linux 🐧
+sudo make requirements
 make install
 ```
 

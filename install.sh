@@ -2,15 +2,15 @@ set -e
 set -x
 
 # ----------------------------------------------------------------------------
-# Install brew requirements
+# Install brew
 # ----------------------------------------------------------------------------
 
 case $(uname | tr '[:upper:]' '[:lower:]') in
   linux*)
-    which apt && ./scripts/linuxbrew/debian/requirements.sh
-    which yum && ./scripts/linuxbrew/redhat/requirements.sh
+    ./scripts/linuxbrew/install.sh
     ;;
   darwin*)
+    which brew || /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
     ;;
   *)
     echo "unsupported OS"
