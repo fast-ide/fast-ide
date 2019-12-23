@@ -63,4 +63,4 @@ cp configs/.zshrc -t $HOME/
 mkdir -p $HOME/.config/nvim/
 
 cp configs/init.vim -t $HOME/.config/nvim/
-cp configs/lsp.vimrc -t $HOME/.config/nvim/
+cp configs/lsp.vim -t $HOME/.config/nvim/
