@@ -33,7 +33,7 @@ zsh -c "nvim +PlugInstall +qa && zsh"
 
 ```Shell
 # on the newly installed Linux 🐧
-./install.sh
+./debian/requirements.sh
 ./requirements.sh
 # restart OS
 ./bootstrap.sh
