@@ -65,4 +65,4 @@ mkdir -p $HOME/.config/nvim/
 cp configs/init.vim -t $HOME/.config/nvim/
 cp configs/lsp.vim -t $HOME/.config/nvim/
 
-zsh -c "nvim +PlugInstall +qa"
+# zsh -c "nvim +PlugInstall +qa"
