@@ -1,0 +1,8 @@
+FROM linuxbrew/debian:10
+
+USER developer
+
+COPY bootstrap.sh /tmp/
+COPY configs /tmp/configs
+WORKDIR /tmp/
+RUN /tmp/bootstrap.sh

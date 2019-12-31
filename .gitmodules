@@ -1,0 +1,3 @@
+[submodule "linuxbrew"]
+	path = linuxbrew
+	url = https://github.com/rusdevops/linuxbrew
