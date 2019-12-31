@@ -11,40 +11,47 @@ jobs:
     - pushd linuxbrew/docker/centos-7
     - tar -czh . | docker build -t linuxbrew/centos:7 -
     - popd
-    - docker build docker/centos-7
+    - cd docker/centos-7
+    - tar -czh . | docker build -t fastide/centos:7 -
   - name: "centos:8"
     script:
     - pushd linuxbrew/docker/centos-8
     - tar -czh . | docker build -t linuxbrew/centos:8 -
     - popd
-    - docker build docker/centos-8
+    - cd docker/centos-8
+    - tar -czh . | docker build -t fastide/centos:8 -
   - name: "debian:10"
     script:
     - pushd linuxbrew/docker/debian-10
     - tar -czh . | docker build -t linuxbrew/debian:10 -
     - popd
-    - docker build docker/debian-10
+    - cd docker/debian-10
+    - tar -czh . | docker build -t fastide/debian:10 -
   - name: "fedora:30"
     script:
     - pushd linuxbrew/docker/fedora-30
     - tar -czh . | docker build -t linuxbrew/fedora:30 -
     - popd
-    - docker build docker/fedora-30
+    - cd docker/fedora-30
+    - tar -czh . | docker build -t fastide/fedora:30 -
   - name: "fedora:31"
     script:
     - pushd linuxbrew/docker/fedora-31
     - tar -czh . | docker build -t linuxbrew/fedora:31 -
     - popd
-    - docker build docker/fedora-31
+    - cd docker/fedora-31
+    - tar -czh . | docker build -t fastide/fedora:31 -
   - name: "ubuntu:18.04"
     script:
     - pushd linuxbrew/docker/ubuntu-18.04
     - tar -czh . | docker build -t linuxbrew/ubuntu:18.04 -
     - popd
-    - docker build docker/ubuntu-18.04
+    - cd docker/ubuntu-18.04
+    - tar -czh . | docker build -t fastide/ubuntu:18.04 -
   - name: "ubuntu:19.04"
     script:
     - pushd linuxbrew/docker/ubuntu-19.04
     - tar -czh . | docker build -t linuxbrew/ubuntu:19.04 -
     - popd
-    - docker build docker/ubuntu-19.04
+    - cd docker/ubuntu-19.04
+    - tar -czh . | docker build -t fastide/ubuntu:19.04 -
