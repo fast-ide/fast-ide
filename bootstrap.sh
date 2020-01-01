@@ -5,6 +5,8 @@ set -x
 # Install brew packages
 # ----------------------------------------------------------------------------
 
+brew config
+
 brew install zsh \
              python@2 \
              python@3 \
