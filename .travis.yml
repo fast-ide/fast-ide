@@ -4,54 +4,23 @@ language:
 services:
 - docker
 
-jobs:
-  include:
-  - name: "centos:7"
-    script:
-    - pushd linuxbrew/docker/centos-7
-    - tar -czh . | docker build -t linuxbrew/centos:7 -
-    - popd
-    - cd docker/centos-7
-    - tar -czh . | docker build -t fastide/centos:7 -
-  - name: "centos:8"
-    script:
-    - pushd linuxbrew/docker/centos-8
-    - tar -czh . | docker build -t linuxbrew/centos:8 -
-    - popd
-    - cd docker/centos-8
-    - tar -czh . | docker build -t fastide/centos:8 -
-  - name: "debian:10"
-    script:
-    - pushd linuxbrew/docker/debian-10
-    - tar -czh . | docker build -t linuxbrew/debian:10 -
-    - popd
-    - cd docker/debian-10
-    - tar -czh . | docker build -t fastide/debian:10 -
-  - name: "fedora:30"
-    script:
-    - pushd linuxbrew/docker/fedora-30
-    - tar -czh . | docker build -t linuxbrew/fedora:30 -
-    - popd
-    - cd docker/fedora-30
-    - tar -czh . | docker build -t fastide/fedora:30 -
-  - name: "fedora:31"
-    script:
-    - pushd linuxbrew/docker/fedora-31
-    - tar -czh . | docker build -t linuxbrew/fedora:31 -
-    - popd
-    - cd docker/fedora-31
-    - tar -czh . | docker build -t fastide/fedora:31 -
-  - name: "ubuntu:18.04"
-    script:
-    - pushd linuxbrew/docker/ubuntu-18.04
-    - tar -czh . | docker build -t linuxbrew/ubuntu:18.04 -
-    - popd
-    - cd docker/ubuntu-18.04
-    - tar -czh . | docker build -t fastide/ubuntu:18.04 -
-  - name: "ubuntu:19.04"
-    script:
-    - pushd linuxbrew/docker/ubuntu-19.04
-    - tar -czh . | docker build -t linuxbrew/ubuntu:19.04 -
-    - popd
-    - cd docker/ubuntu-19.04
-    - tar -czh . | docker build -t fastide/ubuntu:19.04 -
+env:
+- OS_FAMILY=centos OS_VERSION=7
+- OS_FAMILY=centos OS_VERSION=8
+- OS_FAMILY=debian OS_VERSION=10
+- OS_FAMILY=fedora OS_VERSION=30
+- OS_FAMILY=fedora OS_VERSION=31
+- OS_FAMILY=ubuntu OS_VERSION=18.04
+- OS_FAMILY=ubuntu OS_VERSION=19.04
+
+script:
+- lscpu && uname -a && docker version
+- pushd linuxbrew/docker/${OS_FAMILY}-${OS_VERSION}
+- tar -czh . | docker build -t linuxbrew/${OS_FAMILY}:${OS_VERSION} -
+- popd
+- cd docker/${OS_FAMILY}-${OS_VERSION}
+- tar -czh . | docker build -t fastide/${OS_FAMILY}:${OS_VERSION} -
+
+after_success:
+- echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+- docker push fastide/${OS_FAMILY}:${OS_VERSION}
