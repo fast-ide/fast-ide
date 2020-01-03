@@ -1,53 +1,17 @@
 set -ex
 
 # ----------------------------------------------------------------------------
-# Install brew packages
+# Copy configuration files
 # ----------------------------------------------------------------------------
 
-brew config
+cp configs/.ackignore -t $HOME/
+cp configs/.gitconfig -t $HOME/
+cp configs/.tmux.conf -t $HOME/
+cp configs/.zshrc -t $HOME/
 
-brew install --build-bottle zsh \
-             python@2 \
-             python@3 \
-             pyenv \
-             node \
-             nvm \
-             vim \
-             neovim \
-             tmux \
-             fpp \
-             ag \
-             fzf \
-             ctags \
-             git-extras \
-             tig \
-             htop \
-             catimg \
-             grc \
-             jq \
-             jid \
-             httpie \
-             ncdu \
-             vimpager
+mkdir -p $HOME/.config/nvim/
 
-brew cleanup
+cp configs/init.vim -t $HOME/.config/nvim/
+cp configs/lsp.vim -t $HOME/.config/nvim/
 
-# ----------------------------------------------------------------------------
-# Install npm packages
-# ----------------------------------------------------------------------------
-
-npm install -g jscpd \
-               gitmoji-cli \
-               git-recent \
-               git-stats \
-               diff-so-fancy \
-               taskbook \
-               vtop
-
-# ----------------------------------------------------------------------------
-# Install python packages
-# ----------------------------------------------------------------------------
-
-pip2 install pynvim
-pip3 install pynvim \
-             git-plus
+# zsh -c "nvim +PlugInstall +qa"
