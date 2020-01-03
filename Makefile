@@ -1,3 +1,5 @@
+SHELL = /bin/bash
+
 all: requirements install
 
 requirements:
