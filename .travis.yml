@@ -15,7 +15,7 @@ env:
 
 script:
 - lscpu && uname -a && docker version
-- travis_wait 60 ./scripts/docker_build.sh
+- travis_wait 360 ./scripts/docker_build.sh
 
 after_success:
 - ./scripts/docker_deploy.sh
