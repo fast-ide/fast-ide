@@ -7,7 +7,7 @@ set -x
 
 brew config
 
-brew install zsh \
+brew install --build-bottle zsh \
              python@2 \
              python@3 \
              pyenv \

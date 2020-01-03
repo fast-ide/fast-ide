@@ -6,3 +6,9 @@ requirements:
 install:
 	./install.sh
 	./bootstrap.sh
+
+docker-build:
+	./scripts/docker_build.sh
+
+docker-deploy:
+	./scripts/docker_deploy.sh

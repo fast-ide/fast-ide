@@ -15,12 +15,7 @@ env:
 
 script:
 - lscpu && uname -a && docker version
-- pushd linuxbrew/docker/${OS_FAMILY}-${OS_VERSION}
-- tar -czh . | docker build -t linuxbrew/${OS_FAMILY}:${OS_VERSION} -
-- popd
-- cd docker/${OS_FAMILY}-${OS_VERSION}
-- tar -czh . | docker build -t fastide/${OS_FAMILY}:${OS_VERSION} -
+- travis_wait 60 make docker-build
 
 after_success:
-- echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-- docker push fastide/${OS_FAMILY}:${OS_VERSION}
+- make docker-deploy
