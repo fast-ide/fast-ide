@@ -14,8 +14,9 @@ env:
 - OS_FAMILY=ubuntu OS_VERSION=19.04
 
 script:
-- lscpu && uname -a && docker version
-- travis_wait 360 ./scripts/docker_build.sh
+- cd docker/${OS_FAMILY}-${OS_VERSION}
+- tar -czh . | docker build -t fastide/${OS_FAMILY}:${OS_VERSION} -
 
 after_success:
-- ./scripts/docker_deploy.sh
+- echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+- docker push fastide/${OS_FAMILY}:${OS_VERSION}
