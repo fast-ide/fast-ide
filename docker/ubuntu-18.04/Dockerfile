@@ -2,6 +2,9 @@ FROM linuxbrew/ubuntu:18.04
 
 USER developer
 
+COPY install.sh /tmp/
+RUN bash -c ". ~/.profile && /tmp/install.sh"
+
 COPY bootstrap.sh /tmp/
 COPY configs /tmp/configs
 WORKDIR /tmp/
