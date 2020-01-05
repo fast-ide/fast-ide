@@ -1,4 +1,4 @@
-FROM fastide/linuxbrew-fedora:30
+FROM fastide/bootstrap-fedora:30
 
 USER developer
 

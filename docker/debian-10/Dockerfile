@@ -1,4 +1,4 @@
-FROM fastide/linuxbrew-debian:10
+FROM fastide/bootstrap-debian:10
 
 USER developer
 

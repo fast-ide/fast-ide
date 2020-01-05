@@ -1,4 +1,4 @@
-FROM fastide/linuxbrew-ubuntu:18.04
+FROM fastide/bootstrap-ubuntu:18.04
 
 USER developer
 

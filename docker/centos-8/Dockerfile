@@ -1,4 +1,4 @@
-FROM fastide/linuxbrew-centos:8
+FROM fastide/bootstrap-centos:8
 
 USER developer
 
