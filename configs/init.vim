@@ -225,7 +225,7 @@ set ts=2
 set ttimeoutlen=0
 set undofile
 set viewoptions=folds
-set wildmode=longest:full
+set wildmode=longest:full,full
 
 let mapleader = "\<Space>"
 
