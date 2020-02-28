@@ -29,7 +29,7 @@ antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle zsh-users/zsh-completions
 antigen bundle mollifier/cd-gitroot
 antigen bundle Tarrasch/zsh-bd
-antigen bundle hlissner/zsh-autopair
+# antigen bundle hlissner/zsh-autopair // don't work with vimux
 antigen bundle djui/alias-tips
 antigen bundle adolfoabegg/browse-commit
 antigen bundle joel-porquet/zsh-dircolors-solarized
