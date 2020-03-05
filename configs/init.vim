@@ -215,6 +215,7 @@ set nofoldenable
 set novisualbell
 set nowrap
 set number
+set sel=old
 set spelllang=en_gb
 set splitbelow
 set splitright
@@ -244,6 +245,9 @@ nmap n nzz
 
 nnoremap # #``
 nnoremap * *``
+
+nnoremap V v$
+nnoremap vv V
 
 nmap <C-Down> <C-W>-<C-W>-
 nmap <C-Left> <C-W><<C-W><
