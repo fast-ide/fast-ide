@@ -249,6 +249,8 @@ nnoremap * *``
 nnoremap V v$
 nnoremap vv V
 
+vmap ; "xy:@x<CR>
+
 nmap <C-Down> <C-W>-<C-W>-
 nmap <C-Left> <C-W><<C-W><
 nmap <C-Right> <C-W>><C-W>>
@@ -484,7 +486,7 @@ noremap <silent> <leader>gt :GoldenRatioToggle<CR>
 " Plug 'skywind3000/vim-preview'
 " ----------------------------------------------------------------------------
 
-nnoremap ; :PreviewTag<CR>
+# nnoremap ; :PreviewTag<CR>
 
 nnoremap <Leader>pd :PreviewClose<CR>
 nnoremap <Leader>pt :PreviewGoto tabe<CR>
