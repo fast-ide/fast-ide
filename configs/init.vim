@@ -249,7 +249,7 @@ nnoremap * *``
 nnoremap V v$
 nnoremap vv V
 
-vmap ; "xy:@x<CR>
+nmap ; V"xy:@x<CR>
 
 nmap <C-Down> <C-W>-<C-W>-
 nmap <C-Left> <C-W><<C-W><
