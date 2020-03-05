@@ -687,12 +687,22 @@ let g:DirDiffAddArgs = "-w"
 " ----------------------------------------------------------------------------
 
 map <Leader>vo :call VimuxOpenRunner()<CR>
+map <Leader>vc :call VimuxRunCommand("clear")<CR>
 map <Leader>vi :VimuxInspectRunner<CR>
 map <Leader>vl :VimuxRunLastCommand<CR>
 map <Leader>vp :VimuxPromptCommand<CR>
 map <Leader>vq :VimuxCloseRunner<CR>
 map <Leader>vx :VimuxInterruptRunner<CR>
 map <Leader>vz :call VimuxZoomRunner()<CR>
+
+function! VimuxSlime()
+    call VimuxSendText(@v)
+    call VimuxSendKeys("Enter")
+endfunction
+
+vmap <Leader>vs "vy :call VimuxSlime()<CR>
+nmap " V<Leader>vs
+nmap <Leader>vp vip<Leader>vs<CR>
 
 " ----------------------------------------------------------------------------
 " Plug 'm42e/vim-gcov-marker'
