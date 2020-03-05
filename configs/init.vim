@@ -248,6 +248,7 @@ nnoremap * *``
 
 nnoremap V v$
 nnoremap vv V
+nnoremap \| v$"py:read !<C-r>p<CR>
 
 nmap ; V"xy:@x<CR>
 
