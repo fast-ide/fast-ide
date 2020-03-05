@@ -684,6 +684,7 @@ let g:DirDiffAddArgs = "-w"
 " Plug 'benmills/vimux'
 " ----------------------------------------------------------------------------
 
+map <Leader>vo :call VimuxOpenRunner()<CR>
 map <Leader>vi :VimuxInspectRunner<CR>
 map <Leader>vl :VimuxRunLastCommand<CR>
 map <Leader>vp :VimuxPromptCommand<CR>
