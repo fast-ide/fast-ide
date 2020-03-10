@@ -221,7 +221,7 @@ set splitbelow
 set splitright
 set sw=2
 set t_vb=
-set timeoutlen=1000
+set timeoutlen=0
 set ts=2
 set ttimeoutlen=0
 set undofile
@@ -249,8 +249,7 @@ nnoremap * *``
 nnoremap V v$
 nnoremap vv V
 nnoremap \| v$"py:read !<C-r>p<CR>
-
-nmap ; V"xy:@x<CR>
+nnoremap ; v$"xy:@x<CR>
 
 nmap <C-Down> <C-W>-<C-W>-
 nmap <C-Left> <C-W><<C-W><
@@ -392,7 +391,7 @@ let g:rtagsUseLocationList = 0
 " Plug 'scrooloose/nerdtree'
 " ----------------------------------------------------------------------------
 
-let g:NERDTreeWinPos = "right"
+let g:NERDTreeWinPos = "left"
 let g:NERDSpaceDelims = 1
 
 noremap <silent> <Leader><Tab> :NERDTreeToggle<CR>
