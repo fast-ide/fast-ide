@@ -25,12 +25,8 @@ zsh -c "nvim +PlugInstall +qa && zsh"
 ### Install
 
 ```Shell
-# on the newly installed macOS 🍎
-pushd
-git clone https://github.com/fast-ide/bootstrap
-cd bootstrap && make install
-make install
-popd
+git clone --recursive https://github.com/fast-ide/bootstrap
+cd bootstrap && make all
 git clone https://github.com/fast-ide/fast-ide
 cd fast-ide && make install
 zsh -c "nvim +PlugInstall +qa"
