@@ -35,12 +35,6 @@ cd fast-ide && make install
 zsh -c "nvim +PlugInstall +qa"
 ```
 
-```Shell
-# on the newly installed Linux 🐧
-sudo make requirements
-make install
-```
-
 ### Font settings
 
 ```Shell
