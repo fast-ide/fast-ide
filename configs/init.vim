@@ -486,15 +486,15 @@ noremap <silent> <leader>gt :GoldenRatioToggle<CR>
 " Plug 'skywind3000/vim-preview'
 " ----------------------------------------------------------------------------
 
-# nnoremap ; :PreviewTag<CR>
+nnoremap <silent> ; :PreviewTag<CR>
 
-nnoremap <Leader>pd :PreviewClose<CR>
-nnoremap <Leader>pt :PreviewGoto tabe<CR>
-nnoremap <Leader>ps :PreviewGoto split<CR>
-nnoremap <Leader>pv :PreviewGoto vsplit<CR>
+nnoremap <silent> <Leader>pd :PreviewClose<CR>
+nnoremap <silent> <Leader>pt :PreviewGoto tabe<CR>
+nnoremap <silent> <Leader>ps :PreviewGoto split<CR>
+nnoremap <silent> <Lead er>pv :PreviewGoto vsplit<CR>
 
-noremap <m-u> :PreviewScroll -1<cr>
-noremap <m-d> :PreviewScroll +1<cr>
+noremap <silent> <m-u> :PreviewScroll -1<cr>
+noremap <silent> <m-d> :PreviewScroll +1<cr>
 
 autocmd FileType qf nnoremap <silent><buffer> p :PreviewQuickfix<cr>
 autocmd FileType qf nnoremap <silent><buffer> P :PreviewClose<cr>
