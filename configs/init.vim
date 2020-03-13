@@ -287,6 +287,11 @@ vnoremap <Leader>y "+y
 nnoremap <Leader>Y "+yg_
 nnoremap <Leader>y "+y
 nnoremap <Leader>yy "+yy
+
+nnoremap <Leader>yf :let @+ = expand("%:p")<CR>
+nnoremap <Leader>yl :let @+ = join([expand('%'),  line(".")], ':')<CR>
+nnoremap <Leader>yr :let @+ = expand("%")<CR>
+
 nnoremap <Leader>p "+p
 nnoremap <Leader>P "+P
 vnoremap <Leader>p "+p
