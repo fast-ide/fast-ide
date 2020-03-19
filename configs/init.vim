@@ -122,6 +122,7 @@ call plug#begin('~/.nvim/plugged')
   Plug 'wesQ3/vim-windowswap'
   Plug 'roman/golden-ratio'
   Plug 'chrisbra/NrrwRgn'
+  Plug 'simeji/winresizer'
 
 " ----------------------------------------------------------------------------
 " View plugins
@@ -485,7 +486,7 @@ let g:golden_ratio_exclude_nonmodifiable = 1
 let g:golden_ratio_autocommand = 0
 let g:golden_ratio_filetypes_blacklist = ["nerdtree", "unite"]
 
-noremap <silent> <leader>gt :GoldenRatioToggle<CR>
+noremap <silent> <leader>ww :GoldenRatioToggle<CR>
 
 " ----------------------------------------------------------------------------
 " Plug 'skywind3000/vim-preview'
