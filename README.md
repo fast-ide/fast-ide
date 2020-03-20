@@ -40,5 +40,6 @@ git clone https://github.com/powerline/fonts
 cd fonts
 ./install.sh
 # select 'Ubuntu Mono' font in terminal preferences
+# for iTerm2 see https://apple.stackexchange.com/questions/368603/how-to-make-powerline-fonts-work-with-iterm2
 ```
 
