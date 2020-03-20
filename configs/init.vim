@@ -699,7 +699,7 @@ smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
 
 silent! colorscheme onehalfdark
 
-set notermguicolors
+set termguicolors
 set background=dark
 
 highlight Comment cterm=italic
