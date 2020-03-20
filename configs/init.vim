@@ -228,11 +228,6 @@ nnoremap V v$
 nnoremap \| v$"py:read !<C-r>p<CR>
 nnoremap ; v$"xy:@x<CR>
 
-nmap <C-Down> <C-W>-<C-W>-
-nmap <C-Left> <C-W><<C-W><
-nmap <C-Right> <C-W>><C-W>>
-nmap <C-Up> <C-W>+<C-W>+
-
 inoremap jk <esc>
 nmap zj <C-d>zz
 nmap zk <C-u>zz
