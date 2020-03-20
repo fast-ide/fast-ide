@@ -62,6 +62,7 @@ call plug#begin('~/.nvim/plugged')
   Plug 'gregsexton/gitv' |
   Plug 'lambdalisue/vim-unified-diff' |
   Plug 'christoomey/vim-conflicted'
+
   Plug 'will133/vim-dirdiff'
 
   Plug 'sjl/gundo.vim'
@@ -138,7 +139,6 @@ call plug#begin('~/.nvim/plugged')
 " Tags plugins
 " ----------------------------------------------------------------------------
 
-  Plug 'lyuts/vim-rtags'
   Plug 'majutsushi/tagbar'
   Plug 'skywind3000/vim-preview'
 
@@ -203,9 +203,7 @@ set splitbelow
 set splitright
 set sw=2
 set t_vb=
-set timeoutlen=0
 set ts=2
-set ttimeoutlen=0
 set undofile
 set viewoptions=folds
 set wildmode=longest:full,full
@@ -225,11 +223,8 @@ nmap * *nzz
 nmap n nzz
 nmap n nzz
 
-nnoremap # #``
-nnoremap * *``
-
-nnoremap V v$
 nnoremap vv V
+nnoremap V v$
 nnoremap \| v$"py:read !<C-r>p<CR>
 nnoremap ; v$"xy:@x<CR>
 
@@ -700,7 +695,6 @@ smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
 " Plug 'neoclide/coc.nvim'
 " ----------------------------------------------------------------------------
 
-" TODO: need to fix the example of lsp configuration
 " source $HOME/.config/nvim/lsp.vim
 
 " ----------------------------------------------------------------------------
