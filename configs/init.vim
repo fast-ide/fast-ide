@@ -159,8 +159,7 @@ call plug#begin('~/.nvim/plugged')
 " Theme plugins
 " ----------------------------------------------------------------------------
 
-  Plug 'altercation/vim-colors-solarized'
-  Plug 'joshdick/onedark.vim'
+  Plug 'sonph/onehalf' , {'rtp': 'vim/'}
   Plug 'itchyny/lightline.vim' |
   Plug 'albertomontesg/lightline-asyncrun'
 
@@ -173,30 +172,12 @@ call plug#begin('~/.nvim/plugged')
   Plug 'plasticboy/vim-markdown'
   Plug 'ntpeters/vim-better-whitespace'
 
-" ----------------------------------------------------------------------------
-" Language specific plugins
-" ----------------------------------------------------------------------------
-
-  Plug 'arakashic/chromatica.nvim'
-  Plug 'm42e/vim-gcov-marker'
-  Plug 'dpelle/vim-LanguageTool'
-  Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-  Plug 'huawenyu/neogdb.vim'
-  Plug 'octol/vim-cpp-enhanced-highlight'
-  Plug 'python-mode/python-mode', { 'branch': 'develop' }
-
-  " Plug 'vim-vdebug/vdebug' " slow pluggin
-
 call plug#end()
 
 filetype plugin on
 
 set noswapfile
 set nobackup
-" set backupdir=$HOME/.nvim/backup//
-" set directory=$HOME/.nvim/swap//
-" set undodir=$HOME/.nvim/undodir//
-" set viewdir=$HOME/.nvim/view//
 
 set encoding=utf-8
 set expandtab
@@ -550,7 +531,7 @@ augroup END
 " ----------------------------------------------------------------------------
 
 let g:lightline = {
-    \ 'colorscheme': 'onedark',
+    \ 'colorscheme': 'onehalfdark',
     \ 'component_function': {
     \   'gitbranch': 'fugitive#head'
     \ },
@@ -585,7 +566,7 @@ vmap X <Plug>(Exchange)
 
 let g:bookmark_no_default_key_mappings = 1
 
-nmap <Leader>b <Plug>BookmarkToggle
+nmap <Leader>bb <Plug>BookmarkToggle
 nmap <Leader>bi <Plug>BookmarkAnnotate
 nmap <Leader>ba <Plug>BookmarkShowAll
 nmap <Leader>bn <Plug>BookmarkNext
@@ -624,21 +605,11 @@ let g:better_whitespace_enabled=1
 let g:strip_whitespace_on_save=0
 
 " ----------------------------------------------------------------------------
-" Plug 'Chiel92/vim-autoformat'
-" ----------------------------------------------------------------------------
-
-let g:formatdef_cmake_formatter = '"cmake-format - -o -"'
-let g:formatters_cmake = ['cmake_formatter']
-let g:formatdef_cpp_formatter = '"astyle"'
-let g:formatters_cpp = ['cpp_formatter']
-
-" ----------------------------------------------------------------------------
 " Plug 'tpope/vim-fugitive'
 " ----------------------------------------------------------------------------
 
 nnoremap <Leader>ga :Git add %:p<CR><CR>
-nnoremap <Leader>gb :Git branch<Space>
-nnoremap <Leader>gc :Gcommit -v -q<CR>
+nnoremap <Leader>gb :Gblame<CR>
 nnoremap <Leader>gd :Gdiff<CR>
 nnoremap <Leader>ge :Gedit<CR>
 nnoremap <Leader>gg :Ggrep<Space>
@@ -711,35 +682,6 @@ nmap " V<Leader>vs
 nmap <Leader>vp vip<Leader>vs<CR>
 
 " ----------------------------------------------------------------------------
-" Plug 'm42e/vim-gcov-marker'
-" ----------------------------------------------------------------------------
-
-let g:gcov_marker_auto_lopen = 0
-let g:gcov_marker_covered    = '✓'
-let g:gcov_marker_path = '_coverage'
-let g:gcov_marker_uncovered  = 'X'
-
-" ----------------------------------------------------------------------------
-" Plug 'python-mode/python-mode'
-" ----------------------------------------------------------------------------
-
-let g:pymode_options_colorcolumn = 0
-
-" ----------------------------------------------------------------------------
-" Plug 'fatih/vim-go'
-" ----------------------------------------------------------------------------
-
-let g:go_list_type = "quickfix"
-let g:go_fmt_command = "goimports"
-
-let g:go_highlight_functions = 1
-let g:go_highlight_function_calls = 1
-let g:go_highlight_function_parameters = 1
-
-autocmd FileType go hi! GoDebugCurrent
-            \ ctermfg=16 ctermbg=12 guifg=Black guibg=DarkBlue
-
-" ----------------------------------------------------------------------------
 " Plug 'Shougo/neosnippet.vim'
 " ----------------------------------------------------------------------------
 
@@ -762,12 +704,10 @@ smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
 " source $HOME/.config/nvim/lsp.vim
 
 " ----------------------------------------------------------------------------
-" Plug 'joshdick/onedark.vim'
+" Plug 'sonph/onehalf'
 " ----------------------------------------------------------------------------
 
-let g:onedark_terminal_italics = 1
-
-silent! colorscheme onedark
+silent! colorscheme onehalfdark
 
 set notermguicolors
 set background=dark

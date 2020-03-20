@@ -3,6 +3,8 @@ if [ ! -f "$HOME/.zsh/antigen.zsh" ]; then
 fi
 source $HOME/.zsh/antigen.zsh
 
+export TERM=screen-256color
+
 CASE_SENSITIVE="true"
 ZSH_THEME=""
 
