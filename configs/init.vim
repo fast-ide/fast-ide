@@ -179,6 +179,7 @@ filetype plugin on
 set noswapfile
 set nobackup
 
+set cursorline
 set encoding=utf-8
 set expandtab
 set foldmethod=indent
