@@ -2,8 +2,9 @@
 
 💨 The **Fast IDE** you can only dream of ⛅
 
-### Supported os
+### Supported OSs
 
+```yaml
 - centos 7
 - centos 8
 - debian 10
@@ -11,8 +12,7 @@
 - fedora 31
 - ubuntu 18.04
 - ubunut 19.04
-
-- macos
+```
 
 ### Run
 
@@ -24,7 +24,7 @@ docker run -it fastide/ubuntu:19.04 zsh -c "nvim +PlugInstall +qa && zsh"
 ### Deploy
 
 ```Shell
-# on Ubuntu Disco 🕺
+# for example on Ubuntu Disco 🕺
 docker pull fastide/ubuntu:19.04
 docker create -ti --name fastide fastide/ubuntu:19.04 bash
 docker cp fastide:/home/developer /home/ # docker rm -f fastide
@@ -48,10 +48,9 @@ zsh -c "nvim +PlugInstall +qa"
 
 ```Shell
 # this is required for OS that don't support non-ascii characters
-git clone https://github.com/powerline/fonts
-cd fonts
+git clone https://github.com/powerline/fonts && cd fonts
 ./install.sh
 # select 'Ubuntu Mono' font in terminal preferences
-# for iTerm2 see https://apple.stackexchange.com/questions/368603/how-to-make-powerline-fonts-work-with-iterm2
+# also https://apple.stackexchange.com/questions/368603/how-to-make-powerline-fonts-work-with-iterm2
 ```
 
