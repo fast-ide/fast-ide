@@ -5,6 +5,7 @@
 ### Supported OSs
 
 ```yaml
+# see deploy section
 - centos 7
 - centos 8
 - debian 10
@@ -15,6 +16,7 @@
 ```
 
 ```yaml
+# see install section
 - macos
 ```
 
