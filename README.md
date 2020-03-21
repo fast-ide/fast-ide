@@ -14,6 +14,10 @@
 - ubunut 19.04
 ```
 
+```yaml
+- macos
+```
+
 ### Run
 
 ```Shell
