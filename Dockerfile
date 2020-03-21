@@ -1,4 +1,6 @@
-FROM fastide/bootstrap-centos:7
+ARG OS_FAMILY
+ARG OS_VERSION
+FROM fastide/bootstrap-${OS_FAMILY}:${OS_VERSION}
 
 USER developer
 
