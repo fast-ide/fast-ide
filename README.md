@@ -60,3 +60,14 @@ git clone https://github.com/powerline/fonts && cd fonts
 # also https://apple.stackexchange.com/questions/368603/how-to-make-powerline-fonts-work-with-iterm2
 ```
 
+### Themes
+
+```yaml
+onehalf: # default
+  vim: https://github.com/sonph/onehalf
+  terminal: https://github.com/sonph/onehalf
+
+onedark:
+  vim: https://github.com/joshdick/onedark.vim
+  terminal: https://github.com/joshdick/onedark.vim/tree/master/term
+```
