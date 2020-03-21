@@ -2,6 +2,18 @@
 
 💨 The **Fast IDE** you can only dream of ⛅
 
+### Supported os
+
+- centos 7
+- centos 8
+- debian 10
+- fedora 30
+- fedora 31
+- ubuntu 18.04
+- ubunut 19.04
+
+- macos
+
 ### Run
 
 ```Shell
