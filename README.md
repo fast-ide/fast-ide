@@ -43,10 +43,9 @@ zsh -c "nvim +PlugInstall +qa && zsh"
 ### Install
 
 ```Shell
-git clone --recursive https://github.com/fast-ide/bootstrap
-cd bootstrap && make all
-git clone https://github.com/fast-ide/fast-ide
-cd fast-ide && make install
+git clone --recursive https://github.com/fast-ide/fast-ide
+cd /fast-ide/bootstrap && make all
+cd .. && make install
 zsh -c "nvim +PlugInstall +qa"
 ```
 
