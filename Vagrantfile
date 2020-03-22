@@ -9,7 +9,6 @@ sudo docker cp fastide:/home/developer /home/
 sudo useradd developer
 echo "developer:developer" | sudo chpasswd
 sudo chown -R developer /home/developer
-sudo -u developer zsh -c "nvim +PlugInstall +qa"
 SCRIPT
 
 Vagrant.configure("2") do |config|
