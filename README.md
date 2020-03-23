@@ -10,9 +10,10 @@
 - centos 7
 - centos 8
 - debian 10
+- fedora 30
+- fedora 31
 - ubuntu 18.04
 - ubuntu 19.04
-- fedora ?
 ```
 
 ```yaml
@@ -23,8 +24,9 @@
 ### Run
 
 ```Shell
-docker pull fastide/ubuntu:19.04
-docker run -it fastide/ubuntu:19.04 zsh -c "nvim +PlugInstall +qa && zsh"
+# for example on Ubuntu Disco 🦡
+docker pull fastide/ubuntu:18.04
+docker run -it fastide/ubuntu:18.04 zsh -c "nvim +PlugInstall +qa && zsh"
 ```
 
 ### Deploy
