@@ -1,0 +1,41 @@
+name: ci_dockerfile
+on:
+  push:
+    branches:
+      - master
+jobs:
+  build:
+    name: build
+    runs-on: ubuntu-18.04
+    strategy:
+      matrix:
+        os: [ubuntu-18.04, ubuntu-19.04, debian-10, centos-7, centos-8, fedora-30, fedora-31]
+        include:
+          - os: ubuntu-18.04
+            family: ubuntu
+            version: 18.04
+          - os: ubuntu-19.04
+            family: ubuntu
+            version: 19.04
+          - os: debian-10
+            family: debian
+            version: 10
+          - os: centos-7
+            family: centos
+            version: 7
+          - os: centos-8
+            family: centos
+            version: 8
+          - os: fedora-30
+            family: fedora
+            version: 30
+          - os: fedora-31
+            family: fedora
+            version: 31
+    steps:
+      - uses: actions/checkout@master
+      - name: build
+        run: |
+          docker build -t fastide/${{ matrix.family }}:${{ matrix.version  }} --build-arg OS_FAMILY=${{ matrix.family }} --build-arg OS_VERSION=${{ matrix.version  }} .
+          echo "${{ secrets.DOCKER_PASSWORD }}" | docker login --username fastide --password-stdin
+          docker push fastide/${{ matrix.family }}:${{ matrix.version  }}

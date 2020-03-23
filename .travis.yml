@@ -1,19 +1,6 @@
-os: linux
+os: osx
 language:
 - minimal
-services:
-- docker
-
-env:
-- OS_FAMILY=centos OS_VERSION=7
-- OS_FAMILY=centos OS_VERSION=8
-- OS_FAMILY=debian OS_VERSION=10
-- OS_FAMILY=ubuntu OS_VERSION=18.04
-- OS_FAMILY=ubuntu OS_VERSION=19.04
 
 script:
-- docker build -t fastide/${OS_FAMILY}:${OS_VERSION} --build-arg OS_FAMILY=${OS_FAMILY} --build-arg OS_VERSION=${OS_VERSION} .
-
-after_success:
-- echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-- docker push fastide/${OS_FAMILY}:${OS_VERSION}
+- make all
