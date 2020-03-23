@@ -1,3 +1,4 @@
+![ci_dockerfile](https://github.com/fast-ide/fast-ide/workflows/ci_dockerfile/badge.svg?branch=master)
 [![Build Status](https://travis-ci.org/fast-ide/fast-ide.svg?branch=master)](https://travis-ci.org/fast-ide/fast-ide)
 
 💨 The **Fast IDE** you can only dream of ⛅
@@ -9,9 +10,10 @@
 - centos 7
 - centos 8
 - debian 10
+- fedora 30
+- fedora 31
 - ubuntu 18.04
 - ubuntu 19.04
-- fedora ?
 ```
 
 ```yaml
@@ -22,8 +24,9 @@
 ### Run
 
 ```Shell
-docker pull fastide/ubuntu:19.04
-docker run -it fastide/ubuntu:19.04 zsh -c "nvim +PlugInstall +qa && zsh"
+# for example on Ubuntu Disco 🦡
+docker pull fastide/ubuntu:18.04
+docker run -it fastide/ubuntu:18.04 zsh -c "nvim +PlugInstall +qa && zsh"
 ```
 
 ### Deploy
