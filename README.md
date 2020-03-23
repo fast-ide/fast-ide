@@ -70,5 +70,7 @@ onehalf: # default
 
 onedark:
   vim: https://github.com/joshdick/onedark.vim
-  terminal: https://github.com/joshdick/onedark.vim/tree/master/term
+  terminal: 
+  - https://github.com/joshdick/onedark.vim/tree/master/term
+  - https://github.com/denysdovhan/one-gnome-terminal
 ```
