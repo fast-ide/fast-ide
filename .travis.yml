@@ -3,4 +3,5 @@ language:
 - minimal
 
 script:
-- make all
+cd bootstrap && make all
+cd .. && make install
