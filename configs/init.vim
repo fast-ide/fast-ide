@@ -393,14 +393,14 @@ nmap <Leader>M <Plug>(quickhl-manual-reset)
 xmap <Leader>M <Plug>(quickhl-manual-reset)
 
 let g:quickhl_manual_colors = [
-    \ "gui=bold ctermfg=16  ctermbg=153 guifg=#ffffff guibg=#0a7383",
-    \ "gui=bold ctermfg=16  ctermbg=1   guibg=#a07040 guifg=#ffffff",
-    \ "gui=bold ctermfg=16  ctermbg=2   guibg=#4070a0 guifg=#ffffff",
-    \ "gui=bold ctermfg=16  ctermbg=4   guibg=#40a070 guifg=#ffffff",
-    \ "gui=bold ctermfg=16  ctermbg=5   guibg=#70a040 guifg=#ffffff",
-    \ "gui=bold ctermfg=16  ctermbg=6   guibg=#d4a00d guifg=#ffffff",
-    \ "gui=bold ctermfg=16  ctermbg=7   guibg=#06287e guifg=#ffffff",
-    \ "gui=bold ctermfg=16  ctermbg=8   guibg=#4c8f2f guifg=#ffffff",
+    \ "ctermfg=16  ctermbg=153",
+    \ "ctermfg=16  ctermbg=1",
+    \ "ctermfg=16  ctermbg=2",
+    \ "ctermfg=16  ctermbg=4",
+    \ "ctermfg=16  ctermbg=5",
+    \ "ctermfg=16  ctermbg=6",
+    \ "ctermfg=16  ctermbg=7",
+    \ "ctermfg=16  ctermbg=215",
     \ ]
 
 " ----------------------------------------------------------------------------
