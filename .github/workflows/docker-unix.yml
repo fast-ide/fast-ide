@@ -9,8 +9,11 @@ jobs:
     runs-on: ubuntu-18.04
     strategy:
       matrix:
-        os: [ubuntu-19.04, debian-10, centos-7, centos-8, fedora-30, fedora-31]
+        os: [ubuntu-18.04, ubuntu-19.04, debian-10, centos-7, centos-8, fedora-30, fedora-31]
         include:
+          - os: ubuntu-18.04
+            family: ubuntu
+            version: 18.04
           - os: ubuntu-19.04
             family: ubuntu
             version: 19.04
