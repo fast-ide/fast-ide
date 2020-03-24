@@ -16,4 +16,5 @@ cp configs/snapshot.vim $HOME/.config/nvim/
 cp configs/lsp.vim $HOME/.config/nvim/
 
 zsh -c "source $HOME/.zshrc"
-nvim -S $HOME/.config/nvim/snapshot.vim < /dev/null
+echo $TERM
+# nvim -S $HOME/.config/nvim/snapshot.vim < /dev/null
