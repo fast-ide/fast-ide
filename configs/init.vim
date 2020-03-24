@@ -160,8 +160,8 @@ call plug#begin('~/.nvim/plugged')
 " ----------------------------------------------------------------------------
 
   Plug 'sonph/onehalf' , {'rtp': 'vim/'}
-  Plug 'itchyny/lightline.vim' |
-  Plug 'albertomontesg/lightline-asyncrun'
+  Plug 'vim-airline/vim-airline'
+  Plug 'vim-airline/vim-airline-themes'
 
 " ----------------------------------------------------------------------------
 " Syntax plugins
@@ -227,7 +227,7 @@ nmap n nzz
 nnoremap vv V
 nnoremap V v$
 nnoremap \| v$"py:read !<C-r>p<CR>
-nnoremap ; v$"xy:@x<CR>
+nnoremap - v$"xy:@x<CR>
 
 inoremap jk <esc>
 nmap zj <C-d>zz
@@ -255,6 +255,9 @@ nnoremap M D
 nnoremap m d
 nnoremap mm dd
 xnoremap m d
+
+noremap <Tab> :bn<CR>
+noremap <S-Tab> :bp<CR>
 
 vnoremap <Leader>y "+y
 nnoremap <Leader>Y "+yg_
@@ -508,8 +511,8 @@ let g:tmuxcomplete#trigger = 'omnifunc'
 " ----------------------------------------------------------------------------
 " Plug 'skywind3000/asyncrun.vim'
 " ----------------------------------------------------------------------------
-"
-let g:asyncrun_status = "stopped"
+
+let g:asyncrun_status = ''
 
 augroup QuickfixStatus
   au! BufWinEnter quickfix setlocal
@@ -518,27 +521,13 @@ augroup QuickfixStatus
 augroup END
 
 " ----------------------------------------------------------------------------
-" Plug 'itchyny/lightline.vim'
+" Plug 'vim-airline/vim-airline'
 " ----------------------------------------------------------------------------
 
-let g:lightline = {
-    \ 'colorscheme': 'onehalfdark',
-    \ 'component_function': {
-    \   'gitbranch': 'fugitive#head'
-    \ },
-    \ 'component_expand': {
-    \   'asyncrun_status': 'lightline#asyncrun#status'
-    \ },
-    \ 'active': {
-    \   'left': [ ['mode', 'paste'],
-    \             ['gitbranch', 'readonly', 'filename', 'modified'] ],
-    \   'right': [
-    \     ['percent', 'lineinfo'],
-    \     ['fileencoding'],
-    \     ['asyncrun_status']
-    \   ],
-    \ },
-    \ }
+let g:airline_theme='onehalfdark'
+let g:airline_section_warning = airline#section#create_right(['%{g:asyncrun_status}'])
+let g:airline_extensions = ['branch', 'tabline']
+let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
 
 " ----------------------------------------------------------------------------
 " Plug 'tommcdo/vim-exchange'
