@@ -16,5 +16,5 @@ cp configs/snapshot.vim $HOME/.config/nvim/
 cp configs/lsp.vim $HOME/.config/nvim/
 
 zsh -c "echo 'installation of zsh plugins'"
-zsh -c "echo 'installation of vim plugins' | nvim +PlugInstall +qa -"
+nvim +PlugInstall +qa
 # nvim -S $HOME/.config/nvim/snapshot.vim
