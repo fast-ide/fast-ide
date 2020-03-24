@@ -525,9 +525,10 @@ augroup END
 " ----------------------------------------------------------------------------
 
 let g:airline_theme='onehalfdark'
-let g:airline_section_warning = airline#section#create_right(['%{g:asyncrun_status}'])
 let g:airline_extensions = ['branch', 'tabline']
 let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
+
+silent! let g:airline_section_warning = airline#section#create_right(['%{g:asyncrun_status}'])
 
 " ----------------------------------------------------------------------------
 " Plug 'tommcdo/vim-exchange'
