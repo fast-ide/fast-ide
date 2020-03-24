@@ -130,7 +130,7 @@ call plug#begin('~/.nvim/plugged')
 " ----------------------------------------------------------------------------
 
   Plug 'fidian/hexmode'
-  Plug 'hecal3/vim-leader-guide'
+  " Plug 'hecal3/vim-leader-guide'
   Plug 'junegunn/goyo.vim' | Plug 'amix/vim-zenroom2'
   Plug 'junegunn/limelight.vim'
   Plug 'nathanaelkane/vim-indent-guides'
