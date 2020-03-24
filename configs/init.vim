@@ -1,10 +1,9 @@
-if empty(glob('$HOME/.local/share/nvim/site/autoload/plug.vim'))
-  silent !curl -fLo $HOME/.local/share/nvim/site/autoload/plug.vim --create-dirs
+if empty(glob('$HOME/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
-call plug#begin('~/.nvim/plugged')
+call plug#begin('~/.vim/plugged')
 
 " ----------------------------------------------------------------------------
 " Text edit plugins
@@ -131,7 +130,6 @@ call plug#begin('~/.nvim/plugged')
 " ----------------------------------------------------------------------------
 
   Plug 'fidian/hexmode'
-  " Plug 'hecal3/vim-leader-guide'
   Plug 'junegunn/goyo.vim' | Plug 'amix/vim-zenroom2'
   Plug 'junegunn/limelight.vim'
   Plug 'nathanaelkane/vim-indent-guides'

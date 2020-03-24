@@ -11,9 +11,9 @@ cp configs/.zshrc $HOME/
 
 mkdir -p $HOME/.config/nvim/
 
-cp configs/init.vim $HOME/.config/nvim/
+cp configs/init.vim $HOME/.vimrc
 cp configs/snapshot.vim $HOME/.config/nvim/
 cp configs/lsp.vim $HOME/.config/nvim/
 
 zsh -c "source $HOME/.zshrc"
-# nvim -S $HOME/.config/nvim/snapshot.vim
+vim -T dumb -S $HOME/.config/nvim/snapshot.vim +qa

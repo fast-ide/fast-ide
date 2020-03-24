@@ -77,4 +77,4 @@ silent! let g:plugs['vim-zoom'].commit = 'ec4a736'
 silent! let g:plugs['vimux'].commit = '37f4119'
 silent! let g:plugs['winresizer'].commit = 'e914728'
 
-PlugUpdate!
+PlugUpdate! --sync
