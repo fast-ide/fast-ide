@@ -39,16 +39,15 @@ docker cp fastide:/home/developer /home/ # docker rm -f fastide
 sudo useradd developer && sudo passwd developer
 sudo chown -R developer /home/developer
 su - developer
-zsh -c "nvim +PlugInstall +qa && zsh"
+zsh
 ```
 
 ### Install
 
 ```Shell
 git clone --recursive https://github.com/fast-ide/fast-ide
-cd /fast-ide/bootstrap && make all
+cd fast-ide/bootstrap && make all
 cd .. && make install
-zsh -c "nvim +PlugInstall +qa"
 ```
 
 ### Font settings
