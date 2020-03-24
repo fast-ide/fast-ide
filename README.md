@@ -26,7 +26,7 @@
 ```Shell
 # for example on Ubuntu Disco 🦡
 docker pull fastide/ubuntu:18.04
-docker run -it fastide/ubuntu:18.04 zsh -c "nvim +PlugInstall +qa && zsh"
+docker run -it fastide/ubuntu:18.04 zsh"
 ```
 
 ### Deploy
