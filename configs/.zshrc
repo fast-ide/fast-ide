@@ -51,9 +51,9 @@ bindkey "^I" menu-expand-or-complete
 
 HISTORY_SUBSTRING_SEARCH_ENSURE_UNIQUE=1
 
-export EDITOR=vim
+export EDITOR=nvim
 
-alias o=vim
+alias o=nvim
 alias c=vimcat
 alias gs='git status'
 alias cdr='cd `git root`'
