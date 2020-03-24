@@ -64,6 +64,7 @@ call plug#begin('~/.nvim/plugged')
   Plug 'christoomey/vim-conflicted'
 
   Plug 'will133/vim-dirdiff'
+  Plug 'rhysd/committia.vim'
 
   Plug 'sjl/gundo.vim'
 
@@ -639,6 +640,26 @@ let g:rooter_manual_only = 0
 " ----------------------------------------------------------------------------
 
 let g:DirDiffAddArgs = "-w"
+
+" ----------------------------------------------------------------------------
+" Plug 'rhysd/committia.vim'
+" ----------------------------------------------------------------------------
+
+let g:committia_hooks = {}
+function! g:committia_hooks.edit_open(info)
+    " Additional settings
+    setlocal spell
+
+    " If no commit message, start with insert mode
+    if a:info.vcs ==# 'git' && getline(1) ==# ''
+        startinsert
+    endif
+
+    " Scroll the diff window from insert mode
+    " Map <C-n> and <C-p>
+    imap <buffer><C-n> <Plug>(committia-scroll-diff-down-half)
+    imap <buffer><C-p> <Plug>(committia-scroll-diff-up-half)
+endfunction
 
 " ----------------------------------------------------------------------------
 " Plug 'benmills/vimux'
