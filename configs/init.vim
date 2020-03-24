@@ -657,8 +657,8 @@ function! VimuxSlime()
     call VimuxSendKeys("Enter")
 endfunction
 
-vmap <Leader>vs "vy :call VimuxSlime()<CR>
-nmap " V<Leader>vs
+vmap <Leader>vs"vy :call VimuxSlime()<CR>
+nmap " V<Leader>vsj
 nmap <Leader>vp vip<Leader>vs<CR>
 
 " ----------------------------------------------------------------------------
