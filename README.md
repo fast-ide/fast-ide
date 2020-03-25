@@ -38,6 +38,7 @@ docker create -ti --name fastide fastide/centos:8 bash
 docker cp fastide:/home/developer /home/ # docker rm -f fastide
 sudo useradd developer && sudo passwd developer
 sudo chown -R developer /home/developer
+sudo usermod -aG sudo developer # optional
 su - developer
 zsh
 ```
