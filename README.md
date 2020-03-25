@@ -7,13 +7,14 @@
 
 ```yaml
 # see deploy section
-- centos 7
 - centos 8
 - debian 10
-- fedora 30
 - fedora 31
-- ubuntu 18.04
 - ubuntu 19.04
+
+# centos 7
+# fedora 30
+# ubuntu 18.04
 ```
 
 ```yaml
@@ -31,9 +32,9 @@ docker run -it fastide/ubuntu:19.04 zsh
 ### Deploy
 
 ```Shell
-# for example on Ubuntu Bionic 🦡
-docker pull fastide/ubuntu:18.04
-docker create -ti --name fastide fastide/ubuntu:18.04 bash
+# for example on CentOS 8 💰
+docker pull fastide/centos:8
+docker create -ti --name fastide fastide/centos:8 bash
 docker cp fastide:/home/developer /home/ # docker rm -f fastide
 sudo useradd developer && sudo passwd developer
 sudo chown -R developer /home/developer
