@@ -1,7 +1,7 @@
-if [ ! -f "$HOME/.zsh/antigen.zsh" ]; then
-  curl -L git.io/antigen -o $HOME/.zsh/antigen.zsh --create-dirs
+if [ ! -f "$HOME/antigen.zsh" ]; then
+  curl -L git.io/antigen > $HOME/antigen.zsh
 fi
-source $HOME/.zsh/antigen.zsh
+source $HOME/antigen.zsh
 
 export TERM=screen-256color
 
