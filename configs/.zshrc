@@ -1,7 +1,7 @@
-if [ ! -f "$HOME/antigen.zsh" ]; then
-  curl -L git.io/antigen > $HOME/antigen.zsh
+if [ ! -f "$HOME/.antigen.zsh" ]; then
+   wget -q -O $HOME/.antigen.zsh git.io/antigen
 fi
-source $HOME/antigen.zsh
+source $HOME/.antigen.zsh
 
 export TERM=screen-256color
 
