@@ -24,17 +24,16 @@
 ### Run
 
 ```Shell
-# for example on Ubuntu Disco 🦡
-docker pull fastide/ubuntu:18.04
-docker run -it fastide/ubuntu:18.04 zsh"
+# for example on Ubuntu Disco 🕺
+docker run -it fastide/ubuntu:19.04 zsh
 ```
 
 ### Deploy
 
 ```Shell
-# for example on Ubuntu Disco 🕺
-docker pull fastide/ubuntu:19.04
-docker create -ti --name fastide fastide/ubuntu:19.04 bash
+# for example on Ubuntu Bionic 🦡
+docker pull fastide/ubuntu:18.04
+docker create -ti --name fastide fastide/ubuntu:18.04 bash
 docker cp fastide:/home/developer /home/ # docker rm -f fastide
 sudo useradd developer && sudo passwd developer
 sudo chown -R developer /home/developer
