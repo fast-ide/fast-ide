@@ -7,6 +7,7 @@ sudo docker pull fastide/ubuntu:19.04
 sudo docker create -ti --name fastide fastide/ubuntu:19.04 bash
 sudo docker cp fastide:/home/developer /home/
 sudo useradd developer
+sudo usermod -aG sudo developer
 echo "developer:developer" | sudo chpasswd
 sudo chown -R developer /home/developer
 SCRIPT
