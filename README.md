@@ -25,7 +25,7 @@
 
 ```Shell
 # for example on Ubuntu Disco 🕺
-docker run -it fastide/ubuntu:19.04 zsh"
+docker run -it fastide/ubuntu:19.04 zsh
 ```
 
 ### Deploy
