@@ -1,5 +1,5 @@
 if [ ! -f "$HOME/.antigen.zsh" ]; then
-   wget -q -O $HOME/.antigen.zsh git.io/antigen
+  curl -L git.io/antigen > $HOME/.antigen.zsh
 fi
 source $HOME/.antigen.zsh
 
