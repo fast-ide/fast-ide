@@ -64,11 +64,11 @@ git clone https://github.com/powerline/fonts && cd fonts
 ### Themes
 
 ```yaml
-onehalf: # default
+onehalf:
   vim: https://github.com/sonph/onehalf
   terminal: https://github.com/sonph/onehalf
 
-onedark:
+onedark: # alternative
   vim: https://github.com/joshdick/onedark.vim
   terminal: 
   - https://github.com/joshdick/onedark.vim/tree/master/term
