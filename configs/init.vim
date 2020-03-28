@@ -180,6 +180,7 @@ filetype plugin on
 set noswapfile
 set nobackup
 
+set conceallevel=2
 set cursorline
 set encoding=utf-8
 set expandtab
