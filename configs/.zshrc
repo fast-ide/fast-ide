@@ -3,8 +3,6 @@ if [ ! -f "$HOME/.antigen.zsh" ]; then
 fi
 source $HOME/.antigen.zsh
 
-export TERM=screen-256color
-
 CASE_SENSITIVE="true"
 ZSH_THEME=""
 
@@ -52,6 +50,7 @@ bindkey "^I" menu-expand-or-complete
 HISTORY_SUBSTRING_SEARCH_ENSURE_UNIQUE=1
 
 export EDITOR=nvim
+export LC_ALL=en_US.UTF-8
 
 alias o=nvim
 alias c=vimcat
@@ -62,11 +61,4 @@ alias r=clear
 
 [ -f $HOME/.fzf.zsh ] && source $HOME/.fzf.zsh
 
-# TODO: need to fix this crutch
-if [ ! -f "$HOME/.tmux/line" ]; then
-  tmux new-session "nvim -c ':Tmuxline lightline' -c ':TmuxlineSnapshot $HOME/.tmux/line' -c ':qall'"
-fi
-
 KEYTIMEOUT=1
-
-export LC_ALL=en_US.UTF-8
