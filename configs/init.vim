@@ -91,6 +91,12 @@ call plug#begin('~/.nvim/plugged')
   Plug 'haya14busa/incsearch.vim'
 
 " ----------------------------------------------------------------------------
+" Floaterm plugin
+" ----------------------------------------------------------------------------
+
+  Plug 'voldikss/vim-floaterm'
+
+" ----------------------------------------------------------------------------
 " Autostart plugins
 " ----------------------------------------------------------------------------
 
@@ -700,6 +706,12 @@ smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
 \ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
 
 " ----------------------------------------------------------------------------
+" Floaterm plugin
+" ----------------------------------------------------------------------------
+
+nmap <leader>f :FloatermNew lf<CR>
+
+" ----------------------------------------------------------------------------
 " Plug 'neoclide/coc.nvim'
 " ----------------------------------------------------------------------------
 
@@ -716,3 +728,4 @@ set background=dark
 
 highlight Comment cterm=italic
 highlight Normal guibg=NONE ctermbg=NONE
+highlight NormalFloat guibg=NONE ctermbg=NONE
