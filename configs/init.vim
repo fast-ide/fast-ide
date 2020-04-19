@@ -331,9 +331,12 @@ map <Leader>ts :tab split<cr>
 
 let g:qf_mapping_ack_style = 1
 let g:qf_nowrap = 1
-let g:ackprg = "ag --vimgrep -s -H
+
+if executable('ag')
+    let g:ackprg = "ag --vimgrep -s -H
             \ --nocolor --nogroup --column --smart-case --follow
             \ -p $HOME/.ackignore"
+endif
 
 nnoremap \ :Ag <C-R><C-W><CR>
 nnoremap <Leader>a :Ag<Space>
