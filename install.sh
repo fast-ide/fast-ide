@@ -4,7 +4,8 @@ set -ex
 # Copy configuration files
 # ----------------------------------------------------------------------------
 
-brew install lf
+# temp solution: need to transfer in bootstrap after openssl fix
+brew install --build-bottle lf tree
 
 cp configs/.ackignore $HOME/
 cp configs/.gitconfig $HOME/
