@@ -60,10 +60,6 @@ alias cdr='cd `git root`'
 alias p=echo
 alias r=clear
 
-# TODO: need to make this for multiple os
-# alias pbcopy='xclip -selection clipboard'
-# alias pbpaste='xclip -selection clipboard -o'
-
 [ -f $HOME/.fzf.zsh ] && source $HOME/.fzf.zsh
 
 # TODO: need to fix this crutch
@@ -73,6 +69,4 @@ fi
 
 KEYTIMEOUT=1
 
-# TODO: need to move in specific language directory
-export GOPATH=$HOME/go
-export PATH="$GOPATH/bin:$PATH"
+export LC_ALL=en_US.UTF-8
