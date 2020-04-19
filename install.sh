@@ -4,6 +4,8 @@ set -ex
 # Copy configuration files
 # ----------------------------------------------------------------------------
 
+brew install lf
+
 cp configs/.ackignore $HOME/
 cp configs/.gitconfig $HOME/
 cp configs/.tmux.conf $HOME/
