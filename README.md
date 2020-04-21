@@ -3,6 +3,15 @@
 
 💨 The **Fast IDE** you can only dream of ⛅
 
+> The developer needs three things:
+> 1. email
+> 2. github account
+> 3. ability to fast develop anywhere and on anything
+
+For the third thing we created the **Fast IDE**.
+
+Available out of the box now:
+
 - [x] C++ 20 (`cmake`)
 - [x] Python 3 (`pip`)
 - [x] Golang 1.14 (`go`)
