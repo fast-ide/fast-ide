@@ -4,9 +4,9 @@
 💨 The **Fast IDE** you can only dream of ⛅
 
 > The developer needs three things:
-> 1. email
-> 2. github account
-> 3. ability to fast develop anywhere and on anything
+> 1. Email
+> 2. GitHub account
+> 3. Ability to fast develop anywhere and on anything
 
 For the third thing we created the **Fast IDE**.
 
