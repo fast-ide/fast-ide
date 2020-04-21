@@ -10,6 +10,8 @@
 
 For the third thing we created the **Fast IDE**.
 
+<img src="https://raw.githubusercontent.com/fast-ide/fast-ide/master/preview.png" width="640"/>
+
 Available out of the box now:
 
 - [x] C++ 20 (`cmake`)
