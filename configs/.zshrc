@@ -49,6 +49,7 @@ bindkey "^I" menu-expand-or-complete
 
 HISTORY_SUBSTRING_SEARCH_ENSURE_UNIQUE=1
 
+export SHELL=`which zsh`
 export EDITOR=nvim
 export LC_ALL=en_US.UTF-8
 
