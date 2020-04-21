@@ -59,6 +59,18 @@ cd fast-ide/bootstrap && make all
 cd .. && make install
 ```
 
+### Alpine
+
+```
+docker run -it fastide/alpine zsh
+```
+
+- [x] C++ 20 (`cmake`)
+- [x] Python 3 (`pip`)
+- [x] Golang 1.14 (`go`)
+- [x] Node.js 12.15 (`npm`)
+
+
 ### Font settings
 
 ```
