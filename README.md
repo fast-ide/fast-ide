@@ -40,7 +40,7 @@ cd fast-ide && ./install.sh
 ### Deploy
 
 ```sh
-# for example on CentOS 8 🐧
+# for example deploy fast-ide on your CentOS 8 🐧
 docker pull fastide/centos:8
 docker create -ti --name fastide fastide/centos:8 bash
 docker cp fastide:/home/developer /home/ # docker rm -f fastide
