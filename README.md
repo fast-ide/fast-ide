@@ -3,30 +3,15 @@
 
 💨 The **Fast IDE** you can only dream of ⛅
 
-### Supported OSs
-
-```yaml
-# see deploy section
-- centos 8
-- debian 10
-- fedora 31
-- ubuntu 19.04
-
-# centos 7
-# fedora 30
-# ubuntu 18.04
-```
-
-```yaml
-# see install section
-- macos
-```
+- [x] C++ 20 (`cmake`)
+- [x] Python 3 (`pip`)
+- [x] Golang 1.14 (`go`)
+- [x] Node.js 12.15 (`npm`)
 
 ### Run
 
 ```sh
-# for example on Ubuntu Disco 🕺
-docker run -it fastide/ubuntu:19.04 zsh
+docker run -it fastide/alpine zsh
 ```
 
 ### Update
@@ -35,6 +20,21 @@ docker run -it fastide/ubuntu:19.04 zsh
 docker run -it fastide/ubuntu:19.04 zsh
 git clone https://github.com/fast-ide/fast-ide
 cd fast-ide && ./install.sh
+```
+
+### Supported OSs
+
+```yaml
+# see deploy section
+- centos 8
+- debian 10
+- fedora 31
+- ubuntu 19.04
+```
+
+```yaml
+# see install section
+- macos
 ```
 
 ### Deploy
@@ -58,18 +58,6 @@ git clone --recursive https://github.com/fast-ide/fast-ide
 cd fast-ide/bootstrap && make all
 cd .. && make install
 ```
-
-### Alpine
-
-```
-docker run -it fastide/alpine zsh
-```
-
-- [x] C++ 20 (`cmake`)
-- [x] Python 3 (`pip`)
-- [x] Golang 1.14 (`go`)
-- [x] Node.js 12.15 (`npm`)
-
 
 ### Font settings
 
