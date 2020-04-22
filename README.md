@@ -138,6 +138,13 @@ Ctrl-T find file using fuzzy search
 Esc    switch to vi mode
 ```
 
+```sh
+# command aliases
+alias c=vimcat
+alias o=nvim
+alias p=echo
+alias r=clear
+```
 
 #### nvim
 
