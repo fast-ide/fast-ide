@@ -259,7 +259,7 @@ s{char}{char}  to move to {char}{char} (see: https://github.com/easymotion/vim-e
 
 ```
 
-####### resize window
+###### resize window
 
 ```
 Ctrl-T     switch to resize window (see: https://github.com/simeji/winresizer)
