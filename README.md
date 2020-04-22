@@ -96,15 +96,15 @@ onedark: # alternative
 #### terminal
 
 ```
-Ctrl-A go to the beginning of the line</br>
-Ctrl-E go to the end of the line</br>
+Ctrl-A go to the beginning of the line
+Ctrl-E go to the end of the line
 
-Ctrl-N next insturction from history</br>
-Ctrl-P previous insturction from history</br>
+Ctrl-N next insturction from history
+Ctrl-P previous insturction from history
 
-Alt-C  go to the directory using fuzzy search</br>
-Ctrl-R find the insturction using fuzzy search</br>
-Ctrl-T find file using fuzzy search</br>
+Alt-C  go to the directory using fuzzy search
+Ctrl-R find the insturction using fuzzy search
+Ctrl-T find file using fuzzy search
 
 Esc    switch to vi mode
 ```
@@ -118,128 +118,130 @@ Esc    switch to vi mode
 
 
 ```
-Ctrl-E down 1 line</br>
-Ctrl-Y up 1 line</br>
+Ctrl-E down 1 line
+Ctrl-Y up 1 line
 
-vv     select line</br>
-V      select to the end of the line</br>
+vv     select line
+V      select to the end of the line
 
-yy     yank line</br>
-Y      yank to the end of the line</br>
+yy     yank line
+Y      yank to the end of the line
 
-mm     move line</br>
-M      move to the end of the line</br>
+mm     move line
+M      move to the end of the line
 
-dd     delete line</br>
-D      delete to the end of the line</br>
+dd     delete line
+D      delete to the end of the line
 
-H      go to the beginning of the line (alias for ^)</br>
-L      go to the end of the line (alias for $)</br>
+H      go to the beginning of the line (alias for ^)
+L      go to the end of the line (alias for $)
 
-zj     down half the window</br>
-zk     up half the window</br>
+zj     down half the window
+zk     up half the window
 ```
 
 
 ###### file manager
 
 ```
-<Leader>f open file manager</br>
+<Leader>f open file manager
 ```
 
 ###### next
 
 ```
-n          next search</br>
-<Leader>wn next window</br>
-<Leader>tn next tab</br>
-<Leader>qn next item in quickfix list</br>
-<Leader>ln next item in location list</br>
-<Leader>bn next bookmark</br>
+n          next search
+<Leader>wn next window
+<Leader>tn next tab
+<Leader>qn next item in quickfix list
+<Leader>ln next item in location list
+<Leader>bn next bookmark
 ```
 
 ###### previous
 
 ```
-p          previous search</br>
-<Leader>wp previous window</br>
-<Leader>tp previous tab</br>
-<Leader>qp previous item in quickfix list</br>
-<Leader>lp previous item in location list</br>
-<Leader>bp previous bookmark</br>
+p          previous search
+<Leader>wp previous window
+<Leader>tp previous tab
+<Leader>qp previous item in quickfix list
+<Leader>lp previous item in location list
+<Leader>bp previous bookmark
 ```
 
 ###### edit
 
 ```
-<Leader>we edit file in new vertical window</br>
-<Leader>te edit file in new tab</br>
-<Leader>qe open quickfix list</br>
-<Leader>le open location list</br>
+<Leader>we edit file in new vertical window
+<Leader>te edit file in new tab
+<Leader>qe open quickfix list
+<Leader>le open location list
 ```
 
 ###### open or only
 
 ```
-<Leader>wo (only) close all other windows</br>
-<Leader>lo (only) close all other tabs</br>
-<Leader>qo open quickfix list</br>
-<Leader>lo open location list</br>
+<Leader>wo (only) close all other windows
+<Leader>lo (only) close all other tabs
+<Leader>qo open quickfix list
+<Leader>lo open location list
+```
 
 ###### close
 
-<Leader>wd (destroy) close window</br>
-<Leader>td (destroy) close tab</br>
-<Leader>qd (destroy) close quickfix list</br>
-<Leader>ld (destroy) close location list</br>
+```
+<Leader>wd (destroy) close window
+<Leader>td (destroy) close tab
+<Leader>qd (destroy) close quickfix list
+<Leader>ld (destroy) close location list
 ```
 
 ###### search
 
 ```
-s{char}{char}  to move to {char}{char}</br>
+s{char}{char}  to move to {char}{char}
 
-<Leader>fb find buffer</br>
-<Leader>ff find file</br>
-<Leader>fl find line</br>
-<Leader>ft find tag</br>
-<Leader>fs find file type</br>
-<Leader>fh find find a file among previously opened files</br>
+<Leader>fb find buffer
+<Leader>ff find file
+<Leader>fl find line
+<Leader>ft find tag
+<Leader>fs find file type
+<Leader>fh find find a file among previously opened files
 
-<Leader>sl find line in the current buffer</br>
-<Leader>st find tag in the current buffer</br>
+<Leader>sl find line in the current buffer
+<Leader>st find tag in the current buffer
 
-\          grep word under cursor</br>
+\          grep word under cursor
 ```
 
 ##### insert mode
 
 ```
-Ctrl-E (like in **normal** mode)</br>
-Ctrl-Y (like in **normal** mode)</br>
+Ctrl-E (like in **normal** mode)
+Ctrl-Y (like in **normal** mode)
 
-jk     switch to normal mode (alias for Esc)</br>
+jk     switch to normal mode (alias for Esc)
 ```
 
 ##### command mode
 
 ```
-Ctrl-A (like in **terminal**)</br>
-Ctrl-E (like in **terminal**)</br>
-Ctrl-N (like in **terminal**)</br>
-Ctrl-P (like in **terminal**)</br>
+Ctrl-A (like in **terminal**)
+Ctrl-E (like in **terminal**)
+Ctrl-N (like in **terminal**)
+Ctrl-P (like in **terminal**)
 ```
 
 ##### improved maps
 
 ```
-/   added winking and centering</br>
-?   added winking and centering</br>
+/   added winking and centering
+?   added winking and centering
 
->   added support for continuous shifting</br>
-<   added support for continuous shifting</br>
+>   added support for continuous shifting
+<   added support for continuous shifting
 
-b   added support for camel notation</br>
-e   added support for camel notation</br>
+b   added support for camel notation
+e   added support for camel notation
 w   added support for camel notation
 ```
