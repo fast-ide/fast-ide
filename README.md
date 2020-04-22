@@ -104,6 +104,7 @@ prefix is **\`** symbol
 
 <prefix>n   next window
 <prefix>p   previous window
+<prefix>{N} go to the N window (i.e. `3)
 
 <prefix>r   source .tmux.conf config file
 <prefix>e   switch to fpp mode (see: https://github.com/facebook/PathPicker)
@@ -179,6 +180,7 @@ zz     center the window
 
 ###### config file
 
+You can see all settings in the configuration file
 ```
 <Leader>ov  open nvim config file
 ```
