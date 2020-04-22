@@ -151,6 +151,11 @@ alias r=clear
 
 `<Leader>` is `Space` symbol
 
+You can see all settings in the configuration file
+```
+<Leader>ov  open nvim config file
+```
+
 ##### normal mode
 
 
@@ -176,13 +181,6 @@ L      go to the end of the line (alias for $)
 zj     down half the window
 zk     up half the window
 zz     center the window
-```
-
-###### config file
-
-You can see all settings in the configuration file
-```
-<Leader>ov  open nvim config file
 ```
 
 ###### file manager
