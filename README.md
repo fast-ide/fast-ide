@@ -8,9 +8,13 @@
 > 2. GitHub account
 > 3. Ability to fast develop anywhere and on anything
 
-For the third thing we created the **Fast IDE**.
+For the third thing we created the **Fast IDE**<br/>
+
+We've taken tools that have been proven for decades and added cool new features and integrated them into a single solution 🌟
 
 <img src="https://raw.githubusercontent.com/fast-ide/fast-ide/master/preview.png"/>
+
+We want to provide you with tools that will help you reach your full potential 🧑‍🚀
 
 Available out of the box now:
 
@@ -329,6 +333,11 @@ w   added support for camel notation
 ```
 
 ## Contributors ✨
+
+We want to change the way we think about the development process, 
+make it fast, convenient, collaborative, and accessible to everyone.
+
+Thank you very much to the people who make this possible:
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore-start -->
