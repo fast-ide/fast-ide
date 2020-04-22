@@ -1,5 +1,6 @@
 ![ci_dockerfile](https://github.com/fast-ide/fast-ide/workflows/ci_dockerfile/badge.svg?branch=master)
 [![Build Status](https://travis-ci.org/fast-ide/fast-ide.svg?branch=master)](https://travis-ci.org/fast-ide/fast-ide)
+<span class="badge-patreon"><a href="https://patreon.com/fastide" title="Donate to this project using Patreon"><img src="https://img.shields.io/badge/patreon-donate-blue.svg" alt="Patreon donate button" /></a></span>
 
 💨 The **Fast IDE** you can only dream of ⛅
 
