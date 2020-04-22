@@ -280,10 +280,10 @@ nnoremap <Leader>p "+p
 nnoremap <Leader>P "+P
 vnoremap <Leader>p "+p
 vnoremap <Leader>P "+P
-
-nnoremap <Leader>hl :nohlsearch<CR>
-nnoremap <Leader>ss :set list!<CR>
 nnoremap <Leader>pp :setlocal paste!<cr>
+
+nnoremap <Leader>ls :set hlsearch!<CR>
+nnoremap <Leader>ll :set list!<CR>
 
 nnoremap <Leader>wH <C-W>H
 nnoremap <Leader>wJ <C-W>J
@@ -398,10 +398,8 @@ noremap <silent> <Leader>tb :TagbarToggle<CR>
 " Plug 't9md/vim-quickhl'
 " ----------------------------------------------------------------------------
 
-nmap <Leader>m <Plug>(quickhl-manual-this)
-xmap <Leader>m <Plug>(quickhl-manual-this)
-nmap <Leader>M <Plug>(quickhl-manual-reset)
-xmap <Leader>M <Plug>(quickhl-manual-reset)
+nmap <Leader>l <Plug>(quickhl-manual-this)
+xmap <Leader>l <Plug>(quickhl-manual-this)
 
 let g:quickhl_manual_colors = [
     \ "ctermfg=16  ctermbg=153",

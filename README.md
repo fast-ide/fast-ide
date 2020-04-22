@@ -212,6 +212,14 @@ p          previous search
 <Leader>bp previous bookmark
 ```
 
+###### highlight
+
+```
+<Leader>l  highlight a word under the cursor (see: https://github.com/t9md/vim-quickhl)
+<Leader>ll toggle show special symbols
+<Leader>ls toggle search highlight
+```
+
 ###### edit
 
 ```
