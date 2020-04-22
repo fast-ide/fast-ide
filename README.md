@@ -170,6 +170,11 @@ zk     up half the window
 zz     center the window
 ```
 
+###### config file
+
+```
+<Leader>ov  open nvim config file
+```
 
 ###### file manager
 
@@ -186,7 +191,7 @@ n          next search
 <Leader>tn next tab
 <Leader>qn next item in quickfix list
 <Leader>ln next item in location list
-<Leader>bn next bookmark
+<Leader>bn next bookmark (see: https://github.com/MattesGroeger/vim-bookmarks)
 ```
 
 ###### previous
@@ -233,8 +238,7 @@ p          previous search
 ```
 s{char}{char}  to move to {char}{char} (see: https://github.com/easymotion/vim-easymotion)
 
-(see: https://github.com/junegunn/fzf.vim)
-<Leader>fb find buffer
+<Leader>fb find buffer (see: https://github.com/junegunn/fzf.vim)
 <Leader>ff find file
 <Leader>fl find line
 <Leader>ft find tag
@@ -244,7 +248,7 @@ s{char}{char}  to move to {char}{char} (see: https://github.com/easymotion/vim-e
 <Leader>sl find line in the current buffer
 <Leader>st find tag in the current buffer
 
-\          grep word under cursor (see https://github.com/mileszs/ack.vim)
+\          grep word under cursor (see: https://github.com/mileszs/ack.vim)
 ```
 
 ###### preview
@@ -304,6 +308,6 @@ w   added support for camel notation
 
 ```
 <Leader>vo  open vimux runner (see: https://github.com/benmills/vimux)
-<Leader>vp  send selected text to tmux pane (vimux runner)
-"           send text from the cursor to the end of the line to tmux pane
+<Leader>vp  send selected text to vimux runner
+"           send text from the cursor to the end of the line to vimux runner
 ```
