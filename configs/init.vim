@@ -264,6 +264,8 @@ nnoremap m d
 nnoremap mm dd
 xnoremap m d
 
+vnoremap . :normal .<CR>
+
 noremap <Tab> :bn<CR>
 noremap <S-Tab> :bp<CR>
 
