@@ -250,7 +250,6 @@ s{char}{char}  to move to {char}{char} (see: https://github.com/easymotion/vim-e
 ###### preview
 
 ```
-# https://github.com/skywind3000/vim-preview
 ;          preview tag (see: https://github.com/skywind3000/vim-preview)
 <Leader>pd (destroy) close preview
 
