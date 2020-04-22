@@ -93,6 +93,35 @@ onedark: # alternative
 
 ### Maps
 
+#### tmux
+
+prefix is ``` symbol
+
+```
+<prefix>|   split the window vertically
+<prefix>-   split the window horizontally
+<prefix>!   move the pane to a separate window
+
+<prefix>n   next window
+<prefix>p   previous window
+
+<prefix>r   source .tmux.conf config file
+<prefix>e   switch to fpp mode (see: https://github.com/facebook/PathPicker)
+
+<prefix>Tab clear pane
+<prefix>x   close pane
+
+Shift-Left  resize pane left by 5
+Shift-Right resize pane right by 5
+Shift-Up    resize pane up by 5
+Shift-Down  resize pane down by 5
+
+Ctrl-H      go to the left pane
+Ctrl-J      go to the bottom pane
+Ctrl-K      go to the top pane
+Ctrl-L      go to the right pane
+```
+
 #### terminal
 
 ```
@@ -138,13 +167,15 @@ L      go to the end of the line (alias for $)
 
 zj     down half the window
 zk     up half the window
+zz     center the window
 ```
 
 
 ###### file manager
 
 ```
-<Leader>f open file manager
+<Leader>f   open lf file manager (see: https://github.com/gokcehan/lf)
+<Leader>Tab open NerdTree (see: https://github.com/preservim/nerdtree)
 ```
 
 ###### next
@@ -185,6 +216,7 @@ p          previous search
 <Leader>lo (only) close all other tabs
 <Leader>qo open quickfix list
 <Leader>lo open location list
+<Leader>bo open bookmark list
 ```
 
 ###### close
@@ -199,8 +231,9 @@ p          previous search
 ###### search
 
 ```
-s{char}{char}  to move to {char}{char}
+s{char}{char}  to move to {char}{char} (see: https://github.com/easymotion/vim-easymotion)
 
+(see: https://github.com/junegunn/fzf.vim)
 <Leader>fb find buffer
 <Leader>ff find file
 <Leader>fl find line
@@ -211,7 +244,23 @@ s{char}{char}  to move to {char}{char}
 <Leader>sl find line in the current buffer
 <Leader>st find tag in the current buffer
 
-\          grep word under cursor
+\          grep word under cursor (see https://github.com/mileszs/ack.vim)
+```
+
+###### preview
+
+```
+# https://github.com/skywind3000/vim-preview
+;          preview tag (see: https://github.com/skywind3000/vim-preview)
+<Leader>pd (destroy) close preview
+
+```
+
+####### resize window
+
+```
+Ctrl-T     switch to resize window (see: https://github.com/simeji/winresizer)
+<Leader>ww toogle golden ration mode (see: https://github.com/roman/golden-ratio)
 ```
 
 ##### insert mode
@@ -232,6 +281,12 @@ Ctrl-N (like in **terminal**)
 Ctrl-P (like in **terminal**)
 ```
 
+##### visual mode
+
+```
+Shift-S surround object (see: https://github.com/tpope/vim-surround)
+```
+
 ##### improved maps
 
 ```
@@ -244,4 +299,12 @@ Ctrl-P (like in **terminal**)
 b   added support for camel notation
 e   added support for camel notation
 w   added support for camel notation
+```
+
+##### tmux intergation
+
+```
+<Leader>vo  open vimux runner (see: https://github.com/benmills/vimux)
+<Leader>vp  send selected text to tmux pane (vimux runner)
+"           send text from the cursor to the end of the line to tmux pane
 ```

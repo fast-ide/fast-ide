@@ -438,9 +438,6 @@ sunmap e
 sunmap ge
 sunmap w
 
-imap <silent> <S-Left> <C-o><Plug>CamelCaseMotion_b
-imap <silent> <S-Right> <C-o><Plug>CamelCaseMotion_w
-
 " ----------------------------------------------------------------------------
 " ftplugin/man.vim
 " ----------------------------------------------------------------------------
@@ -489,7 +486,7 @@ nnoremap <silent> ; :PreviewTag<CR>
 nnoremap <silent> <Leader>pd :PreviewClose<CR>
 nnoremap <silent> <Leader>pt :PreviewGoto tabe<CR>
 nnoremap <silent> <Leader>ps :PreviewGoto split<CR>
-nnoremap <silent> <Lead er>pv :PreviewGoto vsplit<CR>
+nnoremap <silent> <Leader>pv :PreviewGoto vsplit<CR>
 
 noremap <silent> <m-u> :PreviewScroll -1<cr>
 noremap <silent> <m-d> :PreviewScroll +1<cr>
@@ -566,7 +563,7 @@ let g:bookmark_no_default_key_mappings = 1
 
 nmap <Leader>bb <Plug>BookmarkToggle
 nmap <Leader>bi <Plug>BookmarkAnnotate
-nmap <Leader>ba <Plug>BookmarkShowAll
+nmap <Leader>bo <Plug>BookmarkShowAll
 nmap <Leader>bn <Plug>BookmarkNext
 nmap <Leader>bp <Plug>BookmarkPrev
 nmap <Leader>bc <Plug>BookmarkClear
