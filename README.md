@@ -95,7 +95,7 @@ onedark: # alternative
 
 #### tmux
 
-prefix is ``` symbol
+prefix is **\`** symbol
 
 ```
 <prefix>|   split the window vertically
