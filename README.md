@@ -90,3 +90,131 @@ onedark: # alternative
   - https://github.com/joshdick/onedark.vim/tree/master/term
   - https://github.com/denysdovhan/one-gnome-terminal
 ```
+
+### Maps
+
+#### terminal
+
+`Ctrl-A` go to the beginning of the line</br>
+`Ctrl-E` go to the end of the line</br>
+
+`Ctrl-N` next insturction from history</br>
+`Ctrl-P` previous insturction from history</br>
+
+`Alt-C`  go to the directory using fuzzy search</br>
+`Ctrl-R` find the insturction using fuzzy search</br>
+`Ctrl-T` find file using fuzzy search</br>
+
+`Esc`    switch to vi mode
+
+##### alias
+
+`o` nvim</br>
+`p` echo</br>
+`c` vimcat</br>
+
+#### nvim
+
+##### normal mode
+
+`Ctrl-E` down 1 line</br>
+`Ctrl-Y` up 1 line</br>
+
+`vv`     select line</br>
+`V`      select to the end of the line</br>
+
+`yy`     yank line</br>
+`Y`      yank to the end of the line</br>
+
+`mm`     move line</br>
+`M`      move to the end of the line</br>
+
+`dd`     delete line</br>
+`D`      delete to the end of the line</br>
+
+`H`      go to the beginning of the line (alias for `^`)</br>
+`L`      go to the end of the line (alias for `$`)</br>
+
+`zj`     down half the window</br>
+`zk`     up half the window</br>
+
+###### next
+
+`n`          next search</br>
+`<Leader>wn` next window</br>
+`<Leader>tn` next tab</br>
+`<Leader>qn` next item in quickfix list</br>
+`<Leader>ln` next item in location list</br>
+`<Leader>bn` next bookmark</br>
+
+###### previous
+
+`p`          previous search</br>
+`<Leader>wp` previous window</br>
+`<Leader>tp` previous tab</br>
+`<Leader>qp` previous item in quickfix list</br>
+`<Leader>lp` previous item in location list</br>
+`<Leader>bp` previous bookmark</br>
+
+###### edit
+
+`<Leader>we` edit file in new vertical window</br>
+`<Leader>te` edit file in new tab</br>
+`<Leader>qe` open quickfix list</br>
+`<Leader>le` open location list</br>
+
+###### open or only
+
+`<Leader>wo` (only) close all other windows</br>
+`<Leader>lo` (only) close all other tabs</br>
+`<Leader>qo` open quickfix list</br>
+`<Leader>lo` open location list</br>
+
+###### close
+
+`<Leader>wd` (destroy) close window</br>
+`<Leader>td` (destroy) close tab</br>
+`<Leader>qd` (destroy) close quickfix list</br>
+`<Leader>ld` (destroy) close location list</br>
+
+###### search
+
+`s{char}{char}`  to move to {char}{char}</br>
+
+`<Leader>fb` find buffer</br>
+`<Leader>ff` find file</br>
+`<Leader>fl` find line</br>
+`<Leader>ft` find tag</br>
+`<Leader>fs` find file type</br>
+`<Leader>fh` find find a file among previously opened files</br>
+
+`<Leader>sl` find line in the current buffer</br>
+`<Leader>st` find tag in the current buffer</br>
+
+`\`          grep word under cursor</br>
+
+##### insert mode
+
+`Ctrl-E` (like in **normal** mode)</br>
+`Ctrl-Y` (like in **normal** mode)</br>
+
+`jk`     switch to normal mode (alias for Esc)</br>
+
+##### command mode
+
+`Ctrl-A` (like in **terminal**)</br>
+`Ctrl-E` (like in **terminal**)</br>
+`Ctrl-N` (like in **terminal**)</br>
+`Ctrl-P` (like in **terminal**)</br>
+
+##### improved maps
+
+`/`   added winking and centering</br>
+`?`   added winking and centering</br>
+
+`>`   added support for continuous shifting</br>
+`<`   added support for continuous shifting</br>
+
+`b`   added support for camel notation</br>
+`e`   added support for camel notation</br>
+`w`   added support for camel notation
