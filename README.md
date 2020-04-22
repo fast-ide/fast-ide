@@ -308,6 +308,7 @@ Shift-S surround object (see: https://github.com/tpope/vim-surround)
 ##### improved maps
 
 ```
+.   added support for visual mode
 /   added winking and centering
 ?   added winking and centering
 
