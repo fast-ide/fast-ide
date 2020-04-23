@@ -138,17 +138,17 @@ Ctrl-L      go to the right pane
 #### terminal
 
 ```
-Ctrl-A go to the beginning of the line
-Ctrl-E go to the end of the line
+Ctrl-A      go to the beginning of the line
+Ctrl-E      go to the end of the line
 
-Ctrl-N next insturction from history
-Ctrl-P previous insturction from history
+Ctrl-N      next insturction from history
+Ctrl-P      previous insturction from history
 
-Alt-C  go to the directory using fuzzy search
-Ctrl-R find the insturction using fuzzy search
-Ctrl-T find file using fuzzy search
+Alt-C       go to the directory using fuzzy search
+Ctrl-R      find the insturction using fuzzy search
+Ctrl-T      find file using fuzzy search
 
-Esc    switch to vi mode
+Esc         switch to vi mode
 ```
 
 ```sh
@@ -174,27 +174,27 @@ You can see all settings in the configuration file
 
 
 ```
-Ctrl-E down 1 line
-Ctrl-Y up 1 line
+Ctrl-E      down 1 line
+Ctrl-Y      up 1 line
 
-vv     select line
-V      select to the end of the line
+vv          select line
+V           select to the end of the line
 
-yy     yank line
-Y      yank to the end of the line
+yy          yank line
+Y           yank to the end of the line
 
-mm     move line
-M      move to the end of the line
+mm          move line
+M           move to the end of the line
 
-dd     delete line
-D      delete to the end of the line
+dd          delete line
+D           delete to the end of the line
 
-H      go to the beginning of the line (alias for ^)
-L      go to the end of the line (alias for $)
+H           go to the beginning of the line (alias for ^)
+L           go to the end of the line (alias for $)
 
-zj     down half the window
-zk     up half the window
-zz     center the window
+zj          down half the window
+zk          up half the window
+zz          center the window
 ```
 
 ###### file manager
@@ -321,16 +321,16 @@ jk          switch to normal mode (alias for Esc)
 
 ##### code
 ```
-gf  go to file
+gf          go to file
 
-gd  go to definition (see: https://github.com/neoclide/coc.nvim)
-gi  go to implementation
-gy  go to type definition
-gr  go to references
+gd          go to definition (see: https://github.com/neoclide/coc.nvim)
+gi          go to implementation
+gy          go to type definition
+gr          go to references
 
-K   show documentation
+K           show documentation
 
-<Leader>rn   rename current word
+<Leader>rn  rename current word
 ```
 
 ##### command mode
@@ -345,7 +345,7 @@ Ctrl-P      (like in terminal)
 ##### visual mode
 
 ```
-Shift-S surround object (see: https://github.com/tpope/vim-surround)
+Shift-S     surround object (see: https://github.com/tpope/vim-surround)
 ```
 
 ##### improved maps
