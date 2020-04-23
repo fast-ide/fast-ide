@@ -207,67 +207,67 @@ zz     center the window
 ###### next
 
 ```
-n          next search
-<Leader>wn next window
-<Leader>tn next tab
-<Leader>qn next item in quickfix list
-<Leader>ln next item in location list
-<Leader>bn next bookmark (see: https://github.com/MattesGroeger/vim-bookmarks)
+n           next search
+<Leader>wn  next window
+<Leader>tn  next tab
+<Leader>qn  next item in quickfix list
+<Leader>ln  next item in location list
+<Leader>bn  next bookmark (see: https://github.com/MattesGroeger/vim-bookmarks)
 ```
 
 ###### previous
 
 ```
-N          previous search
-<Leader>wp previous window
-<Leader>tp previous tab
-<Leader>qp previous item in quickfix list
-<Leader>lp previous item in location list
-<Leader>bp previous bookmark
+N           previous search
+<Leader>wp  previous window
+<Leader>tp  previous tab
+<Leader>qp  previous item in quickfix list
+<Leader>lp  previous item in location list
+<Leader>bp  previous bookmark
 ```
 
 ###### docs
 
 ```
-K          run a program to lookup the keyword under the cursor
-<Leader>k  display the manpage for the keyword under the cursor horizontally
-<Leader>v  display the manpage for the keyword under the cursor vertically
+K           run a program to lookup the keyword under the cursor
+<Leader>k   display the manpage for the keyword under the cursor horizontally
+<Leader>v   display the manpage for the keyword under the cursor vertically
 ```
 
 ###### highlight
 
 ```
-<Leader>l  highlight a word under the cursor (see: https://github.com/t9md/vim-quickhl)
-<Leader>ll toggle show special symbols
-<Leader>ls toggle search highlight
+<Leader>l   highlight a word under the cursor (see: https://github.com/t9md/vim-quickhl)
+<Leader>ll  toggle show special symbols
+<Leader>ls  toggle search highlight
 ```
 
 ###### edit
 
 ```
-<Leader>we edit file in new vertical window
-<Leader>te edit file in new tab
-<Leader>qe open quickfix list
-<Leader>le open location list
+<Leader>we  edit file in new vertical window
+<Leader>te  edit file in new tab
+<Leader>qe  open quickfix list
+<Leader>le  open location list
 ```
 
 ###### open or only
 
 ```
-<Leader>wo (only) close all other windows
-<Leader>lo (only) close all other tabs
-<Leader>qo open quickfix list
-<Leader>lo open location list
-<Leader>bo open bookmark list
+<Leader>wo  (only) close all other windows
+<Leader>lo  (only) close all other tabs
+<Leader>qo  open quickfix list
+<Leader>lo  open location list
+<Leader>bo  open bookmark list
 ```
 
 ###### close
 
 ```
-<Leader>wd (destroy) close window
-<Leader>td (destroy) close tab
-<Leader>qd (destroy) close quickfix list
-<Leader>ld (destroy) close location list
+<Leader>wd  (destroy) close window
+<Leader>td  (destroy) close tab
+<Leader>qd  (destroy) close quickfix list
+<Leader>ld  (destroy) close location list
 ```
 
 ###### search
@@ -275,24 +275,24 @@ K          run a program to lookup the keyword under the cursor
 ```
 s{char}{char}  to move to {char}{char} (see: https://github.com/easymotion/vim-easymotion)
 
-<Leader>fb find buffer (see: https://github.com/junegunn/fzf.vim)
-<Leader>ff find file
-<Leader>fl find line
-<Leader>ft find tag
-<Leader>fs find file type
-<Leader>fh find find a file among previously opened files
+<Leader>fb  find buffer (see: https://github.com/junegunn/fzf.vim)
+<Leader>ff  find file
+<Leader>fl  find line
+<Leader>ft  find tag
+<Leader>fs  find file type
+<Leader>fh  find find a file among previously opened files
 
-<Leader>sl find line in the current buffer
-<Leader>st find tag in the current buffer
+<Leader>sl  find line in the current buffer
+<Leader>st  find tag in the current buffer
 
-\          grep word under cursor (see: https://github.com/mileszs/ack.vim)
+\           grep word under cursor (see: https://github.com/mileszs/ack.vim)
 ```
 
-###### preview
+###### preview tag
 
 ```
-;          preview tag (see: https://github.com/skywind3000/vim-preview)
-<Leader>pd (destroy) close preview
+;           preview tag (see: https://github.com/skywind3000/vim-preview)
+<Leader>pd  (destroy) close preview
 ```
 
 `<Leader>ft` generates the **tags** of the file if it is missing
@@ -306,32 +306,17 @@ gotags -R ./**/*.go > tags                                             # Go
 ###### resize window
 
 ```
-Ctrl-T     switch to resize window (see: https://github.com/simeji/winresizer)
-<Leader>ww toogle golden ration mode (see: https://github.com/roman/golden-ratio)
+Ctrl-T      switch to resize window (see: https://github.com/simeji/winresizer)
+<Leader>ww  toogle golden ration mode (see: https://github.com/roman/golden-ratio)
 ```
 
 ##### insert mode
 
 ```
-Ctrl-E (like in **normal** mode)
-Ctrl-Y (like in **normal** mode)
+Ctrl-E      (like in normal mode)
+Ctrl-Y      (like in normal mode)
 
-jk     switch to normal mode (alias for Esc)
-```
-
-##### command mode
-
-```
-Ctrl-A (like in **terminal**)
-Ctrl-E (like in **terminal**)
-Ctrl-N (like in **terminal**)
-Ctrl-P (like in **terminal**)
-```
-
-##### visual mode
-
-```
-Shift-S surround object (see: https://github.com/tpope/vim-surround)
+jk          switch to normal mode (alias for Esc)
 ```
 
 ##### code
@@ -348,19 +333,34 @@ K   show documentation
 <Leader>rn   rename current word
 ```
 
+##### command mode
+
+```
+Ctrl-A      (like in terminal)
+Ctrl-E      (like in terminal)
+Ctrl-N      (like in terminal)
+Ctrl-P      (like in terminal)
+```
+
+##### visual mode
+
+```
+Shift-S surround object (see: https://github.com/tpope/vim-surround)
+```
+
 ##### improved maps
 
 ```
-.   added support for visual mode
-/   added winking and centering
-?   added winking and centering
+.           added support for visual mode
+/           added winking and centering
+?           added winking and centering
 
->   added support for continuous shifting
-<   added support for continuous shifting
+>           added support for continuous shifting
+<           added support for continuous shifting
 
-b   added support for camel notation
-e   added support for camel notation
-w   added support for camel notation
+b           added support for camel notation
+e           added support for camel notation
+w           added support for camel notation
 ```
 
 ##### tmux intergation
