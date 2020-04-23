@@ -15,7 +15,7 @@ cp configs/.gitconfig $HOME/
 cp configs/.tmux.conf $HOME/
 cp configs/.zshrc $HOME/
 
-echo "PATH=\$PATH:\$HOME/bin" >> ~/.zshrc # need to remove crutch
+echo "PATH=\$PATH:\$HOME/go/bin" >> ~/.zshrc # need to remove crutch
 
 mkdir -p $HOME/.config/nvim/
 
