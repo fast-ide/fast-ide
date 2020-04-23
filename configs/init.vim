@@ -404,14 +404,14 @@ nmap <Leader>l <Plug>(quickhl-manual-this)
 xmap <Leader>l <Plug>(quickhl-manual-this)
 
 let g:quickhl_manual_colors = [
-    \ "ctermfg=16  ctermbg=153",
-    \ "ctermfg=16  ctermbg=1",
-    \ "ctermfg=16  ctermbg=2",
-    \ "ctermfg=16  ctermbg=4",
-    \ "ctermfg=16  ctermbg=5",
-    \ "ctermfg=16  ctermbg=6",
-    \ "ctermfg=16  ctermbg=7",
-    \ "ctermfg=16  ctermbg=215",
+    \ "ctermfg=16  ctermbg=153 guifg=#ffffff guibg=#0a7383",
+    \ "ctermfg=16  ctermbg=1   guibg=#a07040 guifg=#ffffff",
+    \ "ctermfg=16  ctermbg=2   guibg=#4070a0 guifg=#ffffff",
+    \ "ctermfg=16  ctermbg=4   guibg=#40a070 guifg=#ffffff",
+    \ "ctermfg=16  ctermbg=5   guibg=#0070e0 guifg=#ffffff",
+    \ "ctermfg=16  ctermbg=6   guibg=#007020 guifg=#ffffff",
+    \ "ctermfg=16  ctermbg=7   guibg=#d4a00d guifg=#ffffff",
+    \ "ctermfg=16  ctermbg=215 guibg=#06287e guifg=#ffffff",
     \ ]
 
 " ----------------------------------------------------------------------------
