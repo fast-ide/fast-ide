@@ -27,6 +27,7 @@ ln -s /usr/bin/python3 /usr/bin/python
 apk add python3-dev libc-dev
 
 pip3 install pynvim git-plus python-language-server
+GO111MODULE=on go get golang.org/x/tools/gopls@latest
 
 apk del python3-dev libc-dev
 
@@ -57,6 +58,8 @@ cp configs/.ackignore $HOME/
 cp configs/.gitconfig $HOME/
 cp configs/.tmux.conf $HOME/
 cp configs/.zshrc $HOME/
+
+echo "PATH=\$PATH:\$GOPATH/bin" >> ~/.zshrc
 
 mkdir -p $HOME/.config/nvim/
 
