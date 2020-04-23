@@ -113,11 +113,14 @@ prefix is **\`** symbol
 <prefix>p   previous window
 <prefix>{N} go to the N window (i.e. `3)
 
+<prefix>"   show tree
+<prefix>s   create session
 <prefix>r   source .tmux.conf config file
 <prefix>e   switch to fpp mode (see: https://github.com/facebook/PathPicker)
 
 <prefix>Tab clear pane
 <prefix>x   close pane
+<prefix>&   close window
 
 Shift-Left  resize pane left by 5
 Shift-Right resize pane right by 5
@@ -129,6 +132,8 @@ Ctrl-J      go to the bottom pane
 Ctrl-K      go to the top pane
 Ctrl-L      go to the right pane
 ```
+
+<img src="http://g.recordit.co/XzrdSzlcW1.gif"/>
 
 #### terminal
 
