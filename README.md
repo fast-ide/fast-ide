@@ -133,7 +133,7 @@ Ctrl-K      go to the top pane
 Ctrl-L      go to the right pane
 ```
 
-<img src="http://g.recordit.co/XzrdSzlcW1.gif"/>
+<img src="https://raw.githubusercontent.com/fast-ide/fast-ide/master/docs/tmux.gif"/>
 
 #### terminal
 
@@ -159,7 +159,7 @@ alias p=echo
 alias r=clear
 ```
 
-<img src="https://recordit.co/9J83qSVKPT.gif"/>
+<img src="https://raw.githubusercontent.com/fast-ide/fast-ide/master/docs/zsh.gif"/>
 
 #### nvim
 
