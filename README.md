@@ -293,7 +293,14 @@ s{char}{char}  to move to {char}{char} (see: https://github.com/easymotion/vim-e
 ```
 ;          preview tag (see: https://github.com/skywind3000/vim-preview)
 <Leader>pd (destroy) close preview
+```
 
+`<Leader>ft` generates the **tags** of the file if it is missing
+or you can generate it manually if necessary
+```sh
+ctags -R --c++-kinds=+p --fields=+iaS --extras=+q --language-force=C++ # C++
+ctags -R --fields=+l --languages=python --python-kinds=-iv             # Python
+gotags -R ./**/*.go > tags                                             # Go
 ```
 
 ###### resize window
