@@ -159,6 +159,8 @@ alias p=echo
 alias r=clear
 ```
 
+<img src="https://recordit.co/9J83qSVKPT.gif"/>
+
 #### nvim
 
 `<Leader>` is `Space` symbol
