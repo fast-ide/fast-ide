@@ -462,3 +462,15 @@ Thank you very much to the people who make this possible:
     <td align="center"><a href="https://allcontributors.org"><img src="https://avatars1.githubusercontent.com/u/46410174?v=4" width="100px;" alt=""/><br /><sub><b>All Contributors</b></sub></a><br /><a href="https://github.com/fast-ide/fast-ide/commits?author=all-contributors" title="Documentation">📖</a></td>
   </tr>
 </table>
+
+## Sponsorship 👏
+
+We are grateful to the maintainers of the following projects for their great work
+
+<a href="https://liberapay.com/tmux"><img src="https://img.shields.io/badge/liberapay-tmux-orange.svg" /></a>
+<a href="https://www.patreon.com/tonsky"><img src="https://img.shields.io/badge/patreon-firacode-orange.svg" /></a>
+<a href="https://www.patreon.com/homebrew"><img src="https://img.shields.io/badge/patreon-homebrew-orange.svg" /></a>
+<a href="https://www.patreon.com/wtfutil"><img src="https://img.shields.io/badge/patreon-wtfutil-orange.svg" /></a>
+<a href="https://salt.bountysource.com/teams/neovim"><img src="https://img.shields.io/badge/bountysource-neovim-orange.svg" /></a>
+<a href="https://www.patreon.com/chemzqm"><img src="https://img.shields.io/badge/patreon-cocnvim-orange.svg" /></a>
+<a href="https://www.patreon.com/umputun"><img src="https://img.shields.io/badge/patreon-radio_t-orange.svg" /></a>
