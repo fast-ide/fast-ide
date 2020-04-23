@@ -218,12 +218,20 @@ n          next search
 ###### previous
 
 ```
-p          previous search
+N          previous search
 <Leader>wp previous window
 <Leader>tp previous tab
 <Leader>qp previous item in quickfix list
 <Leader>lp previous item in location list
 <Leader>bp previous bookmark
+```
+
+###### docs
+
+```
+K          run a program to lookup the keyword under the cursor
+<Leader>k  display the manpage for the keyword under the cursor horizontally
+<Leader>v  display the manpage for the keyword under the cursor vertically
 ```
 
 ###### highlight
