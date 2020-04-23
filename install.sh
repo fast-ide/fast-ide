@@ -7,6 +7,7 @@ set -ex
 # temp solution: need to transfer in bootstrap after openssl fix
 brew install --build-bottle lf tree
 GO111MODULE=on go get golang.org/x/tools/gopls@latest
+GO111MODULE=on go get github.com/jstemmer/gotags
 pip3 install python-language-server
 
 cp configs/.ackignore $HOME/
