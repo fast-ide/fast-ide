@@ -334,6 +334,20 @@ Ctrl-P (like in **terminal**)
 Shift-S surround object (see: https://github.com/tpope/vim-surround)
 ```
 
+##### code
+```
+gf  go to file
+
+gd  go to definition (see: https://github.com/neoclide/coc.nvim)
+gi  go to implementation
+gy  go to type definition
+gr  go to references
+
+K   show documentation
+
+<Leader>rn   rename current word
+```
+
 ##### improved maps
 
 ```
