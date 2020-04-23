@@ -473,7 +473,7 @@ Thank you very much to the people who make this possible:
 
 ## Sponsorship 👏
 
-We are grateful to the maintainers of the following projects for their great work
+We are grateful to the maintainers of the following projects for their great work. We are redirecting all revenue to them:
 
 <a href="https://liberapay.com/tmux"><img src="https://img.shields.io/badge/liberapay-tmux-orange.svg" /></a>
 <a href="https://www.patreon.com/tonsky"><img src="https://img.shields.io/badge/patreon-firacode-orange.svg" /></a>
