@@ -28,6 +28,7 @@ apk add python3-dev libc-dev
 
 pip3 install pynvim git-plus python-language-server
 GO111MODULE=on go get golang.org/x/tools/gopls@latest
+GO111MODULE=on go get github.com/jstemmer/gotags
 
 apk del python3-dev libc-dev
 
