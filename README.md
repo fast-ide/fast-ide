@@ -17,7 +17,7 @@ We've taken tools that have been proven for decades and added cool new features 
 <img src="https://raw.githubusercontent.com/fast-ide/fast-ide/master/preview.png"/>
 
 We want to provide you with tools that will help you reach your full potential 🧑‍🚀<br/>
-`neovim` `tmux` `zsh` `coc`
+`tmux` `zsh` `neovim` `coc.nvim`
 
 Available out of the box now:
 
