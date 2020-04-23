@@ -41,7 +41,8 @@ antigen theme https://github.com/denysdovhan/spaceship-prompt spaceship
 
 antigen apply
 
-# TODO: need to check this for multiple os
+export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#808080,bg=gray,underline"
+
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 bindkey '^ ' autosuggest-accept
@@ -61,5 +62,4 @@ alias p=echo
 alias r=clear
 
 [ -f $HOME/.fzf.zsh ] && source $HOME/.fzf.zsh
-
 KEYTIMEOUT=1
