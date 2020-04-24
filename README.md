@@ -48,7 +48,8 @@ cd fast-ide && ./install.sh
 - centos 8
 - debian 10
 - fedora 31
-- ubuntu 19.04
+- ubuntu 18.04
+- ubuntu 20.04
 ```
 
 ```yaml
