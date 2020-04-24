@@ -320,20 +320,6 @@ Ctrl-Y      (like in normal mode)
 jk          switch to normal mode (alias for Esc)
 ```
 
-##### code
-```
-gf          go to file
-
-gd          go to definition (see: https://github.com/neoclide/coc.nvim)
-gi          go to implementation
-gy          go to type definition
-gr          go to references
-
-K           show documentation
-
-<Leader>rn  rename current word
-```
-
 ##### command mode
 
 ```
