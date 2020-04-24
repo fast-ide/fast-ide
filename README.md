@@ -35,8 +35,8 @@ docker run -it fastide/alpine zsh
 ### Update
 
 ```sh
-# for example update on Ubuntu 🕺
-docker run -it fastide/ubuntu:19.04 zsh
+# for example update on Ubuntu Focal Fossa 🐱
+docker run -it fastide/ubuntu:20.04 zsh
 git clone https://github.com/fast-ide/fast-ide
 cd fast-ide && ./install.sh
 ```
