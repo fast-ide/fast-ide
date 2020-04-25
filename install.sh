@@ -17,4 +17,4 @@ cp configs/lsp.vim $HOME/.config/nvim/
 
 zsh -c "source $HOME/.zshrc"
 nvim -S $HOME/.config/nvim/snapshot.vim +qa --headless
-nvim -c "CocInstall coc-clangd coc-python coc-go" --headless
+nvim -c "CocInstall coc-clangd coc-python coc-go" +qa --headless
