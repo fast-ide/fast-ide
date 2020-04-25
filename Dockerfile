@@ -4,4 +4,4 @@ FROM fastide/bootstrap-${OS_FAMILY}:${OS_VERSION}
 
 COPY install.sh /tmp/
 COPY configs /tmp/
-RUN cd /tmp && ./install.sh && rm -rf install.sh configs
+RUN cd /tmp && ./install.sh
