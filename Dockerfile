@@ -3,5 +3,5 @@ ARG OS_VERSION
 FROM fastide/bootstrap-${OS_FAMILY}:${OS_VERSION}
 
 COPY install.sh /tmp/
-COPY configs /tmp/
+COPY configs /tmp/configs
 RUN cd /tmp && ./install.sh
