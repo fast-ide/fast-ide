@@ -53,6 +53,7 @@ HISTORY_SUBSTRING_SEARCH_ENSURE_UNIQUE=1
 export SHELL=`which zsh`
 export EDITOR=nvim
 export LC_ALL=en_US.UTF-8
+export GOPATH=$HOME/go
 
 alias o=nvim
 alias c=vimcat
