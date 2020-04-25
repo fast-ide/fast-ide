@@ -302,6 +302,7 @@ or you can generate it manually if necessary
 ctags -R --c++-kinds=+p --fields=+iaS --extras=+q --language-force=C++ # C++
 ctags -R --fields=+l --languages=python --python-kinds=-iv             # Python
 gotags -R ./**/*.go > tags                                             # Go
+ctags -R                                                               # JavaScript
 ```
 
 ###### resize window
