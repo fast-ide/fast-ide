@@ -480,6 +480,12 @@ Thank you very much to the people who make this possible:
   </tr>
 </table>
 
+## Contributing 🤝
+
+- See the issue list, we have a `help wanted` label for those tasks that you can help solve<br />
+- You can assign the problem to yourself, specify the milestone, and prepare a PR<br />
+- We have a `question` label for issues where we want to hear your opinion<br />
+
 ## Sponsorship 👏
 
 We are grateful to the maintainers of the following projects for their great work. We are redirecting all revenue to them:
