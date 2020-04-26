@@ -482,6 +482,7 @@ Thank you very much to the people who make this possible:
 
 ## Contributing 🤝
 
+- You can describe a cool feature by creating an issue with a description and the `feature` label <br />
 - See the issue list, we have a `help wanted` label for those tasks that you can help solve<br />
 - You can assign the problem to yourself, specify the milestone, and prepare a PR<br />
 - We have a `question` label for issues where we want to hear your opinion<br />
