@@ -3,7 +3,7 @@
 [![Gitter](https://badges.gitter.im/fast-ide/community.svg)](https://gitter.im/fast-ide/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 [![Slack](https://img.shields.io/badge/workspace-slack-blue.svg)](https://fastide.slack.com)
 
-💨 The **Fast IDE** you can only dream of ⛅
+💨 The **Fast IDE** you can only dream of ⛅.
 
 > The developer needs three things:
 > 1. Email
@@ -11,8 +11,10 @@
 > 3. Ability to fast develop anywhere and on anything
 
 For the third thing we created the **Fast IDE**<br/>
+We believe that development tools should be available to everyone and therefore free of charge ✌️
 
-We've taken tools that have been proven for decades and added cool new features and integrated them into a single solution 🌟
+We've taken tools that have been proven for decades and <br/>
+added cool new features and integrated them into a single solution 🌟
 
 <img src="https://raw.githubusercontent.com/fast-ide/fast-ide/master/preview.png"/>
 
