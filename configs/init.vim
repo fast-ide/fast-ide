@@ -235,7 +235,6 @@ nmap n nzz
 nnoremap vv V
 nnoremap V v$
 nnoremap \| v$"py:read !<C-r>p<CR>
-nnoremap - v$"xy:@x<CR>
 
 inoremap jk <esc>
 nmap zj <C-d>zz
