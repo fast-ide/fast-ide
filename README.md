@@ -20,6 +20,8 @@ added cool new features and integrated them into a single solution 🌟
 
 <img src="https://raw.githubusercontent.com/fast-ide/fast-ide/master/preview.png"/>
 
+## Table of Contents
+
 - [Introduction](#introduction)
 - [Instructions](#instructions)
   * [Run](#run)
