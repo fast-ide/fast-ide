@@ -361,10 +361,17 @@ w           added support for camel notation
 "           send text from the cursor to the end of the line to vimux runner
 ```
 
-## Contributors ✨
+## Plans 💡
 
-We want to change the way we think about the development process, 
-make it fast, convenient, collaborative, and accessible to everyone.
+We want to change the way we think about the development process, <br />
+make it fast, convenient, collaborative, and accessible to everyone
+
+One of the key development vectors is providing the ability to easily deploy the environment <br />
+and provide access to other users of the Github service to solve issues together <br />
+A cool feature is to make it possible directly from the browser with the ability  <br />
+to stream the terminal to the corresponding issue page 🎉 <br />
+
+## Contributors ✨
 
 Thank you very much to the people who make this possible:
 
