@@ -3,6 +3,8 @@
 [![Gitter](https://badges.gitter.im/fast-ide/community.svg)](https://gitter.im/fast-ide/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 [![Slack](https://img.shields.io/badge/workspace-slack-blue.svg)](https://fastide.slack.com)
 
+## Introduction
+
 💨 The **Fast IDE** you can only dream of ⛅.
 
 > The developer needs three things:
@@ -17,6 +19,32 @@ We've taken tools that have been proven for decades and <br/>
 added cool new features and integrated them into a single solution 🌟
 
 <img src="https://raw.githubusercontent.com/fast-ide/fast-ide/master/preview.png"/>
+
+- [Introduction](#introduction)
+- [Instructions](#instructions)
+  * [Run](#run)
+  * [Update](#update)
+  * [Supported OSs](#supported-oss)
+  * [Deploy](#deploy)
+  * [Install](#install)
+  * [Font settings](#font-settings)
+  * [Themes](#themes)
+  * [Maps](#maps)
+    + [tmux](#tmux)
+    + [terminal](#terminal)
+    + [nvim](#nvim)
+      - [normal mode](#normal-mode)
+      - [insert mode](#insert-mode)
+      - [command mode](#command-mode)
+      - [visual mode](#visual-mode)
+      - [improved maps](#improved-maps)
+      - [tmux intergation](#tmux-intergation)
+- [Plans 💡](#plans-)
+- [Contributors ✨](#contributors-)
+- [Contributing 🤝](#contributing-)
+- [Sponsorship 👏](#sponsorship-)
+
+## Instructions
 
 We want to provide you with tools that will help you reach your full potential 🧑‍🚀<br/>
 `tmux` `zsh` `brew` `neovim` `coc.nvim`
