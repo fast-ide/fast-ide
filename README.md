@@ -140,7 +140,23 @@ If you are using a terminal that does not support _true colors_ perform the foll
 nvim -c "set notermguicolors" -c "Tmuxline airline" -c "TmuxlineSnapshot! ~/.tmux/line" +q 
 echo "alias o='nvim -c \"set notermguicolors\"'" >> ~/.zshrc
 ```
-On **macOS**, it is better to use **iTerm** instead **terminal.app**
+
+You can check support using the following instruction:
+```sh
+awk 'BEGIN{
+    s="/\\/\\/\\/\\/\\"; s=s s s s s s s s;
+    for (colnum = 0; colnum<77; colnum++) {
+        r = 255-(colnum*255/76);
+        g = (colnum*510/76);
+        b = (colnum*255/76);
+        if (g>255) g = 510-g;
+        printf "\033[48;2;%d;%d;%dm", r,g,b;
+        printf "\033[38;2;%d;%d;%dm", 255-r,255-g,255-b;
+        printf "%s\033[0m", substr(s,colnum+1,1);
+    }
+    printf "\n";
+}'
+```
 
 ### Maps
 
