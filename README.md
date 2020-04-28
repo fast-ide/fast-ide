@@ -134,8 +134,7 @@ onedark: # alternative
 
 ### True colors
 
-If you are using a terminal that does not support true color<br /> 
-perform the following configuration for normal display<br />
+If you are using a terminal that does not support _true colors_ perform the following configuration for normal display
  
 ```sh
 nvim -c "set notermguicolors" -c "Tmuxline airline" -c"TmuxlineSnapshot! ~/.tmux/line" +q 
