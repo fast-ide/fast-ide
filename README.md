@@ -131,6 +131,17 @@ onedark: # alternative
   - https://github.com/denysdovhan/one-gnome-terminal
 ```
 
+### True colors 🎨
+
+If you are using a terminal that does not support true color<br /> 
+perform the following configuration for normal display<br />
+ 
+```sh
+nvim -c "set notermguicolors" -c "Tmuxline airline" -c"TmuxlineSnapshot! ~/.tmux/line" +q 
+echo "alias o='nvim -c \"set notermguicolors\"'" >> ~/.zshrc
+```
+On **macOS**, it is better to use **iTerm** instead **terminal.app**
+
 ### Maps
 
 #### tmux
