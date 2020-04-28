@@ -30,7 +30,8 @@ added cool new features and integrated them into a single solution 🌟
   * [Deploy](#deploy)
   * [Install](#install)
   * [Font settings](#font-settings)
-  * [Themes](#themes)
+  * [Themes 🎨](#themes-)
+  * [True colors](#true-colors)
   * [Maps](#maps)
     + [tmux](#tmux)
     + [terminal](#terminal)
@@ -117,7 +118,7 @@ cd .. && make install
 FiraCode: https://github.com/tonsky/FiraCode/wiki/Installing
 ```
 
-### Themes
+### Themes 🎨
 
 ```yaml
 onehalf:
@@ -131,7 +132,7 @@ onedark: # alternative
   - https://github.com/denysdovhan/one-gnome-terminal
 ```
 
-### True colors 🎨
+### True colors
 
 If you are using a terminal that does not support true color<br /> 
 perform the following configuration for normal display<br />
