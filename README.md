@@ -31,7 +31,7 @@ added cool new features and integrated them into a single solution 🌟
   * [Install](#install)
   * [Font settings](#font-settings)
   * [Themes 🎨](#themes-)
-  * [True colors](#true-colors)
+  * [True color](#true-color)
   * [Maps](#maps)
     + [tmux](#tmux)
     + [terminal](#terminal)
@@ -132,9 +132,9 @@ onedark: # alternative
   - https://github.com/denysdovhan/one-gnome-terminal
 ```
 
-### True colors
+### True color
 
-If you are using a terminal that does not support _true colors_ perform the following configuration for normal display
+If you are using a terminal that does not support _true color_ perform the following script for normal display
  
 ```sh
 nvim -c "set notermguicolors" -c "Tmuxline airline" -c "TmuxlineSnapshot! ~/.tmux/line" +q 
