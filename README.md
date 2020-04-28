@@ -137,7 +137,7 @@ onedark: # alternative
 If you are using a terminal that does not support _true colors_ perform the following configuration for normal display
  
 ```sh
-nvim -c "set notermguicolors" -c "Tmuxline airline" -c"TmuxlineSnapshot! ~/.tmux/line" +q 
+nvim -c "set notermguicolors" -c "Tmuxline airline" -c "TmuxlineSnapshot! ~/.tmux/line" +q 
 echo "alias o='nvim -c \"set notermguicolors\"'" >> ~/.zshrc
 ```
 On **macOS**, it is better to use **iTerm** instead **terminal.app**
