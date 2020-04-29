@@ -13,7 +13,7 @@
 > 3. Ability to fast develop anywhere and on anything
 
 For the third thing we created the **Fast IDE**<br/>
-We believe that development tools should be available to everyone and therefore free of charge ✌️
+We believe that development tools should be available to everyone and therefore **free** of charge ✌️
 
 We've taken tools that have been proven for decades and <br/>
 added cool new features and integrated them into a single solution 🌟
