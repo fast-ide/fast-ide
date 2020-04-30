@@ -108,7 +108,7 @@ zsh
 
 ```sh
 git clone --recursive https://github.com/fast-ide/fast-ide
-cd fast-ide/bootstrap && make all
+cd fast-ide/toolbox && make all
 cd .. && make install
 ```
 
