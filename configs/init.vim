@@ -230,7 +230,7 @@ inoremap <C-Y> <C-X><C-Y>
 nmap # #nzz
 nmap * *nzz
 nmap n nzz
-nmap n nzz
+nmap N Nzz
 
 nnoremap vv V
 nnoremap V v$
