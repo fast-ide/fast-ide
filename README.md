@@ -32,7 +32,7 @@ added cool new features and integrated them into a single solution 🌟
   * [Font settings](#font-settings)
   * [Themes 🎨](#themes-)
   * [True color](#true-color)
-  * [Toolbox](#toolbox)
+  * [Toolbox 🧰](#toolbox-)
   * [Maps](#maps)
     + [tmux](#tmux)
     + [terminal](#terminal)
@@ -159,7 +159,7 @@ awk 'BEGIN{
 }'
 ```
 
-### Toolbox
+### Toolbox 🧰
 
 - [jq](https://stedolan.github.io/jq) and [jid](https://github.com/simeji/jid)
 - [git](https://git-scm.com/book/en/v2) and [tig](https://jonas.github.io/tig/doc/manual.html)
