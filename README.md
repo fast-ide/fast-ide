@@ -167,6 +167,9 @@ awk 'BEGIN{
 - [curl](https://ec.haxx.se) and [httpie](https://httpie.org/docs)
 - [wtfutil](https://github.com/wtfutil/wtf) and [gtop](https://github.com/aksakalli/gtop)
 
+We also have [gnupg](https://www.gnupg.org/gph/en/manual.html) inside each docker container from the [list](#supported-oss) <br/>
+If you used the [deployment](#deploy) instruction you can install it using your system package manager
+
 ### Maps
 
 #### tmux
