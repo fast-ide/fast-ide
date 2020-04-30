@@ -5,7 +5,7 @@
 
 ## Introduction
 
-💨 The **Fast IDE** you can only dream of ⛅.
+💨 The **Fast IDE** you can only dream of ⛅
 
 > The developer needs three things:
 > 1. Email
