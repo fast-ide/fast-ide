@@ -78,7 +78,8 @@ cd fast-ide && ./install.sh
 ### Supported OSs
 
 ```yaml
-# see deploy section
+# see deploy or run section
+- alpine
 - centos 8
 - debian 10
 - fedora 31
