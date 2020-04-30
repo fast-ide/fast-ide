@@ -32,6 +32,7 @@ added cool new features and integrated them into a single solution 🌟
   * [Font settings](#font-settings)
   * [Themes 🎨](#themes-)
   * [True color](#true-color)
+  * [Toolbox](#toolbox)
   * [Maps](#maps)
     + [tmux](#tmux)
     + [terminal](#terminal)
@@ -157,6 +158,14 @@ awk 'BEGIN{
     printf "\n";
 }'
 ```
+
+### Toolbox
+
+- [jq](https://stedolan.github.io/jq) and [jid](https://github.com/simeji/jid)
+- [git](https://git-scm.com/book/en/v2) and [tig](https://jonas.github.io/tig/doc/manual.html)
+- [lf](https://godoc.org/github.com/gokcehan/lf) and [ncdu](https://dev.yorhel.nl/ncdu/man)
+- [curl](https://ec.haxx.se) and [httpie](https://httpie.org/docs)
+- [wtfutil](https://github.com/wtfutil/wtf) and [gtop](https://github.com/aksakalli/gtop)
 
 ### Maps
 
