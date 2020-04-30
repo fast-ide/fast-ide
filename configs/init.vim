@@ -207,6 +207,7 @@ set novisualbell
 set nowrap
 set number
 set sel=old
+set scrolloff=100
 set spelllang=en_gb
 set splitbelow
 set splitright
@@ -227,10 +228,8 @@ cnoremap <C-P> <Up>
 inoremap <C-E> <C-X><C-E>
 inoremap <C-Y> <C-X><C-Y>
 
-nmap # #nzz
-nmap * *nzz
-nmap n nzz
-nmap N Nzz
+nmap # #n
+nmap * *n
 
 nnoremap vv V
 nnoremap V v$
