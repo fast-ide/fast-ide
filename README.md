@@ -379,9 +379,16 @@ ctags -R                                                               # JavaScr
 
 ###### resize window
 
+`Meta` key is `Alt` or `Option`
+
 ```
 Ctrl-T      switch to resize window (see: https://github.com/simeji/winresizer)
 <Leader>ww  toogle golden ration mode (see: https://github.com/roman/golden-ratio)
+
+Meta-Up    increase the vertical size of the current window
+Meta-Down  decrease the vertical size of the current window
+Meta-Right increase the horizontal size of the current window
+Meta-Left  decrease the horizontal size of the current window
 ```
 
 ##### insert mode
