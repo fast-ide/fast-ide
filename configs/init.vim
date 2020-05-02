@@ -265,6 +265,11 @@ xnoremap m d
 
 vnoremap . :normal .<CR>
 
+map <silent> <M-Up> <C-W>+
+map <silent> <M-Down> <C-W>-
+map <silent> <M-Right> <C-w>>
+map <silent> <M-Left> <C-w><
+
 noremap <Tab> :bn<CR>
 noremap <S-Tab> :bp<CR>
 
