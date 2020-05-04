@@ -47,7 +47,7 @@ added cool new features and integrated them into a single solution 🌟
 - [Contributors ✨](#contributors-)
 - [Contributing 🤝](#contributing-)
 - [Sponsorship 👏](#sponsorship-)
-- [License 👏](#license)
+- [License](#license)
 
 ## Instructions
 
