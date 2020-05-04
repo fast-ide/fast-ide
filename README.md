@@ -590,4 +590,4 @@ We are grateful to the maintainers of the following projects for their great wor
 
 ## License
 
-MIT 🌎
+MIT
