@@ -3,6 +3,8 @@
 [![Gitter](https://badges.gitter.im/fast-ide/community.svg)](https://gitter.im/fast-ide/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 [![Slack](https://img.shields.io/badge/workspace-slack-blue.svg)](https://fastide.slack.com)
 
+We will be happy to treat you to coffee ☕, send us a link to your account <br />on the [ko-fi](https://ko-fi.com) service in [gitter](https://gitter.im/fast-ide/community) and you can put a star ⭐ as a reminder for us
+
 ## Introduction
 
 💨 The **Fast IDE** you can only dream of ⛅
