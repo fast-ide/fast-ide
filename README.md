@@ -47,6 +47,7 @@ added cool new features and integrated them into a single solution 🌟
 - [Contributors ✨](#contributors-)
 - [Contributing 🤝](#contributing-)
 - [Sponsorship 👏](#sponsorship-)
+- [License 👏](#license)
 
 ## Instructions
 
@@ -586,3 +587,7 @@ We are grateful to the maintainers of the following projects for their great wor
 <a href="https://www.patreon.com/chemzqm"><img src="https://img.shields.io/badge/patreon-cocnvim-orange.svg" /></a>
 <a href="https://github.com/sponsors/tpope"><img src="https://img.shields.io/badge/sponsors-tpope-orange.svg" /></a>
 <a href="https://www.patreon.com/umputun"><img src="https://img.shields.io/badge/patreon-radio_t-orange.svg" /></a>
+
+## License
+
+MIT 🌎
