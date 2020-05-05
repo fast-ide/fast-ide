@@ -510,7 +510,6 @@ Thank you very much to the people who make this possible:
     <td align="center"><a href="http://plasticboy.com/"><img src="https://avatars1.githubusercontent.com/u/54499?v=4" width="100px;" alt=""/><br /><sub><b>Ben Williams</b></sub></a><br /><a href="#plugin-plasticboy" title="Plugin/utility libraries">🔌</a></td>
     <td align="center"><a href="http://www.squishythoughts.com"><img src="https://avatars0.githubusercontent.com/u/6490160?v=4" width="100px;" alt=""/><br /><sub><b>Richard Adenling</b></sub></a><br /><a href="#plugin-radenling" title="Plugin/utility libraries">🔌</a></td>
     <td align="center"><a href="https://rhysd.github.io/"><img src="https://avatars3.githubusercontent.com/u/823277?v=4" width="100px;" alt=""/><br /><sub><b>Linda_pp</b></sub></a><br /><a href="#plugin-rhysd" title="Plugin/utility libraries">🔌</a></td>
-    <td align="center"><a href="https://github.com/romainl"><img src="https://avatars1.githubusercontent.com/u/344335?v=4" width="100px;" alt=""/><br /><sub><b>Romain Lafourcade</b></sub></a><br /><a href="#plugin-romainl" title="Plugin/utility libraries">🔌</a></td>
     <td align="center"><a href="http://blog.roman-gonzalez.ca"><img src="https://avatars3.githubusercontent.com/u/7335?v=4" width="100px;" alt=""/><br /><sub><b>Roman Gonzalez</b></sub></a><br /><a href="#plugin-roman" title="Plugin/utility libraries">🔌</a></td>
   </tr>
   <tr>
