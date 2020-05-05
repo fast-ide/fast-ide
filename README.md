@@ -453,7 +453,7 @@ to stream the terminal to the corresponding issue page 🎉 <br />
 
 ## Powered by ✨
 
-Thank you very much to the people who make this possible:
+Many thanks to the people and organizations that make this possible:
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore-start -->
