@@ -46,7 +46,7 @@ added cool new features and integrated them into a single solution 🌟
       - [improved maps](#improved-maps)
       - [tmux intergation](#tmux-intergation)
 - [Plans 💡](#plans-)
-- [Contributors ✨](#contributors-)
+- [Powered by ✨](#powered-by)
 - [Contributing 🤝](#contributing-)
 - [Sponsorship 👏](#sponsorship-)
 - [License](#license)
@@ -451,7 +451,7 @@ and provide access to other users of the Github service to solve issues together
 A cool feature is to make it possible directly from the browser with the ability  <br />
 to stream the terminal to the corresponding issue page 🎉 <br />
 
-## Contributors ✨
+## Powered by ✨
 
 Thank you very much to the people who make this possible:
 
