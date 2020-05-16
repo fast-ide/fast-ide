@@ -475,6 +475,9 @@ For more information see: https://github.com/dense-analysis/ale
 :Dispatch ginkgo ./...
 ```
 
+You can view the output of commands launched using `AsyncRun`<br />
+in the quickfix list using keyboard shortcut: `<Leader>qo`
+
 ## Plans 💡
 
 We want to change the way we think about the development process, <br />
