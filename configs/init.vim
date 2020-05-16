@@ -719,7 +719,7 @@ nmap <leader>f :FloatermNew lf<CR>
 " Plug 'neoclide/coc.nvim'
 " ----------------------------------------------------------------------------
 
-" https://github.com/fast-ide/fast-ide/issues/55
+" will be fixed in https://github.com/fast-ide/fast-ide/issues/55
 " source $HOME/.config/nvim/lsp.vim
 
 " ----------------------------------------------------------------------------
