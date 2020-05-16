@@ -3,7 +3,8 @@
 [![Gitter](https://badges.gitter.im/fast-ide/community.svg)](https://gitter.im/fast-ide/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 [![Slack](https://img.shields.io/badge/workspace-slack-blue.svg)](https://fastide.slack.com)
 
-We will be happy to treat everyone who helps us with coffee ☕, send us a link to your account <br />on the [ko-fi](https://ko-fi.com) service in [gitter](https://gitter.im/fast-ide/community) and you can put a star ⭐ as a reminder for us
+We will be happy to treat everyone who helps us with coffee ☕, send us a link to your account <br />
+on the [ko-fi](https://ko-fi.com) service in [gitter](https://gitter.im/fast-ide/community) and you can put a star ⭐ as a reminder for us
 
 ## Introduction
 
@@ -476,7 +477,7 @@ For more information see: https://github.com/dense-analysis/ale
 ```
 
 You can view the output of commands launched using `AsyncRun`<br />
-in the quickfix list using keyboard shortcut: `<Leader>qo`
+in the quickfix list using keyboard shortcut: `<Leader>qo`<br />
 For more information see:
 - https://github.com/tpope/vim-dispatch
 - https://github.com/skywind3000/asyncrun.vim
