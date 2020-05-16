@@ -439,6 +439,40 @@ w           added support for camel notation
 "           send text from the cursor to the end of the line to vimux runner
 ```
 
+##### linter integration
+
+All errors which are identified by the linter are in the location list
+You can navigate to them using the keyboard shortcuts:
+`<Leader>lo`, `<Leader>ln`, `<Leader>lp` (see their description above)
+For more information see: https://github.com/dense-analysis/ale
+
+##### how to
+
+> how to build project with Makefile
+```
+:Make
+```
+> how to build a project with Makefile in background ?
+```
+:Asyncrun make
+```
+
+> how to build project without Makefile
+```vim
+" cmake prjoect example
+:Dispatch cmake --build _build
+```
+> how to build a project without Makefile in background ?
+```vim
+" cmake prjoect example
+:Asyncrun cmake --build _build
+```
+> how to run tests for project
+```vim
+" go project example
+:Dispatch ginkgo ./...
+```
+
 ## Plans 💡
 
 We want to change the way we think about the development process, <br />
