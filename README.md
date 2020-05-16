@@ -197,7 +197,9 @@ prefix is **\`** symbol
 <prefix>"   show tree
 <prefix>s   create session
 <prefix>r   source .tmux.conf config file
+<prefix>i   install tmux plugins (https://github.com/tmux-plugins/tpm)
 <prefix>e   switch to fpp mode (see: https://github.com/facebook/PathPicker)
+<prefix>u   opening urls from browser (see: https://github.com/wfxr/tmux-fzf-url)
 
 <prefix>Tab clear pane
 <prefix>x   close pane
