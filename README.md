@@ -284,6 +284,8 @@ zz          center the window
 
 ```
 <Leader>f   open lf file manager (see: https://github.com/gokcehan/lf)
+# use the hjkl keys to navigate and press l to open the selected file
+
 <Leader>Tab open NerdTree (see: https://github.com/preservim/nerdtree)
 ```
 
