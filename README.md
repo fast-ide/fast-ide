@@ -448,7 +448,7 @@ For more information see: https://github.com/dense-analysis/ale
 
 ##### how to
 
-> how to build project with Makefile
+> how to build a project with Makefile ?
 ```
 :Make
 ```
@@ -457,7 +457,7 @@ For more information see: https://github.com/dense-analysis/ale
 :Asyncrun make
 ```
 
-> how to build project without Makefile
+> how to build a project without Makefile ?
 ```vim
 " cmake prjoect example
 :Dispatch cmake --build _build
@@ -467,7 +467,7 @@ For more information see: https://github.com/dense-analysis/ale
 " cmake prjoect example
 :Asyncrun cmake --build _build
 ```
-> how to run tests for project
+> how to run tests for a project ?
 ```vim
 " go project example
 :Dispatch ginkgo ./...
