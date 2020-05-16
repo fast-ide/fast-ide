@@ -323,15 +323,13 @@ K           run a program to lookup the keyword under the cursor
 ```
 <Leader>we  edit file in new vertical window
 <Leader>te  edit file in new tab
-<Leader>qe  open quickfix list
-<Leader>le  open location list
 ```
 
 ###### open or only
 
 ```
 <Leader>wo  (only) close all other windows
-<Leader>lo  (only) close all other tabs
+<Leader>to  (only) close all other tabs
 <Leader>qo  open quickfix list
 <Leader>lo  open location list
 <Leader>bo  open bookmark list
