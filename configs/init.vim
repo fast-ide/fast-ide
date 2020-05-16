@@ -719,7 +719,8 @@ nmap <leader>f :FloatermNew lf<CR>
 " Plug 'neoclide/coc.nvim'
 " ----------------------------------------------------------------------------
 
-source $HOME/.config/nvim/lsp.vim
+" https://github.com/fast-ide/fast-ide/issues/55
+" source $HOME/.config/nvim/lsp.vim
 
 " ----------------------------------------------------------------------------
 " Plug 'sonph/onehalf'
