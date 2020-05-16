@@ -45,6 +45,8 @@ added cool new features and integrated them into a single solution 🌟
       - [visual mode](#visual-mode)
       - [improved maps](#improved-maps)
       - [tmux intergation](#tmux-intergation)
+      - [linter intergation](#linter-intergation)
+      - [how to](#how-to)
 - [Plans 💡](#plans-)
 - [Powered by ✨](#powered-by)
 - [Contributing 🤝](#contributing-)
