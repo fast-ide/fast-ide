@@ -47,7 +47,7 @@ added cool new features and integrated them into a single solution 🌟
       - [improved maps](#improved-maps)
       - [tmux integration](#tmux-integration)
       - [linter integration](#linter-integration)
-      - [how to](#how-to)
+  * [How To](#how-to)
 - [Plans 💡](#plans-)
 - [Powered by ✨](#powered-by)
 - [Contributing 🤝](#contributing-)
@@ -449,7 +449,7 @@ You can navigate to them using the keyboard shortcuts:<br/>
 `<Leader>lo`, `<Leader>ln`, `<Leader>lp` (see their description above)<br/>
 For more information see: https://github.com/dense-analysis/ale
 
-##### how to
+### how to
 
 > how to build a project with Makefile ?
 ```
