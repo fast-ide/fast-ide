@@ -1,6 +1,6 @@
 ![ci_dockerfile](https://github.com/fast-ide/fast-ide/workflows/ci_dockerfile/badge.svg?branch=master)
 [![Build Status](https://travis-ci.org/fast-ide/fast-ide.svg?branch=master)](https://travis-ci.org/fast-ide/fast-ide)
-[![Gitter](https://badges.gitter.im/fast-ide/community.svg)](https://gitter.im/fast-ide/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+[![Gitter](https://img.shields.io/badge/chat-gitter-brightgreen.svg)](https://gitter.im/fast-ide/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 [![Slack](https://img.shields.io/badge/workspace-slack-blue.svg)](https://fastide.slack.com)
 ![Platform](https://img.shields.io/badge/Platform-MacOS%20|%20Linux%20|%20Windows-blue.svg)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/fast-ide/fast-ide/blob/master/LICENSE)
