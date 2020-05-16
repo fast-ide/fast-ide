@@ -477,6 +477,9 @@ For more information see: https://github.com/dense-analysis/ale
 
 You can view the output of commands launched using `AsyncRun`<br />
 in the quickfix list using keyboard shortcut: `<Leader>qo`
+For more information see:
+- https://github.com/tpope/vim-dispatch
+- https://github.com/skywind3000/asyncrun.vim
 
 ## Plans 💡
 
