@@ -441,9 +441,9 @@ w           added support for camel notation
 
 ##### linter integration
 
-All errors which are identified by the linter are in the location list
-You can navigate to them using the keyboard shortcuts:
-`<Leader>lo`, `<Leader>ln`, `<Leader>lp` (see their description above)
+All errors which are identified by the linter are in the location list<br/>
+You can navigate to them using the keyboard shortcuts:<br/>
+`<Leader>lo`, `<Leader>ln`, `<Leader>lp` (see their description above)<br/>
 For more information see: https://github.com/dense-analysis/ale
 
 ##### how to
