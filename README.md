@@ -433,7 +433,7 @@ e           added support for camel notation
 w           added support for camel notation
 ```
 
-##### tmux intergation
+##### tmux integration
 
 ```
 <Leader>vo  open vimux runner (see: https://github.com/benmills/vimux)
