@@ -34,6 +34,7 @@ added cool new features and integrated them into a single solution 🌟
   * [Supported OSs](#supported-oss)
   * [Deploy](#deploy)
   * [Install](#install)
+  * [Configuration](#configuration)
   * [Font settings](#font-settings)
   * [Themes 🎨](#themes-)
   * [True color](#true-color)
@@ -120,6 +121,15 @@ zsh
 git clone --recursive https://github.com/fast-ide/fast-ide
 cd fast-ide/toolbox && make all
 cd .. && make install
+```
+
+### Configuration
+
+See the corresponding configuration files:
+```
+- $HOME/.zshrc
+- $HOME/.tmux.conf
+- $HOME/.config/nvim/init.vim
 ```
 
 ### Font settings
