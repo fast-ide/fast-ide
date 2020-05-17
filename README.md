@@ -5,7 +5,7 @@
 ![Platform](https://img.shields.io/badge/Platform-MacOS%20|%20Linux%20|%20Windows-blue.svg)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/fast-ide/fast-ide/blob/master/LICENSE)
 
-We will be happy to treat everyone who helps us with coffee ☕, send us a link to your account <br />
+We will be happy to treat everyone who helps us with coffee ☕ and more, send us a link to your account <br />
 on the [ko-fi](https://ko-fi.com) service in [gitter](https://gitter.im/fast-ide/community) and you can put a star ⭐ as a reminder for us
 
 ## Introduction
