@@ -498,6 +498,13 @@ and provide access to other users of the Github service to solve issues together
 A cool feature is to make it possible directly from the browser with the ability  <br />
 to stream the terminal to the corresponding issue page 🎉 <br />
 
+### health care ❤️
+
+we want to help programmers to be more healthy:
+- be able to work remotely from any location so that you don't have to spend time traveling
+- perform their duties faster and as a result spend less time at the computer
+- work in a color scheme that will protect the eyes from excessive load
+
 ## Powered by ✨
 
 Many thanks to the people and organizations that make this possible:
