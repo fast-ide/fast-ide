@@ -1,9 +1,12 @@
 ![ci_dockerfile](https://github.com/fast-ide/fast-ide/workflows/ci_dockerfile/badge.svg?branch=master)
 [![Build Status](https://travis-ci.org/fast-ide/fast-ide.svg?branch=master)](https://travis-ci.org/fast-ide/fast-ide)
-[![Gitter](https://badges.gitter.im/fast-ide/community.svg)](https://gitter.im/fast-ide/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+[![Gitter](https://img.shields.io/badge/chat-gitter-brightgreen.svg)](https://gitter.im/fast-ide/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 [![Slack](https://img.shields.io/badge/workspace-slack-blue.svg)](https://fastide.slack.com)
+![Platform](https://img.shields.io/badge/Platform-MacOS%20|%20Linux%20|%20Windows-blue.svg)
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/fast-ide/fast-ide/blob/master/LICENSE)
 
-We will be happy to treat everyone who helps us with coffee ☕, send us a link to your account <br />on the [ko-fi](https://ko-fi.com) service in [gitter](https://gitter.im/fast-ide/community) and you can put a star ⭐ as a reminder for us
+We will be happy to treat everyone who helps us with coffee ☕ and more, send us a link to your account <br />
+on the [ko-fi](https://ko-fi.com) service in [gitter](https://gitter.im/fast-ide/community) and you can put a star ⭐ as a reminder for us
 
 ## Introduction
 
@@ -31,6 +34,7 @@ added cool new features and integrated them into a single solution 🌟
   * [Supported OSs](#supported-oss)
   * [Deploy](#deploy)
   * [Install](#install)
+  * [Configuration](#configuration)
   * [Font settings](#font-settings)
   * [Themes 🎨](#themes-)
   * [True color](#true-color)
@@ -44,7 +48,9 @@ added cool new features and integrated them into a single solution 🌟
       - [command mode](#command-mode)
       - [visual mode](#visual-mode)
       - [improved maps](#improved-maps)
-      - [tmux intergation](#tmux-intergation)
+      - [tmux integration](#tmux-integration)
+      - [linter integration](#linter-integration)
+  * [How To](#how-to)
 - [Plans 💡](#plans-)
 - [Powered by ✨](#powered-by)
 - [Contributing 🤝](#contributing-)
@@ -115,6 +121,15 @@ zsh
 git clone --recursive https://github.com/fast-ide/fast-ide
 cd fast-ide/toolbox && make all
 cd .. && make install
+```
+
+### Configuration
+
+See the corresponding configuration files:
+```
+- $HOME/.zshrc
+- $HOME/.tmux.conf
+- $HOME/.config/nvim/init.vim
 ```
 
 ### Font settings
@@ -192,7 +207,9 @@ prefix is **\`** symbol
 <prefix>"   show tree
 <prefix>s   create session
 <prefix>r   source .tmux.conf config file
+<prefix>i   install tmux plugins (https://github.com/tmux-plugins/tpm)
 <prefix>e   switch to fpp mode (see: https://github.com/facebook/PathPicker)
+<prefix>u   opening urls from browser (see: https://github.com/wfxr/tmux-fzf-url)
 
 <prefix>Tab clear pane
 <prefix>x   close pane
@@ -277,6 +294,8 @@ zz          center the window
 
 ```
 <Leader>f   open lf file manager (see: https://github.com/gokcehan/lf)
+# use the hjkl keys to navigate and press l to open the selected file
+
 <Leader>Tab open NerdTree (see: https://github.com/preservim/nerdtree)
 ```
 
@@ -323,15 +342,13 @@ K           run a program to lookup the keyword under the cursor
 ```
 <Leader>we  edit file in new vertical window
 <Leader>te  edit file in new tab
-<Leader>qe  open quickfix list
-<Leader>le  open location list
 ```
 
 ###### open or only
 
 ```
 <Leader>wo  (only) close all other windows
-<Leader>lo  (only) close all other tabs
+<Leader>to  (only) close all other tabs
 <Leader>qo  open quickfix list
 <Leader>lo  open location list
 <Leader>bo  open bookmark list
@@ -433,13 +450,53 @@ e           added support for camel notation
 w           added support for camel notation
 ```
 
-##### tmux intergation
+##### tmux integration
 
 ```
 <Leader>vo  open vimux runner (see: https://github.com/benmills/vimux)
 <Leader>vp  send selected text to vimux runner
 "           send text from the cursor to the end of the line to vimux runner
 ```
+
+##### linter integration
+
+All errors which are identified by the linter are in the location list<br/>
+You can navigate to them using the keyboard shortcuts:<br/>
+`<Leader>lo`, `<Leader>ln`, `<Leader>lp` (see their description above)<br/>
+For more information see: https://github.com/dense-analysis/ale
+
+### How To
+
+> how to build a project with Makefile ?
+```
+:Make
+```
+> how to build a project with Makefile in background ?
+```
+:Asyncrun make
+```
+
+> how to build a project without Makefile ?
+```vim
+" cmake prjoect example
+:Dispatch cmake --build _build
+```
+> how to build a project without Makefile in background ?
+```vim
+" cmake prjoect example
+:Asyncrun cmake --build _build
+```
+> how to run tests for a project ?
+```vim
+" go project example
+:Dispatch ginkgo ./...
+```
+
+You can view the output of commands launched using `AsyncRun`<br />
+in the quickfix list using keyboard shortcut: `<Leader>qo`<br />
+For more information see:
+- https://github.com/tpope/vim-dispatch
+- https://github.com/skywind3000/asyncrun.vim
 
 ## Plans 💡
 
@@ -450,6 +507,13 @@ One of the key development vectors is providing the ability to easily deploy the
 and provide access to other users of the Github service to solve issues together <br />
 A cool feature is to make it possible directly from the browser with the ability  <br />
 to stream the terminal to the corresponding issue page 🎉 <br />
+
+### health care ❤️
+
+we want to help programmers to be more healthy:
+- be able to work remotely from any location so that you don't have to spend time traveling
+- perform their duties faster and as a result spend less time at the computer
+- work in a color scheme that will protect the eyes from excessive load
 
 ## Powered by ✨
 
@@ -588,7 +652,3 @@ We are grateful to the maintainers of the following projects for their great wor
 <a href="https://www.patreon.com/chemzqm"><img src="https://img.shields.io/badge/patreon-cocnvim-orange.svg" /></a>
 <a href="https://github.com/sponsors/tpope"><img src="https://img.shields.io/badge/sponsors-tpope-orange.svg" /></a>
 <a href="https://www.patreon.com/umputun"><img src="https://img.shields.io/badge/patreon-radio_t-orange.svg" /></a>
-
-## License
-
-MIT
