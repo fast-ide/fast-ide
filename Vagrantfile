@@ -3,8 +3,8 @@
 
 $script = <<-SCRIPT
 sudo apt install docker.io -y
-sudo docker pull fastide/ubuntu:19.04
-sudo docker create -ti --name fastide fastide/ubuntu:19.04 bash
+sudo docker pull fastide/ubuntu:20.04
+sudo docker create -ti --name fastide fastide/ubuntu:20.04 bash
 sudo docker cp fastide:/home/developer /home/
 sudo useradd developer
 sudo usermod -aG sudo developer
@@ -16,7 +16,7 @@ Vagrant.configure("2") do |config|
 
   config.vagrant.plugins = ["vagrant-vbguest", "vagrant-disksize"]
 
-  config.vm.box = "chenhan/ubuntu-desktop-19.04"
+  config.vm.box = "bento/ubuntu-20.04"
   config.vm.network "public_network"
   config.disksize.size = "20GB"
 
