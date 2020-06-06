@@ -23,7 +23,7 @@ We believe that development tools should be available to everyone and therefore 
 We've taken tools that have been proven for decades and <br/>
 added cool new features and integrated them into a single solution 🌟
 
-<img src="https://raw.githubusercontent.com/fast-ide/fast-ide/master/preview.png"/>
+<img src="https://raw.githubusercontent.com/fast-ide/fast-ide/master/docs/preview.png"/>
 
 ## Table of Contents
 
