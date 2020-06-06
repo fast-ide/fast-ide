@@ -36,6 +36,5 @@ jobs:
           docker build -t fastide/${{ matrix.family }}:${{ matrix.version }} --build-arg OS_FAMILY=${{ matrix.family }} --build-arg OS_VERSION=${{ matrix.version }} .
           echo "${{ secrets.DOCKER_PASSWORD }}" | docker login --username fastide --password-stdin
       - name: deploy
-        if: github.ref == 'ref/head/v*'
         run: |
           docker push fastide/${{ matrix.family }}:${{ matrix.version }}
