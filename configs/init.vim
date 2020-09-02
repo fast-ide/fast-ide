@@ -333,13 +333,13 @@ let g:qf_mapping_ack_style = 1
 let g:qf_nowrap = 1
 
 if executable('ag')
-    let g:ackprg = "ag --vimgrep -s -H
+    let g:ackprg = "ag --vimgrep -s --hidden --ignore .git
             \ --nocolor --nogroup --column --smart-case --follow
             \ -p $HOME/.ackignore"
 endif
 
-nnoremap \ :Ag <C-R><C-W><CR>
-nnoremap <Leader>a :Ag<Space>
+nnoremap \ :Ack <C-R><C-W><CR>
+nnoremap <Leader>a :Ack<Space>
 
 " ----------------------------------------------------------------------------
 " Plug 'junegunn/fzf.vim'
