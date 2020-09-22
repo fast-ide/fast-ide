@@ -464,7 +464,7 @@ let g:limelight_conceal_ctermfg = 'gray'
 " Plug 'simeji/winresizer'
 " ----------------------------------------------------------------------------
 
-let g:winresizer_start_key = '<C-T>'
+let g:winresizer_start_key = '<C-W>'
 
 " ----------------------------------------------------------------------------
 " Plug 'roman/golden-ratio'
