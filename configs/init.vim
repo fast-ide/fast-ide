@@ -200,6 +200,7 @@ set nofoldenable
 set novisualbell
 set nowrap
 set number
+set scrolloff=999
 set sel=old
 set spelllang=en_gb
 set splitbelow
