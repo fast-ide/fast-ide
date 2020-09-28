@@ -229,7 +229,6 @@ nmap N Nzz
 
 nnoremap vv V
 nnoremap V v$
-nnoremap \| v$"py:read !<C-r>p<CR>
 
 inoremap jk <esc>
 nmap zj <C-d>zz
@@ -691,8 +690,8 @@ function! VimuxSlime()
     call VimuxSendKeys("Enter")
 endfunction
 
-vmap <Leader>vs"vy :call VimuxSlime()<CR>
-nmap " V<Leader>vsj
+vmap <Leader>vs "vy :call VimuxSlime()<CR>
+nmap \| V<Leader>vsj
 nmap <Leader>vp vip<Leader>vs<CR>
 
 " ----------------------------------------------------------------------------
