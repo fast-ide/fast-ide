@@ -160,7 +160,7 @@ call plug#begin('~/.nvim/plugged')
 " Theme plugins
 " ----------------------------------------------------------------------------
 
-  Plug 'sonph/onehalf' , {'rtp': 'vim/'}
+  Plug 'joshdick/onedark.vim'
   Plug 'vim-airline/vim-airline'
   Plug 'vim-airline/vim-airline-themes'
 
@@ -536,7 +536,7 @@ augroup END
 " Plug 'vim-airline/vim-airline'
 " ----------------------------------------------------------------------------
 
-let g:airline_theme='onehalfdark'
+let g:airline_theme='onedark'
 let g:airline_extensions = ['branch', 'tabline']
 let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
 
@@ -723,10 +723,10 @@ nmap <leader>f :FloatermNew lf<CR>
 " source $HOME/.config/nvim/lsp.vim
 
 " ----------------------------------------------------------------------------
-" Plug 'sonph/onehalf'
+" Plug 'joshdick/onedark.vim'
 " ----------------------------------------------------------------------------
 
-silent! colorscheme onehalfdark
+silent! colorscheme onedark
 
 if exists('+termguicolors')
   let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
