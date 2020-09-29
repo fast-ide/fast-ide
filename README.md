@@ -141,15 +141,15 @@ FiraCode: https://github.com/tonsky/FiraCode/wiki/Installing
 ### Themes 🎨
 
 ```yaml
-onehalf:
-  vim: https://github.com/sonph/onehalf
-  terminal: https://github.com/sonph/onehalf
-
-onedark: # alternative
+onedark:
   vim: https://github.com/joshdick/onedark.vim
   terminal: 
   - https://github.com/joshdick/onedark.vim/tree/master/term
   - https://github.com/denysdovhan/one-gnome-terminal
+
+onehalf: # alternative
+  vim: https://github.com/sonph/onehalf
+  terminal: https://github.com/sonph/onehalf
 ```
 
 ### True color
