@@ -63,6 +63,8 @@ call plug#begin('~/.nvim/plugged')
   Plug 'lambdalisue/vim-unified-diff' |
   Plug 'christoomey/vim-conflicted'
 
+  Plug 'rhysd/git-messenger.vim'
+
   Plug 'will133/vim-dirdiff'
   Plug 'rhysd/committia.vim'
 
@@ -605,7 +607,6 @@ nnoremap <Leader>ga :Git add %:p<CR><CR>
 nnoremap <Leader>gb :Gblame<CR>
 nnoremap <Leader>gd :Gdiff<CR>
 nnoremap <Leader>ge :Gedit<CR>
-nnoremap <Leader>gg :Ggrep<Space>
 nnoremap <Leader>gl :Dispatch! git pull<CR>
 nnoremap <Leader>gm :Gmove<Space>
 nnoremap <Leader>go :Git checkout<Space>
@@ -671,6 +672,23 @@ function! g:committia_hooks.edit_open(info)
     imap <buffer><C-n> <Plug>(committia-scroll-diff-down-half)
     imap <buffer><C-p> <Plug>(committia-scroll-diff-up-half)
 endfunction
+
+" ----------------------------------------------------------------------------
+" Plug 'rhysd/git-messenger.vim'
+" ----------------------------------------------------------------------------
+
+nmap <Leader>gg <Plug>(git-messenger)
+let g:git_messenger_always_into_popup = 1
+let g:git_messenger_include_diff = "current"
+function! s:setup_git_messenger_popup() abort
+    " Your favorite configuration here
+
+    " For example, set go back/forward history to <C-o>/<C-i>
+    nmap <buffer><C-o> o
+    nmap <buffer><C-i> O
+endfunction
+autocmd FileType gitmessengerpopup call <SID>setup_git_messenger_popup()
+
 
 " ----------------------------------------------------------------------------
 " Plug 'benmills/vimux'
