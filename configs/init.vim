@@ -347,9 +347,12 @@ nnoremap <Leader>a :Ack<Space>
 " Plug 'junegunn/fzf.vim'
 " ----------------------------------------------------------------------------
 
+command! -bang -nargs=? -complete=dir HFiles
+  \ call fzf#vim#files(<q-args>, {'source': 'ag --hidden --ignore .git -g ""'}, <bang>0)
 noremap <Leader>fb :Buffers<CR>
 noremap <Leader>fc :Commits<CR>
 noremap <Leader>ff :Files<CR>
+noremap <Leader>fi :HFiles<CR>
 noremap <Leader>fg :GFiles<CR>
 noremap <Leader>fh :History<CR>
 noremap <Leader>fl :Lines<CR>
