@@ -368,6 +368,8 @@ noremap <Leader>sc :BCommits<CR>
 noremap <Leader>sl :BLines<CR>
 noremap <Leader>st :BTags<CR>
 
+noremap ,, :Marks<CR>
+
 " ----------------------------------------------------------------------------
 " Plug 'inside/vim-search-pulse'
 " ----------------------------------------------------------------------------
