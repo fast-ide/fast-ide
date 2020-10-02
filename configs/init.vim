@@ -262,6 +262,8 @@ nnoremap m d
 nnoremap mm dd
 xnoremap m d
 
+nnoremap , m
+
 vnoremap . :normal .<CR>
 
 map <silent> <M-Up> <C-W>+
