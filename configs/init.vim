@@ -224,6 +224,9 @@ cnoremap <C-P> <Up>
 inoremap <C-E> <C-X><C-E>
 inoremap <C-Y> <C-X><C-Y>
 
+inoremap <C-a> <C-o>^
+inoremap <C-e> <C-o>$
+
 nmap # #nzz
 nmap * *nzz
 nmap n nzz
