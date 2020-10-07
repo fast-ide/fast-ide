@@ -235,7 +235,7 @@ nmap N Nzz
 nnoremap vv V
 nnoremap V v$
 
-inoremap jk <esc>
+inoremap jj <esc>
 nmap zj <C-d>zz
 nmap zk <C-u>zz
 
