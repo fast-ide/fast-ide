@@ -251,6 +251,8 @@ noremap L $
 noremap q/ :History/<CR>
 noremap q: :History:<CR>
 
+nnoremap <expr> gb '`[' . strpart(getregtype(), 0, 1) . '`]'
+
 nnoremap / /\v
 vnoremap / /\v
 
