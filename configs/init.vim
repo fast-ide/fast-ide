@@ -756,7 +756,7 @@ let g:vim_markdown_fenced_languages = ['go=go']
 " ----------------------------------------------------------------------------
 
 " will be fixed in https://github.com/fast-ide/fast-ide/issues/55
-" source $HOME/.config/nvim/lsp.vim
+source $HOME/.config/nvim/lsp.vim
 
 " ----------------------------------------------------------------------------
 " Plug 'joshdick/onedark.vim'
