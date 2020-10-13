@@ -347,7 +347,7 @@ if executable('ag')
             \ -p $HOME/.ackignore"
 endif
 
-nnoremap \ :Ack <C-R><C-W><CR>
+nnoremap \ :Ag <C-R><C-W><CR>
 nnoremap <Leader>a :Ack<Space>
 
 " ----------------------------------------------------------------------------
