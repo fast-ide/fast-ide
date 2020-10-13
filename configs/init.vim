@@ -740,10 +740,16 @@ smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
 \ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
 
 " ----------------------------------------------------------------------------
-" Floaterm plugin
+" Plug 'voldikss/vim-floaterm'
 " ----------------------------------------------------------------------------
 
 nmap <leader>f :FloatermNew lf<CR>
+
+" ----------------------------------------------------------------------------
+" Plug 'plasticboy/vim-markdown'
+" ----------------------------------------------------------------------------
+
+let g:vim_markdown_fenced_languages = ['go=go']
 
 " ----------------------------------------------------------------------------
 " Plug 'neoclide/coc.nvim'
