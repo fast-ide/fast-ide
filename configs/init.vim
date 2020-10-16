@@ -660,6 +660,7 @@ vmap <leader>gV :Gitv! --all<cr>
 " ----------------------------------------------------------------------------
 
 let g:rooter_manual_only = 0
+nnoremap <Leader>rr :RooterToggle<CR>
 
 " ----------------------------------------------------------------------------
 " Plug 'will133/vim-dirdiff'
