@@ -551,7 +551,9 @@ augroup END
 " ----------------------------------------------------------------------------
 
 let g:airline_theme='onedark'
-let g:airline_extensions = ['branch', 'tabline']
+let g:airline#extensions#tagbar#enabled = 1
+let g:airline#extensions#branch#enabled = 1
+let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
 
 silent! let g:airline_section_warning = airline#section#create_right(['%{g:asyncrun_status}'])
