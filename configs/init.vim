@@ -148,7 +148,7 @@ call plug#begin('~/.nvim/plugged')
 " Tags plugins
 " ----------------------------------------------------------------------------
 
-  Plug 'majutsushi/tagbar'
+  Plug 'preservim/tagbar'
   Plug 'skywind3000/vim-preview'
 
 " ----------------------------------------------------------------------------
