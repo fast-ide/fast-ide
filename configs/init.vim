@@ -42,6 +42,12 @@ call plug#begin('~/.nvim/plugged')
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " ----------------------------------------------------------------------------
+" Debugging
+" ----------------------------------------------------------------------------
+
+  Plug 'puremourning/vimspector'
+
+" ----------------------------------------------------------------------------
 " Snippets plugins
 " ----------------------------------------------------------------------------
 
@@ -760,6 +766,13 @@ let g:vim_markdown_fenced_languages = ['go=go']
 
 " will be fixed in https://github.com/fast-ide/fast-ide/issues/55
 " source $HOME/.config/nvim/lsp.vim
+
+" ----------------------------------------------------------------------------
+" Plug 'puremourning/vimspector'
+" ----------------------------------------------------------------------------
+
+let g:vimspector_install_gadgets = [ 'debugpy', 'vscode-cpptools', 'vscode-go', 'vscode-node-debug2' ]
+let g:vimspector_enable_mappings = 'HUMAN'
 
 " ----------------------------------------------------------------------------
 " Plug 'joshdick/onedark.vim'
