@@ -24,4 +24,5 @@ tmux kill-server
 zsh -c "source $HOME/.zshrc"
 nvim -S $HOME/.config/nvim/snapshot.vim +qa --headless
 
+brew install llvm
 nvim -c "CocInstall coc-clangd coc-python coc-go coc-tsserver" +qa --headless
