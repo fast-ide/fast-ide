@@ -561,6 +561,7 @@ let g:airline#extensions#tagbar#enabled = 1
 let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
+let g:airline_statusline_ontop=1
 
 silent! let g:airline_section_warning = airline#section#create_right(['%{g:asyncrun_status}'])
 
