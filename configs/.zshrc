@@ -37,7 +37,7 @@ antigen bundle cal2195/q
 antigen bundle robertzk/send.zsh
 antigen bundle gko/ssh-connect
 antigen bundle nviennot/zsh-vim-plugin
-antigen bundle wfxr/forgit
+# antigen bundle wfxr/forgit invalid cherry-pick behaviour
 antigen theme https://github.com/denysdovhan/spaceship-prompt spaceship
 
 antigen apply
