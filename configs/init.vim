@@ -138,7 +138,6 @@ call plug#begin('~/.nvim/plugged')
   Plug 'wesQ3/vim-windowswap'
   Plug 'roman/golden-ratio'
   Plug 'chrisbra/NrrwRgn'
-  Plug 'simeji/winresizer'
 
 " ----------------------------------------------------------------------------
 " View plugins
@@ -478,12 +477,6 @@ let g:chromatica#highlight_feature_level=0
 " ----------------------------------------------------------------------------
 
 let g:limelight_conceal_ctermfg = 'gray'
-
-" ----------------------------------------------------------------------------
-" Plug 'simeji/winresizer'
-" ----------------------------------------------------------------------------
-
-let g:winresizer_start_key = '<C-W>'
 
 " ----------------------------------------------------------------------------
 " Plug 'roman/golden-ratio'
