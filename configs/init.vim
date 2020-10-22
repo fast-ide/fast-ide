@@ -774,6 +774,12 @@ let g:vimspector_install_gadgets = [ 'debugpy', 'vscode-cpptools', 'vscode-go', 
 let g:vimspector_enable_mappings = 'HUMAN'
 
 " ----------------------------------------------------------------------------
+" Plug 'edkolev/tmuxline.vim'
+" ----------------------------------------------------------------------------
+
+let g:airline#extensions#tmuxline#enabled = 0
+
+" ----------------------------------------------------------------------------
 " Plug 'joshdick/onedark.vim'
 " ----------------------------------------------------------------------------
 
