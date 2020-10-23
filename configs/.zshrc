@@ -50,6 +50,8 @@ bindkey '^ ' autosuggest-accept
 bindkey "^I" menu-expand-or-complete
 
 HISTORY_SUBSTRING_SEARCH_ENSURE_UNIQUE=1
+SPACESHIP_GIT_BRANCH_PREFIX=""
+KEYTIMEOUT=1
 
 export SHELL=`which zsh`
 export EDITOR=nvim
@@ -65,4 +67,3 @@ alias p=echo
 alias r=clear
 
 [ -f $HOME/.fzf.zsh ] && source $HOME/.fzf.zsh
-KEYTIMEOUT=1
