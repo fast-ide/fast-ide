@@ -24,4 +24,4 @@ tmux kill-server || echo "already killed"
 zsh -c "source $HOME/.zshrc"
 nvim -S $HOME/.config/nvim/snapshot.vim +qa --headless
 
-nvim -c "CocInstall coc-clangd coc-python coc-go coc-tsserver" +qa --headless
+# nvim -c "CocInstall coc-clangd coc-python coc-go coc-tsserver" +qa --headless
