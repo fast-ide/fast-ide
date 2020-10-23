@@ -19,7 +19,7 @@ cp configs/lfrc $HOME/.config/lf/lfrc
 
 tmux start-server && tmux new-session -d && sleep 30
 ~/.tmux/plugins/tpm/scripts/install_plugins.sh
-tmux kill-server
+tmux kill-server || echo "already killed"
 
 zsh -c "source $HOME/.zshrc"
 nvim -S $HOME/.config/nvim/snapshot.vim +qa --headless
