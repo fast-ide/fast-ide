@@ -21,6 +21,7 @@ call plug#begin('~/.nvim/plugged')
   Plug 'tpope/vim-speeddating'
   Plug 'godlygeek/tabular'
   Plug 'svermeulen/vim-cutlass'
+  Plug 'vim-scripts/ingo-library' | Plug 'vim-scripts/EnhancedJumps'
 
 " ----------------------------------------------------------------------------
 " Marks plugins
@@ -603,6 +604,19 @@ nmap <silent> <Leader>a\| :Tabularize /\|<CR>
 vmap <silent> <Leader>a\| :Tabularize /\|<CR>
 nmap <silent> <Leader>a: :Tabularize /:\zs<CR>
 vmap <silent> <Leader>a: :Tabularize /:\zs<CR>
+
+" ----------------------------------------------------------------------------
+" Plug 'vim-scripts/EnhancedJumps'
+" ----------------------------------------------------------------------------
+
+nmap [[         <Plug>EnhancedJumpsOlder
+nmap ]]         <Plug>EnhancedJumpsNewer
+nmap g[         <Plug>EnhancedJumpsRemoteOlder
+nmap g]         <Plug>EnhancedJumpsRemoteNewer
+nmap <Leader>[  <Plug>EnhancedJumpsLocalOlder
+nmap <Leader>]  <Plug>EnhancedJumpsLocalNewer
+
+let g:EnhancedJumps_CaptureJumpMessages = 0
 
 " ----------------------------------------------------------------------------
 " Plug 'ntpeters/vim-better-whitespace'
