@@ -205,6 +205,7 @@ prefix is **\`** symbol
 <prefix>{N} go to the N window (i.e. `3)
 
 <prefix>"   show tree
+<prefix>w   find window
 <prefix>s   create session
 <prefix>r   source .tmux.conf config file
 <prefix>i   install tmux plugins (https://github.com/tmux-plugins/tpm)
