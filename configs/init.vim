@@ -779,7 +779,22 @@ source $HOME/.config/nvim/lsp.vim
 " ----------------------------------------------------------------------------
 
 let g:vimspector_install_gadgets = [ 'debugpy', 'vscode-cpptools', 'vscode-go', 'vscode-node-debug2' ]
-let g:vimspector_enable_mappings = 'HUMAN'
+
+nmap <Leader>c <Plug>VimspectorContinue
+nmap <Leader>s <Plug>VimspectorStop
+nmap <Leader>r <Plug>VimspectorRestart
+nmap <Leader>b <Plug>VimspectorToggleBreakpoint
+nmap <Leader>i <Plug>VimspectorToggleConditionalBreakpoint
+nmap <Leader>j <Plug>VimspectorStepOver
+nmap <Leader>h <Plug>VimspectorStepInto
+nmap <Leader>k <Plug>VimspectorStepOut
+nmap <Leader>t <Plug>VimspectorRunToCursor
+
+sign define vimspectorBP text=o          texthl=WarningMsg
+sign define vimspectorBPCond text=o?     texthl=WarningMsg
+sign define vimspectorBPDisabled text=o! texthl=LineNr
+sign define vimspectorPC text=\ >        texthl=MatchParen
+sign define vimspectorPCBP text=o>       texthl=MatchParen
 
 " ----------------------------------------------------------------------------
 " Plug 'edkolev/tmuxline.vim'
