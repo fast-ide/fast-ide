@@ -26,3 +26,5 @@ nvim -S $HOME/.config/nvim/snapshot.vim +qa --headless
 
 nvim -c "CocInstall -sync coc-clangd coc-python coc-go coc-tsserver" +qa --headless
 python -m pip install jedi
+cd $HOME/.nvim/plugged/vimspector/
+python ./install_gadget.py --enable-c --enable-python --enable-go --force-enable-node
