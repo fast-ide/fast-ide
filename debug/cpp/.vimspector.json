@@ -1,0 +1,25 @@
+{
+  "configurations" : {
+    "<name> : Launch": {
+      "adapter": "vscode-cpptools",
+      "configuration": {
+        "type": "cppdbg",
+        "request": "launch",
+        "name": "Debug",
+        "program": "${workspaceRoot}/_builds/default-Debug/demo",
+        "args": [],
+        "stopAtEntry": true,
+        "cwd": "${workspaceRoot}",
+        "environment": [
+          { "name": "DEMO_VAR", "value": "DEMO_VALUE" },
+        ],
+        "externalConsole": false,
+        "MIMode": "lldb",
+        "osx": {
+            "MIMode": "lldb"
+         },
+        "setupCommands": []
+      }
+    }
+  }
+}
