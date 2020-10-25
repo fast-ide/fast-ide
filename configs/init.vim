@@ -789,6 +789,7 @@ nmap <Leader>j <Plug>VimspectorStepOver
 nmap <Leader>h <Plug>VimspectorStepInto
 nmap <Leader>k <Plug>VimspectorStepOut
 nmap <Leader>t <Plug>VimspectorRunToCursor
+nmap <Leader>e :VimspectorEval <C-R><C-W><CR>
 
 sign define vimspectorBP text=o          texthl=WarningMsg
 sign define vimspectorBPCond text=o?     texthl=WarningMsg
