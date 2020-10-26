@@ -462,9 +462,9 @@ sunmap w
 
 runtime! ftplugin/man.vim
 
-nnoremap <silent> <Leader>kx :Man<CR>
+nnoremap <silent> <Leader>kk :Man<CR>
 nnoremap <silent> <Leader>kv :vertical Man<CR>
-vnoremap <silent> <Leader>kx y:Man <C-r>"<CR>
+vnoremap <silent> <Leader>kk y:Man <C-r>"<CR>
 vnoremap <silent> <Leader>kv y:vertical Man <C-r>"<CR>
 
 " ----------------------------------------------------------------------------
@@ -493,7 +493,7 @@ noremap <silent> <leader>ww :GoldenRatioToggle<CR>
 " Plug 'skywind3000/vim-preview'
 " ----------------------------------------------------------------------------
 
-nnoremap <silent> ; :PreviewTag<CR>
+nnoremap <silent> \| :PreviewTag<CR>
 
 nnoremap <silent> <Leader>pd :PreviewClose<CR>
 nnoremap <silent> <Leader>pt :PreviewGoto tabe<CR>
@@ -740,7 +740,7 @@ function! VimuxSlime()
 endfunction
 
 vmap <Leader>vs "vy :call VimuxSlime()<CR>
-nmap \| V<Leader>vsj
+nmap <Leader><Space> V<Leader>vsj
 nmap <Leader>vp vip<Leader>vs<CR>
 
 " ----------------------------------------------------------------------------
@@ -783,6 +783,7 @@ source $HOME/.config/nvim/lsp.vim
 let g:vimspector_install_gadgets = [ 'debugpy', 'vscode-cpptools', 'vscode-go', 'vscode-node-debug2' ]
 
 nmap <Leader>c <Plug>VimspectorContinue
+nmap <Leader>d <Plug>VimspectorReset
 nmap <Leader>s <Plug>VimspectorStop
 nmap <Leader>r <Plug>VimspectorRestart
 nmap <Leader>b <Plug>VimspectorToggleBreakpoint
