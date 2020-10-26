@@ -593,6 +593,8 @@ let g:startify_lists = [
     \ { 'header': ['   MRU '. getcwd()], 'type': 'dir' },
     \ { 'header': ['   Sessions'],       'type': 'sessions' },
     \ ]
+    
+let g:startify_custom_indices = map(range(1,100), 'string(v:val)')
 
 " ----------------------------------------------------------------------------
 " Plug 'godlygeek/tabular'
