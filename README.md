@@ -459,6 +459,21 @@ w           added support for camel notation
 "           send text from the cursor to the end of the line to vimux runner
 ```
 
+##### debugging
+
+```
+<Leader>c start/continue debugging
+<Leader>s stop debugging
+<Leader>r restart debugging
+<Leader>b set breakpoint
+<Leader>i set conditional breakpoint
+<Leader>j step over
+<Leader>h step into
+<Leader>k step out
+<Leader>t run to cursor
+<Leader>e evalute keyword under the cursor (see: https://github.com/puremourning/vimspector)
+```
+
 ##### linter integration
 
 All errors which are identified by the linter are in the location list<br/>
