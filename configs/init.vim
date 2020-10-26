@@ -238,6 +238,8 @@ nmap * *nzz
 nmap n nzz
 nmap N Nzz
 
+nmap zz :qall!<CR>
+
 nnoremap vv V
 nnoremap V v$
 
