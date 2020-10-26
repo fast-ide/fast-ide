@@ -412,7 +412,7 @@ noremap <silent> <Leader><Tab> :NERDTreeToggle<CR>
 " Plug 'majutsushi/tagbar'
 " ----------------------------------------------------------------------------
 
-noremap <silent> <Leader>tb :TagbarToggle<CR>
+noremap <silent> <Leader>tt :TagbarToggle<CR>
 
 " ----------------------------------------------------------------------------
 " Plug 't9md/vim-quickhl'
@@ -460,10 +460,10 @@ sunmap w
 
 runtime! ftplugin/man.vim
 
-nnoremap <silent> <Leader>K :Man<CR>
-nnoremap <silent> <Leader>v :vertical Man<CR>
-vnoremap <silent> <Leader>K y:Man <C-r>"<CR>
-vnoremap <silent> <Leader>v y:vertical Man <C-r>"<CR>
+nnoremap <silent> <Leader>kx :Man<CR>
+nnoremap <silent> <Leader>kv :vertical Man<CR>
+vnoremap <silent> <Leader>kx y:Man <C-r>"<CR>
+vnoremap <silent> <Leader>kv y:vertical Man <C-r>"<CR>
 
 " ----------------------------------------------------------------------------
 " Plug 'arakashic/chromatica.nvim'
