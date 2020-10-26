@@ -465,6 +465,7 @@ w           added support for camel notation
 <Leader>c start/continue debugging
 <Leader>s stop debugging
 <Leader>r restart debugging
+<Leader>d reset debugging
 <Leader>b set breakpoint
 <Leader>i set conditional breakpoint
 <Leader>j step over
