@@ -418,8 +418,8 @@ noremap <silent> <Leader>tb :TagbarToggle<CR>
 " Plug 't9md/vim-quickhl'
 " ----------------------------------------------------------------------------
 
-nmap <Leader>l <Plug>(quickhl-manual-this)
-xmap <Leader>l <Plug>(quickhl-manual-this)
+nmap <Leader>l <Plug>(quickhl-manual-this-whole-word)
+xmap <Leader>l <Plug>(quickhl-manual-this-whole-word)
 
 let g:quickhl_manual_colors = [
     \ "ctermfg=16  ctermbg=153 guifg=#ffffff guibg=#0a7383",
