@@ -437,8 +437,6 @@ let g:quickhl_manual_colors = [
 " ----------------------------------------------------------------------------
 
 nmap s <Plug>(easymotion-overwin-f2)
-map <Leader>j <Plug>(easymotion-j)
-map <Leader>k <Plug>(easymotion-k)
 
 let g:EasyMotion_smartcase = 1
 
@@ -462,9 +460,9 @@ sunmap w
 
 runtime! ftplugin/man.vim
 
-nnoremap <silent> <Leader>k :Man<CR>
+nnoremap <silent> <Leader>K :Man<CR>
 nnoremap <silent> <Leader>v :vertical Man<CR>
-vnoremap <silent> <Leader>k y:Man <C-r>"<CR>
+vnoremap <silent> <Leader>K y:Man <C-r>"<CR>
 vnoremap <silent> <Leader>v y:vertical Man <C-r>"<CR>
 
 " ----------------------------------------------------------------------------
