@@ -778,7 +778,7 @@ nmap <leader>f :FloatermNew lf<CR>
 " Plug 'w0rp/ale'
 " ----------------------------------------------------------------------------
 
-nmap <Leader>ll ALEToggle<CR>
+nmap <Leader>ll :ALEToggle<CR>
 
 " ----------------------------------------------------------------------------
 " Plug 'plasticboy/vim-markdown'
