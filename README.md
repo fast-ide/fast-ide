@@ -289,6 +289,8 @@ L           go to the end of the line (alias for $)
 zj          down half the window
 zk          up half the window
 zz          center the window
+
+Z           quit all
 ```
 
 ###### file manager
@@ -297,7 +299,7 @@ zz          center the window
 <Leader>f   open lf file manager (see: https://github.com/gokcehan/lf)
 # use the hjkl keys to navigate and press l to open the selected file
 
-<Leader>Tab open NerdTree (see: https://github.com/preservim/nerdtree)
+<Leader>nn open NerdTree (see: https://github.com/preservim/nerdtree)
 ```
 
 ###### next
@@ -326,16 +328,16 @@ N           previous search
 
 ```
 K           run a program to lookup the keyword under the cursor
-<Leader>k   display the manpage for the keyword under the cursor horizontally
-<Leader>v   display the manpage for the keyword under the cursor vertically
+<Leader>kk   display the manpage for the keyword under the cursor horizontally
+<Leader>kv   display the manpage for the keyword under the cursor vertically
 ```
 
 ###### highlight
 
 ```
-<Leader>l   highlight a word under the cursor (see: https://github.com/t9md/vim-quickhl)
-<Leader>ll  toggle show special symbols
-<Leader>ls  toggle search highlight
+<Leader>hh   highlight a word under the cursor (see: https://github.com/t9md/vim-quickhl)
+<Leader>hl  toggle show special symbols
+<Leader>hs  toggle search highlight
 ```
 
 ###### edit
@@ -373,9 +375,9 @@ s{char}{char}  to move to {char}{char} (see: https://github.com/easymotion/vim-e
 <Leader>ff  find file
 <Leader>fl  find line
 <Leader>ft  find tag
-<Leader>fs  find file type
 <Leader>fh  find find a file among previously opened files
 
+<Leader>ss  find file type (syntax)
 <Leader>sl  find line in the current buffer
 <Leader>st  find tag in the current buffer
 
@@ -385,7 +387,7 @@ s{char}{char}  to move to {char}{char} (see: https://github.com/easymotion/vim-e
 ###### preview tag
 
 ```
-;           preview tag (see: https://github.com/skywind3000/vim-preview)
+|           preview tag (see: https://github.com/skywind3000/vim-preview)
 <Leader>pd  (destroy) close preview
 ```
 

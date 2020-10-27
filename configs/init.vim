@@ -238,7 +238,7 @@ nmap * *nzz
 nmap n nzz
 nmap N Nzz
 
-nmap zz :qall!<CR>
+nmap Z :qall!<CR>
 
 nnoremap vv V
 nnoremap V v$
@@ -299,8 +299,8 @@ vnoremap <Leader>p "+p
 vnoremap <Leader>P "+P
 nnoremap <Leader>pp :setlocal paste!<cr>
 
-nnoremap <Leader>ls :set hlsearch!<CR>
-nnoremap <Leader>ll :set list!<CR>
+nnoremap <Leader>hs :set hlsearch!<CR>
+nnoremap <Leader>hl :set list!<CR>
 
 nnoremap <Leader>wH <C-W>H
 nnoremap <Leader>wJ <C-W>J
@@ -372,8 +372,8 @@ noremap <Leader>fg :GFiles<CR>
 noremap <Leader>fh :History<CR>
 noremap <Leader>fl :Lines<CR>
 noremap <Leader>ft :Tags<CR>
-noremap <Leader>fs :Filetypes<CR>
 
+noremap <Leader>ss :Filetypes<CR>
 noremap <Leader>sc :BCommits<CR>
 noremap <Leader>sl :BLines<CR>
 noremap <Leader>st :BTags<CR>
@@ -408,7 +408,7 @@ let g:rtagsUseLocationList = 0
 let g:NERDTreeWinPos = "left"
 let g:NERDSpaceDelims = 1
 
-noremap <silent> <Leader><Tab> :NERDTreeToggle<CR>
+noremap <silent> <Leader>nn :NERDTreeToggle<CR>
 
 " ----------------------------------------------------------------------------
 " Plug 'majutsushi/tagbar'
@@ -420,8 +420,8 @@ noremap <silent> <Leader>tt :TagbarToggle<CR>
 " Plug 't9md/vim-quickhl'
 " ----------------------------------------------------------------------------
 
-nmap <Leader>l <Plug>(quickhl-manual-this-whole-word)
-xmap <Leader>l <Plug>(quickhl-manual-this-whole-word)
+nmap <Leader>hh <Plug>(quickhl-manual-this-whole-word)
+xmap <Leader>hh <Plug>(quickhl-manual-this-whole-word)
 
 let g:quickhl_manual_colors = [
     \ "ctermfg=16  ctermbg=153 guifg=#ffffff guibg=#0a7383",
@@ -441,6 +441,13 @@ let g:quickhl_manual_colors = [
 nmap s <Plug>(easymotion-overwin-f2)
 
 let g:EasyMotion_smartcase = 1
+
+" ----------------------------------------------------------------------------
+" Plug 'AndrewRadev/splitjoin.vim'
+" ----------------------------------------------------------------------------
+
+nmap <Leader>j gJ
+nmap <Leader>jj gS
 
 " ----------------------------------------------------------------------------
 " Plug 'bkad/CamelCaseMotion'
@@ -593,8 +600,10 @@ let g:startify_lists = [
     \ { 'header': ['   MRU '. getcwd()], 'type': 'dir' },
     \ { 'header': ['   Sessions'],       'type': 'sessions' },
     \ ]
-    
+
 let g:startify_custom_indices = map(range(1,100), 'string(v:val)')
+
+nmap <Leader>ee :Startify<CR>
 
 " ----------------------------------------------------------------------------
 " Plug 'godlygeek/tabular'
@@ -725,7 +734,7 @@ autocmd FileType gitmessengerpopup call <SID>setup_git_messenger_popup()
 " Plug 'benmills/vimux'
 " ----------------------------------------------------------------------------
 
-map <Leader>vo :call VimuxOpenRunner()<CR>
+map <Leader>vv :call VimuxOpenRunner()<CR>
 map <Leader>vc :call VimuxRunCommand("clear")<CR>
 map <Leader>vi :VimuxInspectRunner<CR>
 map <Leader>vl :VimuxRunLastCommand<CR>
@@ -740,7 +749,7 @@ function! VimuxSlime()
 endfunction
 
 vmap <Leader>vs "vy :call VimuxSlime()<CR>
-nmap <Leader><Space> V<Leader>vsj
+nmap <Leader>V V<Leader>vsj
 nmap <Leader>vp vip<Leader>vs<CR>
 
 " ----------------------------------------------------------------------------
@@ -764,6 +773,13 @@ smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
 
 nmap <leader>f :FloatermNew lf<CR>
 
+
+" ----------------------------------------------------------------------------
+" Plug 'w0rp/ale'
+" ----------------------------------------------------------------------------
+
+nmap <Leader>ll ALEToggle<CR>
+
 " ----------------------------------------------------------------------------
 " Plug 'plasticboy/vim-markdown'
 " ----------------------------------------------------------------------------
@@ -782,17 +798,17 @@ source $HOME/.config/nvim/lsp.vim
 
 let g:vimspector_install_gadgets = [ 'debugpy', 'vscode-cpptools', 'vscode-go', 'vscode-node-debug2' ]
 
-nmap <Leader>c <Plug>VimspectorContinue
-nmap <Leader>d <Plug>VimspectorReset
-nmap <Leader>s <Plug>VimspectorStop
-nmap <Leader>r <Plug>VimspectorRestart
-nmap <Leader>b <Plug>VimspectorToggleBreakpoint
-nmap <Leader>i <Plug>VimspectorToggleConditionalBreakpoint
-nmap <Leader>j <Plug>VimspectorStepOver
-nmap <Leader>h <Plug>VimspectorStepInto
-nmap <Leader>k <Plug>VimspectorStepOut
-nmap <Leader>t <Plug>VimspectorRunToCursor
-nmap <Leader>e :VimspectorEval <C-R><C-W><CR>
+nmap <Leader>dc <Plug>VimspectorContinue
+nmap <Leader>dd <Plug>VimspectorReset
+nmap <Leader>ds <Plug>VimspectorStop
+nmap <Leader>dr <Plug>VimspectorRestart
+nmap <Leader>db <Plug>VimspectorToggleBreakpoint
+nmap <Leader>di <Plug>VimspectorToggleConditionalBreakpoint
+nmap <Leader>dj <Plug>VimspectorStepOver
+nmap <Leader>dh <Plug>VimspectorStepInto
+nmap <Leader>dk <Plug>VimspectorStepOut
+nmap <Leader>dt <Plug>VimspectorRunToCursor
+nmap <Leader>de :VimspectorEval <C-R><C-W><CR>
 
 sign define vimspectorBP text=o          texthl=WarningMsg
 sign define vimspectorBPCond text=o?     texthl=WarningMsg
