@@ -291,6 +291,11 @@ zk          up half the window
 zz          center the window
 
 Z           quit all
+
+,,          show list of marks
+,{m}        set mark m at current cursor location
+;{m}        jump to position (line and column) of mark
+'{m}        jump to line (line and column) of mark
 ```
 
 ###### file manager

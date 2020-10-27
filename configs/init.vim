@@ -22,6 +22,7 @@ call plug#begin('~/.nvim/plugged')
   Plug 'godlygeek/tabular'
   Plug 'svermeulen/vim-cutlass'
   Plug 'vim-scripts/ingo-library' | Plug 'vim-scripts/EnhancedJumps'
+  Plug 'rhysd/clever-f.vim'
 
 " ----------------------------------------------------------------------------
 " Marks plugins
@@ -273,6 +274,7 @@ nnoremap mm dd
 xnoremap m d
 
 nnoremap , m
+nnoremap ; `
 
 vnoremap . :normal .<CR>
 
