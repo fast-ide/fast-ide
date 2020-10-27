@@ -296,6 +296,7 @@ Z           quit all
 ,{m}        set mark m at current cursor location
 ;{m}        jump to position (line and column) of mark
 '{m}        jump to line (line and column) of mark
+''          jump back (to line in current buffer where jumped from)
 ```
 
 ###### file manager
