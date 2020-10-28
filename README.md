@@ -204,17 +204,18 @@ prefix is **\`** symbol
 <prefix>p   previous window
 <prefix>{N} go to the N window (i.e. `3)
 
-<prefix>"   show tree
-<prefix>w   find window
+<prefix>d   close pane
+<prefix>w   new window
+<prefix>f   find window
 <prefix>s   create session
+<prefix>q   detach session
 <prefix>r   source .tmux.conf config file
 <prefix>i   install tmux plugins (https://github.com/tmux-plugins/tpm)
 <prefix>e   switch to fpp mode (see: https://github.com/facebook/PathPicker)
 <prefix>u   opening urls from browser (see: https://github.com/wfxr/tmux-fzf-url)
 
 <prefix>Tab clear pane
-<prefix>x   close pane
-<prefix>&   close window
+<prefix>c   close window
 
 Shift-Left  resize pane left by 5
 Shift-Right resize pane right by 5
