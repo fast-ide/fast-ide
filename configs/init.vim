@@ -456,7 +456,14 @@ nmap <Leader>jj gS
 " ----------------------------------------------------------------------------
 
 let b:surround_{char2nr('b')} = "**\r**"
-let b:surround_{char2nr('c')} = "`\r`"
+let b:surround_{char2nr('i')} = "`\r`"
+let b:surround_{char2nr('l')} = "[](\r)"
+let b:surround_{char2nr('c')} = "```\n\r\n```"
+
+nmap <Leader>mb ysiwb
+nmap <Leader>mi ysiwi
+nmap <Leader>ml yssl
+nmap <Leader>mc yssc
 
 " ----------------------------------------------------------------------------
 " Plug 'bkad/CamelCaseMotion'
