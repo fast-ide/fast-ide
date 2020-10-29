@@ -532,6 +532,18 @@ autocmd FileType qf nnoremap <silent><buffer> p :PreviewQuickfix<cr>
 autocmd FileType qf nnoremap <silent><buffer> P :PreviewClose<cr>
 
 " ----------------------------------------------------------------------------
+" Plug 'christoomey/vim-tmux-navigator'
+" ----------------------------------------------------------------------------
+
+let g:tmux_navigator_no_mappings = 1
+
+nnoremap <silent> <C-h> :TmuxNavigateLeft<CR>
+nnoremap <silent> <C-j> :TmuxNavigateDown<CR>
+nnoremap <silent> <C-k> :TmuxNavigateUp<CR>
+nnoremap <silent> <C-l> :TmuxNavigateRight<CR>
+nnoremap <silent> <C-/> :TmuxNavigatePrevious<CR>
+
+" ----------------------------------------------------------------------------
 " Plug 'edkolev/tmuxline.vim'
 " ----------------------------------------------------------------------------
 
