@@ -76,7 +76,7 @@ call plug#begin('~/.nvim/plugged')
   Plug 'will133/vim-dirdiff'
   Plug 'rhysd/committia.vim'
 
-  Plug 'sjl/gundo.vim'
+  Plug 'simnalamburt/vim-mundo'
 
 " ----------------------------------------------------------------------------
 " Tmux plugins
@@ -757,6 +757,11 @@ function! s:setup_git_messenger_popup() abort
 endfunction
 autocmd FileType gitmessengerpopup call <SID>setup_git_messenger_popup()
 
+" ----------------------------------------------------------------------------
+" Plug 'simnalamburt/vim-mundo'
+" ----------------------------------------------------------------------------
+
+nnoremap <Leader>uu :MundoToggle<CR>
 
 " ----------------------------------------------------------------------------
 " Plug 'benmills/vimux'
