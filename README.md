@@ -261,7 +261,9 @@ alias r=clear
 
 You can see all settings in the configuration file
 ```
-<Leader>ov  open nvim config file
+<Leader>ev  open nvim config file
+<Leader>et  open tmux config file
+<Leader>ez  open zsh config file
 ```
 
 ##### normal mode

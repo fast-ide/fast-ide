@@ -332,8 +332,10 @@ noremap <Leader>qn :cnext<CR>
 noremap <Leader>qo :copen<CR>
 noremap <Leader>qp :cprev<CR>
 
-noremap <Leader>ov :edit $MYVIMRC<CR>
-noremap <Leader>sv :source $MYVIMRC<CR>
+nnoremap <leader>ee :edit <c-r>=expand("%:p:h")<CR>/
+nnoremap <Leader>ev :edit $MYVIMRC<CR>
+nnoremap <leader>ez :edit $HOME/.zshrc<CR>
+nnoremap <leader>et :edit $HOME/.tmux.conf<CR>
 
 map <Leader>tc :tabnew<cr>
 map <Leader>td :tabclose<cr>
