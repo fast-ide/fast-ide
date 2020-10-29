@@ -633,8 +633,6 @@ let g:startify_lists = [
 
 let g:startify_custom_indices = map(range(1,100), 'string(v:val)')
 
-nmap <Leader>ee :Startify<CR>
-
 " ----------------------------------------------------------------------------
 " Plug 'godlygeek/tabular'
 " ----------------------------------------------------------------------------
