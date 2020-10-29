@@ -206,8 +206,10 @@ prefix is **\`** symbol
 
 <prefix>d   close pane
 <prefix>w   new window
+<prefix>W   kill window
 <prefix>f   find window
 <prefix>s   create session
+<prefix>S   kill session
 <prefix>q   detach session
 <prefix>r   source .tmux.conf config file
 <prefix>i   install tmux plugins (https://github.com/tmux-plugins/tpm)
