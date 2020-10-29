@@ -471,7 +471,7 @@ w           added support for camel notation
 ```
 <Leader>vo  open vimux runner (see: https://github.com/benmills/vimux)
 <Leader>vp  send selected text to vimux runner
-"           send text from the cursor to the end of the line to vimux runner
+<Leader>V   send text from the cursor to the end of the line to vimux runner
 ```
 
 ##### debugging
