@@ -357,6 +357,7 @@ K            run a program to lookup the keyword under the cursor
 
 ```
 <Leader>we  edit file in new vertical window
+<Leader>ee  edit file in current window
 <Leader>te  edit file in new tab
 ```
 
