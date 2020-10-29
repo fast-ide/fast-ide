@@ -340,7 +340,7 @@ N           previous search
 ###### docs
 
 ```
-K           run a program to lookup the keyword under the cursor
+K            run a program to lookup the keyword under the cursor
 <Leader>kk   display the manpage for the keyword under the cursor horizontally
 <Leader>kv   display the manpage for the keyword under the cursor vertically
 ```
@@ -348,7 +348,7 @@ K           run a program to lookup the keyword under the cursor
 ###### highlight
 
 ```
-<Leader>hh   highlight a word under the cursor (see: https://github.com/t9md/vim-quickhl)
+<Leader>hh  highlight a word under the cursor (see: https://github.com/t9md/vim-quickhl)
 <Leader>hl  toggle show special symbols
 <Leader>hs  toggle search highlight
 ```
