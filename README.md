@@ -214,6 +214,10 @@ prefix is **\`** symbol
 <prefix>e   switch to fpp mode (see: https://github.com/facebook/PathPicker)
 <prefix>u   opening urls from browser (see: https://github.com/wfxr/tmux-fzf-url)
 
+<prefix>;   go to previous pane
+<prefix>l   go to previous window
+<prefix>L   go to previous session
+
 <prefix>Tab clear pane
 <prefix>c   close window
 
