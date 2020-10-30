@@ -32,6 +32,7 @@ added cool new features and integrated them into a single solution 🌟
   * [Run](#run)
   * [Update](#update)
   * [Supported OSs](#supported-oss)
+  * [Build](#build)
   * [Deploy](#deploy)
   * [Install](#install)
   * [Configuration](#configuration)
@@ -99,6 +100,29 @@ cd fast-ide && ./install.sh
 ```yaml
 # see install section
 - macos
+```
+
+### Build
+
+Example for ubuntu 20.04:
+
+```sh
+# build brew image 
+cd toolbox/linuxbrew
+pushd docker/ubuntu-20.04
+tar -czh . | docker build -t fastide/linuxbrew-ubuntu:20.04 -
+popd
+
+# build toolbox image
+cd ..
+docker build -t fastide/toolbox-ubuntu:20.04 --build-arg OS_FAMILY=ubuntu --build-arg OS_VERSION=20.04 .
+
+# build fastide image
+cd ..
+docker build -t fastide/ubuntu:20.04 --build-arg OS_FAMILY=ubuntu --build-arg OS_VERSION=20.04 .
+
+# after run
+docker run -it fastide/ubuntu:20.04 zsh
 ```
 
 ### Deploy
