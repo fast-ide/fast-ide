@@ -493,7 +493,7 @@ e           added support for camel notation
 w           added support for camel notation
 ```
 
-##### coding
+##### coding 
 
 ```
 gd go to symbol definition
@@ -501,6 +501,9 @@ gr go to symbol links
 gi go to implementation 
 (for more information see: https://github.com/neoclide/coc.nvim)
 ```
+
+C++ projects based on cmake must be built with the `CMAKE_EXPORT_COMPILE_COMMANDS` flag
+and after copying the generated **compile_commands.json** file to the root directory 🔥
 
 ##### debugging
 
