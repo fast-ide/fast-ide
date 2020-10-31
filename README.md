@@ -176,6 +176,11 @@ onehalf: # alternative
   terminal: https://github.com/sonph/onehalf
 ```
 
+🟦 input
+🟩 normal 
+🟥 attention
+🟪 check
+
 ### True color
 
 If you are using a terminal that does not support _true color_ perform the following script for normal display
