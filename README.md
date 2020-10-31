@@ -210,7 +210,7 @@ awk 'BEGIN{
 - [curl](https://ec.haxx.se) and [httpie](https://httpie.org/docs)
 - [wtfutil](https://github.com/wtfutil/wtf) and [gtop](https://github.com/aksakalli/gtop)
 
-We also have [gnupg](https://www.gnupg.org/gph/en/manual.html) inside each docker container from the [list](#supported-oss) <br/>
+We also have [gnupg](https://www.gnupg.org/gph/en/manual.html) inside each docker container from the [list](#supported-oss)<br/>
 If you used the [deployment](#deploy) instruction you can install it using your system package manager
 
 ### Maps
@@ -502,7 +502,7 @@ gi go to implementation
 (for more information see: https://github.com/neoclide/coc.nvim)
 ```
 
-C++ projects based on cmake must be built with the `CMAKE_EXPORT_COMPILE_COMMANDS` flag
+C++ projects based on cmake must be built with the `CMAKE_EXPORT_COMPILE_COMMANDS` flag<br/>
 and after copying the generated **compile_commands.json** file to the root directory 🔥
 
 ##### debugging
