@@ -460,7 +460,7 @@ Meta-Left  decrease the horizontal size of the current window
 Ctrl-E      (like in normal mode)
 Ctrl-Y      (like in normal mode)
 
-jk          switch to normal mode (alias for Esc)
+jj          switch to normal mode (alias for Esc)
 ```
 
 ##### command mode
