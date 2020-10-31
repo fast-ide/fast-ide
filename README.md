@@ -493,12 +493,13 @@ e           added support for camel notation
 w           added support for camel notation
 ```
 
-##### tmux integration
+##### coding
 
 ```
-<Leader>vo  open vimux runner (see: https://github.com/benmills/vimux)
-<Leader>vp  send selected text to vimux runner
-<Leader>V   send text from the cursor to the end of the line to vimux runner
+gd go to symbol definition
+gr go to symbol links
+gi go to implementation 
+(for more information see: https://github.com/neoclide/coc.nvim)
 ```
 
 ##### debugging
@@ -515,6 +516,14 @@ w           added support for camel notation
 <Leader>k step out
 <Leader>t run to cursor
 <Leader>e evalute keyword under the cursor (see: https://github.com/puremourning/vimspector)
+```
+
+##### tmux integration
+
+```
+<Leader>vo  open vimux runner (see: https://github.com/benmills/vimux)
+<Leader>vp  send selected text to vimux runner
+<Leader>V   send text from the cursor to the end of the line to vimux runner
 ```
 
 ##### linter integration
