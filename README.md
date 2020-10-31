@@ -176,9 +176,9 @@ onehalf: # alternative
   terminal: https://github.com/sonph/onehalf
 ```
 
-![#f03c15](https://via.placeholder.com/15/61afef/000000?text=+) active
+![#f03c15](https://via.placeholder.com/15/61afef/000000?text=+) active (input mode, active tmux window, active tmux pane)
 ![#f03c15](https://via.placeholder.com/15/98c379/000000?text=+) normal
-![#f03c15](https://via.placeholder.com/15/e06c75/000000?text=+) attention
+![#f03c15](https://via.placeholder.com/15/e06c75/000000?text=+) attention (errors, zoomed tmux pane)
 ![#f03c15](https://via.placeholder.com/15/c678dd/000000?text=+) checks
 
 ### True color
