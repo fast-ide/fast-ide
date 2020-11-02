@@ -192,6 +192,7 @@ echo "alias o='nvim -c \"set notermguicolors\"'" >> ~/.zshrc
 
 You can check support using the following instruction:
 ```sh
+# 256 color
 awk 'BEGIN{
     s="/\\/\\/\\/\\/\\"; s=s s s s s s s s;
     for (colnum = 0; colnum<77; colnum++) {
@@ -205,6 +206,9 @@ awk 'BEGIN{
     }
     printf "\n";
 }'
+
+# true color
+printf "\x1b[38;2;255;100;0mTRUECOLOR\x1b[0m\n"
 ```
 
 ### Toolbox 🧰
