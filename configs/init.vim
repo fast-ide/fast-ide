@@ -179,7 +179,9 @@ filetype plugin on
 
 set noswapfile
 set nobackup
+set nowritebackup
 
+set cmdheight=2
 set conceallevel=2
 set cursorline
 set encoding=utf-8
@@ -201,6 +203,8 @@ set novisualbell
 set nowrap
 set number
 set sel=old
+set shortmess+=c
+set signcolumn=yes
 set spelllang=en_gb
 set splitbelow
 set splitright
@@ -208,6 +212,7 @@ set sw=2
 set t_vb=
 set ts=2
 set undofile
+set updatetime=300
 set viewoptions=folds
 set wildmode=longest:full,full
 
@@ -221,21 +226,22 @@ cnoremap <C-P> <Up>
 inoremap <C-E> <C-X><C-E>
 inoremap <C-Y> <C-X><C-Y>
 
-nmap # #nzz
-nmap * *nzz
-nmap n nzz
-nmap N Nzz
+nnoremap <C-U> 11kzz
+nnoremap <C-D> 11jzz
+nnoremap j gjzz
+nnoremap k gkzz
+nnoremap # #zz
+nnoremap * *zz
+nnoremap n nzz
+nnoremap N Nzz
+nmap zj <C-d>zz
+nmap zk <C-u>zz
 
 nnoremap vv V
 nnoremap V v$
 nnoremap \| v$"py:read !<C-r>p<CR>
 
 inoremap jk <esc>
-nmap zj <C-d>zz
-nmap zk <C-u>zz
-
-nnoremap j gj
-nnoremap k gk
 
 nnoremap Q @q
 nnoremap Y y$
