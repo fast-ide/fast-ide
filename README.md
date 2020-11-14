@@ -32,6 +32,7 @@ added cool new features and integrated them into a single solution 🌟
   * [Run](#run)
   * [Update](#update)
   * [Supported OSs](#supported-oss)
+  * [Build](#build)
   * [Deploy](#deploy)
   * [Install](#install)
   * [Configuration](#configuration)
@@ -101,6 +102,29 @@ cd fast-ide && ./install.sh
 - macos
 ```
 
+### Build
+
+Example for ubuntu 20.04:
+
+```sh
+# build brew image 
+cd toolbox/linuxbrew
+pushd docker/ubuntu-20.04
+tar -czh . | docker build -t fastide/linuxbrew-ubuntu:20.04 -
+popd
+
+# build toolbox image
+cd ..
+docker build -t fastide/toolbox-ubuntu:20.04 --build-arg OS_FAMILY=ubuntu --build-arg OS_VERSION=20.04 .
+
+# build fastide image
+cd ..
+docker build -t fastide/ubuntu:20.04 --build-arg OS_FAMILY=ubuntu --build-arg OS_VERSION=20.04 .
+
+# after run
+docker run -it fastide/ubuntu:20.04 zsh
+```
+
 ### Deploy
 
 ```sh
@@ -141,16 +165,21 @@ FiraCode: https://github.com/tonsky/FiraCode/wiki/Installing
 ### Themes 🎨
 
 ```yaml
-onehalf:
-  vim: https://github.com/sonph/onehalf
-  terminal: https://github.com/sonph/onehalf
-
-onedark: # alternative
+onedark:
   vim: https://github.com/joshdick/onedark.vim
   terminal: 
   - https://github.com/joshdick/onedark.vim/tree/master/term
   - https://github.com/denysdovhan/one-gnome-terminal
+
+onehalf: # alternative
+  vim: https://github.com/sonph/onehalf
+  terminal: https://github.com/sonph/onehalf
 ```
+
+![#f03c15](https://via.placeholder.com/15/61afef/000000?text=+) active (input mode, active tmux window, active tmux pane)
+![#f03c15](https://via.placeholder.com/15/98c379/000000?text=+) normal
+![#f03c15](https://via.placeholder.com/15/e06c75/000000?text=+) attention (errors, zoomed tmux pane)
+![#f03c15](https://via.placeholder.com/15/c678dd/000000?text=+) checks
 
 ### True color
 
@@ -163,6 +192,7 @@ echo "alias o='nvim -c \"set notermguicolors\"'" >> ~/.zshrc
 
 You can check support using the following instruction:
 ```sh
+# 256 color
 awk 'BEGIN{
     s="/\\/\\/\\/\\/\\"; s=s s s s s s s s;
     for (colnum = 0; colnum<77; colnum++) {
@@ -176,6 +206,9 @@ awk 'BEGIN{
     }
     printf "\n";
 }'
+
+# true color
+printf "\x1b[38;2;255;100;0mTRUECOLOR\x1b[0m\n"
 ```
 
 ### Toolbox 🧰
@@ -186,7 +219,7 @@ awk 'BEGIN{
 - [curl](https://ec.haxx.se) and [httpie](https://httpie.org/docs)
 - [wtfutil](https://github.com/wtfutil/wtf) and [gtop](https://github.com/aksakalli/gtop)
 
-We also have [gnupg](https://www.gnupg.org/gph/en/manual.html) inside each docker container from the [list](#supported-oss) <br/>
+We also have [gnupg](https://www.gnupg.org/gph/en/manual.html) inside each docker container from the [list](#supported-oss)<br/>
 If you used the [deployment](#deploy) instruction you can install it using your system package manager
 
 ### Maps
@@ -204,16 +237,24 @@ prefix is **\`** symbol
 <prefix>p   previous window
 <prefix>{N} go to the N window (i.e. `3)
 
-<prefix>"   show tree
+<prefix>d   close pane
+<prefix>w   new window
+<prefix>W   kill window
+<prefix>f   find window
 <prefix>s   create session
+<prefix>S   kill session
+<prefix>q   detach session
 <prefix>r   source .tmux.conf config file
 <prefix>i   install tmux plugins (https://github.com/tmux-plugins/tpm)
 <prefix>e   switch to fpp mode (see: https://github.com/facebook/PathPicker)
 <prefix>u   opening urls from browser (see: https://github.com/wfxr/tmux-fzf-url)
 
+<prefix>;   go to previous pane
+<prefix>l   go to previous window
+<prefix>L   go to previous session
+
 <prefix>Tab clear pane
-<prefix>x   close pane
-<prefix>&   close window
+<prefix>c   close window
 
 Shift-Left  resize pane left by 5
 Shift-Right resize pane right by 5
@@ -260,7 +301,9 @@ alias r=clear
 
 You can see all settings in the configuration file
 ```
-<Leader>ov  open nvim config file
+<Leader>ev  open nvim config file
+<Leader>et  open tmux config file
+<Leader>ez  open zsh config file
 ```
 
 ##### normal mode
@@ -288,6 +331,14 @@ L           go to the end of the line (alias for $)
 zj          down half the window
 zk          up half the window
 zz          center the window
+
+Z           quit all
+
+,,          show list of marks
+,{m}        set mark m at current cursor location
+;{m}        jump to position (line and column) of mark
+'{m}        jump to line (line and column) of mark
+''          jump back (to line in current buffer where jumped from)
 ```
 
 ###### file manager
@@ -296,7 +347,7 @@ zz          center the window
 <Leader>f   open lf file manager (see: https://github.com/gokcehan/lf)
 # use the hjkl keys to navigate and press l to open the selected file
 
-<Leader>Tab open NerdTree (see: https://github.com/preservim/nerdtree)
+<Leader>nn open NerdTree (see: https://github.com/preservim/nerdtree)
 ```
 
 ###### next
@@ -324,23 +375,24 @@ N           previous search
 ###### docs
 
 ```
-K           run a program to lookup the keyword under the cursor
-<Leader>k   display the manpage for the keyword under the cursor horizontally
-<Leader>v   display the manpage for the keyword under the cursor vertically
+K            run a program to lookup the keyword under the cursor
+<Leader>kk   display the manpage for the keyword under the cursor horizontally
+<Leader>kv   display the manpage for the keyword under the cursor vertically
 ```
 
 ###### highlight
 
 ```
-<Leader>l   highlight a word under the cursor (see: https://github.com/t9md/vim-quickhl)
-<Leader>ll  toggle show special symbols
-<Leader>ls  toggle search highlight
+<Leader>hh  highlight a word under the cursor (see: https://github.com/t9md/vim-quickhl)
+<Leader>hl  toggle show special symbols
+<Leader>hs  toggle search highlight
 ```
 
 ###### edit
 
 ```
 <Leader>we  edit file in new vertical window
+<Leader>ee  edit file in current window
 <Leader>te  edit file in new tab
 ```
 
@@ -372,9 +424,9 @@ s{char}{char}  to move to {char}{char} (see: https://github.com/easymotion/vim-e
 <Leader>ff  find file
 <Leader>fl  find line
 <Leader>ft  find tag
-<Leader>fs  find file type
 <Leader>fh  find find a file among previously opened files
 
+<Leader>ss  find file type (syntax)
 <Leader>sl  find line in the current buffer
 <Leader>st  find tag in the current buffer
 
@@ -384,7 +436,7 @@ s{char}{char}  to move to {char}{char} (see: https://github.com/easymotion/vim-e
 ###### preview tag
 
 ```
-;           preview tag (see: https://github.com/skywind3000/vim-preview)
+|           preview tag (see: https://github.com/skywind3000/vim-preview)
 <Leader>pd  (destroy) close preview
 ```
 
@@ -417,7 +469,7 @@ Meta-Left  decrease the horizontal size of the current window
 Ctrl-E      (like in normal mode)
 Ctrl-Y      (like in normal mode)
 
-jk          switch to normal mode (alias for Esc)
+jj          switch to normal mode (alias for Esc)
 ```
 
 ##### command mode
@@ -450,12 +502,40 @@ e           added support for camel notation
 w           added support for camel notation
 ```
 
+##### coding 
+
+```
+gd go to symbol definition
+gr go to symbol links
+gi go to implementation 
+(for more information see: https://github.com/neoclide/coc.nvim)
+```
+
+C++ projects based on cmake must be built with the `CMAKE_EXPORT_COMPILE_COMMANDS` flag<br/>
+and after copying the generated **compile_commands.json** file to the root directory 🔥
+
+##### debugging
+
+```
+<Leader>c start/continue debugging
+<Leader>s stop debugging
+<Leader>r restart debugging
+<Leader>d reset debugging
+<Leader>b set breakpoint
+<Leader>i set conditional breakpoint
+<Leader>j step over
+<Leader>h step into
+<Leader>k step out
+<Leader>t run to cursor
+<Leader>e evalute keyword under the cursor (see: https://github.com/puremourning/vimspector)
+```
+
 ##### tmux integration
 
 ```
 <Leader>vo  open vimux runner (see: https://github.com/benmills/vimux)
 <Leader>vp  send selected text to vimux runner
-"           send text from the cursor to the end of the line to vimux runner
+<Leader>V   send text from the cursor to the end of the line to vimux runner
 ```
 
 ##### linter integration
@@ -575,6 +655,7 @@ Many thanks to the people and organizations that make this possible:
     <td align="center"><a href="http://www.squishythoughts.com"><img src="https://avatars0.githubusercontent.com/u/6490160?v=4" width="100px;" alt=""/><br /><sub><b>Richard Adenling</b></sub></a><br /><a href="#plugin-radenling" title="Plugin/utility libraries">🔌</a></td>
     <td align="center"><a href="https://rhysd.github.io/"><img src="https://avatars3.githubusercontent.com/u/823277?v=4" width="100px;" alt=""/><br /><sub><b>Linda_pp</b></sub></a><br /><a href="#plugin-rhysd" title="Plugin/utility libraries">🔌</a></td>
     <td align="center"><a href="http://blog.roman-gonzalez.ca"><img src="https://avatars3.githubusercontent.com/u/7335?v=4" width="100px;" alt=""/><br /><sub><b>Roman Gonzalez</b></sub></a><br /><a href="#plugin-roman" title="Plugin/utility libraries">🔌</a></td>
+    <td align="center"><a href="https://iccf.nl"><img src="https://avatars2.githubusercontent.com/u/10584846?v=4" width="100px;" alt=""/><br /><sub><b>Ben Jackson</b></sub></a><br /><a href="#plugin-vimspector" title="Plugin/utility libraries">🔌</a></td>
   </tr>
   <tr>
     <td align="center"><a href="https://github.com/scrooloose"><img src="https://avatars1.githubusercontent.com/u/1671?v=4" width="100px;" alt=""/><br /><sub><b>Martin Grenfell</b></sub></a><br /><a href="#plugin-scrooloose" title="Plugin/utility libraries">🔌</a></td>

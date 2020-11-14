@@ -21,6 +21,8 @@ call plug#begin('~/.nvim/plugged')
   Plug 'tpope/vim-speeddating'
   Plug 'godlygeek/tabular'
   Plug 'svermeulen/vim-cutlass'
+  Plug 'vim-scripts/ingo-library' | Plug 'vim-scripts/EnhancedJumps'
+  Plug 'rhysd/clever-f.vim'
 
 " ----------------------------------------------------------------------------
 " Marks plugins
@@ -40,6 +42,12 @@ call plug#begin('~/.nvim/plugged')
 " ----------------------------------------------------------------------------
 
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+" ----------------------------------------------------------------------------
+" Debugging
+" ----------------------------------------------------------------------------
+
+  Plug 'puremourning/vimspector'
 
 " ----------------------------------------------------------------------------
 " Snippets plugins
@@ -63,10 +71,12 @@ call plug#begin('~/.nvim/plugged')
   Plug 'lambdalisue/vim-unified-diff' |
   Plug 'christoomey/vim-conflicted'
 
+  Plug 'rhysd/git-messenger.vim'
+
   Plug 'will133/vim-dirdiff'
   Plug 'rhysd/committia.vim'
 
-  Plug 'sjl/gundo.vim'
+  Plug 'simnalamburt/vim-mundo'
 
 " ----------------------------------------------------------------------------
 " Tmux plugins
@@ -130,7 +140,6 @@ call plug#begin('~/.nvim/plugged')
   Plug 'wesQ3/vim-windowswap'
   Plug 'roman/golden-ratio'
   Plug 'chrisbra/NrrwRgn'
-  Plug 'simeji/winresizer'
 
 " ----------------------------------------------------------------------------
 " View plugins
@@ -146,7 +155,7 @@ call plug#begin('~/.nvim/plugged')
 " Tags plugins
 " ----------------------------------------------------------------------------
 
-  Plug 'majutsushi/tagbar'
+  Plug 'preservim/tagbar'
   Plug 'skywind3000/vim-preview'
 
 " ----------------------------------------------------------------------------
@@ -160,7 +169,7 @@ call plug#begin('~/.nvim/plugged')
 " Theme plugins
 " ----------------------------------------------------------------------------
 
-  Plug 'sonph/onehalf' , {'rtp': 'vim/'}
+  Plug 'joshdick/onedark.vim'
   Plug 'vim-airline/vim-airline'
   Plug 'vim-airline/vim-airline-themes'
 
@@ -191,7 +200,7 @@ set formatoptions-=t
 set gdefault
 set hidden
 set ignorecase
-set iskeyword-=/
+set iskeyword=@,48-57,_,192-255
 set lazyredraw
 set listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<,space:␣
 set nocompatible
@@ -202,6 +211,7 @@ set nofoldenable
 set novisualbell
 set nowrap
 set number
+set scrolloff=999
 set sel=old
 set shortmess+=c
 set signcolumn=yes
@@ -226,6 +236,9 @@ cnoremap <C-P> <Up>
 inoremap <C-E> <C-X><C-E>
 inoremap <C-Y> <C-X><C-Y>
 
+inoremap <C-a> <C-o>^
+inoremap <C-e> <C-o>$
+
 nnoremap <C-U> 11kzz
 nnoremap <C-D> 11jzz
 nnoremap j gjzz
@@ -237,11 +250,12 @@ nnoremap N Nzz
 nmap zj <C-d>zz
 nmap zk <C-u>zz
 
+nmap Z :qall!<CR>
+
 nnoremap vv V
 nnoremap V v$
-nnoremap \| v$"py:read !<C-r>p<CR>
 
-inoremap jk <esc>
+inoremap jj <esc>
 
 nnoremap Q @q
 nnoremap Y y$
@@ -251,6 +265,8 @@ noremap L $
 
 noremap q/ :History/<CR>
 noremap q: :History:<CR>
+
+nnoremap <expr> gb '`[' . strpart(getregtype(), 0, 1) . '`]'
 
 nnoremap / /\v
 vnoremap / /\v
@@ -262,6 +278,9 @@ nnoremap M D
 nnoremap m d
 nnoremap mm dd
 xnoremap m d
+
+nnoremap , m
+nnoremap ; `
 
 vnoremap . :normal .<CR>
 
@@ -288,8 +307,8 @@ vnoremap <Leader>p "+p
 vnoremap <Leader>P "+P
 nnoremap <Leader>pp :setlocal paste!<cr>
 
-nnoremap <Leader>ls :set hlsearch!<CR>
-nnoremap <Leader>ll :set list!<CR>
+nnoremap <Leader>hs :set hlsearch!<CR>
+nnoremap <Leader>hl :set list!<CR>
 
 nnoremap <Leader>wH <C-W>H
 nnoremap <Leader>wJ <C-W>J
@@ -319,8 +338,10 @@ noremap <Leader>qn :cnext<CR>
 noremap <Leader>qo :copen<CR>
 noremap <Leader>qp :cprev<CR>
 
-noremap <Leader>ov :edit $MYVIMRC<CR>
-noremap <Leader>sv :source $MYVIMRC<CR>
+nnoremap <leader>ee :edit <c-r>=expand("%:p:h")<CR>/
+nnoremap <Leader>ev :edit $MYVIMRC<CR>
+nnoremap <leader>ez :edit $HOME/.zshrc<CR>
+nnoremap <leader>et :edit $HOME/.tmux.conf<CR>
 
 map <Leader>tc :tabnew<cr>
 map <Leader>td :tabclose<cr>
@@ -339,30 +360,35 @@ let g:qf_mapping_ack_style = 1
 let g:qf_nowrap = 1
 
 if executable('ag')
-    let g:ackprg = "ag --vimgrep -s -H
+    let g:ackprg = "ag --vimgrep -s --hidden --ignore .git
             \ --nocolor --nogroup --column --smart-case --follow
             \ -p $HOME/.ackignore"
 endif
 
 nnoremap \ :Ag <C-R><C-W><CR>
-nnoremap <Leader>a :Ag<Space>
+nnoremap <Leader>a :Ack<Space>
 
 " ----------------------------------------------------------------------------
 " Plug 'junegunn/fzf.vim'
 " ----------------------------------------------------------------------------
 
+command! -bang -nargs=? -complete=dir HFiles
+  \ call fzf#vim#files(<q-args>, {'source': 'ag --hidden --ignore .git -g ""'}, <bang>0)
 noremap <Leader>fb :Buffers<CR>
 noremap <Leader>fc :Commits<CR>
 noremap <Leader>ff :Files<CR>
+noremap <Leader>fi :HFiles<CR>
 noremap <Leader>fg :GFiles<CR>
 noremap <Leader>fh :History<CR>
 noremap <Leader>fl :Lines<CR>
 noremap <Leader>ft :Tags<CR>
-noremap <Leader>fs :Filetypes<CR>
 
+noremap <Leader>ss :Filetypes<CR>
 noremap <Leader>sc :BCommits<CR>
 noremap <Leader>sl :BLines<CR>
 noremap <Leader>st :BTags<CR>
+
+noremap ,, :Marks<CR>
 
 " ----------------------------------------------------------------------------
 " Plug 'inside/vim-search-pulse'
@@ -392,20 +418,20 @@ let g:rtagsUseLocationList = 0
 let g:NERDTreeWinPos = "left"
 let g:NERDSpaceDelims = 1
 
-noremap <silent> <Leader><Tab> :NERDTreeToggle<CR>
+noremap <silent> <Leader>nn :NERDTreeToggle<CR>
 
 " ----------------------------------------------------------------------------
 " Plug 'majutsushi/tagbar'
 " ----------------------------------------------------------------------------
 
-noremap <silent> <Leader>tb :TagbarToggle<CR>
+noremap <silent> <Leader>tt :TagbarToggle<CR>
 
 " ----------------------------------------------------------------------------
 " Plug 't9md/vim-quickhl'
 " ----------------------------------------------------------------------------
 
-nmap <Leader>l <Plug>(quickhl-manual-this)
-xmap <Leader>l <Plug>(quickhl-manual-this)
+nmap <Leader>hh <Plug>(quickhl-manual-this-whole-word)
+xmap <Leader>hh <Plug>(quickhl-manual-this-whole-word)
 
 let g:quickhl_manual_colors = [
     \ "ctermfg=16  ctermbg=153 guifg=#ffffff guibg=#0a7383",
@@ -423,10 +449,29 @@ let g:quickhl_manual_colors = [
 " ----------------------------------------------------------------------------
 
 nmap s <Plug>(easymotion-overwin-f2)
-map <Leader>j <Plug>(easymotion-j)
-map <Leader>k <Plug>(easymotion-k)
 
 let g:EasyMotion_smartcase = 1
+
+" ----------------------------------------------------------------------------
+" Plug 'AndrewRadev/splitjoin.vim'
+" ----------------------------------------------------------------------------
+
+nmap <Leader>j gJ
+nmap <Leader>jj gS
+
+" ----------------------------------------------------------------------------
+" Plug 'tpope/vim-surround'
+" ----------------------------------------------------------------------------
+
+let b:surround_{char2nr('b')} = "**\r**"
+let b:surround_{char2nr('i')} = "`\r`"
+let b:surround_{char2nr('l')} = "[](\r)"
+let b:surround_{char2nr('c')} = "```\n\r\n```"
+
+nmap <Leader>mb ysiwb
+nmap <Leader>mi ysiwi
+nmap <Leader>ml yssl
+nmap <Leader>mc yssc
 
 " ----------------------------------------------------------------------------
 " Plug 'bkad/CamelCaseMotion'
@@ -448,10 +493,10 @@ sunmap w
 
 runtime! ftplugin/man.vim
 
-nnoremap <silent> <Leader>k :Man<CR>
-nnoremap <silent> <Leader>v :vertical Man<CR>
-vnoremap <silent> <Leader>k y:Man <C-r>"<CR>
-vnoremap <silent> <Leader>v y:vertical Man <C-r>"<CR>
+nnoremap <silent> <Leader>kk :Man<CR>
+nnoremap <silent> <Leader>kv :vertical Man<CR>
+vnoremap <silent> <Leader>kk y:Man <C-r>"<CR>
+vnoremap <silent> <Leader>kv y:vertical Man <C-r>"<CR>
 
 " ----------------------------------------------------------------------------
 " Plug 'arakashic/chromatica.nvim'
@@ -464,12 +509,6 @@ let g:chromatica#highlight_feature_level=0
 " ----------------------------------------------------------------------------
 
 let g:limelight_conceal_ctermfg = 'gray'
-
-" ----------------------------------------------------------------------------
-" Plug 'simeji/winresizer'
-" ----------------------------------------------------------------------------
-
-let g:winresizer_start_key = '<C-T>'
 
 " ----------------------------------------------------------------------------
 " Plug 'roman/golden-ratio'
@@ -485,7 +524,7 @@ noremap <silent> <leader>ww :GoldenRatioToggle<CR>
 " Plug 'skywind3000/vim-preview'
 " ----------------------------------------------------------------------------
 
-nnoremap <silent> ; :PreviewTag<CR>
+nnoremap <silent> \| :PreviewTag<CR>
 
 nnoremap <silent> <Leader>pd :PreviewClose<CR>
 nnoremap <silent> <Leader>pt :PreviewGoto tabe<CR>
@@ -497,6 +536,18 @@ noremap <silent> <m-d> :PreviewScroll +1<cr>
 
 autocmd FileType qf nnoremap <silent><buffer> p :PreviewQuickfix<cr>
 autocmd FileType qf nnoremap <silent><buffer> P :PreviewClose<cr>
+
+" ----------------------------------------------------------------------------
+" Plug 'christoomey/vim-tmux-navigator'
+" ----------------------------------------------------------------------------
+
+let g:tmux_navigator_no_mappings = 1
+
+nnoremap <silent> <C-h> :TmuxNavigateLeft<CR>
+nnoremap <silent> <C-j> :TmuxNavigateDown<CR>
+nnoremap <silent> <C-k> :TmuxNavigateUp<CR>
+nnoremap <silent> <C-l> :TmuxNavigateRight<CR>
+nnoremap <silent> <C-/> :TmuxNavigatePrevious<CR>
 
 " ----------------------------------------------------------------------------
 " Plug 'edkolev/tmuxline.vim'
@@ -542,9 +593,12 @@ augroup END
 " Plug 'vim-airline/vim-airline'
 " ----------------------------------------------------------------------------
 
-let g:airline_theme='onehalfdark'
-let g:airline_extensions = ['branch', 'tabline']
+let g:airline_theme='onedark'
+let g:airline#extensions#tagbar#enabled = 1
+let g:airline#extensions#branch#enabled = 1
+let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
+let g:airline_statusline_ontop=1
 
 silent! let g:airline_section_warning = airline#section#create_right(['%{g:asyncrun_status}'])
 
@@ -583,6 +637,8 @@ let g:startify_lists = [
     \ { 'header': ['   Sessions'],       'type': 'sessions' },
     \ ]
 
+let g:startify_custom_indices = map(range(1,100), 'string(v:val)')
+
 " ----------------------------------------------------------------------------
 " Plug 'godlygeek/tabular'
 " ----------------------------------------------------------------------------
@@ -593,6 +649,19 @@ nmap <silent> <Leader>a\| :Tabularize /\|<CR>
 vmap <silent> <Leader>a\| :Tabularize /\|<CR>
 nmap <silent> <Leader>a: :Tabularize /:\zs<CR>
 vmap <silent> <Leader>a: :Tabularize /:\zs<CR>
+
+" ----------------------------------------------------------------------------
+" Plug 'vim-scripts/EnhancedJumps'
+" ----------------------------------------------------------------------------
+
+nmap [[         <Plug>EnhancedJumpsOlder
+nmap ]]         <Plug>EnhancedJumpsNewer
+nmap g[         <Plug>EnhancedJumpsRemoteOlder
+nmap g]         <Plug>EnhancedJumpsRemoteNewer
+nmap <Leader>[  <Plug>EnhancedJumpsLocalOlder
+nmap <Leader>]  <Plug>EnhancedJumpsLocalNewer
+
+let g:EnhancedJumps_CaptureJumpMessages = 0
 
 " ----------------------------------------------------------------------------
 " Plug 'ntpeters/vim-better-whitespace'
@@ -611,7 +680,6 @@ nnoremap <Leader>ga :Git add %:p<CR><CR>
 nnoremap <Leader>gb :Gblame<CR>
 nnoremap <Leader>gd :Gdiff<CR>
 nnoremap <Leader>ge :Gedit<CR>
-nnoremap <Leader>gg :Ggrep<Space>
 nnoremap <Leader>gl :Dispatch! git pull<CR>
 nnoremap <Leader>gm :Gmove<Space>
 nnoremap <Leader>go :Git checkout<Space>
@@ -651,6 +719,7 @@ vmap <leader>gV :Gitv! --all<cr>
 " ----------------------------------------------------------------------------
 
 let g:rooter_manual_only = 0
+nnoremap <Leader>rr :RooterToggle<CR>
 
 " ----------------------------------------------------------------------------
 " Plug 'will133/vim-dirdiff'
@@ -679,14 +748,35 @@ function! g:committia_hooks.edit_open(info)
 endfunction
 
 " ----------------------------------------------------------------------------
+" Plug 'rhysd/git-messenger.vim'
+" ----------------------------------------------------------------------------
+
+nmap <Leader>gg <Plug>(git-messenger)
+let g:git_messenger_always_into_popup = 1
+let g:git_messenger_include_diff = "current"
+function! s:setup_git_messenger_popup() abort
+    " Your favorite configuration here
+
+    " For example, set go back/forward history to <C-o>/<C-i>
+    nmap <buffer><C-o> o
+    nmap <buffer><C-i> O
+endfunction
+autocmd FileType gitmessengerpopup call <SID>setup_git_messenger_popup()
+
+" ----------------------------------------------------------------------------
+" Plug 'simnalamburt/vim-mundo'
+" ----------------------------------------------------------------------------
+
+nnoremap <Leader>uu :MundoToggle<CR>
+
+" ----------------------------------------------------------------------------
 " Plug 'benmills/vimux'
 " ----------------------------------------------------------------------------
 
-map <Leader>vo :call VimuxOpenRunner()<CR>
+map <Leader>vv :call VimuxOpenRunner()<CR>
 map <Leader>vc :call VimuxRunCommand("clear")<CR>
 map <Leader>vi :VimuxInspectRunner<CR>
 map <Leader>vl :VimuxRunLastCommand<CR>
-map <Leader>vp :VimuxPromptCommand<CR>
 map <Leader>vq :VimuxCloseRunner<CR>
 map <Leader>vx :VimuxInterruptRunner<CR>
 map <Leader>vz :call VimuxZoomRunner()<CR>
@@ -696,8 +786,8 @@ function! VimuxSlime()
     call VimuxSendKeys("Enter")
 endfunction
 
-vmap <Leader>vs"vy :call VimuxSlime()<CR>
-nmap " V<Leader>vsj
+vmap <Leader>vs "vy :call VimuxSlime()<CR>
+nmap <Leader>V V<Leader>vsj
 nmap <Leader>vp vip<Leader>vs<CR>
 
 " ----------------------------------------------------------------------------
@@ -716,23 +806,65 @@ smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
 \ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
 
 " ----------------------------------------------------------------------------
-" Floaterm plugin
+" Plug 'voldikss/vim-floaterm'
 " ----------------------------------------------------------------------------
 
 nmap <leader>f :FloatermNew lf<CR>
+
+
+" ----------------------------------------------------------------------------
+" Plug 'w0rp/ale'
+" ----------------------------------------------------------------------------
+
+nmap <Leader>ll :ALEToggle<CR>
+
+" ----------------------------------------------------------------------------
+" Plug 'plasticboy/vim-markdown'
+" ----------------------------------------------------------------------------
+
+let g:vim_markdown_fenced_languages = ['go=go']
 
 " ----------------------------------------------------------------------------
 " Plug 'neoclide/coc.nvim'
 " ----------------------------------------------------------------------------
 
-" will be fixed in https://github.com/fast-ide/fast-ide/issues/55
-" source $HOME/.config/nvim/lsp.vim
+source $HOME/.config/nvim/lsp.vim
 
 " ----------------------------------------------------------------------------
-" Plug 'sonph/onehalf'
+" Plug 'puremourning/vimspector'
 " ----------------------------------------------------------------------------
 
-silent! colorscheme onehalfdark
+let g:vimspector_install_gadgets = [ 'debugpy', 'vscode-cpptools', 'vscode-go', 'vscode-node-debug2' ]
+
+nmap <Leader>dc <Plug>VimspectorContinue
+nmap <Leader>dd <Plug>VimspectorReset
+nmap <Leader>ds <Plug>VimspectorStop
+nmap <Leader>dr <Plug>VimspectorRestart
+nmap <Leader>db <Plug>VimspectorToggleBreakpoint
+nmap <Leader>di <Plug>VimspectorToggleConditionalBreakpoint
+nmap <Leader>dj <Plug>VimspectorStepOver
+nmap <Leader>dh <Plug>VimspectorStepInto
+nmap <Leader>dk <Plug>VimspectorStepOut
+nmap <Leader>dt <Plug>VimspectorRunToCursor
+nmap <Leader>de :VimspectorEval <C-R><C-W><CR>
+
+sign define vimspectorBP text=o          texthl=WarningMsg
+sign define vimspectorBPCond text=o?     texthl=WarningMsg
+sign define vimspectorBPDisabled text=o! texthl=LineNr
+sign define vimspectorPC text=\ >        texthl=MatchParen
+sign define vimspectorPCBP text=o>       texthl=MatchParen
+
+" ----------------------------------------------------------------------------
+" Plug 'edkolev/tmuxline.vim'
+" ----------------------------------------------------------------------------
+
+let g:airline#extensions#tmuxline#enabled = 0
+
+" ----------------------------------------------------------------------------
+" Plug 'joshdick/onedark.vim'
+" ----------------------------------------------------------------------------
+
+silent! colorscheme onedark
 
 if exists('+termguicolors')
   let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"

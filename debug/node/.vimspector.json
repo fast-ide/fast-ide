@@ -1,0 +1,15 @@
+{
+  "configurations": {
+    "run": {
+      "adapter": "vscode-node",
+      "configuration": {
+        "request": "launch",
+        "protocol": "auto",
+        "stopOnEntry": true,
+        "console": "integratedTerminal",
+        "program": "${workspaceRoot}/demo.js",
+        "cwd": "${workspaceRoot}"
+      }
+    }
+  }
+}

@@ -37,6 +37,7 @@ antigen bundle cal2195/q
 antigen bundle robertzk/send.zsh
 antigen bundle gko/ssh-connect
 antigen bundle nviennot/zsh-vim-plugin
+# antigen bundle wfxr/forgit TODO: will be fixed in #105
 antigen theme https://github.com/denysdovhan/spaceship-prompt spaceship
 
 antigen apply
@@ -49,6 +50,8 @@ bindkey '^ ' autosuggest-accept
 bindkey "^I" menu-expand-or-complete
 
 HISTORY_SUBSTRING_SEARCH_ENSURE_UNIQUE=1
+SPACESHIP_GIT_BRANCH_PREFIX=""
+KEYTIMEOUT=1
 
 export SHELL=`which zsh`
 export EDITOR=nvim
@@ -64,4 +67,5 @@ alias p=echo
 alias r=clear
 
 [ -f $HOME/.fzf.zsh ] && source $HOME/.fzf.zsh
-KEYTIMEOUT=1
+export FZF_DEFAULT_COMMAND='fd --type f'
+export FZF_DEFAULT_OPTS="--layout=reverse --inline-info"
