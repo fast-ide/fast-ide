@@ -23,6 +23,7 @@ call plug#begin('~/.nvim/plugged')
   Plug 'svermeulen/vim-cutlass'
   Plug 'vim-scripts/ingo-library' | Plug 'vim-scripts/EnhancedJumps'
   Plug 'rhysd/clever-f.vim'
+  Plug 'editorconfig/editorconfig-vim'
 
 " ----------------------------------------------------------------------------
 " Marks plugins
@@ -662,6 +663,12 @@ nmap <Leader>[  <Plug>EnhancedJumpsLocalOlder
 nmap <Leader>]  <Plug>EnhancedJumpsLocalNewer
 
 let g:EnhancedJumps_CaptureJumpMessages = 0
+
+" ----------------------------------------------------------------------------
+" Plug 'editorconfig/editorconfig-vim'
+" ----------------------------------------------------------------------------
+
+let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
 
 " ----------------------------------------------------------------------------
 " Plug 'ntpeters/vim-better-whitespace'
