@@ -810,7 +810,7 @@ smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
 " ----------------------------------------------------------------------------
 
 nmap <leader>f :FloatermNew lf<CR>
-
+nmap <leader>t :FloatermNew<CR>
 
 " ----------------------------------------------------------------------------
 " Plug 'w0rp/ale'
