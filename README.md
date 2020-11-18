@@ -517,17 +517,17 @@ and after copying the generated **compile_commands.json** file to the root direc
 ##### debugging
 
 ```
-<Leader>c start/continue debugging
-<Leader>s stop debugging
-<Leader>r restart debugging
-<Leader>d reset debugging
-<Leader>b set breakpoint
-<Leader>i set conditional breakpoint
-<Leader>j step over
-<Leader>h step into
-<Leader>k step out
-<Leader>t run to cursor
-<Leader>e evalute keyword under the cursor (see: https://github.com/puremourning/vimspector)
+<Leader>dc start/continue debugging
+<Leader>ds stop debugging
+<Leader>dr restart debugging
+<Leader>dd reset debugging
+<Leader>db set breakpoint
+<Leader>di set conditional breakpoint
+<Leader>dj step over
+<Leader>dh step into
+<Leader>dk step out
+<Leader>dt run to cursor
+<Leader>de evalute keyword under the cursor (see: https://github.com/puremourning/vimspector)
 ```
 
 ##### tmux integration
