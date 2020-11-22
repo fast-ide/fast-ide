@@ -33,8 +33,8 @@ added cool new features and integrated them into a single solution 🌟
   * [Update](#update)
   * [Supported OSs](#supported-oss)
   * [Build](#build)
-  * [Deploy](#deploy)
   * [Install](#install)
+  * [Deploy](#deploy)
   * [Configuration](#configuration)
   * [Font settings](#font-settings)
   * [Themes 🎨](#themes-)
@@ -125,6 +125,14 @@ docker build -t fastide/ubuntu:20.04 --build-arg OS_FAMILY=ubuntu --build-arg OS
 docker run -it fastide/ubuntu:20.04 zsh
 ```
 
+### Install
+
+```sh
+git clone --recursive https://github.com/fast-ide/fast-ide
+cd fast-ide/toolbox && make all
+cd .. && make install
+```
+
 ### Deploy
 
 ```sh
@@ -137,14 +145,6 @@ sudo chown -R developer /home/developer
 sudo usermod -aG sudo developer # optional
 su - developer
 zsh
-```
-
-### Install
-
-```sh
-git clone --recursive https://github.com/fast-ide/fast-ide
-cd fast-ide/toolbox && make all
-cd .. && make install
 ```
 
 ### Configuration
