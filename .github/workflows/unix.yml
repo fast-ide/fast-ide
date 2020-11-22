@@ -10,4 +10,6 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - name: build
-        run: make install
+        run: |
+          cd toolbox && make all &&
+          cd .. && make install
