@@ -11,5 +11,5 @@ jobs:
       - uses: actions/checkout@master
       - name: build
         run: |
-          cd toolbox && make all &&
+          cd toolbox && make all
           cd .. && make install
