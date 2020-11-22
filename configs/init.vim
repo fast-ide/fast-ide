@@ -244,10 +244,6 @@ nnoremap <C-U> 11kzz
 nnoremap <C-D> 11jzz
 nnoremap j gjzz
 nnoremap k gkzz
-nnoremap # #zz
-nnoremap * *zz
-nnoremap n nzz
-nnoremap N Nzz
 nmap zj <C-d>zz
 nmap zk <C-u>zz
 
@@ -396,6 +392,13 @@ noremap ,, :Marks<CR>
 " ----------------------------------------------------------------------------
 
 let g:vim_search_pulse_mode = 'cursor_line'
+let g:vim_search_pulse_disable_auto_mappings = 1
+
+nmap n nzz<Plug>Pulse
+nmap N Nzz<Plug>Pulse
+nmap * *zz<Plug>Pulse
+nmap # #zz<Plug>Pulse
+cmap <silent> <expr> <enter> search_pulse#PulseFirst()
 
 " ----------------------------------------------------------------------------
 " Plug 'haya14busa/incsearch.vim'
