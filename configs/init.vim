@@ -212,7 +212,6 @@ set nofoldenable
 set novisualbell
 set nowrap
 set number
-set scrolloff=999
 set sel=old
 set shortmess+=c
 set signcolumn=yes
