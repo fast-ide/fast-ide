@@ -9,6 +9,8 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@master
+        with:
+          submodules: recursive
       - name: build
         run: |
           cd toolbox && make all
