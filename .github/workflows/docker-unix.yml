@@ -1,8 +1,8 @@
 name: ci_dockerfile
 on:
   push:
-    branches:
-      - master
+    tags:
+       - '*'
 jobs:
   build:
     name: build
