@@ -884,3 +884,5 @@ set background=dark
 highlight Comment cterm=italic
 highlight Normal guibg=NONE ctermbg=NONE
 highlight NormalFloat guibg=NONE ctermbg=NONE
+
+packadd cfilter
