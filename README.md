@@ -487,6 +487,13 @@ Ctrl-P      (like in terminal)
 Shift-S     surround object (see: https://github.com/tpope/vim-surround)
 ```
 
+##### helper functions
+
+```
+:Cfilter[!] /{pat}/
+:Lfilter[!] /{pat}/
+```
+
 ##### improved maps
 
 ```
