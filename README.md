@@ -514,6 +514,25 @@ gi go to implementation
 C++ projects based on cmake must be built with the `CMAKE_EXPORT_COMPILE_COMMANDS` flag<br/>
 and after copying the generated **compile_commands.json** file to the root directory 🔥
 
+interesting settings in the configuration file **.config/nvim/coc-settings.json**
+```json
+{
+  "suggest": {
+    "enablePreselect": true,
+    "enablePreview": true,
+    "noselect": false,
+    "numberSelect": true
+  }
+}
+```
+To work correctly with the enabled `numerSelect` option, it is useful<br/>
+to add exceptions using abbreviations, for example:
+```
+iabbrev u6 uint64
+iabbrev u8 uint8
+iabbrev u3 uint32
+```
+
 ##### debugging
 
 ```
