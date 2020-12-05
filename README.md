@@ -525,12 +525,13 @@ interesting settings in the configuration file **.config/nvim/coc-settings.json*
   }
 }
 ```
+
 To work correctly with the enabled `numerSelect` option, it is useful<br/>
 to add exceptions using abbreviations, for example:
-```
-iabbrev u6 uint64
-iabbrev u8 uint8
-iabbrev u3 uint32
+```vim
+iabbrev 3u uint32
+iabbrev 6u uint64
+iabbrev 8u uint8
 ```
 
 ##### debugging
