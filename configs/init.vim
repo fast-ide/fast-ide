@@ -361,8 +361,9 @@ if executable('ag')
             \ -p $HOME/.ackignore"
 endif
 
-nnoremap \ :Ag <C-R><C-W><CR>
-nnoremap <Leader>a :Ack<Space>
+nnoremap <Leader>a :Ag <C-R><C-W><CR>
+nnoremap <Leader>aa :Ack<Space>
+map \ /\C
 
 " ----------------------------------------------------------------------------
 " Plug 'junegunn/fzf.vim'
