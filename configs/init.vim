@@ -243,8 +243,8 @@ nnoremap <C-U> 11kzz
 nnoremap <C-D> 11jzz
 nnoremap j gjzz
 nnoremap k gkzz
-nmap zj <C-d>zz
-nmap zk <C-u>zz
+nmap <Leader>j <C-d>zz
+nmap <Leader>k <C-u>zz
 
 nmap Z :qall!<CR>
 
@@ -460,8 +460,8 @@ let g:EasyMotion_smartcase = 1
 " Plug 'AndrewRadev/splitjoin.vim'
 " ----------------------------------------------------------------------------
 
-nmap <Leader>j gJ
-nmap <Leader>jj gS
+nmap gJ gJ
+nmap gS gS
 
 " ----------------------------------------------------------------------------
 " Plug 'tpope/vim-surround'
