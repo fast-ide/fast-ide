@@ -604,6 +604,11 @@ let g:airline_statusline_ontop=1
 
 silent! let g:airline_section_warning = airline#section#create_right(['%{g:asyncrun_status}'])
 
+function! AirlineInit()
+  let g:airline_section_z = airline#section#create(['%p%%', 'linenr', ':%v ', 't:%{tabpagenr()}/%{tabpagenr(''$'')}'])
+endfunction
+autocmd User AirlineAfterInit call AirlineInit()
+
 " ----------------------------------------------------------------------------
 " Plug 'tommcdo/vim-exchange'
 " ----------------------------------------------------------------------------
