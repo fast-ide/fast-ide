@@ -159,7 +159,10 @@ See the corresponding configuration files:
 ### Font settings
 
 ```
-FiraCode: https://github.com/tonsky/FiraCode/wiki/Installing
+Monaco
+Apple Color Emoji (Non-ASCII Font)
+
+FiraCode # alternative (see https://github.com/tonsky/FiraCode/wiki/Installing)
 ```
 
 ### Themes 🎨
