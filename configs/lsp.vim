@@ -61,6 +61,8 @@ if exists("coc#status")
   set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 endif
 
+nmap <silent> gs :call CocAction('jumpDefinition', 'split')<CR>
+nmap <silent> gD :call CocAction('jumpDefinition', 'vsplit')<CR>
 
 xmap if <Plug>(coc-funcobj-i)
 omap if <Plug>(coc-funcobj-i)
