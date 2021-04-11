@@ -451,8 +451,13 @@ let g:quickhl_manual_colors = [
 " ----------------------------------------------------------------------------
 
 nmap s <Plug>(easymotion-overwin-f2)
+nmap S <Plug>(easymotion-overwin-w)
+map <Leader>s <Plug>(easymotion-j)
+map <Leader>S <Plug>(easymotion-k)
 
+let g:EasyMotion_do_mapping = 0
 let g:EasyMotion_smartcase = 1
+let g:EasyMotion_use_smartsign_us = 1
 
 " ----------------------------------------------------------------------------
 " Plug 'AndrewRadev/splitjoin.vim'
