@@ -909,4 +909,4 @@ nnoremap <Leader>zi :set list!<CR>
 nnoremap <Leader>zl :Limelight!!<CR>
 nnoremap <Leader>zs :set hlsearch!<CR>
 nnoremap <Leader>zw :set wrap!<CR>
-nnoremap <Leader>zy :GoYo<CR>
+nnoremap <Leader>zy :Goyo<CR>
