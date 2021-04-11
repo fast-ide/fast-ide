@@ -303,9 +303,6 @@ vnoremap <Leader>p "+p
 vnoremap <Leader>P "+P
 nnoremap <Leader>pp :setlocal paste!<cr>
 
-nnoremap <Leader>hs :set hlsearch!<CR>
-nnoremap <Leader>hl :set list!<CR>
-
 nnoremap <Leader>wH <C-W>H
 nnoremap <Leader>wJ <C-W>J
 nnoremap <Leader>wK <C-W>K
@@ -903,3 +900,13 @@ let g:limelight_conceal_ctermfg = 240
 
 let g:limelight_conceal_guifg = 'DarkGray'
 let g:limelight_conceal_guifg = '#777777'
+
+" ----------------------------------------------------------------------------
+
+nnoremap <Leader>zd :diffthis<CR>
+nnoremap <Leader>zh :Hexmode<CR>
+nnoremap <Leader>zi :set list!<CR>
+nnoremap <Leader>zl :Limelight!!<CR>
+nnoremap <Leader>zs :set hlsearch!<CR>
+nnoremap <Leader>zw :set wrap!<CR>
+nnoremap <Leader>zy :GoYo<CR>
