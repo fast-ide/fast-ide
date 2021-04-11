@@ -434,6 +434,7 @@ noremap <silent> <Leader>tt :TagbarToggle<CR>
 " Plug 't9md/vim-quickhl'
 " ----------------------------------------------------------------------------
 
+nmap <Leader>hd <Plug>(quickhl-manual-reset)
 nmap <Leader>hh <Plug>(quickhl-manual-this-whole-word)
 xmap <Leader>hh <Plug>(quickhl-manual-this-whole-word)
 
