@@ -9,7 +9,7 @@ ZSH_THEME=""
 setopt hist_ignore_all_dups
 setopt hist_save_nodups
 setopt hist_ignore_space
-setopt inc_append_history
+setopt share_history
 
 antigen use oh-my-zsh
 antigen bundle git
@@ -72,3 +72,11 @@ alias r=clear
 export FZF_DEFAULT_COMMAND='fd --type f'
 export FZF_DEFAULT_OPTS="--layout=reverse --inline-info"
 export WORDCHARS=''
+
+fzf-history-widget-accept() {
+  [[ -z $BUFFER ]] && fc -R $HISTFILE
+  fzf-history-widget
+  zle accept-line
+}
+zle     -N     fzf-history-widget-accept
+bindkey '^R' fzf-history-widget-accept
