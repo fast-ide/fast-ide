@@ -360,7 +360,7 @@ endif
 
 nnoremap <Leader>a :Ag <C-R><C-W><CR>
 nnoremap <Leader>aa :Ack<Space>
-map \ /\C
+nnoremap \ /<C-R>+
 
 " ----------------------------------------------------------------------------
 " Plug 'junegunn/fzf.vim'
