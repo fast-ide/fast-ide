@@ -825,6 +825,8 @@ smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
 " Plug 'voldikss/vim-floaterm'
 " ----------------------------------------------------------------------------
 
+let g:floaterm_opener = 'edit'
+
 nmap <leader>f :FloatermNew lf<CR>
 nmap <leader>t :FloatermNew<CR>
 
