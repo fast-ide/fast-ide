@@ -634,15 +634,19 @@ vmap X <Plug>(Exchange)
 " Plug 'MattesGroeger/vim-bookmarks'
 " ----------------------------------------------------------------------------
 
-let g:bookmark_no_default_key_mappings = 1
-
 nmap <Leader>bb <Plug>BookmarkToggle
-nmap <Leader>bi <Plug>BookmarkAnnotate
+nmap <Leader>ba <Plug>BookmarkAnnotate
 nmap <Leader>bo <Plug>BookmarkShowAll
 nmap <Leader>bn <Plug>BookmarkNext
 nmap <Leader>bp <Plug>BookmarkPrev
 nmap <Leader>bc <Plug>BookmarkClear
 nmap <Leader>bx <Plug>BookmarkClearAll
+nmap <Leader>bj <Plug>BookmarkMoveDown
+nmap <Leader>bk <Plug>BookmarkMoveUp
+
+let g:bookmark_save_per_working_dir = 1
+let g:bookmark_highlight_lines = 1
+let g:bookmark_disable_ctrlp = 1
 
 " ----------------------------------------------------------------------------
 " Plug 'mhinz/vim-startify'
