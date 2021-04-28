@@ -746,7 +746,6 @@ vmap <leader>gV :Gitv! --all<cr>
 " ----------------------------------------------------------------------------
 
 let g:rooter_manual_only = 0
-nnoremap <Leader>rr :RooterToggle<CR>
 
 " ----------------------------------------------------------------------------
 " Plug 'will133/vim-dirdiff'
@@ -928,3 +927,22 @@ nnoremap <Leader>zl :Limelight!!<CR>
 nnoremap <Leader>zs :set hlsearch!<CR>
 nnoremap <Leader>zw :set wrap!<CR>
 nnoremap <Leader>zy :Goyo<CR>
+nnoremap <Leader>zr :RooterToggle<CR>
+nnoremap <Leader>ze :set cursorline!<CR>
+
+cnoreabbrev H vert h
+
+let g:centering = v:false
+function! ToggleCenter()
+  let g:centering = !g:centering
+  if g:centering
+    nnoremap j gjzz
+    nnoremap k gkzz
+  else
+    nnoremap j gj
+    nnoremap k gk
+  endif
+endfunction
+
+nmap <Leader>zt :call ToggleCenter()<CR>
+call ToggleCenter()
