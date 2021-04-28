@@ -345,6 +345,10 @@ map <Leader>to :tabonly<cr>
 map <Leader>tp gT
 map <Leader>ts :tab split<cr>
 
+nnoremap <Leader>rr :vsplit term://zsh<CR>A
+nnoremap <Leader>rs :split term://zsh<CR>
+nnoremap <Leader>re :vsplit term://
+
 " ----------------------------------------------------------------------------
 " Plug 'mileszs/ack.vim'
 " ----------------------------------------------------------------------------
