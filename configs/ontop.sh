@@ -1,12 +1,3 @@
-if [ "x$ONTOP" = "xfalse" ]; then
-else
-  ONTOP=true
-fi
-
-if [ "$ONTOP_COLOR" = "" ]; then
-  ONTOP_COLOR="green"
-fi
-
 function _accept_line_ontop {
   if [ "x$ONTOP" = "xtrue" ]; then
     tput cup 0 0
