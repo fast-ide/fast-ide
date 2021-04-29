@@ -536,8 +536,6 @@ let g:golden_ratio_exclude_nonmodifiable = 1
 let g:golden_ratio_autocommand = 0
 let g:golden_ratio_filetypes_blacklist = ["nerdtree", "unite"]
 
-noremap <silent> <leader>ww :GoldenRatioToggle<CR>
-
 " ----------------------------------------------------------------------------
 " Plug 'skywind3000/vim-preview'
 " ----------------------------------------------------------------------------
@@ -946,6 +944,7 @@ nnoremap <Leader>zw :set wrap!<CR>
 nnoremap <Leader>zy :Goyo<CR>
 nnoremap <Leader>zr :RooterToggle<CR>
 nnoremap <Leader>ze :set cursorline!<CR>
+nnoremap <leader>zg :GoldenRatioToggle<CR>
 
 cnoreabbrev H vert h
 
