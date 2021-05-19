@@ -24,6 +24,7 @@ call plug#begin('~/.nvim/plugged')
   Plug 'vim-scripts/ingo-library' | Plug 'vim-scripts/EnhancedJumps'
   Plug 'rhysd/clever-f.vim'
   Plug 'editorconfig/editorconfig-vim'
+  Plug 'tpope/vim-commentary'
 
 " ----------------------------------------------------------------------------
 " Marks plugins
@@ -63,7 +64,6 @@ call plug#begin('~/.nvim/plugged')
 " ----------------------------------------------------------------------------
 
   Plug 'scrooloose/nerdtree' |
-  Plug 'scrooloose/nerdcommenter' |
   Plug 'Xuyuanp/nerdtree-git-plugin'
 
   Plug 'airblade/vim-gitgutter' |
@@ -348,6 +348,12 @@ map <Leader>ts :tab split<cr>
 nnoremap <Leader>rr :vsplit term://zsh<CR>A
 nnoremap <Leader>rs :split term://zsh<CR>
 nnoremap <Leader>re :vsplit term://
+
+" ----------------------------------------------------------------------------
+" Plug 'dhruvasagar/vim-zoom'
+" ----------------------------------------------------------------------------
+
+nmap <Leader>wz <C-W>m
 
 " ----------------------------------------------------------------------------
 " Plug 'mileszs/ack.vim'
