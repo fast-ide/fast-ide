@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-18.04
     strategy:
       matrix:
-        os: [ubuntu-18.04, ubuntu-20.04, debian-10, centos-8, fedora-31]
+        os: [ubuntu-18.04, ubuntu-20.04, centos-8, fedora-31]
         include:
           - os: ubuntu-18.04
             family: ubuntu
@@ -17,9 +17,6 @@ jobs:
           - os: ubuntu-20.04
             family: ubuntu
             version: 20.04
-          - os: debian-10
-            family: debian
-            version: 10
           - os: centos-8
             family: centos
             version: 8
@@ -38,7 +35,7 @@ jobs:
         run: |
           docker buildx build \
             -t fastide/${{ matrix.family }}:${{ matrix.version }} \
-            --platform=linux/amd64,linux/386,linux/arm64 \
+            --platform=linux/amd64,linux/386,linux/arm64,darwin/amd64 \
             --build-arg OS_FAMILY=${{ matrix.family }} \
             --build-arg OS_VERSION=${{ matrix.version }} \
             --push .
