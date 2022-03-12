@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-18.04
     strategy:
       matrix:
-        os: [alpine, ubuntu-18.04, ubuntu-20.04, debian-10, centos-8, fedora-31]
+        os: [ubuntu-18.04, ubuntu-20.04, debian-10, centos-8, fedora-31]
         include:
           - os: alpine
             family: alpine
