@@ -28,10 +28,12 @@ jobs:
             version: 31
     steps:
       - uses: actions/checkout@master
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v1
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v1
+      - name: Login to GitHub Package Registry
+        run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
       - name: build
         run: |
-          docker build -t fastide/${{ matrix.family }}:${{ matrix.version }} --build-arg OS_FAMILY=${{ matrix.family }} --build-arg OS_VERSION=${{ matrix.version }} .
-          echo "${{ secrets.DOCKER_PASSWORD }}" | docker login --username fastide --password-stdin
-      - name: deploy
-        run: |
-          docker push fastide/${{ matrix.family }}:${{ matrix.version }}
+          docker buildx --push --platform=linux/arm64,linux/amd64 -t fastide/${{ matrix.family }}:${{ matrix.version }} --build-arg OS_FAMILY=${{ matrix.family }} --build-arg OS_VERSION=${{ matrix.version }} .
