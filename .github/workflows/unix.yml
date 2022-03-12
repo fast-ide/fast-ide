@@ -1,4 +1,4 @@
-name: ci_unix
+name: unix
 on:
   push:
     branches:

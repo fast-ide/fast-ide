@@ -1,4 +1,4 @@
-name: ci_dockerfile
+name: docker
 on:
   push:
     tags:
