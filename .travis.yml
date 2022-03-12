@@ -1,7 +1,0 @@
-os: osx
-language:
-- minimal
-
-script:
-- cd toolbox && make all
-- cd .. && make install

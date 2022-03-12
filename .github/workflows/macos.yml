@@ -1,0 +1,17 @@
+name: ci_unix
+on:
+  push:
+    branches:
+      - master
+jobs:
+  build:
+    name: build
+    runs-on: macos-11
+    steps:
+      - uses: actions/checkout@master
+        with:
+          submodules: recursive
+      - name: build
+        run: |
+          cd toolbox && make all
+          cd .. && make install
