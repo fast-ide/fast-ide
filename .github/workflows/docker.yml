@@ -36,4 +36,9 @@ jobs:
         run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u fastide --password-stdin
       - name: build
         run: |
-          docker buildx build --push --platform=linux/arm64,linux/amd64 -t fastide/${{ matrix.family }}:${{ matrix.version }} --build-arg OS_FAMILY=${{ matrix.family }} --build-arg OS_VERSION=${{ matrix.version }} .
+          docker buildx build \
+            -t fastide/${{ matrix.family }}:${{ matrix.version }} \
+            --platform=linux/amd64,linux/386,linux/arm64 \
+            --build-arg OS_FAMILY=${{ matrix.family }} \
+            --build-arg OS_VERSION=${{ matrix.version }} \
+            --push .
