@@ -35,7 +35,7 @@ jobs:
         run: |
           docker buildx build \
             -t fastide/${{ matrix.family }}:${{ matrix.version }} \
-            --platform=linux/amd64,linux/386,linux/arm64,darwin/amd64 \
+            --platform=linux/amd64,darwin/amd64 \
             --build-arg OS_FAMILY=${{ matrix.family }} \
             --build-arg OS_VERSION=${{ matrix.version }} \
             --push .
