@@ -9,20 +9,14 @@ jobs:
     runs-on: ubuntu-18.04
     strategy:
       matrix:
-        os: [ubuntu-18.04, ubuntu-20.04, centos-8, fedora-31]
+        os: [ubuntu-20.04, debian-10]
         include:
-          - os: ubuntu-18.04
-            family: ubuntu
-            version: 18.04
           - os: ubuntu-20.04
             family: ubuntu
             version: 20.04
-          - os: centos-8
-            family: centos
-            version: 8
-          - os: fedora-31
-            family: fedora
-            version: 31
+          - os: debian-10
+            family: debian
+            version: 10
     steps:
       - uses: actions/checkout@master
       - name: Set up QEMU
