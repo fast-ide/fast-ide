@@ -92,8 +92,7 @@ cd fast-ide && ./install.sh
 - alpine
 - centos 8
 - debian 10
-- fedora 31
-- ubuntu 18.04
+- fedora 35
 - ubuntu 20.04
 ```
 
@@ -137,8 +136,8 @@ cd .. && make install
 
 ```sh
 # for example deploy Fast IDE on your CentOS 8 🐧
-docker pull fastide/centos:8
-docker create -ti --name fastide fastide/centos:8 bash
+docker pull fastide/ubuntu:20.04
+docker create -ti --name fastide fastide/ubuntu:20.04 bash
 docker cp fastide:/home/developer /home/ # docker rm -f fastide
 sudo useradd developer && sudo passwd developer
 sudo chown -R developer /home/developer
