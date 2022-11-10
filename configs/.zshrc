@@ -22,7 +22,7 @@ antigen bundle tmuxinator
 antigen bundle vi-mode
 
 antigen bundle agkozak/zsh-z
-antigen bundle zdharma/fast-syntax-highlighting
+antigen bundle zdharma/fast-syntax-highlighting --branch=main
 antigen bundle hschne/fzf-git
 antigen bundle leophys/zsh-plugin-fzf-finder
 antigen bundle zsh-users/zsh-history-substring-search
@@ -33,7 +33,7 @@ antigen bundle Tarrasch/zsh-bd
 antigen bundle djui/alias-tips
 antigen bundle adolfoabegg/browse-commit
 antigen bundle joel-porquet/zsh-dircolors-solarized
-antigen bundle unixorn/git-extra-commands
+antigen bundle unixorn/git-extra-commands --branch=main
 antigen bundle cal2195/q
 antigen bundle robertzk/send.zsh
 antigen bundle gko/ssh-connect
