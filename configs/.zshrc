@@ -50,6 +50,7 @@ bindkey '^[[B' history-substring-search-down
 bindkey '^ ' autosuggest-accept
 bindkey "^I" menu-expand-or-complete
 bindkey -M vicmd r edit-command-line
+bindkey '^Q' delete-word
 
 HISTORY_SUBSTRING_SEARCH_ENSURE_UNIQUE=1
 SPACESHIP_GIT_BRANCH_PREFIX=""
