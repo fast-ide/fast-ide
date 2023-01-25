@@ -68,6 +68,7 @@ alias gs='git status'
 alias cdr='cd `git root`'
 alias p=echo
 alias r=clear
+alias less='less -S'
 
 [ -f $HOME/.fzf.zsh ] && source $HOME/.fzf.zsh
 export FZF_DEFAULT_COMMAND='fd --type f'
