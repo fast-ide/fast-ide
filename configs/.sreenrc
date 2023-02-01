@@ -1,0 +1,4 @@
+truecolor on
+
+bind ^a windowlist
+bind r eval "source $HOME/.screenrc" "echo '.screenrc reloaded!'"
