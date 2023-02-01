@@ -2,3 +2,6 @@ truecolor on
 
 bind ^a windowlist
 bind r eval "source $HOME/.screenrc" "echo '.screenrc reloaded!'"
+
+bindkey "^k" eval "copy" "stuff k"
+bindkey "^j" eval "copy" "stuff j"
