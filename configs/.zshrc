@@ -48,9 +48,10 @@ export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#808080,bg=gray,underline"
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 bindkey '^ ' autosuggest-accept
-bindkey "^I" menu-expand-or-complete
+bindkey '^I' menu-expand-or-complete
+bindkey '^S' delete-word
+bindkey '^Q' beginning-of-line
 bindkey -M vicmd r edit-command-line
-bindkey '^Q' delete-word
 
 HISTORY_SUBSTRING_SEARCH_ENSURE_UNIQUE=1
 SPACESHIP_GIT_BRANCH_PREFIX=""
