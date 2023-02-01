@@ -45,6 +45,12 @@ antigen apply
 
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#808080,bg=gray,underline"
 
+ssh() {
+    tmux rename-window "$*"
+    command ssh "$@"
+    exit
+}
+
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 bindkey '^ ' autosuggest-accept
