@@ -6,6 +6,7 @@ set -ex
 
 cp configs/.ackignore $HOME/
 cp configs/.gitconfig $HOME/
+cp configs/.screenrc $HOME/
 cp configs/.tmux.conf $HOME/
 cp configs/.zshrc $HOME/
 
