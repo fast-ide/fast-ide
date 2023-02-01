@@ -5,3 +5,6 @@ bind r eval "source $HOME/.screenrc" "echo '.screenrc reloaded!'"
 
 bindkey "^k" eval "copy" "stuff k"
 bindkey "^j" eval "copy" "stuff j"
+
+bindkey -m "^j" stuff j
+bindkey -m "^k" stuff k
