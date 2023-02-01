@@ -204,6 +204,7 @@ set ignorecase
 set iskeyword=@,48-57,_,192-255
 set lazyredraw
 set listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<,space:␣
+set mouse=c
 set nocompatible
 set noendofline
 set noerrorbells
